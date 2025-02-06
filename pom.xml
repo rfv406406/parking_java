@@ -74,6 +74,13 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<!-- <version>8.1.0</version> -->
 		</dependency>
+		<!--lombok-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
+		</dependency>
 		
 	</dependencies>
 

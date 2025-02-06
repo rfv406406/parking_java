@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sideproject.parking_java.Exception.*;
-
 
 @RestController
 public class StudentController {
@@ -19,6 +17,7 @@ public class StudentController {
     @PostMapping("/students")
     public String insert(@RequestBody Student student) {
         String sql = "INSERT INTO student(number, name, email) VALUES (:number, :name, :email)";
+        // throw new InvalidParameterError("invaild parameter");
         HashMap<String, Object> map = new HashMap<>();
         map.put("number", student.getNumber());
         map.put("name", student.getName());
