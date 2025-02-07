@@ -6,9 +6,11 @@ import lombok.Getter;
 
 public class StatusCode {
 
-    @AllArgsConstructor
+    public interface interfaceStatusCode {};
+
+    // @AllArgsConstructor
     @Getter
-    public enum Base {
+    public enum Base implements interfaceStatusCode{
         INTERNAL_SERVER_ERROR("E9999"),
         INVALID_PARAMETER("E9901"),
         S3_ERROR("E9904"),
@@ -17,5 +19,9 @@ public class StatusCode {
 
         @JsonValue
         private final String status;
+
+        Base(String status) {
+            this.status = status;
+        }
     }
 }
