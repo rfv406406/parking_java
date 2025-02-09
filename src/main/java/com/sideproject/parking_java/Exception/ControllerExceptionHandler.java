@@ -42,4 +42,11 @@ public class ControllerExceptionHandler {
         
         return response;
     }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> Exception(Exception exception) {
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Exception:\n" + exception.getMessage());
+        
+        return response;
+    }
 }

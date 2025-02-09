@@ -6,7 +6,9 @@ import lombok.Getter;
 
 public class StatusCode {
 
-    public interface interfaceStatusCode {};
+    public interface interfaceStatusCode {
+        String getErrorName();
+    };
 
     // @AllArgsConstructor
     @Getter
@@ -20,8 +22,13 @@ public class StatusCode {
         @JsonValue
         private final String status;
 
-        Base(String status) {
+        private Base(String status) {
             this.status = status;
+        }
+
+        @Override
+        public String getErrorName() {
+            return this.name();
         }
     }
 }
