@@ -1,5 +1,5 @@
 package com.sideproject.parking_java;
-
+// @AllArgsConstructor
 public class Student {
     private Integer number;
     private String name;

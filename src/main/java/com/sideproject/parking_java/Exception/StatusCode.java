@@ -1,8 +1,6 @@
 package com.sideproject.parking_java.Exception;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 public class StatusCode {
 
@@ -11,7 +9,7 @@ public class StatusCode {
     };
 
     // @AllArgsConstructor
-    @Getter
+    // @Getter
     public enum Base implements interfaceStatusCode{
         INTERNAL_SERVER_ERROR("E9999"),
         INVALID_PARAMETER("E9901"),

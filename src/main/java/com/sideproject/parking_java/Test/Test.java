@@ -23,7 +23,7 @@ public class Test {
     public static void getMethods(Object obj) {
         System.out.println("方法名: ");
         for (Method m:methods) {
-            System.out.println(m.getName());
+            System.out.println(m);
         }
     }
 
