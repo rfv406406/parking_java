@@ -1,7 +1,5 @@
 package com.sideproject.parking_java.Exception;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 public class StatusCode {
 
     public interface interfaceStatusCode {
@@ -11,18 +9,18 @@ public class StatusCode {
     // @AllArgsConstructor
     // @Getter
     public enum Base implements interfaceStatusCode{
-        INTERNAL_SERVER_ERROR("E9999"),
-        INVALID_PARAMETER("E9901"),
-        S3_ERROR("E9904"),
-        DATABASE_ERROR("E9902"),
-        AUTHENTICATION_ERROR("E9905");
+        INTERNAL_SERVER_ERROR,
+        INVALID_PARAMETER,
+        S3_ERROR,
+        DATABASE_ERROR,
+        AUTHENTICATION_ERROR;
 
-        @JsonValue
-        private final String status;
+        // @JsonValue
+        // private final String status;
 
-        private Base(String status) {
-            this.status = status;
-        }
+        // private Base(String status) {
+        //     this.status = status;
+        // }
 
         @Override
         public String getErrorName() {

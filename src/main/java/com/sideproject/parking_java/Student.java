@@ -1,9 +1,9 @@
 package com.sideproject.parking_java;
 // @AllArgsConstructor
 public class Student {
-    private Integer number;
-    private String name;
-    private String email;
+    private final Integer number;
+    private final String name;
+    private final String email;
 
     public Student(Integer number, String name, String email) {
         this.number = number;

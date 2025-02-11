@@ -49,4 +49,11 @@ public class ControllerExceptionHandler {
         
         return response;
     }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> RuntimeException(RuntimeException exception) {
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body("RuntimeException:\n" + exception.getMessage());
+        
+        return response;
+    }
 }
