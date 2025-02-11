@@ -3,7 +3,7 @@ package com.sideproject.parking_java.Test;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class Test {
+public class DataInforTest {
     public static Class<?> className;
     public static Method[] methods;
     public static Field[] fields;
