@@ -9,9 +9,9 @@ import com.sideproject.parking_java.Model.Member;
 public class MemberService {
 
     @Autowired
-    private MemberDao studentDao;
+    private MemberDao memberDao;
 
-    public String StudentInsertService(Member student) {
-        return studentDao.insertStudent(student);
+    public Integer postMemberService(Member member) {
+        return memberDao.postMemberDao(member);
     }
 }
