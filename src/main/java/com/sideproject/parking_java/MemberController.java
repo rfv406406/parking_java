@@ -5,14 +5,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sideproject.parking_java.Model.Member;
+
 
 @RestController
-public class StudentController {
+public class MemberController {
     @Autowired
-    private StudentService studentService;
+    private MemberService studentService;
 
     @PostMapping("/students")
-    public String insert(@RequestBody Student student) {
+    public String insert(@RequestBody Member student) {
        return studentService.StudentInsertService(student);
     }
     
