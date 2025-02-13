@@ -6,16 +6,20 @@ import com.sideproject.parking_java.Utility.TimeFormat;
 
 // @AllArgsConstructor
 public class Member {
-    private final String account;
-    private final String password;
-    private final String email;
-    private final String creatTime;
+    private String account;
+    private String password;
+    private String email;
+    private String creatTime;
 
     public Member(String account, String password, String email) {
         this.account = account;
         this.password = password;
         this.email = email;
         this.creatTime = TimeFormat.timeFormat(new Date());
+    }
+    //MemberRowMapper
+    public Member(String account) {
+        this.account = account;
     }
 
     public String getAccount() {
