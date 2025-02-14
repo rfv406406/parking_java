@@ -1,6 +1,5 @@
 package com.sideproject.parking_java;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,11 +34,12 @@ public class MemberDao {
         return insertId;
     }
 
-    public boolean  getAccountByValue(Member value) {
+    public boolean getAccountByValue(Member value) {
         String sql = "SELECT account FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", value.getAccount());
         List<Member> getAccountByValue = namedParameterJdbcTemplate.query(sql, map, new MemberRowMapper());
 
         return getAccountByValue.size() == 0 ? true : false;
+    }
 }

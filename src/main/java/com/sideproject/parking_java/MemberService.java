@@ -13,13 +13,16 @@ public class MemberService {
     @Autowired
     private MemberDao memberDao;
 
-    public Integer postMemberService(Member member) throws DatabaseError {
+    public Integer postMemberService(Member member) throws DatabaseError, InvalidParameterError {
         if (member.getAccount() == null || member.getAccount().equals("") ||
             member.getPassword() == null || member.getPassword().equals("") ||
             member.getEmail() == null || member.getEmail().equals("") ||
             member.getCreatTime().equals("")) {
                 throw new InvalidParameterError("parameter is null or empty");
             }
+        if (!memberDao.getAccountByValue(member)) {
+            throw new InvalidParameterError("該帳號已被使用!");
+        }
         return memberDao.postMemberDao(member);
     }
 }
