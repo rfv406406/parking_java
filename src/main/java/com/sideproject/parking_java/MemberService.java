@@ -20,9 +20,14 @@ public class MemberService {
             member.getCreatTime().equals("")) {
                 throw new InvalidParameterError("parameter is null or empty");
             }
-        if (!memberDao.getAccountByValue(member)) {
+        if (!memberDao.getAccountByValueDao(member)) {
             throw new InvalidParameterError("該帳號已被使用!");
         }
         return memberDao.postMemberDao(member);
+    }
+
+    @Autowired
+    public Member postMemberAuthService(Member member) throws DatabaseError, InvalidParameterError {
+        return memberDao.postGetMemberAuthDao(member);
     }
 }

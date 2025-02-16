@@ -34,7 +34,18 @@ public class MemberDao {
         return insertId;
     }
 
-    public boolean getAccountByValue(Member value) {
+    public Member postGetMemberAuthDao(Member member) {
+        String sql = "SELECT id, account, email FROM member WHERE id = :id, account = :account, email = :email";
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("id", member.getId());
+        map.put("account", member.getAccount());
+        map.put("email", member.getEmail());
+        Member postGetMemberAuth = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
+
+        return postGetMemberAuth;
+    }
+
+    public boolean getAccountByValueDao(Member value) {
         String sql = "SELECT account FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", value.getAccount());

@@ -13,17 +13,28 @@ import com.sideproject.parking_java.Exception.InvalidParameterError;
 import com.sideproject.parking_java.Model.Member;
 
 import org.springframework.http.ResponseCookie;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class MemberController {
     @Autowired
     private MemberService memberService;
-
+    
     @PostMapping("/api/member")
     public ResponseEntity<String> postMember(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
        memberService.postMemberService(member);
-       ResponseCookie cookie = ResponseCookie.from("RegistrationCompleted", "TRUE").path("/").maxAge(60*5).build();
+       ResponseCookie cookie = ResponseCookie.from("RegistrationCompleted", "TRUE").path("/").maxAge(60*5).httpOnly(true).build();
        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).header(HttpHeaders.SET_COOKIE, cookie.toString()).body("ok");
        return response;
     }
+
+    @PostMapping("/api/member/auth")
+    public ResponseEntity<String> postmemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
+        Member memberAuth = memberService.postMemberAuthService(member);
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
+        return response;
+    }
+    
 }
