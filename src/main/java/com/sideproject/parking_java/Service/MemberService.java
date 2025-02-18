@@ -1,10 +1,11 @@
-package com.sideproject.parking_java;
+package com.sideproject.parking_java.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.Dao.MemberDao;
 import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Exception.InvalidParameterError;

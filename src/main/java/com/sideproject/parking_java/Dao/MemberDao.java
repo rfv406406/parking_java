@@ -1,4 +1,4 @@
-package com.sideproject.parking_java;
+package com.sideproject.parking_java.Dao;
 
 import java.util.HashMap;
 import java.util.List;

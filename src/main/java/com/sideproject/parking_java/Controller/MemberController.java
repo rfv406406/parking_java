@@ -1,4 +1,4 @@
-package com.sideproject.parking_java;
+package com.sideproject.parking_java.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -18,6 +18,7 @@ import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Exception.InvalidParameterError;
 import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.Service.MemberService;
 import com.sideproject.parking_java.Utility.Jwt;
 
 import io.jsonwebtoken.Claims;
