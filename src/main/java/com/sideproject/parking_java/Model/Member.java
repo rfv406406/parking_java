@@ -10,16 +10,16 @@ public class Member {
     private String account;
     private String password;
     private String email;
-    private String creatTime;
+    private String creatTime = TimeFormat.timeFormat(new Date());
 
     public Member() {};
     //sign in
-    public Member(String account, String password, String email) {
-        this.account = account;
-        this.password = password;
-        this.email = email;
-        this.creatTime = TimeFormat.timeFormat(new Date());
-    }
+    // public Member(String account, String password, String email) {
+    //     this.account = account;
+    //     this.password = password;
+    //     this.email = email;
+    //     this.creatTime = TimeFormat.timeFormat(new Date());
+    // }
     //MemberRowMapper
     public Member(String account) {
         this.account = account;
@@ -41,9 +41,9 @@ public class Member {
         this.email = email;
     }
 
-    public void setCreatTime() {
-        this.creatTime = TimeFormat.timeFormat(new Date());
-    }
+    // public void setCreatTime() {
+    //     this.creatTime = TimeFormat.timeFormat(new Date());
+    // }
 
     public int getId() {
         return id;

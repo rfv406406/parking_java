@@ -1,17 +1,25 @@
 package com.sideproject.parking_java;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Exception.InvalidParameterError;
 import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.Utility.Jwt;
+
+import io.jsonwebtoken.Claims;
 
 @Component
 public class MemberService {
 
     @Autowired
     private MemberDao memberDao;
+    @Autowired
+    private Jwt jwt;
 
     public Integer postMemberService(Member member) throws DatabaseError, InvalidParameterError {
         if (member.getAccount() == null || member.getAccount().equals("") ||
@@ -26,8 +34,19 @@ public class MemberService {
         return memberDao.postMemberDao(member);
     }
 
-    @Autowired
-    public Member postMemberAuthService(Member member) throws DatabaseError, InvalidParameterError {
-        return memberDao.postGetMemberAuthDao(member);
+    public String postMemberAuthService(Member member) throws DatabaseError, InvalidParameterError {
+        Member memberAuth = memberDao.postGetMemberAuthDao(member);
+        String token = jwt.generateToken(memberAuth);
+        return token;
+    }
+
+    public Claims getMemberAuthService(String authorizationHeader) throws DatabaseError, InvalidParameterError {
+        if (authorizationHeader != null && authorizationHeader != "" && authorizationHeader.startsWith("Bearer ")){
+            String accessToken = authorizationHeader.replace("Bearer ", "");
+            Claims payload = jwt.parseToken(accessToken);
+            return payload;
+        } else {
+            throw new AuthenticationError("AuthorizationHeader is null or empty");
+        }
     }
 }
