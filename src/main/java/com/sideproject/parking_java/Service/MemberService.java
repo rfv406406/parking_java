@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sideproject.parking_java.Dao.MemberDao;
 import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Exception.DatabaseError;
@@ -13,6 +15,8 @@ import com.sideproject.parking_java.Model.Member;
 import com.sideproject.parking_java.Utility.Jwt;
 
 import io.jsonwebtoken.Claims;
+
+import java.util.Map;
 
 @Component
 public class MemberService {
@@ -25,8 +29,7 @@ public class MemberService {
     public Integer postMemberService(Member member) throws DatabaseError, InvalidParameterError {
         if (member.getAccount() == null || member.getAccount().equals("") ||
             member.getPassword() == null || member.getPassword().equals("") ||
-            member.getEmail() == null || member.getEmail().equals("") ||
-            member.getCreatTime().equals("")) {
+            member.getEmail() == null || member.getEmail().equals("")) {
                 throw new InvalidParameterError("parameter is null or empty");
             }
         if (!memberDao.getAccountByValueDao(member)) {
@@ -46,6 +49,19 @@ public class MemberService {
             String accessToken = authorizationHeader.replace("Bearer ", "");
             Claims payload = jwt.parseToken(accessToken);
             return payload;
+        } else {
+            throw new AuthenticationError("AuthorizationHeader is null or empty");
+        }
+    }
+
+    public String getMemberStatusService(String authorizationHeader) throws DatabaseError, InvalidParameterError {
+        if (authorizationHeader != null && authorizationHeader != "" && authorizationHeader.startsWith("Bearer ")){
+            String accessToken = authorizationHeader.replace("Bearer ", "");
+            Map<String, Object> payload = jwt.parseToken(accessToken);
+            int id = (Integer)payload.get("id");
+            Member msmberStatus = memberDao.getMemberStatusById(id);
+            String status = msmberStatus.getStatus();
+            return status;
         } else {
             throw new AuthenticationError("AuthorizationHeader is null or empty");
         }

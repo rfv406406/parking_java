@@ -10,16 +10,15 @@ public class Member {
     private String account;
     private String password;
     private String email;
-    private String creatTime = TimeFormat.timeFormat(new Date());
+    private String name;
+    private String birthday;
+    private String cellphone;
+    private String createTime;
+    private String lastLogInTime;
+    private String status;
 
     public Member() {};
-    //sign in
-    // public Member(String account, String password, String email) {
-    //     this.account = account;
-    //     this.password = password;
-    //     this.email = email;
-    //     this.creatTime = TimeFormat.timeFormat(new Date());
-    // }
+  
     //MemberRowMapper
     public Member(String account) {
         this.account = account;
@@ -41,9 +40,29 @@ public class Member {
         this.email = email;
     }
 
-    // public void setCreatTime() {
-    //     this.creatTime = TimeFormat.timeFormat(new Date());
-    // }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public void setLastLogInTime(String lastLogInTime) {
+        this.lastLogInTime = lastLogInTime;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public int getId() {
         return id;
@@ -61,8 +80,27 @@ public class Member {
         return email;
     }
 
-    public String getCreatTime() {
-        return creatTime;
+    public String getName() {
+        return name;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public String getLastLogInTime() {
+        return lastLogInTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }

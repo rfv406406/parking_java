@@ -1,5 +1,6 @@
 package com.sideproject.parking_java.Dao;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Model.Member;
 import com.sideproject.parking_java.Utility.MemberRowMapper;
+import com.sideproject.parking_java.Utility.TimeFormat;
 
 @Component
 public class MemberDao {
@@ -18,13 +20,14 @@ public class MemberDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public Integer postMemberDao(Member member) throws DatabaseError {
-        String sql = "INSERT INTO member(account, password, email, creatTime) VALUES (:account, :password, :email, :creatTime)";
+        String sql = "INSERT INTO member(account, password, email, createTime) VALUES (:account, :password, :email, :createTime)";
         // LocalDateTime creatTime = LocalDateTime.now().withNano(0);       
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", member.getAccount());
         map.put("password", member.getPassword());
         map.put("email", member.getEmail());
-        map.put("creatTime", member.getCreatTime());
+        member.setCreateTime(TimeFormat.timeFormat(new Date()));
+        map.put("createTime", member.getCreateTime());
 
         int insertId = namedParameterJdbcTemplate.update(sql, map);
         
@@ -35,22 +38,28 @@ public class MemberDao {
     }
 
     public Member postGetMemberAuthDao(Member member) {
-        String sql = "SELECT id, account, email FROM member WHERE account = :account AND password = :password";
+        String sql = "SELECT id, account, email , name, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account AND password = :password";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", member.getAccount());
         map.put("password", member.getPassword());
         Member postGetMemberAuth = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
-        System.out.println("AURH: "+postGetMemberAuth);
         return postGetMemberAuth;
     }
 
     public boolean getAccountByValueDao(Member value) {
-
-        String sql = "SELECT account FROM member WHERE account = :account";
+        String sql = "SELECT id, account, email , name, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", value.getAccount());
         List<Member> getAccountByValue = namedParameterJdbcTemplate.query(sql, map, new MemberRowMapper());
 
         return getAccountByValue.size() == 0 ? true : false;
+    }
+
+    public Member getMemberStatusById(Integer id) {
+        String sql = "SELECT id, account, email , name, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE id = :id";
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("id", id);
+        Member getMemberStatusById = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
+        return getMemberStatusById;
     }
 }

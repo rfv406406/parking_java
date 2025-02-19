@@ -38,7 +38,7 @@ public class MemberController {
     @PostMapping("/api/member/auth")
     public ResponseEntity<String> postMemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
         String token = memberService.postMemberAuthService(member);
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("token" + token);
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body(token);
         return response;
     }
 
@@ -46,6 +46,13 @@ public class MemberController {
     public ResponseEntity<String> getMemberAuth(@RequestHeader("Authorization") String authorizationHeader) throws AuthenticationError {
         Claims payload = memberService.getMemberAuthService(authorizationHeader);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("payload" + payload);
+        return response;
+    }
+
+    @GetMapping("/api/mamber/status")
+    public ResponseEntity<String> getMemberStatus(@RequestHeader("Authorization") String authorizationHeader) throws AuthenticationError {
+        String status = memberService.getMemberStatusService(authorizationHeader);
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("status" + status);
         return response;
     }
     

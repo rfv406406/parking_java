@@ -12,9 +12,16 @@ public class MemberRowMapper implements RowMapper<Member>{
     @Override
     public Member mapRow(@NonNull ResultSet rs, int rowNum) throws SQLException{
         Member member = new Member();
+
         member.setId(rs.getInt("id"));
         member.setAccount(rs.getString("account"));
         member.setEmail(rs.getString("email"));
+        member.setName(rs.getString("name"));
+        member.setBirthday(rs.getString("birthday"));
+        member.setCellphone(rs.getString("cellphone"));
+        member.setCreateTime(rs.getString("createTime"));
+        member.setLastLogInTime(rs.getString("lastLogInTime"));
+        member.setStatus(rs.getString("status"));
         return member;
     }
 }

@@ -61,9 +61,10 @@ public class Jwt {
 
     public Claims parseToken(String token) {
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
+        System.out.println("KEY: "+ key);
 
         Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
-
+        System.out.println("parser: "+ parser);
         Claims claims = parser.getBody();
 
         return claims;
