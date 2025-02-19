@@ -3,8 +3,17 @@ package com.sideproject.parking_java.Service;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-
 import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.HashMap;
+
+import com.sideproject.parking_java.Exception.InvalidParameterError;
+
 
 @Component
 public class GPSService {
@@ -14,11 +23,34 @@ public class GPSService {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    public String getLatAndLngService(String address) {
-        System.out.println("address"+address);
-        String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s", address, googleMapKey);
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        System.out.println("GPS"+response.getBody());
-        return response.getBody();
+    public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException{
+        if (address == null || address == "") {
+            throw new InvalidParameterError("address is null or empty");
+        }
+        try {
+            String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s", address, googleMapKey);
+            ResponseEntity<String> GPS = restTemplate.getForEntity(url, String.class);
+            // 建立 ObjectMapper
+            ObjectMapper mapper = new ObjectMapper();
+            // 解析 JSON 字串為 JsonNode tree
+            JsonNode root = mapper.readTree(GPS.getBody());
+
+            // 取得 results 陣列的第一個物件
+            JsonNode firstResult = root.path("results").get(0);
+            // 取得 geometry -> location
+            JsonNode location = firstResult.path("geometry").path("location");
+
+            System.out.println("Location: " + location);
+            double lat = location.path("lat").asDouble();
+            double lng = location.path("lng").asDouble();
+
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("lat",lat);
+            map.put("lng",lng);
+
+            return map;
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error coverting JSON to Object", e);
+        }
     }
 }
