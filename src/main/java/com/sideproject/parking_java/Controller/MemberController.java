@@ -1,5 +1,7 @@
 package com.sideproject.parking_java.Controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,7 @@ import com.sideproject.parking_java.Service.MemberService;
 import com.sideproject.parking_java.Utility.Jwt;
 
 import io.jsonwebtoken.Claims;
+import jakarta.servlet.http.HttpServletRequest;
 @RestController
 public class MemberController {
     @Autowired
@@ -43,15 +46,15 @@ public class MemberController {
     }
 
     @GetMapping("/api/member/auth")
-    public ResponseEntity<String> getMemberAuth(@RequestHeader("Authorization") String authorizationHeader) throws AuthenticationError {
-        Claims payload = memberService.getMemberAuthService(authorizationHeader);
+    public ResponseEntity<String> getMemberAuth(HttpServletRequest httpRequest) throws AuthenticationError {
+        Map<String, Object> payload = memberService.getMemberAuthService(httpRequest);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("payload" + payload);
         return response;
     }
 
-    @GetMapping("/api/mamber/status")
-    public ResponseEntity<String> getMemberStatus(@RequestHeader("Authorization") String authorizationHeader) throws AuthenticationError {
-        String status = memberService.getMemberStatusService(authorizationHeader);
+    @GetMapping("/api/member/status")
+    public ResponseEntity<String> getMemberStatus(HttpServletRequest httpRequest) throws AuthenticationError {
+        String status = memberService.getMemberStatusService(httpRequest);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("status" + status);
         return response;
     }

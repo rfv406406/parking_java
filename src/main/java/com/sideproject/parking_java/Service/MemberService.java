@@ -15,6 +15,7 @@ import com.sideproject.parking_java.Model.Member;
 import com.sideproject.parking_java.Utility.Jwt;
 
 import io.jsonwebtoken.Claims;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.Map;
 
@@ -44,26 +45,17 @@ public class MemberService {
         return token;
     }
 
-    public Claims getMemberAuthService(String authorizationHeader) throws DatabaseError, InvalidParameterError {
-        if (authorizationHeader != null && authorizationHeader != "" && authorizationHeader.startsWith("Bearer ")){
-            String accessToken = authorizationHeader.replace("Bearer ", "");
-            Claims payload = jwt.parseToken(accessToken);
-            return payload;
-        } else {
-            throw new AuthenticationError("AuthorizationHeader is null or empty");
-        }
+    public Map<String, Object> getMemberAuthService(HttpServletRequest httpRequest) throws AuthenticationError {
+        Map<String, Object> payload = (Map<String, Object>)httpRequest.getAttribute("payloads");
+        return payload;
     }
 
-    public String getMemberStatusService(String authorizationHeader) throws DatabaseError, InvalidParameterError {
-        if (authorizationHeader != null && authorizationHeader != "" && authorizationHeader.startsWith("Bearer ")){
-            String accessToken = authorizationHeader.replace("Bearer ", "");
-            Map<String, Object> payload = jwt.parseToken(accessToken);
-            int id = (Integer)payload.get("id");
-            Member msmberStatus = memberDao.getMemberStatusById(id);
-            String status = msmberStatus.getStatus();
-            return status;
-        } else {
-            throw new AuthenticationError("AuthorizationHeader is null or empty");
-        }
+    public String getMemberStatusService(HttpServletRequest httpRequest) throws AuthenticationError {
+        Map<String, Object> payload = (Map<String, Object>)httpRequest.getAttribute("payloads");
+        System.out.println("httpRequest"+httpRequest);
+        int id = (Integer)payload.get("id");
+        Member msmberStatus = memberDao.getMemberStatusById(id);
+        String status = msmberStatus.getStatus();
+        return status;
     }
 }
