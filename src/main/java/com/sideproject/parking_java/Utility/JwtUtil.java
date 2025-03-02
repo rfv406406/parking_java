@@ -1,34 +1,27 @@
 package com.sideproject.parking_java.Utility;
 
 import java.nio.charset.StandardCharsets;
+import java.security.Key;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import com.sideproject.parking_java.Model.Member;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
-import java.security.Key;
-
-import com.sideproject.parking_java.Model.Member;
-import com.sideproject.parking_java.Utility.TimeFormat;
-
 @Component
-public class Jwt {
+public class JwtUtil {
     private static final long expirationTime = 7*24*60*60*1000;
 
-    @Value("${secretkey}")
-    private String secretKey;
+    // @Value("${secretkey}")
+    private static final String secretKey = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
 
-    public String generateToken(Member member) {
+    public static String generateToken(Member member) {
         // 使用 hmacShaKeyFor 生成 Key 物件
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
         Date now = new Date();
@@ -37,8 +30,9 @@ public class Jwt {
         Claims claim = Jwts.claims();
         claim.setSubject(member.getAccount());
         claim.setExpiration(exp);
-        claim.put("id", member.getId());
-        claim.put("email", member.getEmail());
+        // claim.put("id", member.getId());
+        // claim.put("email", member.getEmail());
+        // claim.put("role", member.getRole());
 
         return Jwts.builder()
                 .setClaims(claim)
@@ -46,7 +40,7 @@ public class Jwt {
                 .compact();
     }
 
-    public Claims parseToken(String token) {
+    public static Claims parseToken(String token) {
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
 
         Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);

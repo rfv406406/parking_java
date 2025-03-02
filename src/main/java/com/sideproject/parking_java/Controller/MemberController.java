@@ -5,30 +5,27 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
-
-import org.springframework.http.ResponseCookie;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Exception.InvalidParameterError;
 import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.Service.JwtService;
 import com.sideproject.parking_java.Service.MemberService;
-import com.sideproject.parking_java.Utility.Jwt;
 
-import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 @RestController
 public class MemberController {
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private JwtService jwtService;
     
     @PostMapping("/api/member")
     public ResponseEntity<String> postMember(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
@@ -40,7 +37,7 @@ public class MemberController {
 
     @PostMapping("/api/member/auth")
     public ResponseEntity<String> postMemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
-        String token = memberService.postMemberAuthService(member);
+        String token = jwtService.returnAuth(member);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body(token);
         return response;
     }
