@@ -39,28 +39,27 @@ public class MemberDao {
     }
 
     public Member postGetMemberAuthDao(String account) {
-        String sql = "SELECT id, account, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
-        // map.put("password", member.getPassword());
         Member postGetMemberAuth = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
         return postGetMemberAuth;
     }
 
     public boolean getAccountByValueDao(Member value) {
-        String sql = "SELECT id, account, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", value.getAccount());
         List<Member> getAccountByValue = namedParameterJdbcTemplate.query(sql, map, new MemberRowMapper());
-
-        return getAccountByValue.size() == 0 ? true : false;
+    
+        return getAccountByValue.isEmpty();
     }
 
-    public Member getMemberStatusById(Integer id) {
-        String sql = "SELECT id, account, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE id = :id";
+    public Member getMemberStatusByAccount(String account) {
+        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
-        map.put("id", id);
-        Member getMemberStatusById = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
-        return getMemberStatusById;
+        map.put("account", account);
+        Member getMemberStatusByAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
+        return getMemberStatusByAccount;
     }
 }

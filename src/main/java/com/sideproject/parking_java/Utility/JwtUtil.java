@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.Model.MemberDetails;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -21,16 +21,16 @@ public class JwtUtil {
     // @Value("${secretkey}")
     private static final String secretKey = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
 
-    public static String generateToken(Member member) {
+    public static String generateToken(MemberDetails member) {
         // 使用 hmacShaKeyFor 生成 Key 物件
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
         Date now = new Date();
         Date exp = new Date(now.getTime() + expirationTime);
 
         Claims claim = Jwts.claims();
-        claim.setSubject(member.getAccount());
+        claim.setSubject(member.getUsername());
         claim.setExpiration(exp);
-        // claim.put("id", member.getId());
+        claim.put("id", member.getId());
         // claim.put("email", member.getEmail());
         // claim.put("role", member.getRole());
 
@@ -40,12 +40,13 @@ public class JwtUtil {
                 .compact();
     }
 
-    public static Claims parseToken(String token) {
+    public static String parseToken(String token) {
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
 
         Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
         Claims claims = parser.getBody();
+        String account = claims.getSubject();
 
-        return claims;
+        return account;
     }
 }

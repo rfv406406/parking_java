@@ -15,18 +15,14 @@ import com.sideproject.parking_java.Model.MemberDetails;
 public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private MemberDao memberDao;
-    // @Autowired
-    // private MemberDetails memberDetails;
  
 	@Override
     public UserDetails loadUserByUsername(String account) throws UsernameNotFoundException {
         Member memberAuth = memberDao.postGetMemberAuthDao(account);
-        System.out.println("account: "+account);
         if (memberAuth == null) {
             throw new UsernameNotFoundException("Can't find member: " + memberAuth);
         } else {
 			MemberDetails memberDetails = new MemberDetails(memberAuth);
-            System.out.println("getPassword: "+memberDetails.getPassword());
 			return memberDetails;
 		}
     }

@@ -26,6 +26,10 @@ public class MemberDetails implements UserDetails{
         return member.getPassword();
     }
 
+    public int getId() {
+        return member.getId();
+    }
+
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> arrayList = new ArrayList<>();

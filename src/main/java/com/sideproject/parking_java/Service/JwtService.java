@@ -6,16 +6,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import com.sideproject.parking_java.Dao.MemberDao;
 import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.Model.MemberDetails;
 import com.sideproject.parking_java.Utility.JwtUtil;
 
 @Service
 public class JwtService {
-    @Autowired
-    private MemberDao meberDao;
-    @Autowired
-    private UserDetailsServiceImpl userDetailsServiceImpl;
+    // @Autowired
+    // private MemberDao meberDao;
+    // @Autowired
+    // private UserDetailsServiceImpl userDetailsServiceImpl;
     @Autowired
     private AuthenticationManager authenticationManager;
   
@@ -23,11 +23,12 @@ public class JwtService {
     public String returnAuth(Member member) {
         String account = member.getAccount();
         String password = member.getPassword();
-        
+
         Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
         authentication = authenticationManager.authenticate(authentication);
+        System.out.println("authentication: "+authentication);
 
-        Member getPrincipal = (Member)authentication.getPrincipal();
+        MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
         String token = JwtUtil.generateToken(getPrincipal);
 
         return token;

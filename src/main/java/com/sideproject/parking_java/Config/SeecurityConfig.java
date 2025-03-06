@@ -7,13 +7,13 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import static org.springframework.security.config.Customizer.withDefaults;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import com.sideproject.parking_java.Service.UserDetailsServiceImpl;
 
@@ -22,21 +22,24 @@ import com.sideproject.parking_java.Service.UserDetailsServiceImpl;
 public class SeecurityConfig {
     @Autowired
     private UserDetailsServiceImpl userDetailsServiceImpl;
+	@Autowired
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
             .csrf((AbstractHttpConfigurer::disable))
-			.httpBasic(withDefaults())
-			// .addFilterBefore(new LoggingBasicAuthFilter(), BasicAuthenticationFilter.class)
-			.authenticationManager(authenticationManager())
-			// 加入自訂的 LoggingBasicAuthFilter
+			// .httpBasic(withDefaults())
+			// .addFilterBefore(new LoggingBasicAuthFilter(), BasicAuthenticationFilter.class)			
 			.authorizeHttpRequests((authorize) -> authorize
-				.requestMatchers(HttpMethod.POST,"/api/member").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/getLatAndLong/**").permitAll()
-				.requestMatchers(HttpMethod.POST,"/api/member/auth").permitAll()
+				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
+				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status").hasAuthority("user")
+				.requestMatchers(HttpMethod.POST,"/api/parkingLotRegister").hasAuthority("user")
 				.anyRequest().authenticated()
-			);
+			)
+			.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class)
+			.authenticationManager(authenticationManager());
 
 		return http.build();
 	}

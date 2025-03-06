@@ -1,9 +1,12 @@
 package com.sideproject.parking_java.Config;
 
 import java.io.IOException;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -17,7 +20,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @Component
-// @WebFilter(urlPatterns = "/api/member/auth")
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private UserDetailsServiceImpl userDetailsServiceImpl;
@@ -28,24 +30,23 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         String authorizationHeader = httpRequest.getHeader("Authorization");
         try {
-            if (authorizationHeader != null && authorizationHeader != "" && authorizationHeader.startsWith("Bearer ")){
+            if (authorizationHeader != null && !authorizationHeader.isEmpty() && authorizationHeader.startsWith("Bearer ")){
                 String accessToken = authorizationHeader.replace("Bearer ", "");
-                Map<String, Object> payload = JwtUtil.parseToken(accessToken);
-                System.out.println("payload: "+payload);
-                // MemberDetails memberDetails = userDetailsServiceImpl.loadUserByUsername(account);
-                // Authentication authentication = new UsernamePasswordAuthenticationToken( account, memberDetails.getPassword(), memberDetails.getAuthorities());
-                // SecurityContextHolder.getContext().setAuthentication(authentication);
+                String account = JwtUtil.parseToken(accessToken);
+                UserDetails memberDetails = userDetailsServiceImpl.loadUserByUsername(account);
+                Authentication authentication = new UsernamePasswordAuthenticationToken(memberDetails, null, memberDetails.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(authentication);
                 // Log request details
                 // System.out.println("Request URI: " + httpRequest.getRequestURI());
                 // System.out.println("Remote Address: " + httpRequest.getRemoteAddr());
                 // Proceed with the next filter in the chain or the target resource
-                chain.doFilter(request, response);
-    
                 // Log after response is sent
                 // System.out.println("Response sent to client.");
             }
         } catch(AuthenticationError e) {
             throw new AuthenticationError("AuthorizationHeader is null or empty");
+        } finally {
+            chain.doFilter(request, response);
         }
     }
 }
