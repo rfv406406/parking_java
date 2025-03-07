@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ParkingLot {
+    private int id;
     private String name;
     private String address;
     private String nearLandmark;
@@ -21,6 +22,10 @@ public class ParkingLot {
 
     private List<CarSpaceNumber> carSpaceNumber;
     private List<CarSpaceImage> carSpaceImage;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -66,7 +71,7 @@ public class ParkingLot {
         this.longitude = longitude;
     }
 
-    public void setImage(MultipartFile[] img) {
+    public void setImg(MultipartFile[] img) {
         this.img = img;
     }
 
@@ -78,6 +83,9 @@ public class ParkingLot {
         this.carSpaceImage = carSpaceImage;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
@@ -123,7 +131,7 @@ public class ParkingLot {
         return longitude; 
     }
 
-    public MultipartFile[] getImage() {
+    public MultipartFile[] getImg() {
         return img;
     }
 

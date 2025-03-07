@@ -1,10 +1,4 @@
 package com.sideproject.parking_java.Model;
-
-import java.util.Date;
-
-import com.sideproject.parking_java.Utility.TimeFormat;
-
-// @AllArgsConstructor
 public class Member {
     private int id;
     private String account;
@@ -21,9 +15,9 @@ public class Member {
     public Member() {};
     
     //MemberRowMapper
-    public Member(String account) {
-        this.account = account;
-    }
+    // public Member(String account) {
+    //     this.account = account;
+    // }
 
     public void setId(int id) {
         this.id =  id;
