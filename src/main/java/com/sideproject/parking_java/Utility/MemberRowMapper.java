@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Utility;
+package com.sideproject.parking_java.utility;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

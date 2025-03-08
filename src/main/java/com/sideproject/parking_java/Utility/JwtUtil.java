@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Utility;
+package com.sideproject.parking_java.utility;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;

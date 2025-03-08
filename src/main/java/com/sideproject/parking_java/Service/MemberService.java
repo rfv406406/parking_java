@@ -37,12 +37,6 @@ public class MemberService {
         return memberDao.postMemberDao(member);
     }
 
-    // public String postMemberAuthService(Member member) throws DatabaseError, InvalidParameterError {
-    //     Member memberAuth = memberDao.postGetMemberAuthDao(member.getAccount());
-    //     String token = jwt.generateToken(memberAuth);
-    //     return token;
-    // }
-
     public String getMemberAuthService() throws AuthenticationError {
         SecurityContext context = SecurityContextHolder.getContext();
         Authentication auth = context.getAuthentication();

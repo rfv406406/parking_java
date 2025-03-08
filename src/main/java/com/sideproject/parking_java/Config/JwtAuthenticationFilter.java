@@ -12,7 +12,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.sideproject.parking_java.Exception.AuthenticationError;
 import com.sideproject.parking_java.Service.UserDetailsServiceImpl;
-import com.sideproject.parking_java.Utility.JwtUtil;
+import com.sideproject.parking_java.utility.JwtUtil;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

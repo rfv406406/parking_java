@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sideproject.parking_java.Model.Member;
 import com.sideproject.parking_java.Model.MemberDetails;
-import com.sideproject.parking_java.Utility.JwtUtil;
+import com.sideproject.parking_java.utility.JwtUtil;
 
 @Service
 public class JwtService {

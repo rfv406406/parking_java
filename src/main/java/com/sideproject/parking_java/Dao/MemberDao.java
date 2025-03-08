@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.sideproject.parking_java.Exception.DatabaseError;
 import com.sideproject.parking_java.Model.Member;
-import com.sideproject.parking_java.Utility.MemberRowMapper;
-import com.sideproject.parking_java.Utility.TimeFormat;
+import com.sideproject.parking_java.utility.MemberRowMapper;
+import com.sideproject.parking_java.utility.TimeFormat;
 
 @Component
 public class MemberDao {

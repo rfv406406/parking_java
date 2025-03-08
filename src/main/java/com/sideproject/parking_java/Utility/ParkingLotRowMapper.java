@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Utility;
+package com.sideproject.parking_java.utility;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
     @Override
     public ParkingLot mapRow(@NonNull ResultSet rs, int rowNum) throws SQLException{
         ParkingLot parkinglot = new ParkingLot();
-        parkinglot.setId(rs.getInt("id"));
+        parkinglot.setParkingLotId(rs.getInt("id"));
         return parkinglot;
     }
 }
