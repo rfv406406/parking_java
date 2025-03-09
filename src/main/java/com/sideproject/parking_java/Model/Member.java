@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Model;
+package com.sideproject.parking_java.model;
 public class Member {
     private int id;
     private String account;

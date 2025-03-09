@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.lang.NonNull;
 
-import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.model.Member;
 
 public class MemberRowMapper implements RowMapper<Member>{
     @Override

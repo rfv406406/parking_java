@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Dao;
+package com.sideproject.parking_java.dao;
 
 import java.util.HashMap;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Exception.InternalServerError;
-import com.sideproject.parking_java.Model.ParkingLot;
+import com.sideproject.parking_java.exception.InternalServerError;
+import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
 import io.micrometer.common.lang.NonNull;

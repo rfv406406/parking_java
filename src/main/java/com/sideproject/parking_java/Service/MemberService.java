@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Service;
+package com.sideproject.parking_java.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -8,11 +8,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Dao.MemberDao;
-import com.sideproject.parking_java.Exception.AuthenticationError;
-import com.sideproject.parking_java.Exception.DatabaseError;
-import com.sideproject.parking_java.Exception.InvalidParameterError;
-import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.dao.MemberDao;
+import com.sideproject.parking_java.exception.AuthenticationError;
+import com.sideproject.parking_java.exception.DatabaseError;
+import com.sideproject.parking_java.exception.InvalidParameterError;
+import com.sideproject.parking_java.model.Member;
 
 @Component
 public class MemberService {

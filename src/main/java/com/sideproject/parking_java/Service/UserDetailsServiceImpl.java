@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Service;
+package com.sideproject.parking_java.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,9 +6,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.sideproject.parking_java.Dao.MemberDao;
-import com.sideproject.parking_java.Model.Member;
-import com.sideproject.parking_java.Model.MemberDetails;
+import com.sideproject.parking_java.dao.MemberDao;
+import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.model.MemberDetails;
 
 
 @Service

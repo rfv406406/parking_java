@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Dao;
+package com.sideproject.parking_java.dao;
 
 import java.util.HashMap;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Model.ParkingLot;
+import com.sideproject.parking_java.model.ParkingLot;
 
 @Component
 public class ParkingLotRegisterDao {
@@ -50,6 +50,16 @@ public class ParkingLotRegisterDao {
         namedParameterJdbcTemplate.update(sql3, map);
         int insertId = namedParameterJdbcTemplate.update(sql4, map);
 
+        return insertId;
+    }
+
+    public int putParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
+        String sql = "UPDATE parkinglotdata SET name, address, landmark, openingTime, closingTime, spaceInOut, price, widthLimit, heightLimit, ing, lat"
+        + "WHERE id = :parkinglotdata_id AND mmeber_id = :member_id";
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("parkinglotdata_id", parkingLot.getParkingLotId());
+        map.put("member_id", memberId);
+        int insertId = namedParameterJdbcTemplate.update(sql, map);
         return insertId;
     }
 }

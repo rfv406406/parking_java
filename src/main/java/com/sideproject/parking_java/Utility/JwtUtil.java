@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Model.MemberDetails;
+import com.sideproject.parking_java.model.MemberDetails;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

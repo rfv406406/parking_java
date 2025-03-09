@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Config;
+package com.sideproject.parking_java.config;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.sideproject.parking_java.Exception.AuthenticationError;
-import com.sideproject.parking_java.Service.UserDetailsServiceImpl;
+import com.sideproject.parking_java.exception.AuthenticationError;
+import com.sideproject.parking_java.service.UserDetailsServiceImpl;
 import com.sideproject.parking_java.utility.JwtUtil;
 
 import jakarta.servlet.FilterChain;

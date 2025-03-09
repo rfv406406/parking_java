@@ -4,7 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.sideproject.parking_java.Model.MemberDetails;
+import com.sideproject.parking_java.model.MemberDetails;
 
 public class MemberIdUtil {
     public static int getMemberIdUtil() {

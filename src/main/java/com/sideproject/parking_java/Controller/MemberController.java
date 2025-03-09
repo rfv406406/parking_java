@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Controller;
+package com.sideproject.parking_java.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sideproject.parking_java.Exception.AuthenticationError;
-import com.sideproject.parking_java.Exception.DatabaseError;
-import com.sideproject.parking_java.Exception.InvalidParameterError;
-import com.sideproject.parking_java.Model.Member;
-import com.sideproject.parking_java.Service.JwtService;
-import com.sideproject.parking_java.Service.MemberService;
+import com.sideproject.parking_java.exception.AuthenticationError;
+import com.sideproject.parking_java.exception.DatabaseError;
+import com.sideproject.parking_java.exception.InvalidParameterError;
+import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.service.JwtService;
+import com.sideproject.parking_java.service.MemberService;
 @RestController
 public class MemberController {
     @Autowired

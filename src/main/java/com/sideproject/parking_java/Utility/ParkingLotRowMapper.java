@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.lang.NonNull;
 
-import com.sideproject.parking_java.Model.ParkingLot;
+import com.sideproject.parking_java.model.ParkingLot;
 
 public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
     @Override

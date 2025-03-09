@@ -1,8 +1,8 @@
-package com.sideproject.parking_java.Exception;
+package com.sideproject.parking_java.exception;
 
 import java.util.Date;
 
-import com.sideproject.parking_java.Exception.StatusCode.interfaceStatusCode;
+import com.sideproject.parking_java.exception.StatusCode.interfaceStatusCode;
 
 public class ServiceException extends RuntimeException {
 

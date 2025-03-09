@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Test;
+package com.sideproject.parking_java.tool;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -13,21 +13,20 @@ public class DataInforGetting {
         methods = className.getDeclaredMethods();
         fields = className.getDeclaredFields();
 
-        System.out.println("類名: ");
-        System.out.println(className.getName());
+        System.out.println("類名: "+className.getName());
 
-        getMethods(methods);
-        getFields(fields);
+        printMethods(methods);
+        printFields(fields);
     }
 
-    public static void getMethods(Object obj) {
+    public static void printMethods(Object obj) {
         System.out.println("方法名: ");
         for (Method m:methods) {
             System.out.println(m);
         }
     }
 
-    public static void getFields(Object obj) {
+    public static void printFields(Object obj) {
         System.out.println("屬性名: ");
         for (Field f:fields) {
             System.out.println(f);

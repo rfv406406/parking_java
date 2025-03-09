@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Service;
+package com.sideproject.parking_java.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -6,8 +6,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import com.sideproject.parking_java.Model.Member;
-import com.sideproject.parking_java.Model.MemberDetails;
+import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.model.MemberDetails;
 import com.sideproject.parking_java.utility.JwtUtil;
 
 @Service

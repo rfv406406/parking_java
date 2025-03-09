@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Exception;
+package com.sideproject.parking_java.exception;
 
 public class InvalidParameterError extends ServiceException{
     public InvalidParameterError(String message) {

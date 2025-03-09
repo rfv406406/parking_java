@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Exception;
+package com.sideproject.parking_java.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

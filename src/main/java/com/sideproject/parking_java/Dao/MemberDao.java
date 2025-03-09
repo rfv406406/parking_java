@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Dao;
+package com.sideproject.parking_java.dao;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.sideproject.parking_java.Exception.DatabaseError;
-import com.sideproject.parking_java.Model.Member;
+import com.sideproject.parking_java.exception.DatabaseError;
+import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.utility.MemberRowMapper;
 import com.sideproject.parking_java.utility.TimeFormat;
 

@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Exception;
+package com.sideproject.parking_java.exception;
 
 public class StatusCode {
 

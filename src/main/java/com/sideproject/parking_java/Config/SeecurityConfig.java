@@ -1,4 +1,4 @@
-package com.sideproject.parking_java.Config;
+package com.sideproject.parking_java.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import com.sideproject.parking_java.Service.UserDetailsServiceImpl;
+import com.sideproject.parking_java.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
