@@ -5,6 +5,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class CarSpaceImage {
     private String name;
     private MultipartFile[] value;
+    //return type
+    private String[] imgUrl;
 
     public void setName(String name) {
         this.name = name;
@@ -14,11 +16,19 @@ public class CarSpaceImage {
         this.value = value;
     }
 
+    public void setValue(String[] imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     public String getName() {
         return name;
     }
 
     public MultipartFile[] getValue() {
         return value;
+    }
+
+    public String[] getImgurl() {
+        return imgUrl;
     }
 }

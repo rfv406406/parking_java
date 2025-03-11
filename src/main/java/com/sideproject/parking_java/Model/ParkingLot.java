@@ -19,6 +19,8 @@ public class ParkingLot {
     private String longitude;
 
     private MultipartFile[] img;
+    // return type
+    private String[] imgUrl;
 
     private List<CarSpaceNumber> carSpaceNumber;
     private List<CarSpaceImage> carSpaceImage;
@@ -73,6 +75,10 @@ public class ParkingLot {
 
     public void setImg(MultipartFile[] img) {
         this.img = img;
+    }
+
+    public void setImgUrl(String[] imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public void setCarSpaceNumber(List<CarSpaceNumber> carSpaceNumber) {
@@ -133,6 +139,10 @@ public class ParkingLot {
 
     public MultipartFile[] getImg() {
         return img;
+    }
+
+    public String[] getImgUrl() {
+        return imgUrl;
     }
 
     public List<CarSpaceNumber> getCarSpaceNumber() {

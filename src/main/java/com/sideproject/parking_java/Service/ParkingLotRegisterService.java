@@ -1,5 +1,7 @@
 package com.sideproject.parking_java.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,14 +25,12 @@ public class ParkingLotRegisterService{
     @Autowired
     private ParkingLotSquareDao parkingLotSquareDao;
 
+    public List<ParkingLot> getParkingLotRegister() {
+        return parkingLotRegisterDao.getParingLotRegisterDao();
+    }
+
     public void postParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
 
-        // SecurityContext context = SecurityContextHolder.getContext();
-        // Authentication auth = context.getAuthentication();
-        // Object principal = auth.getPrincipal();
-        // MemberDetails memberDetails = (MemberDetails)principal;
-        // int memberId = memberDetails.getId();
-        // int memberId = MemberIdUtil.getMemberIdUtil();
         int memberId = MemberIdUtil.getMemberIdUtil();
 
         if (parkingLot.getName() == null || parkingLot.getName().equals("") ||

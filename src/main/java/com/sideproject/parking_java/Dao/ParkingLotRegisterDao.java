@@ -1,18 +1,40 @@
 package com.sideproject.parking_java.dao;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.sideproject.parking_java.model.ParkingLot;
+import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
 @Component
 public class ParkingLotRegisterDao {
 
     @Autowired 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
+    public List<ParkingLot> getParingLotRegisterDao() {
+        String sql = "SELECT parkinglotdata.*, " +
+             "GROUP_CONCAT(parkinglotimage.image SEPARATOR ',') AS images, " +
+             "GROUP_CONCAT(CONCAT(parkinglotsquare.parkinglotdata_id, ',', parkinglotsquare.square_number, ',', parkinglotsquare.status) " +
+             "ORDER BY parkinglotsquare.square_number SEPARATOR ',') AS squares " +
+             "FROM parkinglotdata " +
+             "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglotdata_id " +
+             "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglotdata_id " +
+             "GROUP BY parkinglotdata.id";
+
+        HashMap<String, Object> map = new HashMap<>();
+        List<ParkingLot> parkingLot = namedParameterJdbcTemplate.query(sql, map, new ParkingLotRowMapper());
+
+        for (ParkingLot p : parkingLot) {
+            System.out.println(p);
+        }
+      
+        return parkingLot;
+    }
 
     public int postParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
         String sql = "INSERT INTO parkinglotdata(member_id, name, address, landmark, openingTime, closingTime, spaceInOut, price, widthLimit, heightLimit, lat, lng)" 

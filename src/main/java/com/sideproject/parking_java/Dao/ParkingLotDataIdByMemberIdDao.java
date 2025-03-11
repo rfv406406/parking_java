@@ -19,7 +19,7 @@ public class ParkingLotDataIdByMemberIdDao{
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public int getParkingLotDataIdByMemberId(@NonNull int memberId) throws InternalServerError{
-        String sql = "SELECT id FROM parkinglotdata WHERE member_id = :member_id ORDER BY id DESC LIMIT 1";
+        String sql = "SELECT * FROM parkinglotdata WHERE member_id = :member_id ORDER BY id DESC LIMIT 1";
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);

@@ -32,7 +32,7 @@ public class SeecurityConfig {
 			// .httpBasic(withDefaults())
 			// .addFilterBefore(new LoggingBasicAuthFilter(), BasicAuthenticationFilter.class)			
 			.authorizeHttpRequests((authorize) -> authorize
-				.requestMatchers(HttpMethod.GET,"/api/getLatAndLong/**").permitAll()
+				.requestMatchers(HttpMethod.GET,"/api/getLatAndLong/**","/api/parkingLotRegister").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status").hasAuthority("user")
 				.requestMatchers(HttpMethod.POST,"/api/parkingLotRegister").hasAuthority("user")
