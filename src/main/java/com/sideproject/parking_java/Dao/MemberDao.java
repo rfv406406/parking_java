@@ -13,15 +13,19 @@ import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.utility.MemberRowMapper;
 import com.sideproject.parking_java.utility.TimeFormat;
 
+import jakarta.transaction.Transactional;
+
 @Component
 public class MemberDao {
     
     @Autowired 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
+    @Transactional
     public Integer postMemberDao(Member member) throws DatabaseError {
         String sql = "INSERT INTO member(account, password, email, role, createTime) VALUES (:account, :password, :email, :role, :createTime)";
-        // LocalDateTime creatTime = LocalDateTime.now().withNano(0);       
+        String sql2 = "INSERT INTO deposit_account(member_id) VALUES (:member_id)";
+
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", member.getAccount());
         map.put("password", member.getPassword());
@@ -31,10 +35,18 @@ public class MemberDao {
         map.put("createTime", member.getCreateTime());
 
         int insertId = namedParameterJdbcTemplate.update(sql, map);
-        
         if (insertId == 0) {
-            throw new DatabaseError("insert failed");
+            throw new DatabaseError("member registation failed");
         }
+
+        Member returnMemberId = postGetMemberAuthDao(member.getAccount());
+        System.out.println(returnMemberId.getId());
+        HashMap<String, Object> map2 = new HashMap<>();
+        map2.put("member_id", returnMemberId.getId());
+
+        namedParameterJdbcTemplate.update(sql2, map2);
+        
+        
         return insertId;
     }
 

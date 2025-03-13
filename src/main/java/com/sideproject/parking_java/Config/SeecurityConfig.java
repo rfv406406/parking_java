@@ -35,7 +35,7 @@ public class SeecurityConfig {
 				.requestMatchers(HttpMethod.GET,"/api/getLatAndLong/**","/api/parkingLotRegister").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status").hasAuthority("user")
-				.requestMatchers(HttpMethod.POST,"/api/parkingLotRegister").hasAuthority("user")
+				.requestMatchers(HttpMethod.POST,"/api/parkingLotRegister","/api/tappay").hasAuthority("user")
 				.anyRequest().authenticated()
 			)
 			.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class)

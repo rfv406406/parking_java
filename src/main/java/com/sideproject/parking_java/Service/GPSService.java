@@ -20,14 +20,13 @@ public class GPSService {
     @Value("${googleMapKey}")
     private String googleMapKey;
 
-    private RestTemplate restTemplate = new RestTemplate();
-
     public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException{
-        if (address == null || address == "") {
+        if (address == null || address.isEmpty()) {
             throw new InvalidParameterError("address is null or empty");
         }
         try {
             String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s", address, googleMapKey);
+            RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<String> GPS = restTemplate.getForEntity(url, String.class);
             // 建立 ObjectMapper
             ObjectMapper mapper = new ObjectMapper();
