@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Cardholder {
     @JsonProperty("phone_number")
-    private String PHONENUMBER = "0987654321";
+    private final String PHONENUMBER = "0987654321";
 
     @JsonProperty("name")
-    private String NAME = "KCW";
+    private final String NAME = "KCW";
     
     @JsonProperty("email")
-    private String EMAIL = "KCW@gmail.com";
+    private final String EMAIL = "KCW@gmail.com";
 
     public String getPhoneNumber() {
         return PHONENUMBER;

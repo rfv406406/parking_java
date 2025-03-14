@@ -27,7 +27,6 @@ public class TappayService {
         int memberId = MemberIdUtil.getMemberIdUtil();
         int deposit = tappay.getDeposit();
         String prime = tappay.getPrime();
-        System.out.println(prime);
         String orderNumber = TimeFormat.timeFormat(new Date()) + Integer.toString(memberId);
 
         TappayPayload tappayPayload = new TappayPayload();
@@ -56,20 +55,21 @@ public class TappayService {
             String url = "https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime";
             // 發送 POST 請求，並接收回應字串
             TappayResponse tappayResponse = restTemplate.postForObject(url, requestEntity, TappayResponse.class);
-            
-            if (tappayResponse.getMsg().equals("Success")) {
+
+            if (tappayResponse == null) {
+                return new TappayResponse().getMsg();
+            } else if (tappayResponse.getMsg().equals("Success")) {
                 tappayDao.postTappayUpdateStatusDao(orderNumber, depositAccountId);
                 tappayDao.postTappayUpdateBalanceDao(memberId, deposit);
-                System.out.println("tappayResponse: " + tappayResponse.getMsg());
                 return tappayResponse.getMsg();
             } else {
-                System.out.println("tappayResponse: " + tappayResponse.getMsg());
                 return tappayResponse.getMsg();
             }
+
         } catch(RestClientException | DatabaseError e) {
             System.out.println("Error: " + e);
             return new TappayResponse().getMsg();
-        }
+        } 
         
     }
     

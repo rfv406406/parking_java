@@ -6,20 +6,20 @@ public class TappayPayload {
     private String prime;
 
     @JsonProperty("partner_key")
-    private String PARTNER_KEY = "partner_HhmDLgk9cfgfzexAH1atrizRHAfXrRsLshDvpu6S6tW9m4rc0dtrE3cP";
+    private final String PARTNER_KEY = "partner_HhmDLgk9cfgfzexAH1atrizRHAfXrRsLshDvpu6S6tW9m4rc0dtrE3cP";
 
     @JsonProperty("merchant_id")
-    private String MERCHANT_ID = "rfv406406_CTBC";
+    private final String MERCHANT_ID = "rfv406406_CTBC";
 
     @JsonProperty("details")
-    private String DETAILS = "TapPay Test";
+    private final String DETAILS = "TapPay Test";
 
     private String amount;
     private String orderNumber;
-    private Cardholder cardholder = new Cardholder();
+    private final Cardholder cardholder = new Cardholder();
 
     @JsonProperty("remember")
-    private boolean REMEMBER = true;
+    private final boolean REMEMBER = true;
 
     public void setPrime(String prime) {
         this.prime = prime;
@@ -61,7 +61,7 @@ public class TappayPayload {
         return cardholder;
     }
 
-    public boolean  getRemember() {
+    public boolean getRemember() {
         return REMEMBER;
     }
 }
