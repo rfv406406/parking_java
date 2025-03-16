@@ -10,15 +10,13 @@ import com.sideproject.parking_java.exception.InternalServerError;
 import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
-import io.micrometer.common.lang.NonNull;
-
 @Component
 public class ParkingLotDataIdByMemberIdDao{
 
     @Autowired 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public int getParkingLotDataIdByMemberId(@NonNull int memberId) throws InternalServerError{
+    public int getParkingLotDataIdByMemberId(int memberId) throws InternalServerError{
         String sql = "SELECT * FROM parkinglotdata WHERE member_id = :member_id ORDER BY id DESC LIMIT 1";
 
         HashMap<String, Object> map = new HashMap<>();

@@ -4,13 +4,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.lang.NonNull;
 
 import com.sideproject.parking_java.model.Member;
 
 public class MemberRowMapper implements RowMapper<Member>{
     @Override
-    public Member mapRow(@NonNull ResultSet rs, int rowNum) throws SQLException{
+    public Member mapRow(@org.springframework.lang.NonNull ResultSet rs, int rowNum) throws SQLException{
         Member member = new Member();
 
         member.setId(rs.getInt("id"));

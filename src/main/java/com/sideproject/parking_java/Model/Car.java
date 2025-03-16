@@ -3,8 +3,14 @@ package com.sideproject.parking_java.model;
 import org.springframework.web.multipart.MultipartFile;
 
 public class Car {
+    private int id;
     private String carNumber;
     private MultipartFile carImage;
+    private String carImageUrl;
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
     public void setCarNumber(String carNumber) {
         this.carNumber = carNumber;
@@ -14,11 +20,23 @@ public class Car {
         this.carImage = carImage;
     }
 
+    public void setCarImageUrl(String carImageUrl) {
+        this.carImageUrl = carImageUrl;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public String getCarNumber() {
         return carNumber;
     }
 
     public MultipartFile getCarImage() {
         return carImage;
+    }
+
+    public String getCarImageUrl() {
+        return carImageUrl;
     }
 }

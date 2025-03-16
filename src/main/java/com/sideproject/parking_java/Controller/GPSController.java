@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.sideproject.parking_java.exception.InvalidParameterError;
-import com.sideproject.parking_java.service.GPSService;
+import com.sideproject.parking_java.service.GpsService;
 
 @RestController
 public class GPSController {
     @Autowired
-    private GPSService gpsService;
+    private GpsService gpsService;
 
     @GetMapping("/api/getLatAndLong/{address}")
     public ResponseEntity<String> getLatAndLng(@PathVariable String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException{

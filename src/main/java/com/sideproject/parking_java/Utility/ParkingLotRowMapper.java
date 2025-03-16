@@ -5,14 +5,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.lang.NonNull;
 
 import com.sideproject.parking_java.model.CarSpaceNumber;
 import com.sideproject.parking_java.model.ParkingLot;
 
 public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
     @Override
-    public ParkingLot mapRow(@NonNull ResultSet rs, int rowNum) throws SQLException{
+    public ParkingLot mapRow(@org.springframework.lang.NonNull ResultSet rs, int rowNum) throws SQLException{
         ParkingLot parkinglot = new ParkingLot();
         parkinglot.setParkingLotId(rs.getInt("id"));
         parkinglot.setName(rs.getString("name"));

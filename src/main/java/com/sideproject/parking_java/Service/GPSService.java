@@ -13,9 +13,11 @@ import com.sideproject.parking_java.exception.InvalidParameterError;
 
 import java.util.HashMap;
 
+import org.springframework.stereotype.Service;
 
-@Component
-public class GPSService {
+
+@Service
+public class GpsService {
 
     @Value("${googleMapKey}")
     private String googleMapKey;

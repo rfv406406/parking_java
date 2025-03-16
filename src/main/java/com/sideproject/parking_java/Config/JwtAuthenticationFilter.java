@@ -25,7 +25,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private UserDetailsServiceImpl userDetailsServiceImpl;
     
     @Override
-    public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws AuthenticationError, IOException, ServletException{
+    public void doFilterInternal(@org.springframework.lang.NonNull HttpServletRequest request, @org.springframework.lang.NonNull HttpServletResponse response, @org.springframework.lang.NonNull FilterChain chain) throws AuthenticationError, IOException, ServletException{
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         String authorizationHeader = httpRequest.getHeader("Authorization");

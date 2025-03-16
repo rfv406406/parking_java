@@ -16,16 +16,16 @@ import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtUtil {
-    private static final long expirationTime = 7*24*60*60*1000;
+    private static final long EWPIRATION_TIME = 7*24*60*60*1000;
 
     // @Value("${secretkey}")
-    private static final String secretKey = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
+    private static final String SECRET_KEY = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
 
     public static String generateToken(MemberDetails member) {
         // 使用 hmacShaKeyFor 生成 Key 物件
-        Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
+        Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
         Date now = new Date();
-        Date exp = new Date(now.getTime() + expirationTime);
+        Date exp = new Date(now.getTime() + EWPIRATION_TIME);
 
         Claims claim = Jwts.claims();
         claim.setSubject(member.getUsername());
@@ -41,7 +41,7 @@ public class JwtUtil {
     }
 
     public static String parseToken(String token) {
-        Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
+        Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
 
         Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
         Claims claims = parser.getBody();

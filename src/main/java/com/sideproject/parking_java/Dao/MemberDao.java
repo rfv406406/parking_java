@@ -51,7 +51,7 @@ public class MemberDao {
     }
 
     public Member postGetMemberAuthDao(String account) {
-        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email, name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
         Member postGetMemberAuth = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
