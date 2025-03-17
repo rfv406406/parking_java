@@ -14,7 +14,7 @@ public class CarRegisterService {
     @Autowired
     private CarRegisterDao carRegisterDao;
 
-    public List<Car> getCarRegisterData() {
+    public List<Car> getCarRegisterDataService() {
         int memberId = MemberIdUtil.getMemberIdUtil();
         List<Car> car = carRegisterDao.getCarRegisterDataDao(memberId);
         return car;
@@ -22,8 +22,15 @@ public class CarRegisterService {
 
     public void postCarRegisterService(Car car) {
         int memberId = MemberIdUtil.getMemberIdUtil();
-        carRegisterDao.postInsertCar(memberId, car);
+        carRegisterDao.postInsertCarDao(memberId, car);
         int carId = carRegisterDao.getCarIdDao(memberId);
-        carRegisterDao.postInsertCarImage(carId, car);
+        carRegisterDao.postInsertCarImageDao(carId, car);
+    }
+
+    public void deleteCarRegisterDataService(Car car) {
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        int carId = car.getId();
+        carRegisterDao.deleteCarDao(carId, memberId);
+        carRegisterDao.deleteCarImageDao(carId);
     }
 }
