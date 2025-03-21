@@ -12,10 +12,6 @@ import com.sideproject.parking_java.utility.JwtUtil;
 
 @Service
 public class JwtService {
-    // @Autowired
-    // private MemberDao meberDao;
-    // @Autowired
-    // private UserDetailsServiceImpl userDetailsServiceImpl;
     @Autowired
     private AuthenticationManager authenticationManager;
   
@@ -26,7 +22,6 @@ public class JwtService {
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
         authentication = authenticationManager.authenticate(authentication);
-        System.out.println("authentication: "+authentication);
 
         MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
         String token = JwtUtil.generateToken(getPrincipal);

@@ -17,9 +17,9 @@ public class ParkingLotSquareDao {
     public int postParkingLotSquareDao(ParkingLot parkingLot, int parkingLotDataId) {
         int insertId = 0;
         for (CarSpaceNumber carSpaceNumber : parkingLot.getCarSpaceNumber()) {
-            String sql = "INSERT INTO parkinglotsquare(parkinglotdata_id, square_number, status) VALUES(:parkinglotdata_id, :square_number, :status)";
+            String sql = "INSERT INTO parkinglotsquare(parkinglot_id, square_number, status) VALUES(:parkinglot_id, :square_number, :status)";
             HashMap<String, Object> map = new HashMap<>();
-            map.put("parkinglotdata_id", parkingLotDataId);
+            map.put("parkinglot_id", parkingLotDataId);
             map.put("square_number", carSpaceNumber.getValue());
             map.put("status", "閒置中");
             int insertCount = namedParameterJdbcTemplate.update(sql, map);
@@ -32,9 +32,9 @@ public class ParkingLotSquareDao {
         int insertId = 0;
         for (CarSpaceNumber carSpaceNumber : parkingLot.getCarSpaceNumber()) {
             String sql = "UPDATE parkinglotsquare SET square_number = :square_number" +
-            "WHERE parkinglotdata_id = :parkinglotdata_id";            
+            "WHERE parkinglot_id = :parkinglot_id";            
             HashMap<String, Object> map = new HashMap<>();
-            map.put("parkinglotdata_id", parkingLotDataId);
+            map.put("parkinglot_id", parkingLotDataId);
             map.put("square_number", carSpaceNumber.getValue());
             int insertCount = namedParameterJdbcTemplate.update(sql, map);
             insertId += insertCount;

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.model.MemberDepositAccount;
+import com.sideproject.parking_java.utility.MemberDepositAccountRowMapper;
 import com.sideproject.parking_java.utility.MemberRowMapper;
 import com.sideproject.parking_java.utility.TimeFormat;
 
@@ -39,7 +41,7 @@ public class MemberDao {
             throw new DatabaseError("member registation failed");
         }
 
-        Member returnMemberId = postGetMemberAuthDao(member.getAccount());
+        Member returnMemberId = getMemberAuthDao(member.getAccount());
         System.out.println(returnMemberId.getId());
         HashMap<String, Object> map2 = new HashMap<>();
         map2.put("member_id", returnMemberId.getId());
@@ -50,7 +52,7 @@ public class MemberDao {
         return insertId;
     }
 
-    public Member postGetMemberAuthDao(String account) {
+    public Member getMemberAuthDao(String account) {
         String sql = "SELECT id, account, password, email, name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
@@ -73,5 +75,17 @@ public class MemberDao {
         map.put("account", account);
         Member getMemberStatusByAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
         return getMemberStatusByAccount;
+    }
+
+    public int getDepositAccountIdDao(int memberId) {
+        String sql = "SELECT deposit_account.id FROM deposit_account WHERE member_id = :member_id";
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("member_id", memberId);
+
+        MemberDepositAccount memberDepositAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberDepositAccountRowMapper());
+        int depositAccountId = memberDepositAccount.getDepositAccountId();
+
+        return depositAccountId;
     }
 }

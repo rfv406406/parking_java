@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
+import jakarta.transaction.Transactional;
+
 @Component
 public class ParkingLotRegisterDao {
 
@@ -19,11 +21,11 @@ public class ParkingLotRegisterDao {
     public List<ParkingLot> getParingLotRegisterDao() {
         String sql = "SELECT parkinglotdata.*, " +
              "GROUP_CONCAT(parkinglotimage.image SEPARATOR ',') AS images, " +
-             "GROUP_CONCAT(CONCAT(parkinglotsquare.parkinglotdata_id, ',', parkinglotsquare.square_number, ',', parkinglotsquare.status) " +
+             "GROUP_CONCAT(CONCAT(parkinglotsquare.parkinglot_id, ',', parkinglotsquare.square_number, ',', parkinglotsquare.status) " +
              "ORDER BY parkinglotsquare.square_number SEPARATOR ',') AS squares " +
              "FROM parkinglotdata " +
-             "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglotdata_id " +
-             "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglotdata_id " +
+             "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglot_id " +
+             "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglot_id " +
              "GROUP BY parkinglotdata.id";
 
         HashMap<String, Object> map = new HashMap<>();
@@ -58,7 +60,8 @@ public class ParkingLotRegisterDao {
 
         return insertId;
     }
-
+    
+    @Transactional
     public int deleteParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
         String sql1 = "DELETE FROM parkingsquareimage WHERE parkinglotsquare_id IN (SELECT id FROM parkinglotsquare WHERE parkinglotdata_id = :parkinglotdata_id)";
         String sql2 = "DELETE FROM parkinglotsquare WHERE parkinglotdata_id = :parkinglotdata_id";

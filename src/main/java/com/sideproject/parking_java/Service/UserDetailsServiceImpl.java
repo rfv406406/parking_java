@@ -18,7 +18,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
  
 	@Override
     public UserDetails loadUserByUsername(String account) throws UsernameNotFoundException {
-        Member memberAuth = memberDao.postGetMemberAuthDao(account);
+        Member memberAuth = memberDao.getMemberAuthDao(account);
         if (memberAuth == null) {
             throw new UsernameNotFoundException("Can't find member: " + memberAuth);
         } else {

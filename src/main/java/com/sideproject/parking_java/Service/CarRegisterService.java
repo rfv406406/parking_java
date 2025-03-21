@@ -24,7 +24,9 @@ public class CarRegisterService {
         int memberId = MemberIdUtil.getMemberIdUtil();
         carRegisterDao.postInsertCarDao(memberId, car);
         int carId = carRegisterDao.getCarIdDao(memberId);
-        carRegisterDao.postInsertCarImageDao(carId, car);
+        if (car.getCarImage() != null) {
+            carRegisterDao.postInsertCarImageDao(carId, car);
+        }
     }
 
     public void deleteCarRegisterDataService(Car car) {

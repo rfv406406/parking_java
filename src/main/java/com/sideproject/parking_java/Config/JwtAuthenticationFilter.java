@@ -42,9 +42,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 // Proceed with the next filter in the chain or the target resource
                 // Log after response is sent
                 // System.out.println("Response sent to client.");
+            } else {
+                throw new AuthenticationError("AuthorizationHeader is null or empty");
             }
         } catch(AuthenticationError e) {
-            throw new AuthenticationError("AuthorizationHeader is null or empty");
+            System.out.println("Error: " + e);
         } finally {
             chain.doFilter(request, response);
         }

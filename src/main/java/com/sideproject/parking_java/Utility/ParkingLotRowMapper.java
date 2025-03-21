@@ -1,6 +1,7 @@
 package com.sideproject.parking_java.utility;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -12,6 +13,20 @@ import com.sideproject.parking_java.model.ParkingLot;
 public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
     @Override
     public ParkingLot mapRow(@org.springframework.lang.NonNull ResultSet rs, int rowNum) throws SQLException{
+
+        ResultSetMetaData metaData = rs.getMetaData();
+        int length = metaData.getColumnCount();
+        boolean hasImages = false;
+        boolean hasSquares = false;
+        for (int i=1; i<=length; i++) {
+            if (metaData.getColumnName(i).equals("images")) {
+                hasImages = true;
+            }
+            if (metaData.getColumnName(i).equals("squares")) {
+                hasSquares = true;
+            }
+        }
+
         ParkingLot parkinglot = new ParkingLot();
         parkinglot.setParkingLotId(rs.getInt("id"));
         parkinglot.setName(rs.getString("name"));
@@ -26,27 +41,31 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         parkinglot.setLatitude(rs.getString("lat"));
         parkinglot.setLongitude(rs.getString("lng"));
 
-        String imgUrlConcat = rs.getString("images");
-        if (imgUrlConcat != null && !imgUrlConcat.isEmpty()) {
-            String[] imgUrl = imgUrlConcat.split(",");
-            parkinglot.setImgUrl(imgUrl);
-        }
-
-        String carSpaceNumberConcatString = rs.getString("squares");
-        if (carSpaceNumberConcatString != null && !carSpaceNumberConcatString.isEmpty()) {
-
-            String[] carSpaceNumberConcatToStringArray = carSpaceNumberConcatString.split(",");
-            ArrayList<CarSpaceNumber> carSpaceNumberConcat = new ArrayList<>();
-
-            for (int i=0; i<carSpaceNumberConcatToStringArray.length; i=i+3) {
-                CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
-                carSpaceNumber.setParkingLotId(Integer.parseInt(carSpaceNumberConcatToStringArray[i]));
-                carSpaceNumber.setValue(carSpaceNumberConcatToStringArray[i+1]);
-                carSpaceNumber.setStatus(carSpaceNumberConcatToStringArray[i+2]);
-                carSpaceNumberConcat.add(carSpaceNumber);
+        if (hasImages) {
+            String imgUrlConcat = rs.getString("images");
+            if (imgUrlConcat != null && !imgUrlConcat.isEmpty()) {
+                String[] imgUrl = imgUrlConcat.split(",");
+                parkinglot.setImgUrl(imgUrl);
             }
+        }
+        
+        if (hasSquares) {
+            String carSpaceNumberConcatString = rs.getString("squares");
+            if (carSpaceNumberConcatString != null && !carSpaceNumberConcatString.isEmpty()) {
 
-            parkinglot.setCarSpaceNumber(carSpaceNumberConcat);
+                String[] carSpaceNumberConcatToStringArray = carSpaceNumberConcatString.split(",");
+                ArrayList<CarSpaceNumber> carSpaceNumberConcat = new ArrayList<>();
+
+                for (int i=0; i<carSpaceNumberConcatToStringArray.length; i=i+3) {
+                    CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
+                    carSpaceNumber.setParkingLotId(Integer.parseInt(carSpaceNumberConcatToStringArray[i]));
+                    carSpaceNumber.setValue(carSpaceNumberConcatToStringArray[i+1]);
+                    carSpaceNumber.setStatus(carSpaceNumberConcatToStringArray[i+2]);
+                    carSpaceNumberConcat.add(carSpaceNumber);
+                }
+
+                parkinglot.setCarSpaceNumber(carSpaceNumberConcat);
+            }
         }
         
         return parkinglot;

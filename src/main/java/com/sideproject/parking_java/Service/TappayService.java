@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import com.sideproject.parking_java.dao.MemberDao;
 import com.sideproject.parking_java.dao.TappayDao;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.model.Tappay;
@@ -20,6 +21,9 @@ import com.sideproject.parking_java.utility.TimeFormat;
 
 @Service
 public class TappayService {
+
+    @Autowired
+    private MemberDao memberDao;
     @Autowired
     private TappayDao tappayDao;
 
@@ -37,8 +41,8 @@ public class TappayService {
         String PARTNER_KEY = tappayPayload.getPartnerKey();
 
         try {
-            int depositAccountId = tappayDao.postGetDepositAccountIdDao(memberId);
-            int insertID = tappayDao.postTappayInsertTransactionsDao(orderNumber, depositAccountId, deposit);
+            int depositAccountId = memberDao.getDepositAccountIdDao(memberId);
+            int insertID = tappayDao.postTappayInsertTransactionsDao(orderNumber, memberId, depositAccountId, deposit);
 
             if (insertID == 0) {
                 throw new DatabaseError("transaction insert failed");
