@@ -14,7 +14,7 @@ public class ParkingLotUsingDao {
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public void postParkingLotPaymentDao(int memberId, int depositAccountId, String orderNumber, Transaction transcation) {
+    public void postUnpaidParkingLotUsageDao(int memberId, int depositAccountId, String orderNumber, Transaction transcation) {
         String sql = "INSERT INTO transactions SET member_id = :member_id, deposit_account_id = :deposit_account_id, car_id = :car_id, order_number = :order_number, "
         + "parkinglot_id = :parkinglot_id, parkinglotsquare_id = :parkinglotsquare_id, starttime = :starttime, transactions_type = :transactions_type, status = :status";
 
@@ -33,7 +33,7 @@ public class ParkingLotUsingDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
-    public void postParkingLotSquareStatusDao(Transaction transcation) {
+    public void postModifiedParkingLotSquareStatusDao(Transaction transcation) {
         String sql = "UPDATE parkinglotsquare SET status = :status WHERE id = :parkinglotsquare_id";
         
         HashMap<String, Object> map = new HashMap<>();
@@ -44,7 +44,7 @@ public class ParkingLotUsingDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
-    public void postMemberStatusDao(int memberId) {
+    public void postModifiedMemberStatusDao(int memberId) {
         String sql = "UPDATE member SET status = :status WHERE id = :member_id";
 
         HashMap<String, Object> map = new HashMap<>();
@@ -53,5 +53,18 @@ public class ParkingLotUsingDao {
         map.put("status", "停車中");
 
         namedParameterJdbcTemplate.update(sql, map);
+    }
+
+    public void getUnpaidParkingLotUsageDao(int memberId) {
+        String sql = "SELECT t.id, t.starttime, p.*, s.* " + 
+                     "FROM transaction t " + 
+                     "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id" + 
+                     "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id" +
+                     "WHERE member_id = :member_id AND stoptime IS NULL AND transactions_type = 'CONSUMPTION' AND status = '未付款' ";
+                     
+        HashMap<String, Object> map = new HashMap<>();
+
+        map.put("member_id", memberId);
+        namedParameterJdbcTemplate.queryForObject(sql, map, requiredType);
     }
 }

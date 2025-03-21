@@ -23,8 +23,8 @@ public class ParkingLotUsingService {
         int depositAccountId = memberDao.getDepositAccountIdDao(memberId);
         String orderNumber = TimeFormat.timeFormat(new Date()) + Integer.toString(memberId);
 
-        parkingLotUsingDao.postParkingLotPaymentDao(memberId, depositAccountId, orderNumber, transaction);
-        parkingLotUsingDao.postParkingLotSquareStatusDao(transaction);
-        parkingLotUsingDao.postMemberStatusDao(memberId);
+        parkingLotUsingDao.postUnpaidParkingLotUsageDao(memberId, depositAccountId, orderNumber, transaction);
+        parkingLotUsingDao.postModifiedParkingLotSquareStatusDao(transaction);
+        parkingLotUsingDao.postModifiedMemberStatusDao(memberId);
     }
 }

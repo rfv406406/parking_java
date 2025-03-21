@@ -16,31 +16,119 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
 
         ResultSetMetaData metaData = rs.getMetaData();
         int length = metaData.getColumnCount();
+
+        boolean hasId = false;
+        boolean hasName = false;
+        boolean hasAddress = false;
+        boolean hasLandmark = false;
+        boolean hasOpeningTime = false;
+        boolean hasClosingTime = false;
+        boolean hasSpaceInOut = false;
+        boolean hasPrice = false;
+        boolean hasWidthLimit = false;
+        boolean hasHeightLimit = false;
+        boolean hasLat = false;
+        boolean hasLng = false;
         boolean hasImages = false;
         boolean hasSquares = false;
-        for (int i=1; i<=length; i++) {
-            if (metaData.getColumnName(i).equals("images")) {
+
+        for (int i = 1; i <= length; i++) {
+            String columnName = metaData.getColumnName(i);
+            
+            if (columnName.equals("id")) {
+                hasId = true;
+            }
+            if (columnName.equals("name")) {
+                hasName = true;
+            }
+            if (columnName.equals("address")) {
+                hasAddress = true;
+            }
+            if (columnName.equals("landmark")) {
+                hasLandmark = true;
+            }
+            if (columnName.equals("openingTime")) {
+                hasOpeningTime = true;
+            }
+            if (columnName.equals("closingTime")) {
+                hasClosingTime = true;
+            }
+            if (columnName.equals("spaceInOut")) {
+                hasSpaceInOut = true;
+            }
+            if (columnName.equals("price")) {
+                hasPrice = true;
+            }
+            if (columnName.equals("widthLimit")) {
+                hasWidthLimit = true;
+            }
+            if (columnName.equals("heightLimit")) {
+                hasHeightLimit = true;
+            }
+            if (columnName.equals("lat")) {
+                hasLat = true;
+            }
+            if (columnName.equals("lng")) {
+                hasLng = true;
+            }
+            if (columnName.equals("images")) {
                 hasImages = true;
             }
-            if (metaData.getColumnName(i).equals("squares")) {
+            if (columnName.equals("squares")) {
                 hasSquares = true;
             }
         }
 
         ParkingLot parkinglot = new ParkingLot();
-        parkinglot.setParkingLotId(rs.getInt("id"));
-        parkinglot.setName(rs.getString("name"));
-        parkinglot.setAddress(rs.getString("address"));
-        parkinglot.setNearLandmark(rs.getString("landmark"));
-        parkinglot.setOpeningTimeAm(rs.getString("openingTime"));
-        parkinglot.setOpeningTimePm(rs.getString("closingTime"));
-        parkinglot.setSpaceInOut(rs.getString("spaceInOut"));
-        parkinglot.setPrice(rs.getInt("price"));
-        parkinglot.setCarWidth(rs.getString("widthLimit"));
-        parkinglot.setCarHeight(rs.getString("heightLimit"));
-        parkinglot.setLatitude(rs.getString("lat"));
-        parkinglot.setLongitude(rs.getString("lng"));
 
+        if (hasId) {
+            parkinglot.setParkingLotId(rs.getInt("id"));
+        }
+
+        if (hasName) {
+            parkinglot.setName(rs.getString("name"));
+        }
+
+        if (hasAddress) {
+            parkinglot.setAddress(rs.getString("address"));
+        }
+
+        if (hasLandmark) {
+            parkinglot.setNearLandmark(rs.getString("landmark"));
+        }
+
+        if (hasOpeningTime) {
+            parkinglot.setOpeningTimeAm(rs.getString("openingTime"));
+        }
+
+        if (hasClosingTime) {
+            parkinglot.setOpeningTimePm(rs.getString("closingTime"));
+        }
+
+        if (hasSpaceInOut) {
+            parkinglot.setSpaceInOut(rs.getString("spaceInOut"));
+        }
+
+        if (hasPrice) {
+            parkinglot.setPrice(rs.getInt("price"));
+        }
+
+        if (hasWidthLimit) {
+            parkinglot.setCarWidth(rs.getString("widthLimit"));
+        }
+
+        if (hasHeightLimit) {
+            parkinglot.setCarHeight(rs.getString("heightLimit"));
+        }
+        
+        if (hasLat) {
+            parkinglot.setLatitude(rs.getString("lat"));
+        }
+
+        if (hasLng) {
+            parkinglot.setLongitude(rs.getString("lng"));
+        }
+        
         if (hasImages) {
             String imgUrlConcat = rs.getString("images");
             if (imgUrlConcat != null && !imgUrlConcat.isEmpty()) {
