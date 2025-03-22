@@ -39,20 +39,20 @@ public class ParkingLotRegisterDao {
     }
 
     public int postParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
-        String sql = "INSERT INTO parkinglotdata(member_id, name, address, landmark, openingTime, closingTime, spaceInOut, price, widthLimit, heightLimit, lat, lng)" 
-        + "VALUES (:member_id, :name, :address, :landmark, :openingTime, :closingTime, :spaceInOut, :price, :widthLimit, :heightLimit, :lat, :lng)";
+        String sql = "INSERT INTO parkinglotdata(member_id, name, address, landmark, opening_time, closing_time, space_in_out, price, width_limit, height_limit, lat, lng)" 
+        + "VALUES (:member_id, :name, :address, :landmark, :opening_time, :closing_time, :space_in_out, :price, :width_limit, :height_limit, :lat, :lng)";
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);
         map.put("name", parkingLot.getName());
         map.put("address", parkingLot.getAddress());
         map.put("landmark", parkingLot.getNearLandmark());
-        map.put("openingTime", parkingLot.getOpeningTimeAm());
-        map.put("closingTime", parkingLot.getOpeningTimePm());
-        map.put("spaceInOut", parkingLot.getSpaceInOut());
+        map.put("opening_time", parkingLot.getOpeningTimeAm());
+        map.put("closing_time", parkingLot.getOpeningTimePm());
+        map.put("space_in_out", parkingLot.getSpaceInOut());
         map.put("price", parkingLot.getPrice());
-        map.put("widthLimit", parkingLot.getCarWidth());
-        map.put("heightLimit", parkingLot.getCarHeight());
+        map.put("width_limit", parkingLot.getCarWidth());
+        map.put("height_limit", parkingLot.getCarHeight());
         map.put("lat", parkingLot.getLatitude());
         map.put("lng", parkingLot.getLongitude());
         
@@ -63,12 +63,12 @@ public class ParkingLotRegisterDao {
     
     @Transactional
     public int deleteParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
-        String sql1 = "DELETE FROM parkingsquareimage WHERE parkinglotsquare_id IN (SELECT id FROM parkinglotsquare WHERE parkinglotdata_id = :parkinglotdata_id)";
-        String sql2 = "DELETE FROM parkinglotsquare WHERE parkinglotdata_id = :parkinglotdata_id";
-        String sql3 = "DELETE FROM parkinglotimage WHERE parkinglotdata_id = :parkinglotdata_id";
-        String sql4 = "DELETE FROM parkinglotdata WHERE id = :parkinglotdata_id AND member_id = :member_id";
+        String sql1 = "DELETE FROM parkingsquareimage WHERE parkinglotsquare_id IN (SELECT id FROM parkinglotsquare WHERE parkinglot_id = :parkinglot_id)";
+        String sql2 = "DELETE FROM parkinglotsquare WHERE parkinglot_id = :parkinglot_id";
+        String sql3 = "DELETE FROM parkinglotimage WHERE parkinglot_id = :parkinglot_id";
+        String sql4 = "DELETE FROM parkinglotdata WHERE id = :parkinglot_id AND member_id = :member_id";
         HashMap<String, Object> map = new HashMap<>();
-        map.put("parkinglotdata_id", parkingLot.getParkingLotId());
+        map.put("parkinglot_id", parkingLot.getParkingLotId());
         map.put("member_id", memberId);
         namedParameterJdbcTemplate.update(sql1, map);
         namedParameterJdbcTemplate.update(sql2, map);
@@ -79,10 +79,10 @@ public class ParkingLotRegisterDao {
     }
 
     public int putParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
-        String sql = "UPDATE parkinglotdata SET name, address, landmark, openingTime, closingTime, spaceInOut, price, widthLimit, heightLimit, ing, lat"
-        + "WHERE id = :parkinglotdata_id AND mmeber_id = :member_id";
+        String sql = "UPDATE parkinglotdata SET name, address, landmark, opening_time, closing_time, space_in_out, price, width_limit, height_limit, ing, lat"
+        + "WHERE id = :parkinglot_id AND mmeber_id = :member_id";
         HashMap<String, Object> map = new HashMap<>();
-        map.put("parkinglotdata_id", parkingLot.getParkingLotId());
+        map.put("parkinglot_id", parkingLot.getParkingLotId());
         map.put("member_id", memberId);
         int insertId = namedParameterJdbcTemplate.update(sql, map);
         return insertId;

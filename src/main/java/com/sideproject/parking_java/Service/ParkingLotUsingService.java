@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sideproject.parking_java.dao.MemberDao;
 import com.sideproject.parking_java.dao.ParkingLotUsingDao;
+import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 import com.sideproject.parking_java.utility.TimeFormat;
@@ -26,5 +27,12 @@ public class ParkingLotUsingService {
         parkingLotUsingDao.postUnpaidParkingLotUsageDao(memberId, depositAccountId, orderNumber, transaction);
         parkingLotUsingDao.postModifiedParkingLotSquareStatusDao(transaction);
         parkingLotUsingDao.postModifiedMemberStatusDao(memberId);
+    }
+
+    public ParkingLot getUnpaidParkingLotUsageService() {
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        ParkingLot unpaidParkingLotUasgeData = parkingLotUsingDao.getUnpaidParkingLotUsageDao(memberId);
+
+        return unpaidParkingLotUasgeData;
     }
 }

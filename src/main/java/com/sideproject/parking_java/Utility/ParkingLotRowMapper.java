@@ -31,9 +31,11 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         boolean hasLng = false;
         boolean hasImages = false;
         boolean hasSquares = false;
+        boolean hasSquareNumber = false;
 
         for (int i = 1; i <= length; i++) {
             String columnName = metaData.getColumnName(i);
+            System.out.println(columnName);
             
             if (columnName.equals("id")) {
                 hasId = true;
@@ -47,22 +49,22 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
             if (columnName.equals("landmark")) {
                 hasLandmark = true;
             }
-            if (columnName.equals("openingTime")) {
+            if (columnName.equals("opening_time")) {
                 hasOpeningTime = true;
             }
-            if (columnName.equals("closingTime")) {
+            if (columnName.equals("closing_time")) {
                 hasClosingTime = true;
             }
-            if (columnName.equals("spaceInOut")) {
+            if (columnName.equals("space_in_out")) {
                 hasSpaceInOut = true;
             }
             if (columnName.equals("price")) {
                 hasPrice = true;
             }
-            if (columnName.equals("widthLimit")) {
+            if (columnName.equals("width_limit")) {
                 hasWidthLimit = true;
             }
-            if (columnName.equals("heightLimit")) {
+            if (columnName.equals("height_limit")) {
                 hasHeightLimit = true;
             }
             if (columnName.equals("lat")) {
@@ -76,6 +78,9 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
             }
             if (columnName.equals("squares")) {
                 hasSquares = true;
+            }
+            if (columnName.equals("square_number")) {
+                hasSquareNumber = true;
             }
         }
 
@@ -98,15 +103,15 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         }
 
         if (hasOpeningTime) {
-            parkinglot.setOpeningTimeAm(rs.getString("openingTime"));
+            parkinglot.setOpeningTimeAm(rs.getString("opening_time"));
         }
 
         if (hasClosingTime) {
-            parkinglot.setOpeningTimePm(rs.getString("closingTime"));
+            parkinglot.setOpeningTimePm(rs.getString("closing_time"));
         }
 
         if (hasSpaceInOut) {
-            parkinglot.setSpaceInOut(rs.getString("spaceInOut"));
+            parkinglot.setSpaceInOut(rs.getString("space_in_out"));
         }
 
         if (hasPrice) {
@@ -114,11 +119,11 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         }
 
         if (hasWidthLimit) {
-            parkinglot.setCarWidth(rs.getString("widthLimit"));
+            parkinglot.setCarWidth(rs.getString("width_limit"));
         }
 
         if (hasHeightLimit) {
-            parkinglot.setCarHeight(rs.getString("heightLimit"));
+            parkinglot.setCarHeight(rs.getString("height_limit"));
         }
         
         if (hasLat) {
@@ -154,6 +159,15 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
 
                 parkinglot.setCarSpaceNumber(carSpaceNumberConcat);
             }
+        }
+
+        if (hasSquareNumber) {
+            ArrayList<CarSpaceNumber> carSpaceNumberArray = new ArrayList<>();
+            CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
+            carSpaceNumber.setParkingLotId(rs.getInt("parkinglot_id"));
+            carSpaceNumber.setValue(rs.getString("square_number"));
+            carSpaceNumberArray.add(carSpaceNumber);
+            parkinglot.setCarSpaceNumber(carSpaceNumberArray);
         }
         
         return parkinglot;

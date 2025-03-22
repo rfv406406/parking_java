@@ -20,8 +20,8 @@ public class MemberRowMapper implements RowMapper<Member>{
         member.setName(rs.getString("name"));
         member.setBirthday(rs.getString("birthday"));
         member.setCellphone(rs.getString("cellphone"));
-        member.setCreateTime(rs.getString("createTime"));
-        member.setLastLogInTime(rs.getString("lastLogInTime"));
+        member.setCreateTime(rs.getString("create_time"));
+        member.setLastLogInTime(rs.getString("last_log_in_time"));
         member.setStatus(rs.getString("status"));
         return member;
     }

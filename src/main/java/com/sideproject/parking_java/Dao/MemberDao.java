@@ -25,7 +25,7 @@ public class MemberDao {
 
     @Transactional
     public Integer postMemberDao(Member member) throws DatabaseError {
-        String sql = "INSERT INTO member(account, password, email, role, createTime) VALUES (:account, :password, :email, :role, :createTime)";
+        String sql = "INSERT INTO member(account, password, email, role, create_time) VALUES (:account, :password, :email, :role, :create_time)";
         String sql2 = "INSERT INTO deposit_account(member_id) VALUES (:member_id)";
 
         HashMap<String, Object> map = new HashMap<>();
@@ -34,7 +34,7 @@ public class MemberDao {
         map.put("email", member.getEmail());
         map.put("role", "user");
         member.setCreateTime(TimeFormat.timeFormat(new Date()));
-        map.put("createTime", member.getCreateTime());
+        map.put("create_time", member.getCreateTime());
 
         int insertId = namedParameterJdbcTemplate.update(sql, map);
         if (insertId == 0) {
@@ -42,7 +42,7 @@ public class MemberDao {
         }
 
         Member returnMemberId = getMemberAuthDao(member.getAccount());
-        System.out.println(returnMemberId.getId());
+
         HashMap<String, Object> map2 = new HashMap<>();
         map2.put("member_id", returnMemberId.getId());
 
@@ -53,7 +53,7 @@ public class MemberDao {
     }
 
     public Member getMemberAuthDao(String account) {
-        String sql = "SELECT id, account, password, email, name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email, name, role, birthday, cellphone, create_time, last_log_in_time, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
         Member postGetMemberAuth = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
@@ -61,7 +61,7 @@ public class MemberDao {
     }
 
     public boolean getAccountByValueDao(Member value) {
-        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, create_time, last_log_in_time, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", value.getAccount());
         List<Member> getAccountByValue = namedParameterJdbcTemplate.query(sql, map, new MemberRowMapper());
@@ -70,7 +70,7 @@ public class MemberDao {
     }
 
     public Member getMemberStatusByAccount(String account) {
-        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, createTime, lastLogInTime, status FROM member WHERE account = :account";
+        String sql = "SELECT id, account, password, email , name, role, birthday, cellphone, create_time, last_log_in_time, status FROM member WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
         Member getMemberStatusByAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());

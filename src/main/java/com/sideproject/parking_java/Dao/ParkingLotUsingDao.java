@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.model.Transaction;
+import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
 @Component
 public class ParkingLotUsingDao {
@@ -55,16 +57,18 @@ public class ParkingLotUsingDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
-    public void getUnpaidParkingLotUsageDao(int memberId) {
+    public ParkingLot getUnpaidParkingLotUsageDao(int memberId) {
         String sql = "SELECT t.id, t.starttime, p.*, s.* " + 
-                     "FROM transaction t " + 
-                     "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id" + 
-                     "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id" +
-                     "WHERE member_id = :member_id AND stoptime IS NULL AND transactions_type = 'CONSUMPTION' AND status = '未付款' ";
+                     "FROM transactions t " + 
+                     "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id " + 
+                     "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id " +
+                     "WHERE t.member_id = :member_id AND stoptime IS NULL AND transactions_type = 'CONSUMPTION' AND t.status = '未付款'";
                      
         HashMap<String, Object> map = new HashMap<>();
 
         map.put("member_id", memberId);
-        namedParameterJdbcTemplate.queryForObject(sql, map, requiredType);
+        ParkingLot unpaidParkingLotUasgeData = namedParameterJdbcTemplate.queryForObject(sql, map, new ParkingLotRowMapper());
+
+        return unpaidParkingLotUasgeData;
     }
 }

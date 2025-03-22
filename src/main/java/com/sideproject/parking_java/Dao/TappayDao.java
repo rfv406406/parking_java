@@ -20,7 +20,7 @@ public class TappayDao {
         map.put("deposit_account_id", depositAccountId);
         map.put("transactions_type", "DEPOSIT");
         map.put("deposit", deposit);
-        map.put("status", "未繳款");
+        map.put("status", "未付款");
         
         int insertId = namedParameterJdbcTemplate.update(sql, map);   
         return insertId;
@@ -32,7 +32,7 @@ public class TappayDao {
         HashMap<String, Object> map = new HashMap<>();
         map.put("order_number", orderNumber);
         map.put("deposit_account_id", depositAccountId);
-        map.put("status", "已繳款");
+        map.put("status", "已付款");
 
         namedParameterJdbcTemplate.update(sql, map);
     }
