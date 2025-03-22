@@ -12,8 +12,6 @@ public class Member {
     private String lastLogInTime;
     private String status;
     
-    public Member() {};
-    
     //MemberRowMapper
     // public Member(String account) {
     //     this.account = account;

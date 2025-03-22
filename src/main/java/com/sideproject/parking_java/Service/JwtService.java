@@ -19,13 +19,15 @@ public class JwtService {
     public String returnAuth(Member member) {
         String account = member.getAccount();
         String password = member.getPassword();
-
+        System.out.println("getPassword"+password);
         Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
-        authentication = authenticationManager.authenticate(authentication);
+        System.out.println("getPrincipal"+authentication);
 
+        authentication = authenticationManager.authenticate(authentication);
+        System.out.println("authentication"+authentication);
         MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
         String token = JwtUtil.generateToken(getPrincipal);
-
+        
         return token;
     }
 }

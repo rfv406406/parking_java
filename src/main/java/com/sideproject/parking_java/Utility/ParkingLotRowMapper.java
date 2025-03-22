@@ -35,7 +35,6 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
 
         for (int i = 1; i <= length; i++) {
             String columnName = metaData.getColumnName(i);
-            System.out.println(columnName);
             
             if (columnName.equals("id")) {
                 hasId = true;

@@ -16,6 +16,7 @@ import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.service.JwtService;
 import com.sideproject.parking_java.service.MemberService;
+
 @RestController
 public class MemberController {
     @Autowired
@@ -53,5 +54,14 @@ public class MemberController {
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("status: " + status);
         return response;
     }
+
+    @GetMapping("/api/member/memberDetails")
+    public ResponseEntity<Member> getMemberDetails() {
+        Member memberDetails = memberService.getMemberDetailsService();
+        ResponseEntity<Member> response = ResponseEntity.status(HttpStatus.OK).body(memberDetails);
+
+        return response;
+    }
+    
     
 }

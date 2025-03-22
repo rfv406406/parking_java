@@ -13,16 +13,14 @@ import com.sideproject.parking_java.exception.AuthenticationError;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.utility.MemberIdUtil;
 
 @Component
 public class MemberService {
-
     @Autowired
     private MemberDao memberDao;
     @Autowired
 	private PasswordEncoder passwordEncoder;
-    // @Autowired
-    // private JwtUtil jwt;
 
     public Integer postMemberService(Member member) throws DatabaseError, InvalidParameterError {
         if (member.getAccount() == null || member.getAccount().equals("") ||
@@ -58,5 +56,11 @@ public class MemberService {
         Member msmberStatus = memberDao.getMemberStatusByAccount(account);
         String status = msmberStatus.getStatus();
         return status;
+    }
+
+    public Member getMemberDetailsService() {
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        Member memberDetails = memberDao.getMemberDetailsByMemberIdDao(memberId);
+        return memberDetails;
     }
 }
