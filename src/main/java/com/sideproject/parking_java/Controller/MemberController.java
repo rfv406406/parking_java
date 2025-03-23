@@ -7,6 +7,7 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.service.JwtService;
 import com.sideproject.parking_java.service.MemberService;
+
 
 @RestController
 public class MemberController {
@@ -60,6 +62,14 @@ public class MemberController {
         Member memberDetails = memberService.getMemberDetailsService();
         ResponseEntity<Member> response = ResponseEntity.status(HttpStatus.OK).body(memberDetails);
 
+        return response;
+    }
+
+    @PutMapping("/api/member/memberDetails")
+    public ResponseEntity<String> putMethodName(@RequestBody Member member) {
+        memberService.putMemberDetailsService(member);
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
+        
         return response;
     }
     

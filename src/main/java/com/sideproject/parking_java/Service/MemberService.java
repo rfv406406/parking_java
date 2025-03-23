@@ -63,4 +63,9 @@ public class MemberService {
         Member memberDetails = memberDao.getMemberDetailsByMemberIdDao(memberId);
         return memberDetails;
     }
+
+    public void putMemberDetailsService(Member member) {
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        memberDao.putUpdateMemberDetailsDao(memberId, member);
+    }
 }

@@ -97,34 +97,33 @@ public class MemberDao {
         return memberDetails;
     }
 
-    public void postUpdateMemberDetailsDao(int memberId, Member memberDetails) {
-        String sql = "UPDATE Member SET";
-
-        if (!memberDetails.getName().isEmpty()) {
-            sql += "name, ";
-        }
-
-        if (!memberDetails.getEmail().isEmpty()) {
-            sql += "email, ";
-        }
-
-        if (!memberDetails.getBirthday().isEmpty()) {
-            sql += "birthday, ";
-        }
-
-        if (!memberDetails.getCellphone().isEmpty()) {
-            sql += "cellphone, ";
-        }
-        
-        if (!memberDetails.getPassword().isEmpty()) {
-            sql += "password, ";
-        }
-
-        sql = sql.substring(0, sql.length()-1) + " WHERE id = :mmerber_id";
-
+    public void putUpdateMemberDetailsDao(int memberId, Member memberDetails) {
         HashMap<String, Object> map = new HashMap<>();
-
         map.put("member_id", memberId);
+
+        String sql = "UPDATE Member SET ";
+
+        if (memberDetails.getName() != null && !memberDetails.getName().isEmpty()) {
+            sql += "name = :name, ";
+            map.put("name", memberDetails.getName());
+        }
+
+        if (memberDetails.getEmail() != null && !memberDetails.getEmail().isEmpty()) {
+            sql += "email = :email, ";
+            map.put("email", memberDetails.getEmail());
+        }
+
+        if (memberDetails.getBirthday() != null && !memberDetails.getBirthday().isEmpty()) {
+            sql += "birthday = :birthday, ";
+            map.put("birthday", memberDetails.getBirthday());
+        }
+
+        if (memberDetails.getCellphone() != null && !memberDetails.getCellphone().isEmpty()) {
+            sql += "cellphone = :cellphone, ";
+            map.put("cellphone", memberDetails.getCellphone());
+        }
+
+        sql = sql.substring(0, sql.length()-2) + " WHERE id = :member_id";
 
         namedParameterJdbcTemplate.update(sql, map);
     }
