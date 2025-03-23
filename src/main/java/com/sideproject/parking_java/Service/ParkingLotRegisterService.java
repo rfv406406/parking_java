@@ -63,7 +63,7 @@ public class ParkingLotRegisterService{
         }
     }
 
-    public void dateteParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
+    public void deleteParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
         
         int insertId = parkingLotRegisterDao.deleteParkingLotRegisterDao(parkingLot, memberId);

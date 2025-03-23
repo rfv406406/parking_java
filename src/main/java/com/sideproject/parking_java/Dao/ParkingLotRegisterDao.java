@@ -79,13 +79,39 @@ public class ParkingLotRegisterDao {
     }
 
     public int putParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
-        String sql = "UPDATE parkinglotdata SET" + 
-                     "name = :name, address = :address, landmark = :landmark, opening_time = :opening_time, closing_time = :closing_time, " +
-                     "space_in_out = :space_in_out, price = :price, width_limit = :width_limit, height_limit = :height_limit, ing = :ing, lat = :lat" +
-                     "WHERE id = :parkinglot_id AND member_id = :member_id";
+        // String sql = "UPDATE parkinglotdata SET " + 
+        //              "name = :name, address = :address, landmark = :landmark, opening_time = :opening_time, closing_time = :closing_time, " +
+        //              "space_in_out = :space_in_out, price = :price, width_limit = :width_limit, height_limit = :height_limit, lng = :lng, lat = :lat " +
+        //              "WHERE id = :parkinglot_id AND member_id = :member_id";
+        String sql = "UPDATE parkinglotdata SET " +
+        "name = :name, " +
+        "address = :address, " +
+        "landmark = :landmark, " +
+        "opening_time = :opening_time, " +
+        "closing_time = :closing_time, " +
+        "space_in_out = :space_in_out, " +
+        "price = :price, " +
+        "width_limit = :width_limit, " +
+        "height_limit = :height_limit, " +
+        "lng = :lng, " +
+        "lat = :lat " +
+        "WHERE id = :parkinglot_id AND member_id = :member_id";
+    
         HashMap<String, Object> map = new HashMap<>();
         map.put("parkinglot_id", parkingLot.getParkingLotId());
         map.put("member_id", memberId);
+        map.put("name", parkingLot.getName());
+        map.put("address", parkingLot.getAddress());
+        map.put("landmark", parkingLot.getNearLandmark());
+        map.put("opening_time", parkingLot.getOpeningTimeAm());
+        map.put("closing_time", parkingLot.getOpeningTimePm());
+        map.put("space_in_out", parkingLot.getSpaceInOut());
+        map.put("price", parkingLot.getPrice());
+        map.put("width_limit", parkingLot.getCarWidth());
+        map.put("height_limit", parkingLot.getCarHeight());
+        map.put("lng", parkingLot.getLongitude());
+        map.put("lat", parkingLot.getLatitude());
+
         int insertId = namedParameterJdbcTemplate.update(sql, map);
         return insertId;
     }

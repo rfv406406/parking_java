@@ -43,14 +43,14 @@ public class ParkingLotRegisterController {
 
     @PutMapping("/api/parkingLotRegister")
     public ResponseEntity<String> getParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
-        parkingLotRegisterService.postParkingLotRegister(parkingLot);
+        parkingLotRegisterService.putParkingLotRegister(parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
         return response;
     }
 
     @DeleteMapping("/api/parkingLotRegister")
     public ResponseEntity<String> deleteParkingLotRegister(@RequestBody ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
-        parkingLotRegisterService.dateteParkingLotRegister(parkingLot);
+        parkingLotRegisterService.deleteParkingLotRegister(parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
         return response;
     }

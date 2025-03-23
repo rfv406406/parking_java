@@ -25,9 +25,9 @@ public class ParkingLotImagesDao {
                     String UniquefileName = UUID.randomUUID().toString() + fileName;
                     // s3_client.upload_fileobj(image, BUCKET_NAME, filename)
                     String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;
-                    String sql = "INSERT INTO parkinglotimage(parkinglotdata_id, image) VALUES (:parkinglotdata_id, :image)";
+                    String sql = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (:parkinglot_id, :image)";
                     HashMap<String, Object> map = new HashMap<>();
-                    map.put("parkinglotdata_id", parkingLotDataId);
+                    map.put("parkinglot_id", parkingLotDataId);
                     map.put("image", imgUrl);
                     int insertId = namedParameterJdbcTemplate.update(sql, map);
                     count = count + insertId;
@@ -49,9 +49,9 @@ public class ParkingLotImagesDao {
                     String UniquefileName = UUID.randomUUID().toString() + fileName;
                     // s3_client.upload_fileobj(image, BUCKET_NAME, filename)
                     String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;
-                    String sql = "UPDATE parkinglotimage SET image = :image WHERE parkinglotdata_id = :parkinglotdata_id";
+                    String sql = "UPDATE parkinglotimage SET image = :image WHERE parkinglot_id = :parkinglot_id";
                     HashMap<String, Object> map = new HashMap<>();
-                    map.put("parkinglotdata_id", parkingLotDataId);
+                    map.put("parkinglot_id", parkingLotDataId);
                     map.put("image", imgUrl);
                     int insertId = namedParameterJdbcTemplate.update(sql, map);
                     count = count + insertId;

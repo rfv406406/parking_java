@@ -31,7 +31,7 @@ public class ParkingLotSquareDao {
     public int putParkinglotsquareDao(ParkingLot parkingLot, int parkingLotDataId) {
         int insertId = 0;
         for (CarSpaceNumber carSpaceNumber : parkingLot.getCarSpaceNumber()) {
-            String sql = "UPDATE parkinglotsquare SET square_number = :square_number" +
+            String sql = "UPDATE parkinglotsquare SET square_number = :square_number " +
             "WHERE parkinglot_id = :parkinglot_id";            
             HashMap<String, Object> map = new HashMap<>();
             map.put("parkinglot_id", parkingLotDataId);
