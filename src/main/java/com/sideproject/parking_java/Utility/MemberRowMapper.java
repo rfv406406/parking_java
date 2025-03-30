@@ -22,6 +22,10 @@ public class MemberRowMapper implements RowMapper<Member>{
             if (columnName.equals("id")) {
                 member.setId(rs.getInt("id"));
             }
+            // memberId get by parkinglotId 
+            if (columnName.equals("member_id")) {
+                member.setId(rs.getInt("member_id"));
+            }
             if (columnName.equals("account")) {
                 member.setAccount(rs.getString("account"));
             }

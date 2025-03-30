@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sideproject.parking_java.model.Car;
@@ -37,9 +37,9 @@ public class CarRegisterController {
         return response;
     }
 
-    @DeleteMapping("/api/carRegister")
-    public ResponseEntity<String> deleteCarRegisterDataController(@RequestBody Car car) {
-        carRegisterService.deleteCarRegisterDataService(car);
+    @DeleteMapping("/api/carRegister/{carId}")
+    public ResponseEntity<String> deleteCarRegisterDataController(@PathVariable("carId") Integer carId) {
+        carRegisterService.deleteCarRegisterDataService(carId);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }

@@ -16,7 +16,7 @@ public class CarSpaceImage {
         this.value = value;
     }
 
-    public void setValue(String[] imgUrl) {
+    public void setImgurl(String[] imgUrl) {
         this.imgUrl = imgUrl;
     }
 

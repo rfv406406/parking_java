@@ -1,9 +1,9 @@
 package com.sideproject.parking_java.model;
 
 public class MemberDepositAccount {
-    private int depositAccountId;
-    private int deposit;
-    private int balance;
+    private Integer depositAccountId;
+    private Integer deposit;
+    private Integer balance;
 
     public void setDepositAccountId(int depositAccountId) {
         this.depositAccountId = depositAccountId;
@@ -17,15 +17,15 @@ public class MemberDepositAccount {
         this.balance = balance;
     }
 
-    public int getDepositAccountId() {
+    public Integer getDepositAccountId() {
         return depositAccountId;
     }
 
-    public int getDeposit() {
+    public Integer getDeposit() {
         return deposit; 
     }
 
-    public int getBalance() {
+    public Integer getBalance() {
         return balance;
     }
 }

@@ -1,6 +1,6 @@
 package com.sideproject.parking_java.model;
 public class Member {
-    private int id;
+    private Integer id;
     private String account;
     private String password;
     private String email;
@@ -61,7 +61,7 @@ public class Member {
         this.status = status;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

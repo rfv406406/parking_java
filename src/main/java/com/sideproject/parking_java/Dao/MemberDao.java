@@ -13,7 +13,7 @@ import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.MemberDepositAccount;
 import com.sideproject.parking_java.utility.MemberDepositAccountRowMapper;
 import com.sideproject.parking_java.utility.MemberRowMapper;
-import com.sideproject.parking_java.utility.TimeFormat;
+import com.sideproject.parking_java.utility.TimeUtils;
 
 import jakarta.transaction.Transactional;
 
@@ -33,7 +33,7 @@ public class MemberDao {
         map.put("password", member.getPassword());
         map.put("email", member.getEmail());
         map.put("role", "user");
-        member.setCreateTime(TimeFormat.timeFormat(new Date()));
+        member.setCreateTime(TimeUtils.timeFormat(new Date()));
         map.put("create_time", member.getCreateTime());
 
         int insertId = namedParameterJdbcTemplate.update(sql, map);
@@ -78,13 +78,18 @@ public class MemberDao {
     }
 
     public int getDepositAccountIdDao(int memberId) {
-        String sql = "SELECT deposit_account.id FROM deposit_account WHERE member_id = :member_id";
+        String sql = "SELECT id FROM deposit_account WHERE member_id = :member_id";
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);
 
-        MemberDepositAccount memberDepositAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberDepositAccountRowMapper());
-        int depositAccountId = memberDepositAccount.getDepositAccountId();
+        List<MemberDepositAccount> memberDepositAccount = namedParameterJdbcTemplate.query(sql, map, new MemberDepositAccountRowMapper());
+
+        if (memberDepositAccount.get(0) == null) {
+            throw new DatabaseError("memberDepositAccount not found");
+        }
+
+        int depositAccountId = memberDepositAccount.get(0).getDepositAccountId();
 
         return depositAccountId;
     }

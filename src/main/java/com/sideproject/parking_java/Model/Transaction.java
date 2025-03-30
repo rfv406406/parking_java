@@ -1,21 +1,21 @@
 package com.sideproject.parking_java.model;
 
 public class Transaction {
-    private int id;
+    private Integer id;
     private String orderNumber;
-    private int memberId;
-    private int carId;
-    private int depositAccountId;
-    private int parkingLotId;
-    private int parkingLotSquareId;
+    private Integer memberId;
+    private Integer carId;
+    private Integer depositAccountId;
+    private Integer parkingLotId;
+    private Integer parkingLotSquareId;
+    private Integer price;
     private String startTime;
     private String stopTime;
     private String transactionType;
-    private int deposit;
-    private int consumption;
-    private int income;
+    private Integer amount;
     private String status;
     private String transactionsTime;
+    private ParkingLot parkingLot;
 
     public void setId(int id) {
         this.id = id;
@@ -29,7 +29,7 @@ public class Transaction {
         this.memberId = memberId;
     }
 
-    public void setCarId(int carId) {
+    public void setCarId(Integer carId) {
         this.carId = carId;
     }
 
@@ -45,6 +45,10 @@ public class Transaction {
         this.parkingLotSquareId = parkingLotSquareId;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
@@ -57,16 +61,8 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public void setDeposit(int deposit) {
-        this.deposit = deposit;
-    }
-
-    public void setConsumption(int consumption) {
-        this.consumption = consumption;
-    }
-
-    public void setIncome(int income) {
-        this.income = income;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public void setStatus(String status) {
@@ -77,7 +73,11 @@ public class Transaction {
         this.transactionsTime = transactionsTime;
     }
 
-    public int getId() {
+    public void setParkingLot(ParkingLot parkingLot) {
+        this.parkingLot = parkingLot;
+    }
+
+    public Integer getId() {
         return this.id;
     }
     
@@ -85,24 +85,28 @@ public class Transaction {
         return this.orderNumber;
     }
     
-    public int getMemberId() {
+    public Integer getMemberId() {
         return this.memberId;
     }
     
-    public int getCarId() {
+    public Integer getCarId() {
         return this.carId;
     }
     
-    public int getDepositAccountId() {
+    public Integer getDepositAccountId() {
         return this.depositAccountId;
     }
     
-    public int getParkingLotId() {
+    public Integer getParkingLotId() {
         return this.parkingLotId;
     }
     
-    public int getParkingLotSquareId() {
+    public Integer getParkingLotSquareId() {
         return this.parkingLotSquareId;
+    }
+
+    public Integer getPrice() {
+        return this.price;
     }
     
     public String getStartTime() {
@@ -117,16 +121,8 @@ public class Transaction {
         return this.transactionType;
     }
     
-    public int getDeposit() {
-        return this.deposit;
-    }
-    
-    public int getConsumption() {
-        return this.consumption;
-    }
-    
-    public int getIncome() {
-        return this.income;
+    public Integer getAmount() {
+        return this.amount;
     }
     
     public String getStatus() {
@@ -135,5 +131,9 @@ public class Transaction {
     
     public String getTransactionsTime() {
         return this.transactionsTime;
+    }
+
+    public ParkingLot getParkingLot() {
+        return this.parkingLot;
     }
 }

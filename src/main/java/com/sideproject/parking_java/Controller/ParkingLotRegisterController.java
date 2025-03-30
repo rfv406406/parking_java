@@ -8,9 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sideproject.parking_java.exception.DatabaseError;
@@ -48,9 +48,9 @@ public class ParkingLotRegisterController {
         return response;
     }
 
-    @DeleteMapping("/api/parkingLotRegister")
-    public ResponseEntity<String> deleteParkingLotRegister(@RequestBody ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
-        parkingLotRegisterService.deleteParkingLotRegister(parkingLot);
+    @DeleteMapping("/api/parkingLotRegister/{parkingLotId}")
+    public ResponseEntity<String> deleteParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId) throws InvalidParameterError, DatabaseError {
+        parkingLotRegisterService.deleteParkingLotRegister(parkingLotId);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
         return response;
     }

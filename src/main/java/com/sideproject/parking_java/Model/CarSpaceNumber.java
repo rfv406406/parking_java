@@ -1,7 +1,7 @@
 package com.sideproject.parking_java.model;
 
 public class CarSpaceNumber {
-    private int parkingLotId;
+    private Integer parkingLotId;
     private String name;
     private String value;
     private String status;
@@ -22,7 +22,7 @@ public class CarSpaceNumber {
         this.status = status;
     }
 
-    public int getParkingLotId() {
+    public Integer getParkingLotId() {
         return parkingLotId;
     }
 

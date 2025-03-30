@@ -29,9 +29,8 @@ public class CarRegisterService {
         }
     }
 
-    public void deleteCarRegisterDataService(Car car) {
+    public void deleteCarRegisterDataService(Integer carId) {
         int memberId = MemberIdUtil.getMemberIdUtil();
-        int carId = car.getId();
         carRegisterDao.deleteCarDao(carId, memberId);
         carRegisterDao.deleteCarImageDao(carId);
     }

@@ -26,7 +26,7 @@ public class MemberDetails implements UserDetails{
         return member.getPassword();
     }
 
-    public int getId() {
+    public Integer getId() {
         return member.getId();
     }
 

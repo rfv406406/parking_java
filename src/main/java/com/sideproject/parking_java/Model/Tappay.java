@@ -2,7 +2,7 @@ package com.sideproject.parking_java.model;
 
 public class Tappay {
     private String prime;
-    private int deposit;
+    private Integer deposit;
 
     public void setPrime(String prime) {
         this.prime = prime;
@@ -16,7 +16,7 @@ public class Tappay {
         return prime;
     }
 
-    public int getDeposit() {
+    public Integer getDeposit() {
         return deposit;
     }
 

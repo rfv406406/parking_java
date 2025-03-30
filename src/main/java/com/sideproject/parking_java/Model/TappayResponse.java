@@ -1,11 +1,11 @@
 package com.sideproject.parking_java.model;
 
 public class TappayResponse {
-    private int status;
+    private Integer status;
     private String msg = "failure";
-    private int amount;
+    private Integer amount;
     
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
     public void setStatus(int status) {
@@ -19,7 +19,7 @@ public class TappayResponse {
         this.msg = msg;
     }
     
-    public int getAmount() {
+    public Integer getAmount() {
         return amount;
     }
     public void setAmount(int amount) {

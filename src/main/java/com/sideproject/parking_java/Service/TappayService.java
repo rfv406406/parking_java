@@ -11,27 +11,32 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.sideproject.parking_java.dao.MemberDao;
-import com.sideproject.parking_java.dao.TappayDao;
+import com.sideproject.parking_java.dao.TransactionDao;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.model.Tappay;
 import com.sideproject.parking_java.model.TappayPayload;
 import com.sideproject.parking_java.model.TappayResponse;
+import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.utility.MemberIdUtil;
-import com.sideproject.parking_java.utility.TimeFormat;
+import com.sideproject.parking_java.utility.TimeUtils;
 
 @Service
 public class TappayService {
-
     @Autowired
     private MemberDao memberDao;
     @Autowired
-    private TappayDao tappayDao;
+    private TransactionDao transactionDao;
 
     public String postTappayService(Tappay tappay) throws RestClientException, DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
         int deposit = tappay.getDeposit();
+        Transaction transaction = new Transaction();
+        transaction.setAmount(deposit);
+        transaction.setTransactionType("DEPOSIT");
+        transaction.setStatus("未付款");
+
         String prime = tappay.getPrime();
-        String orderNumber = TimeFormat.timeFormat(new Date()) + Integer.toString(memberId);
+        String orderNumber = TimeUtils.timeFormat(new Date()) + Integer.toString(memberId);
 
         TappayPayload tappayPayload = new TappayPayload();
         tappayPayload.setPrime(prime);
@@ -42,7 +47,7 @@ public class TappayService {
 
         try {
             int depositAccountId = memberDao.getDepositAccountIdDao(memberId);
-            int insertID = tappayDao.postTappayInsertTransactionsDao(orderNumber, memberId, depositAccountId, deposit);
+            int insertID = transactionDao.postInsertTransactionDao(memberId, depositAccountId, orderNumber, transaction);
 
             if (insertID == 0) {
                 throw new DatabaseError("transaction insert failed");
@@ -63,15 +68,17 @@ public class TappayService {
             if (tappayResponse == null) {
                 return new TappayResponse().getMsg();
             } else if (tappayResponse.getMsg().equals("Success")) {
-                tappayDao.postTappayUpdateStatusDao(orderNumber, depositAccountId);
-                tappayDao.postTappayUpdateBalanceDao(memberId, deposit);
+                Date currentTime = new Date();
+                String transactionsTime = TimeUtils.timeFormat(currentTime);
+                transactionDao.putTappayUpdateStatusDao(orderNumber, depositAccountId, transactionsTime);
+                transactionDao.putUpdateBalanceDao(memberId, deposit);
                 return tappayResponse.getMsg();
             } else {
                 return tappayResponse.getMsg();
             }
 
         } catch(RestClientException | DatabaseError e) {
-            System.out.println("Error: " + e);
+            System.err.println("Error: " + e);
             return new TappayResponse().getMsg();
         } 
         

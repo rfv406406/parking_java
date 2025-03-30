@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.exception.InternalServerError;
 import com.sideproject.parking_java.model.Car;
 import com.sideproject.parking_java.utility.CarRowMapper;
 
@@ -32,6 +33,11 @@ public class CarRegisterDao {
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);
         Car carId = namedParameterJdbcTemplate.queryForObject(sql, map, new CarRowMapper());
+
+        if (carId == null) {
+            throw new InternalServerError("carId not found: " + carId);
+        }
+        
         return carId.getId();
     }
 

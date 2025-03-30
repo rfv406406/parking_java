@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sideproject.parking_java.dao.ParkingLotDataIdByMemberIdDao;
+import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.ParkingLotImagesDao;
 import com.sideproject.parking_java.dao.ParkingLotRegisterDao;
 import com.sideproject.parking_java.dao.ParkingLotSquareDao;
@@ -17,7 +17,7 @@ import com.sideproject.parking_java.utility.MemberIdUtil;
 @Service
 public class ParkingLotRegisterService{
     @Autowired
-    private ParkingLotDataIdByMemberIdDao parkingLotDataIdByMemberIdDao;
+    private IdDao parkingLotDataIdByMemberIdDao;
     @Autowired
     private ParkingLotRegisterDao parkingLotRegisterDao;
     @Autowired
@@ -63,10 +63,10 @@ public class ParkingLotRegisterService{
         }
     }
 
-    public void deleteParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
+    public void deleteParkingLotRegister(Integer parkingLotId) throws InvalidParameterError, DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
         
-        int insertId = parkingLotRegisterDao.deleteParkingLotRegisterDao(parkingLot, memberId);
+        int insertId = parkingLotRegisterDao.deleteParkingLotRegisterDao(parkingLotId, memberId);
         if (insertId == 0) {
             throw new DatabaseError("ParkingLotRegisterDao inserted failed");
         }

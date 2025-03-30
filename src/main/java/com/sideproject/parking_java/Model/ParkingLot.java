@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ParkingLot {
-    private int parkingLotId;
+    private Integer parkingLotId;
     private String name;
     private String address;
     private String nearLandmark;
     private String openingTimeAm;
     private String openingTimePm;
     private String spaceInOut;
-    private int price;
+    private Integer price;
     private String carWidth;
     private String carHeight;
     private String latitude;
@@ -89,7 +89,7 @@ public class ParkingLot {
         this.carSpaceImage = carSpaceImage;
     }
 
-    public int getParkingLotId() {
+    public Integer getParkingLotId() {
         return parkingLotId;
     }
 
@@ -117,7 +117,7 @@ public class ParkingLot {
         return spaceInOut;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
