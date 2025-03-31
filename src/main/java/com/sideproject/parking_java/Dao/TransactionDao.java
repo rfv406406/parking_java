@@ -113,4 +113,20 @@ public class TransactionDao {
 
         namedParameterJdbcTemplate.update(sql, map);
     }
+
+    public List<Transaction> getTransactionRecordsDao(int memberId) {
+        String sql = "SELECT t.*, p.*, s.* " + 
+                     "FROM transactions t " + 
+                     "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id " +
+                     "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id " +
+                     "WHERE t.member_id = :member_id";
+
+        HashMap<String, Object> map = new HashMap<>();
+
+        map.put("member_id", memberId);
+
+        List<Transaction> transactionRecords = namedParameterJdbcTemplate.query(sql, map, new TransactionRowMapper());
+
+        return transactionRecords;
+    }
 }

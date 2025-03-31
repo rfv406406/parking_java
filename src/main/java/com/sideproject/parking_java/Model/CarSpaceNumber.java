@@ -1,10 +1,15 @@
 package com.sideproject.parking_java.model;
 
 public class CarSpaceNumber {
+    private Integer id;
     private Integer parkingLotId;
     private String name;
     private String value;
     private String status;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setParkingLotId(int parkingLotId) {
         this.parkingLotId = parkingLotId;
@@ -20,6 +25,10 @@ public class CarSpaceNumber {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public Integer getParkingLotId() {

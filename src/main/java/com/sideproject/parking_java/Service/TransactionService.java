@@ -1,6 +1,7 @@
 package com.sideproject.parking_java.service;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -100,5 +101,16 @@ public class TransactionService {
         transaction.setAmount(income);
         transaction.setStatus("已收款");
         transactionDao.putUpdateParkingLotUsageDao(parkingLotOwnerId, orderNumber, transaction);
+    }
+
+    public List<Transaction> getTransactionRecordsService() {
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        List<Transaction> transactionRecords = transactionDao.getTransactionRecordsDao(memberId);
+
+        if (transactionRecords.isEmpty()) {
+            return null;
+        } else {
+            return transactionRecords;
+        }
     }
 }
