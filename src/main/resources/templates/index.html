@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/id.css">
+    <link rel="stylesheet" href="../static/css/plate_board.css">
+    <link rel="stylesheet" href="../static/css/parking_lot_booking.css">
+    <link rel="stylesheet" href="../static/css/selector.css">
+    <link rel="stylesheet" href="../static/css/parking_lot_page.css">
+    <link rel="stylesheet" href="../static/css/parking_page.css">
+    <link rel="stylesheet" href="../static/css/alert.css">
+    <title>首頁</title>
+</head>
+<body>
+    {% include 'nav.html' %} 
+    {% include 'sign_system.html' %}
+    {% include 'parking_page.html' %}
+    {% include 'alert_page.html' %}
+    <main class="main">
+        <div class="map-container">
+            <div class="map" id="map"></div>
+            <div class="search-bar">
+                <input id="searchInput" placeholder="你想停哪邊?">
+            </div>
+            <button class="returnToCurrentPosition" id="returnToCurrentPosition"><img src="../static/image/middle.png"></button>
+            <button class="search-goal-button" id="search-goal-button"><img src="../static/image/search.png"></button>
+        </div>
+        {% include 'parking_lot_booking.html' %}
+    </main>
+    {% include 'foot.html' %}
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiz02ZEX650VEundSMH87J_fHaDtmMQP8&libraries=places&callback=initMap&region=TW&language=zh-TW"></script>
+    <script src="https://unpkg.com/@googlemaps/markerwithlabel/dist/index.min.js"></script>
+    <script src="../static/js/googleMap.js"></script>
+    <!-- <script type="module" src="../static/js/google map index.js"></script> -->
+    <script src="../static/js/sign_system.js"></script>
+    <script src="../static/js/google map index.js"></script>
+    <script src="../static/js/parking_page.js"></script>
+    <!-- <script src="../static/js/sign_system.js"></script> -->
+    <script src="../static/js/parking_lot_booking.js"></script>
+    <script src="../static/js/base.js"></script>
+</body>
+</html>

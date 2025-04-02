@@ -1,0 +1,252 @@
+.parking_lot-information-container{
+    display: none;
+    width: 500px;
+    min-width: 360px;
+    height:85vh; /* 初始高度为页面高度的 30% */
+    position: relative;
+    z-index: 10;
+    background-color: #F5FBFF;
+    bottom: 0;
+    /* overflow: hidden; */
+    cursor: pointer;
+    transition: height 0.5s; /* 使用 transform 实现过渡效果 */
+    overflow: auto; /* 如果内容超出自身高度，则显示滚动条 */
+}
+
+.parking_lot-information-container-toggled{
+    height: 85vh;
+}
+
+@media(max-width: 600px) {
+    .parking_lot-information-container{
+        height:30%; /* 初始高度为页面高度的 30% */
+        position: absolute;
+        width: auto;
+        right: 10px;
+        left: 10px;
+        min-width: 0px;
+    }
+    .parking_lot-information-container-toggled{
+        height: 100%;
+    }
+    }
+
+
+
+.parking_lot-information-container-appear{
+    display: block;
+}
+
+.parking_lot-information{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parking_lot-image{
+    width:100%;
+    height:418px;
+    height:auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.parking_lot_image_container{
+    z-index: 1;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 540px;   */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    height:100%;
+}
+
+.image{
+    display:flex;
+    align-items: center;
+    position:relative;
+    flex: 0 0 auto;
+    width: 100%;
+    height:100%;
+}
+
+.parking_lot-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    /* border-radius: 4px; */
+}
+
+.button-img-left{
+    background-image: url('../IMAGE/button-left.png');
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: transparent;
+    position:absolute;
+    left: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.button-img-right{
+    background-image: url('../IMAGE/button-right.png');
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: transparent;
+    position:absolute;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.parking_lot-image .pot_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    gap: 12px;
+    z-index: 2;
+}
+
+.pot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    width: 12px;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+.pot_pot{
+    height: 11px;
+    width: 11px;
+    background-color: #000;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: #FFF;
+}
+
+.parking_lot-information .button{
+    width:100px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 12px;
+    background: #fefefe;
+    margin: 20px auto 20px auto;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size:20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    cursor: pointer;
+}
+
+.parking_lot-information-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.parking_lot-information-data-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+    border: 1px solid #d4d6d7;
+}
+
+.parking_lot-information-data-render{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.parking_lot-information-data-render-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+.button-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap:20%;
+    cursor: pointer;
+}
+
+.parking_lot-information .selector {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 12px;
+    background: #fefefe;
+    margin: 20px auto 20px auto;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+.parking_lot-information .selector option {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
+.parking_lot-information .separator {
+    width: 100%;
+    height: 1px;
+    border: #d4d6d7 solid 1px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button-container .full-capacity-message {
+    font-size: 40px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+#button-parking-reservation {
+    display: none;
+}

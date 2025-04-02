@@ -1,0 +1,109 @@
+.payment_infor_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    width: 90%;
+    height: auto;
+    color: #666;
+    font-family: Noto Sans TC;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+@media (max-width:1200px){
+    /*螢幕寬度小於1200，套用此區塊CSS*/
+.payment_infor_container{
+    width:90%;
+}    
+}
+
+.card_information{
+    padding: 10px 10px;
+}
+
+.payment_infor_container .text{
+    min-width: 81px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; 
+    color: #757575;
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.payment_infor_container .input{
+    width: 180px;
+    height: 18px;
+    padding: 10px;
+    color: #757575;
+    border-radius: 5px;
+    border: #E8E8E8 solid 1px;
+    background-color: #FFF;
+}
+
+.payment{
+    display: flex;
+    width: 980px;
+    height: 100px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    color: #666;
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.3px;
+}
+
+.pay-success{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin:auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    color: #666;
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13.3px;
+    margin-bottom: 40px;
+}
+
+@media (max-width:1200px){
+    /*螢幕寬度小於1200，套用此區塊CSS*/
+    .payment{
+    width: 90%;
+}    
+}
+
+.payment .pay_button{
+    width: 20%;
+    height: 36px;
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #489;
+    color: #FFF;
+    font-family: Noto Sans TC;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap; 
+    cursor: pointer;
+}

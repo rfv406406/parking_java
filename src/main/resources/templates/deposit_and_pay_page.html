@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/deposit_and_pay.css">
+    <title>首頁</title>
+</head>
+<body>
+    {% include 'nav.html' %} {% include 'sign_system.html' %}
+    <div class="payment_infor_container">
+        <form class="card_information">
+            <div class="text">儲值金額：<input type="text" class="input" id="deposit-number"></div>
+            <div class="text">卡片號碼：<div class="input" id="card-number"></div></div>
+            <div class="text">過期時間：<div class="input" id="card-expiration-date"></div></div>
+            <div class="text">驗證密碼：<div class="input" id="card-ccv"></div></div>
+        </form>
+    </div>
+    <div class="payment">
+        <span>新台幣 <span id="total_price">0</span> 元</span>
+        <button class="pay_button">儲值</button>
+    </div>
+    <div class="pay-success" id="pay-success"></div>
+    {% include 'foot.html' %}
+    <script src="../static/js/sign_system.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.17.0"></script> 
+    <script src="../static/js/deposit_and_pay.js"></script>
+</body>
+</html>

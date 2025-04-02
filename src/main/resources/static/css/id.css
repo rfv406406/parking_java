@@ -1,0 +1,280 @@
+.main{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    width:100%;
+    max-width: 1200px;
+    height: 100%; /* vh 替換為您希望的百分比 */
+    background-color: #F5FBFF;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.information-container{
+    max-width:1200px;
+    width:60%;
+    /* height:100%; */
+    display:none;
+    /* padding: 5px; */
+    border-radius: 12px;
+    margin: auto;
+    border: 0.5px solid #0E578D;
+    background: #fefefe;
+    margin: auto;
+}
+
+
+
+.information-container-toggled{
+    display: block;
+}
+
+.information-container .information-header{
+     /* width:100%; */
+     height:40px;
+     border-radius: 4px 4px 0 0;
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px;
+     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+     font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+     line-height: 1.6;
+     font-size: 24px;
+     font-weight: bold;
+}
+
+.information-header .close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+}
+
+.information-header .close img{
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.information-form{
+    /* width: 100%; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.information-form .input-box{
+    display:flex;
+    width:100%;
+    height:40px;
+}
+
+.information-container .text{
+    height:30px;
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+    font-size: 20px;
+    flex: 0.6;
+}
+
+@media(max-width: 600px) {
+    .information-container .text{
+        flex: 0.8;
+    }
+}
+
+.information-container .consistent-text{
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: bold;
+    width: 30%;
+    text-align: right;
+}
+
+.storage-button{
+    width: 80px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.information-container .footer{
+    width:100%;
+    height:40px;
+    border-radius:0 0 12px 12px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+}
+
+@media(max-width: 800px) {
+    .information-container{
+        width:90%;
+    }
+    .information-container .text{
+        width: 60%;
+    }
+}
+
+.information-page{
+    max-width:1200px;
+    width:90%;
+    height:100%;
+    display:block;
+    /* padding: 5px; */
+    /* border-radius: 12px; */
+    margin: auto;
+    /* border: 0.5px solid #0E578D; */
+    background: #fefefe;
+}
+
+.information-page-toggled{
+    display: none;
+}
+
+.information-page .information-page-header{
+    /* width:100%; */
+    height:40px;
+    border-radius: 4px 4px 0 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.information-table{
+    /* width: 100%; */
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 5%;
+    gap: 10px;
+    border-radius:0 0 4px 4px;
+}
+
+.information-table table{
+    width: 60%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.information-table th {
+    width: 40%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.information-table td {
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+.edit-button{
+    width: 80px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* 媒体查询，当屏幕宽度小于某个值时，改变布局 */
+@media(max-width: 800px) {
+    .information-table, .information-table th, .information-table td {
+         /* 在小屏幕上，th和td都将宽度设置为100% */
+        display: block; /* 使它们表现得像块级元素 */
+    }
+
+    .information-table th {
+        text-align: left; /* 小屏幕上标题左对齐 */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+
+    .information-table td {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+
+    .information-table table{
+        width: 90%;
+        margin: auto;
+    }
+    .edit-button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+}
+
+.information-table .infor-data{
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+.information-table .consistent-text{
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%; /* 24px */
+}
+
+
+
+.information-table .separator{
+    width: 100%;
+    height: 1px;
+    background-color: #d2d2d2;
+}
+
+.id-edit-success-message{
+    text-align: center;
+    color: #9e1a1a;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}

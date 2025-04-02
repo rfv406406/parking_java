@@ -1,0 +1,67 @@
+.plate-board-container{
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+
+.plate-board-information{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin: auto;
+    border: 1px solid #d4d6d7;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+    .plate-board-information {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+.cash-record-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* 給選擇器一些空間 */
+    font-family: Arial, sans-serif; /* 使用清晰易讀的字體 */
+}
+
+/* 下拉選單樣式 */
+select {
+    padding: 8px 12px; /* 增加一些内填充，使選項更容易選擇 */
+    margin-right: 10px; /* 每個下拉選單之間的間隔 */
+    border: 1px solid #ccc; /* 設置邊框 */
+    border-radius: 4px; /* 圓角邊框 */
+    background-color: white; /* 背景顏色 */
+    cursor: pointer; /* 鼠標懸停時的手型指標 */
+}
+
+/* 下拉選單鼠標懸停效果 */
+select:hover {
+    border-color: #888; /* 鼠標懸停時改變邊框顏色 */
+}
+
+/* 下拉選單焦點效果 */
+select:focus {
+    outline: none; /* 移除焦點時的藍色輪廓 */
+    border-color: #555; /* 焦點時的邊框顏色 */
+    cursor: pointer;
+}
+
+/* 選項樣式 */
+option {
+    padding: 8px; /* 增加選項的填充 */
+    background-color: white; /* 設置背景顏色 */
+    border: none; /* 移除邊框 */
+}
+
+

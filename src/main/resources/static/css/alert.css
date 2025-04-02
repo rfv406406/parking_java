@@ -1,0 +1,94 @@
+.alert-page-black-back {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.alert-page-black-back-toggled{
+    display:block;
+}
+
+.alert-page-container{
+    width:340px;
+    /* height:100%; */
+    display:none;
+    position: absolute; /* 相對於.modal定位 */
+    top: 50%; /* 將其移至父元素的中央 */
+    left: 50%; /* 將其移至父元素的中央 */
+    transform: translate(-50%, -50%); /* 使用transform確保完美居中 */
+    /* padding: 5px; */
+    border-radius: 12px;
+    /* margin: auto; */
+    border: 0.5px solid #0E578D;
+    background: #fefefe;
+    margin-top: 5px;
+    z-index: 1000; /* 確保在其他元素之上 */
+}
+
+.alert-page-container-toggled{
+    display:block;
+}
+
+.alert-page-container .header{
+    /* width:100%; */
+    height:20px;
+    border-radius: 12px 12px 0 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+}
+
+.alert-page-information{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.alert-page-information-none{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    height:20vh;
+    font-size: 20px;
+}
+
+.alert-page-information-none-toggled{
+    display: none;
+}
+
+
+
+.alert-page-container .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+    border-radius: 0 0 12px 12px;
+}
+
+.alert-button{
+    width: 80px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+}

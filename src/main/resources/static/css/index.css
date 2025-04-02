@@ -1,0 +1,112 @@
+.map-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+
+.map{
+    width: 100%;
+    height: calc(100vh - 120px);
+}
+
+.search-bar{
+    /* width: 200px; */
+    height: 50px;
+    position: absolute;
+    z-index: 110;
+    top:40%;
+    left:50%;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.search-bar input{
+    width: 180px;
+    height: 30px;
+}
+
+.labels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00000084;
+    background-color: #f4efef;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 54px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.returnToCurrentPosition {
+    position: absolute; /* 讓按鈕可以定位在地圖上的任意位置 */
+    top: 60px; /* 距離地圖頂部的距離 */
+    right: 10px; /* 距離地圖右側的距離 */
+    background-color: white; /* 背景顏色 */
+    color: black; /* 文字顏色 */
+    border: none; /* 無邊框 */
+    border-radius: 100%; /* 完全圓角邊框 */
+    width: 40px; /* 按鈕寬度 */
+    height: 40px; /* 按鈕高度，和寬度相同以形成圓形 */
+    font-size: 14px; /* 字體大小 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 陰影效果 */
+    cursor: pointer; /* 鼠標懸停時的光標樣式 */
+    z-index: 1; /* 確保按鈕在地圖層之上 */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    padding: 0; /* 移除內邊距 */
+}
+
+.returnToCurrentPosition img{
+    width: 20px; /* 控制圖片的寬度 */
+    height: 20px; /* 控制圖片的高度 */
+    object-fit: contain; /* 確保圖片保持其比例 */
+}
+
+.returnToCurrentPosition:hover {
+    background-color: #f8f8f8; /* 鼠標懸停時的背景顏色變化 */
+}
+
+.search-goal-button {
+    position: absolute; /* 讓按鈕可以定位在地圖上的任意位置 */
+    top: 110px; /* 距離地圖頂部的距離 */
+    right: 10px; /* 距離地圖右側的距離 */
+    background-color: white; /* 背景顏色 */
+    color: black; /* 文字顏色 */
+    border: none; /* 無邊框 */
+    border-radius: 100%; /* 完全圓角邊框 */
+    width: 40px; /* 按鈕寬度 */
+    height: 40px; /* 按鈕高度，和寬度相同以形成圓形 */
+    font-size: 14px; /* 字體大小 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 陰影效果 */
+    cursor: pointer; /* 鼠標懸停時的光標樣式 */
+    z-index: 1; /* 確保按鈕在地圖層之上 */
+    display: flex; /* 使用 Flexbox 進行布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    padding: 0; /* 移除內邊距 */
+    cursor: pointer;
+}
+
+.search-goal-button img{
+    width: 20px; /* 控制圖片的寬度 */
+    height: 20px; /* 控制圖片的高度 */
+    object-fit: contain; /* 確保圖片保持其比例 */
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-goal-button {
+    background-color: #f8f8f8; /* 鼠標懸停時的背景顏色變化 */
+    cursor: pointer;
+}

@@ -1,0 +1,333 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5FBFF;
+}
+
+.nav{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    width:100%;
+    height:50px;
+    background-color: #0E578D;
+    /* border-radius: 12px 12px 0 0; */
+    box-sizing: border-box;
+   
+}
+
+.nav-container{
+    display:flex;
+    align-items: center;
+    max-width:1200px;
+    width:100%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    cursor: pointer;
+}
+
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width:32px;
+    height:32px;
+    border-radius: 50%;
+    background-color: #BDE3FF;
+    margin-right: 10px;
+}
+
+.logo .text{
+    color: #0D99FF;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.wakachiau{
+    color: #BDE3FF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.PARKING{
+    color: #BDE3FF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.menu_container{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.menu{
+    width: 80px;
+    height: 32px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    background-color: #0E578D;
+    /* border-radius:0 0 12px 12px; */
+    /* position: fixed;
+    bottom: 0; */
+}
+
+.footer_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#BDE3FF;
+}
+
+.footer_content img{
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 10px;
+}
+   
+.menuContent {
+    position: fixed;
+    top: 50px;
+    right: -100%;
+    width: 100%;
+    background: rgb(15, 155, 143);
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.menuContent_toggled {
+    right: 0; /* the width you want for your menu */
+}
+
+.list-sign-in{
+    display:flex;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    height:30px;
+    background: #fefefe;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+.list-sign-in:hover{
+    background-color: #edecec;
+}
+
+.list-sign-in-toggled{
+    display:none;
+}
+
+.list-sign-out{
+    display:none;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    height:30px;
+    background: #fefefe;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+.list-sign-out:hover{
+    background-color: #edecec;
+}
+
+.list-sign-out-toggled{
+    display:flex;
+}
+
+.list{
+    display:flex;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    height:30px;
+    background: #fefefe;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+.list:hover{
+    background-color: #edecec;
+}
+
+.list-toggled{
+    display:none;
+}
+
+.black-back{
+    display: none; /* 預設為隱藏 */
+    position: fixed; /* 讓彈出窗口固定在畫面上，不受滾動影響 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 覆蓋整個視窗的寬度 */
+    height: 100%; /* 覆蓋整個視窗的高度 */
+    background-color: rgba(0, 0, 0, 0.25); /* 透明黑色背景，可產生半透明的遮罩效果 */
+    z-index: 1000; /* 確保在其他元素之上 */
+}
+
+.black-back-toggled{
+    display: block;
+}
+
+.signin-container, .signup-container{
+    width:340px;
+    /* height:100%; */
+    display:none;
+    position: absolute; /* 相對於.modal定位 */
+    top: 30%; /* 將其移至父元素的中央 */
+    left: 50%; /* 將其移至父元素的中央 */
+    transform: translate(-50%, -50%); /* 使用transform確保完美居中 */
+    /* padding: 5px; */
+    border-radius: 12px;
+    /* margin: auto; */
+    border: 0.5px solid #0E578D;
+    background: #fefefe;
+    margin-top: 5px;
+    z-index: 1000; /* 確保在其他元素之上 */
+}
+
+.signin-container-toggled, .signup-container-toggled{
+    display: block;
+}
+
+.signin-container .header, .signup-container .header{
+    /* width:100%; */
+    height:20px;
+    border-radius: 12px 12px 0 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+}
+
+.header .close{
+    width: 50px;
+    height: 24px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.close img{
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.signin-form, .signup-form{
+    /* width: 100%; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.signin-form .input-box, .signup-form .input-box{
+    display:flex;
+    justify-content: end;
+    width:100%;
+    height:auto;
+}
+
+.signin-container .text, .signup-container .text{
+    height:20px;
+    margin-right: 20%;
+}
+
+.signin-container .consistent-text, .signup-container .consistent-text{
+    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    line-height: 1.6;
+}
+
+.signin-button, .signup-button{
+    width: 100px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.signon-go-container, .signin-return-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+}
+
+.go-signon, .return-signin{
+    width: 80px;
+    height: 40px;
+    color: #1E1E1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 12px;
+}
+
+.signin-container .footer, .signup-container .footer{
+    width:100%;
+    height:20px;
+    border-radius:0 0 12px 12px;
+    background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
+}
+
+.alert_informations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
