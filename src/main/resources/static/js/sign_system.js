@@ -104,45 +104,74 @@ async function getMemberStatus() {
     }
 }
 
-async function fetchAPI(api, token, method, data) {
-    let headers = {};
-
-    if (!(data instanceof FormData)) {
-        headers["Content-type"] = "application/json"
+async function fetchAPI(api, token, method, data = null) {
+    let request = {
+        "headers":{},
+        "method":method 
     }
 
     if (token){
-        headers['Authorization'] = `Bearer ${token}`
+        request.headers['Authorization'] = `Bearer ${token}`
     };
 
-    let request = {
-        headers: headers,
-        method: method
-    };
-
-    if (data instanceof FormData) {
-        request.body = data;
-    } else if (data) {
-        request.body = JSON.stringify(data);
-    };
-
+    if (data != null) {
+        if (data instanceof FormData) {
+            request.body = data;
+        } else {
+            request.headers["Content-type"] = "application/json"
+            request.body = JSON.stringify(data);
+        };
+    }
+    
     const response = await fetch(api, request);
     return response;
 }
 
+// async function fetchAPI(api, token, method, data) {
+//     let headers = {};
+
+//     if (!(data instanceof FormData)) {
+//         headers["Content-type"] = "application/json"
+//     }
+
+//     if (token){
+//         headers['Authorization'] = `Bearer ${token}`
+//     };
+
+//     let request = {
+//         headers: headers,
+//         method: method
+//     };
+
+//     if (data instanceof FormData) {
+//         request.body = data;
+//     } else if (data) {
+//         request.body = JSON.stringify(data);
+//     };
+
+//     const response = await fetch(api, request);
+//     return response;
+// }
+
 async function handleResponse(response) {
+    let contentType = response.headers.get("Content-Type");
     if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message);
     };
-    return response.json();
+    if (contentType.includes('application/json')) {
+        return response.json();
+    }
+    if (contentType.includes('text/plain')) {
+        return response.text();
+    }
 }
 
 function handleError(error) {
-    console.error('This is an error!', error);
-    console.error('Error type:', error.name);
-    console.error('Error:', error.message);
-    console.error('Stack trace:', error.stack);
+    console.error('Error name: ', error);
+    console.error('Error type: ', error.name);
+    console.error('Error message: ', error.message);
+    console.error('Stack trace: ', error.stack);
 }
 
 //後端註冊及登入回應處理

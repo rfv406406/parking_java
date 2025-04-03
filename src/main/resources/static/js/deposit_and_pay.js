@@ -1,11 +1,14 @@
 TPDirect.setupSDK(137033, 'app_g5H5hXkKSIHANVJsYh99hPcebudiWGo3YokDL3zG8kxYMZT4bX4bQoKJbi7V', 'sandbox')
-// console.log(TPDirect);
 
 //顯示儲值金額
-document.querySelector('#deposit-number').addEventListener('input', function() {
-    let inputValue = this.value;
-    inputValue = inputValue.replace(/\D/g, '');
-    document.querySelector('#total_price').textContent = inputValue;
+let depositNumber = document.querySelector('#deposit-number');
+let totalPrice = document.querySelector('#total_price');
+depositNumber.addEventListener('input', () => {
+    let inputValue = depositNumber.value;
+
+    let cleanValue = inputValue.replace(/\D/g, '').replace(/^0+/, '');
+    depositNumber.value = cleanValue;
+    totalPrice.textContent = cleanValue;
 });
 
 let fields = {
@@ -71,7 +74,7 @@ TPDirect.card.setup({
     }
 });
 
-document.querySelector('.pay_button').addEventListener('click', function (event) {
+document.querySelector('.pay_button').addEventListener('click', (event) => {
     event.preventDefault();
 
     const tappayStatus = TPDirect.card.getTappayFieldsStatus();
@@ -81,47 +84,76 @@ document.querySelector('.pay_button').addEventListener('click', function (event)
         return null;
     }
     // Get prime
-    TPDirect.card.getPrime(function (result) {
-        // alert('get prime 成功，prime: ' + result.card.prime);
+    TPDirect.card.getPrime((result) => {
         depositData(result.card.prime);
     });
 });
 
-function depositData(prime) {
-    console.log(prime);
+async function depositData(prime) {
+    const token = localStorage.getItem('Token');
     let totalPrice = document.querySelector("#total_price").textContent;
 
-    if (totalPrice=="" || totalPrice==0){
+    if (totalPrice == '') {
         alert('請輸入金額')
         return null;
     }
 
-    const token = localStorage.getItem('Token');
-    const json = {
-        "prime": prime,
-        "deposit": totalPrice,
-    };
-    fetch("/api/pay", {
-            method: 'POST',
-            body: JSON.stringify(json), 
-            headers: {
-                "Content-type": "application/json",
-                'Authorization': `Bearer ${token}`
-            }
-        })
-        .then(handleResponse)
-        .then(data => {
-            if(data.data.payment.message === "付款成功"){
-                const paySuccess = document.querySelector('#pay-success');
-                paySuccess.textContent = '感謝您的加值!'
-                // setTimeout(function() {
-                //     window.location.href = '/';
-                // }, 2000);
-            }else{
-                alert('付款失敗')
-            }
-        })
-        .catch(
-            handleError
-        )
-    };
+    const depositDataToJson = {
+        "prime":prime,
+        "deposit":totalPrice
+    }
+
+    try {
+        let response = await fetchAPI("api/tappay", token, "POST", depositDataToJson);
+        let data = await handleResponse(response);
+        if (data === 'Success') {
+            const paySuccess = document.querySelector('#pay-success');
+            paySuccess.textContent = '感謝您的加值!'
+            // setTimeout(function() {
+            //     window.location.href = '/';
+            // }, 2000);
+        } else {
+            alert('付款失敗');
+        }
+    } catch(error) {
+        handleError(error);
+    }    
+};
+
+// function depositData(prime) {
+//     let totalPrice = document.querySelector("#total_price").textContent;
+
+//     if (totalPrice=="" || totalPrice==0){
+//         alert('請輸入金額')
+//         return null;
+//     }
+
+//     const token = localStorage.getItem('Token');
+//     const json = {
+//         "prime": prime,
+//         "deposit": totalPrice,
+//     };
+//     fetch("/api/pay", {
+//             method: 'POST',
+//             body: JSON.stringify(json), 
+//             headers: {
+//                 "Content-type": "application/json",
+//                 'Authorization': `Bearer ${token}`
+//             }
+//         })
+//         .then(handleResponse)
+//         .then(data => {
+//             if(data.data.payment.message === "付款成功"){
+//                 const paySuccess = document.querySelector('#pay-success');
+//                 paySuccess.textContent = '感謝您的加值!'
+//                 // setTimeout(function() {
+//                 //     window.location.href = '/';
+//                 // }, 2000);
+//             }else{
+//                 alert('付款失敗')
+//             }
+//         })
+//         .catch(
+//             handleError
+//         )
+//     };

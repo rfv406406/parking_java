@@ -115,10 +115,11 @@ public class TransactionDao {
     }
 
     public List<Transaction> getTransactionRecordsDao(int memberId) {
-        String sql = "SELECT t.*, p.*, s.* " + 
+        String sql = "SELECT t.*, p.*, s.*, c.* " + 
                      "FROM transactions t " + 
                      "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id " +
                      "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id " +
+                     "LEFT JOIN car c ON t.car_id = c.id " +
                      "WHERE t.member_id = :member_id";
 
         HashMap<String, Object> map = new HashMap<>();

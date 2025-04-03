@@ -16,6 +16,7 @@ public class Transaction {
     private String status;
     private String transactionsTime;
     private ParkingLot parkingLot;
+    private Car car;
 
     public void setId(int id) {
         this.id = id;
@@ -77,6 +78,10 @@ public class Transaction {
         this.parkingLot = parkingLot;
     }
 
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
     public Integer getId() {
         return this.id;
     }
@@ -135,5 +140,9 @@ public class Transaction {
 
     public ParkingLot getParkingLot() {
         return this.parkingLot;
+    }
+
+    public Car getCar() {
+        return this.car;
     }
 }

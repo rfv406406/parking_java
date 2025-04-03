@@ -3,7 +3,7 @@ initCarPage();
 async function initCarPage(){
   const token = localStorage.getItem('Token');
   try{
-      const getCarBoardData = await fetchAPI("/api/input_car_board_data", token, "GET");
+      const getCarBoardData = await fetchAPI("/api/carRegister", token, "GET");
       const data = await handleResponse(getCarBoardData);
       // memberCarData = data;
       renderCarInformations(data);
@@ -21,9 +21,9 @@ carBoardDataStorage.addEventListener('click', async (event) => {
   try {
     if (carNumberFormatTest) {
       let formData = getCarInformation();
-      const response = await fetchAPI("/api/input_car_board_data", token, 'POST', formData);
+      const response = await fetchAPI("/api/carRegister", token, 'POST', formData);
       const data = await handleResponse(response);
-      console.log(data);
+      // console.log(data);
       // await passCarBoardData(formData); 
       initCarPage();
     }
@@ -41,10 +41,11 @@ document.querySelector('#parking-lot-container').addEventListener('click', async
       let carTable = event.target.closest('.parking-lot-page-table');
       if (carTable) {
           try{
-            const cartBoardNumber = carTable.querySelector('.parking-lot-information-page-go-button').textContent;
-            const carData = memberCarData.data.find(lot => lot.carboard_number === cartBoardNumber); 
+            // const cartBoardNumber = carTable.querySelector('.parking-lot-information-page-go-button').textContent;
+            // const carData = memberCarData.data.find(lot => lot.carboard_number === cartBoardNumber); 
             // const response = await deleteCarData(carData);
-            const response = await fetchAPI("/api/input_car_board_data", token, 'DELETE', carData)
+            const carId = carTable.id;
+            const response = await fetchAPI(`/api/carRegister/${carId}`, token, 'DELETE')
             const data = await handleResponse(response);
             initCarPage();
           }catch(error){
@@ -100,24 +101,27 @@ function getCarInformation(){
 function renderCarInformations(data) {
   const container = document.querySelector('#parking-lot-container'); 
   container.innerHTML = ''; 
-  if(data.data.length == 0){
+  if(data.length == 0){
       container.textContent = '目前無登記的車牌';
       return true;
   }
 
-  data.data.forEach(item => {
+  data.forEach(item => {
       const parkingLotDiv = document.createElement('div');
       parkingLotDiv.className = 'parking-lot-page-table';
+      parkingLotDiv.id = item.id;
 
       const nameDiv = document.createElement('div');
       nameDiv.className = 'parking-lot-information-page-go-button';
-      nameDiv.textContent = item.carboard_number;
+      // nameDiv.textContent = item.carboard_number;
+      nameDiv.textContent = item.carNumber;
       parkingLotDiv.appendChild(nameDiv);
 
       const imageDiv = document.createElement('div');
       imageDiv.className = 'image';
       const img = document.createElement('img');
-      img.src = item.images && item.images.length > 0 ? item.images[0] : '../static/image/noimage.png';
+      // img.src = item.images && item.images.length > 0 ? item.images[0] : '../static/image/noimage.png';
+      img.src = item.carImageUrl != null ? item.carImageUrl : '../static/image/noimage.png';
       img.onerror = function() {
         this.onerror = null;
         img.src = '../static/image/noimage.png';

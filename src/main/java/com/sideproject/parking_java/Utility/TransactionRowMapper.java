@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import org.springframework.jdbc.core.RowMapper;
 
+import com.sideproject.parking_java.model.Car;
 import com.sideproject.parking_java.model.CarSpaceNumber;
 import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.model.Transaction;
@@ -19,6 +20,7 @@ public class TransactionRowMapper implements RowMapper<Transaction>{
 
         Transaction transaction = new Transaction();
         ParkingLot parkingLot = new ParkingLot();
+        Car car = new Car();
         ArrayList<CarSpaceNumber> carSpaceNumberConcat = new ArrayList<>();
         CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
 
@@ -36,6 +38,9 @@ public class TransactionRowMapper implements RowMapper<Transaction>{
             }
             if (columnName.equals("car_id")) {
                 transaction.setCarId(rs.getInt("car_id"));
+            }
+            if (columnName.equals("carboard_number")) {
+                car.setCarNumber(rs.getString("carboard_number"));
             }
             if (columnName.equals("deposit_account_id")) {
                 transaction.setDepositAccountId(rs.getInt("deposit_account_id"));
@@ -79,7 +84,7 @@ public class TransactionRowMapper implements RowMapper<Transaction>{
                 parkingLot.setPrice(rs.getInt("price"));
             }
         }
-    
+        transaction.setCar(car);
         transaction.setParkingLot(parkingLot);
        
         return transaction;
