@@ -234,34 +234,63 @@ function saveToken(token){
 //使用者登入狀態確認
 async function init(){
     const token = localStorage.getItem('Token');
-    if (token == null){
-        if (window.location.pathname !== '/') {
-            window.location.href = '/';
-        }
-        toggleClass('.list', 'list-toggled');
-    }else{
-        try{
-            let signOutButtonList = document.querySelector('#signout-button-list');
-            signOutButtonList.addEventListener('click', logout);
-            toggleClass('#signin-button-list', 'list-sign-in-toggled');
-            toggleClass('#signout-button-list', 'list-sign-out-toggled'); 
-            
-            const userAccountData = await fetchAPI("/api/user/auth", token, 'GET');
-            const data = await handleResponse(userAccountData);
-            let cashPoint = await getMemberStatus();
-            showCashPointOnMenu(cashPoint);
-            // console.log(data);
-            // await loginCheck(data)
-        }catch(error){
-            handleError(error);
-        }
+    tokenChecking(token);
+    try{
+        let signOutButtonList = document.querySelector('#signout-button-list');
+        signOutButtonList.addEventListener('click', logout);
+        toggleClass('#signin-button-list', 'list-sign-in-toggled');
+        toggleClass('#signout-button-list', 'list-sign-out-toggled'); 
+        
+        const userAccountData = await fetchAPI("/api/user/auth", token, 'GET');
+        const data = await handleResponse(userAccountData);
+        let cashPoint = await getMemberStatus();
+        showCashPointOnMenu(cashPoint);
+        // console.log(data);
+        // await loginCheck(data)
+    }catch(error){
+        handleError(error);
     }
   }
+// async function init(){
+//     const token = localStorage.getItem('Token');
+//     if (token == null){
+//         toggleClass('.list', 'list-toggled');
+//         if (window.location.pathname !== '/') {
+//             window.location.href = '/';
+//         }
+//     }else{
+//         try{
+//             let signOutButtonList = document.querySelector('#signout-button-list');
+//             signOutButtonList.addEventListener('click', logout);
+//             toggleClass('#signin-button-list', 'list-sign-in-toggled');
+//             toggleClass('#signout-button-list', 'list-sign-out-toggled'); 
+            
+//             const userAccountData = await fetchAPI("/api/user/auth", token, 'GET');
+//             const data = await handleResponse(userAccountData);
+//             let cashPoint = await getMemberStatus();
+//             showCashPointOnMenu(cashPoint);
+//             // console.log(data);
+//             // await loginCheck(data)
+//         }catch(error){
+//             handleError(error);
+//         }
+//     }
+//   }
   
   function showCashPointOnMenu(cashPoint){
     const cashBar = document.querySelector('#cash-point')
     cashBar.textContent = '目前點數:'+cashPoint.data.Balance+'點';
   };
+
+  function tokenChecking(token) {
+    if (token == null){
+        toggleClass('.list', 'list-toggled');
+        if (window.location.pathname !== '/') {
+            window.location.href = '/';
+        }
+        return null;
+    }
+  }
 
   //登出
   function logout() {

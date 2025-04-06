@@ -26,7 +26,7 @@ public class ParkingLotRegisterController {
     @Autowired
     private ParkingLotRegisterService parkingLotRegisterService;
 
-    @GetMapping("/api/parkingLotRegister")
+    @GetMapping("/api/parkingLot")
     public ResponseEntity<List<ParkingLot>> getParkingLotRegister() throws DatabaseError {
         List<ParkingLot> parkingLot = parkingLotRegisterService.getParkingLotRegister();
         ResponseEntity<List<ParkingLot>> response = ResponseEntity.status(HttpStatus.OK).body(parkingLot);
@@ -34,21 +34,21 @@ public class ParkingLotRegisterController {
     }
     
 
-    @PostMapping("/api/parkingLotRegister")
+    @PostMapping("/api/parkingLot")
     public ResponseEntity<String> postParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
         parkingLotRegisterService.postParkingLotRegister(parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
         return response;
     }
 
-    @PutMapping("/api/parkingLotRegister")
+    @PutMapping("/api/parkingLot")
     public ResponseEntity<String> getParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
         parkingLotRegisterService.putParkingLotRegister(parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
         return response;
     }
 
-    @DeleteMapping("/api/parkingLotRegister/{parkingLotId}")
+    @DeleteMapping("/api/parkingLot/{parkingLotId}")
     public ResponseEntity<String> deleteParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId) throws InvalidParameterError, DatabaseError {
         parkingLotRegisterService.deleteParkingLotRegister(parkingLotId);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");

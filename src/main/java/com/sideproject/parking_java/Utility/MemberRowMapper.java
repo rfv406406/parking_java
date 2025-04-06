@@ -42,19 +42,22 @@ public class MemberRowMapper implements RowMapper<Member>{
                 member.setName(rs.getString("name"));
             }
             if (columnName.equals("birthday")) {
-                member.setName(rs.getString("birthday"));
+                member.setBirthday(rs.getString("birthday"));
             }
             if (columnName.equals("cellphone")) {
-                member.setName(rs.getString("cellphone"));
+                member.setCellphone(rs.getString("cellphone"));
             }
             if (columnName.equals("create_time")) {
-                member.setName(rs.getString("create_time"));
+                member.setCreateTime(rs.getString("create_time"));
             }
             if (columnName.equals("last_log_in_time")) {
-                member.setName(rs.getString("last_log_in_time"));
+                member.setLastLogInTime(rs.getString("last_log_in_time"));
             }
             if (columnName.equals("status")) {
-                member.setName(rs.getString("status"));
+                member.setStatus(rs.getString("status"));
+            }
+            if (columnName.equals("balance")) {
+                member.setBalance(rs.getInt("balance"));
             }
         }
         

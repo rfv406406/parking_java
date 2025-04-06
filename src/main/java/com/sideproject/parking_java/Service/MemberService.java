@@ -47,15 +47,14 @@ public class MemberService {
         return userDetails.getUsername();
     }
 
-    public String getMemberStatusService() throws AuthenticationError {
+    public Member getMemberBalanceAndStatusService() throws AuthenticationError {
         SecurityContext context = SecurityContextHolder.getContext();
         Authentication auth = context.getAuthentication();
         Object principal = auth.getPrincipal();
         UserDetails userDetails = (UserDetails)principal;
         String account = userDetails.getUsername();
-        Member msmberStatus = memberDao.getMemberStatusByAccount(account);
-        String status = msmberStatus.getStatus();
-        return status;
+        Member memberData = memberDao.getMemberBalanceAndStatusByAccount(account);
+        return memberData;
     }
 
     public Member getMemberDetailsService() {

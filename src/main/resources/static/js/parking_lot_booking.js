@@ -8,18 +8,16 @@ carBoardCheckedButton = document.querySelector('#car-board-checked-button')
 buttonBooking.addEventListener('click', async () => {
     try{
         lastClickedButton = 'booking';
-        // console.log(isTokenChecked)
         let isMemberStatusChecked = await memberStatus();
-        // console.log(isMemberStatusChecked)
         if (!isMemberStatusChecked) {
-            return; 
+            return null; 
         };
-        await returnCarBoardData();
+        let carBoardData = await returnCarBoardData();
+        await carBoardNumberToSelector(carBoardData);
         toggleClass('#packing-page-container', 'packing-page-container-toggled');
         toggleClass('#packing-page-black-back', 'black-back-toggled');  
         toggleClass('#packing-page-information-none', 'packing-page-information-none-toggled'); 
         toggleClass('#packing-page-car-board-selected', 'packing-page-car-board-selected-toggled');
-    
     }catch(error){
         handleError(error)
     }
@@ -29,7 +27,7 @@ carBoardCheckedButton.addEventListener('click', async () => {
     try{
         let isSquareChecked = carBoardChecking();
         if (!isSquareChecked) {
-            return; 
+            return null; 
             };
         toggleClass('#packing-page-car-board-selected', 'packing-page-car-board-selected-toggled');
         let squareNumber = document.querySelector('#data-type-selector').value
@@ -190,8 +188,6 @@ async function returnCarBoardData(){
     try{
         const response = await fetchAPI("/api/input_car_board_data", token, 'GET');
         const data = await handleResponse(response);
-        // console.log(data);
-        await carBoardNumberToSelector(data);
         return data;
     }catch(error){
         handleError(error);
@@ -199,14 +195,13 @@ async function returnCarBoardData(){
 }
 
 async function carBoardNumberToSelector(data){
-    console.log(data);
     let select = document.querySelector('#car-board-number-selector');
     data.data.forEach(item => {
         let exists = false;
         for (let i=0; i< select.options.length; i++) {
             if( select.options[i].textContent === item.carboard_number) {
                 exists = true;
-                return;
+                return null;
             }
         }
         if (!exists) {
@@ -221,17 +216,18 @@ async function carBoardNumberToSelector(data){
 //使用者停車狀態for booking
 async function memberStatus(){
     try{
-        let parkingStatus = await getMemberStatus()
-        let memberCar = await returnCarBoardData()
         const alertContent = document.querySelector("#alert-content")
         const squareNumber = document.querySelector('#data-type-selector')
         const token = localStorage.getItem('Token');
-        console.log(parkingStatus)
+        let parkingStatus = await getMemberStatus()
+        let memberCar = await returnCarBoardData()
+        // console.log(parkingStatus)
         if (!token){
             // const alertContent = document.querySelector("#alert-content")
             alertContent.textContent = '請先登入以使用完整功能';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            return false;
         }
         if (memberCar.data.length === 0){
             alertContent.textContent = '請先登記車輛!';

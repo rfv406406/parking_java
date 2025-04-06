@@ -152,10 +152,10 @@ async function calculateAndDisplayRoute(directionsService, directionsRenderer, o
         }, (response, status) => {
             if (status === 'OK') {
                 directionsRenderer.setDirections(response);
-                resolve(response); // 路徑計算成功，解決 Promise
+                resolve(response); 
             } else {
                 window.alert('Directions request failed due to ' + status);
-                reject(status); // 路徑計算失敗，拒絕 Promise
+                reject(status); 
             };
         });
     });

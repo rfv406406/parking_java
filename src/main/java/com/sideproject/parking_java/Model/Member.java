@@ -11,6 +11,7 @@ public class Member {
     private String createTime;
     private String lastLogInTime;
     private String status;
+    private Integer balance;
     
     //MemberRowMapper
     // public Member(String account) {
@@ -61,6 +62,10 @@ public class Member {
         this.status = status;
     }
 
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -105,4 +110,7 @@ public class Member {
         return status;
     }
 
+    public Integer getBalance() {
+        return balance;
+    }
 }

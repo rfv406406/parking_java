@@ -24,7 +24,7 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/api/parkingLotUsing")
+    @GetMapping("/api/parkingLotUsage")
     public ResponseEntity<Transaction> getUnpaidParkingLotUsageDao() {
         Transaction unpaidParkingLotUasgeData = transactionService.getUnpaidParkingLotUsageService();
         ResponseEntity<Transaction> response = ResponseEntity.status(HttpStatus.OK).body(unpaidParkingLotUasgeData);
@@ -32,7 +32,7 @@ public class TransactionController {
     }
     
 
-    @PostMapping("/api/parkingLotUsing")
+    @PostMapping("/api/parkingLotUsage")
     public ResponseEntity<String> postParkingLotUsingController (@RequestBody Transaction transaction) {
         transactionService.postParkingLotUsageService(transaction);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
@@ -40,7 +40,7 @@ public class TransactionController {
         return response;
     }
 
-    @PutMapping("/api/parkingLotUsing/{orderNumber}")
+    @PutMapping("/api/parkingLotUsage/{orderNumber}")
     public ResponseEntity<String> putParkingLotUsingController(@PathVariable("orderNumber") String orderNumber, @RequestBody Transaction transaction) {
         transactionService.putParkingLotUsageService(orderNumber, transaction);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");

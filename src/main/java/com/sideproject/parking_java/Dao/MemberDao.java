@@ -69,12 +69,12 @@ public class MemberDao {
         return getAccountByValue.isEmpty();
     }
 
-    public Member getMemberStatusByAccount(String account) {
-        String sql = "SELECT status FROM member WHERE account = :account";
+    public Member getMemberBalanceAndStatusByAccount(String account) {
+        String sql = "SELECT m.status, d.balance FROM member m LEFT JOIN deposit_account d ON m.id = d.member_id WHERE account = :account";
         HashMap<String, Object> map = new HashMap<>();
         map.put("account", account);
-        Member getMemberStatusByAccount = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
-        return getMemberStatusByAccount;
+        Member memberData = namedParameterJdbcTemplate.queryForObject(sql, map, new MemberRowMapper());
+        return memberData;
     }
 
     public int getDepositAccountIdDao(int memberId) {

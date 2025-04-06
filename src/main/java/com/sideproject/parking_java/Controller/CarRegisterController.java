@@ -22,7 +22,7 @@ public class CarRegisterController {
     @Autowired
     private CarRegisterService carRegisterService;
 
-    @GetMapping("/api/carRegister")
+    @GetMapping("/api/car")
     public ResponseEntity<List<Car>> getCarRegisterDataController() {
         List<Car> car = carRegisterService.getCarRegisterDataService();
         ResponseEntity<List<Car>> response = ResponseEntity.status(HttpStatus.OK).body(car);
@@ -30,14 +30,14 @@ public class CarRegisterController {
     }
     
 
-    @PostMapping("/api/carRegister")
+    @PostMapping("/api/car")
     public ResponseEntity<String> postCarRegisterController(@ModelAttribute Car car) {
         carRegisterService.postCarRegisterService(car);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }
 
-    @DeleteMapping("/api/carRegister/{carId}")
+    @DeleteMapping("/api/car/{carId}")
     public ResponseEntity<String> deleteCarRegisterDataController(@PathVariable("carId") Integer carId) {
         carRegisterService.deleteCarRegisterDataService(carId);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");

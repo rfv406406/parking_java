@@ -50,10 +50,10 @@ public class MemberController {
         return response;
     }
 
-    @GetMapping("/api/member/status")
-    public ResponseEntity<String> getMemberStatus() throws AuthenticationError {
-        String status = memberService.getMemberStatusService();
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("status: " + status);
+    @GetMapping("/api/member/balanceStatus")
+    public ResponseEntity<Member> getMemberBalanceAndStatus() throws AuthenticationError {
+        Member member = memberService.getMemberBalanceAndStatusService();
+        ResponseEntity<Member> response = ResponseEntity.status(HttpStatus.OK).body(member);
         return response;
     }
 
