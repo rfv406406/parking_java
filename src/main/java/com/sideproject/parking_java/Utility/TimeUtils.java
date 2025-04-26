@@ -12,16 +12,16 @@ public class TimeUtils {
         return ft.format(timeObj);
     }
 
-    public static long timeCalculate(String timeObj1, String timeObj2) {
+    public static int timeCalculate(String timeObj1, String timeObj2) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-        LocalDateTime  timeObj1ParsedDate = LocalDateTime .parse(timeObj1, formatter);
-        LocalDateTime  timeObj2ParsedDate = LocalDateTime .parse(timeObj2, formatter);
+        LocalDateTime  timeObj1ParsedDate = LocalDateTime.parse(timeObj1, formatter);
+        LocalDateTime  timeObj2ParsedDate = LocalDateTime.parse(timeObj2, formatter);
 
         Duration duration = Duration.between(timeObj1ParsedDate, timeObj2ParsedDate);
 
-        long usingTime = duration.toSeconds();
+        int usingTime = (int) duration.toSeconds();
 
         return usingTime;
     }

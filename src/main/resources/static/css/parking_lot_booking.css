@@ -43,6 +43,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.parking_lot-information .parking_lot-name{
+    font-size: 30px;
+    align-items: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 .parking_lot-image{
@@ -52,6 +64,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .parking_lot_image_container{
@@ -84,7 +97,7 @@
 }
 
 .button-img-left{
-    background-image: url('../IMAGE/button-left.png');
+    background-image: url('../image/button-left.png');
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -97,7 +110,7 @@
 }
 
 .button-img-right{
-    background-image: url('../IMAGE/button-right.png');
+    background-image: url('../image/button-right.png');
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -155,7 +168,7 @@
     font-family: Inter;
     font-size:20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 150%; /* 24px */
     cursor: pointer;
 }
@@ -218,7 +231,7 @@
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 150%;
     cursor: pointer;
 }

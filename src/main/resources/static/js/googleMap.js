@@ -1,162 +1,170 @@
 let map;
-let currentPosition; 
-let selectedPlace;
-let marker;
+let infoWindow;
+let currentPosition;
 let directionsService;
 let directionsRenderer;
-let infoWindow;
-let newZoom;
+let geocoder;
+let advancedMarkerElement;
+let markerClusterer;
 
 async function initMap() {
-    //@ts-ignore
-    let { Map } = await google.maps.importLibrary("maps");
+    try {
+        // Request needed libraries.
+        //@ts-ignore
+        const center = { lat: 23.553118, lng: 121.0211024 };
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        advancedMarkerElement = AdvancedMarkerElement;
+        const { MarkerClusterer } = await import('https://cdn.skypack.dev/@googlemaps/markerclusterer@2.3.1');
+        markerClusterer = MarkerClusterer;
 
-    map = new Map(document.querySelector('#map'), {
-        center: {lat: 23.553118, lng: 121.0211024},
-        zoom: 7,
-        heading: 90,
-        gestureHandling: 'greedy'
-        // mapTypeControl: false
-    });
-    map.addListener("zoom_changed", function() {
-        newZoom = map.getZoom();
-        console.log("目前縮放等級是：", newZoom);
-    });
-    navigator.geolocation.getCurrentPosition(async function(position){
-        currentPosition = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-        };
-        map.setCenter(currentPosition);
-        map.setZoom(16);
-        await setupAutocompleteListener(map, currentPosition);
-    });
-    directionsService = new google.maps.DirectionsService();
-    directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(map);
-    startTrackingUserPosition();
+        map = new Map(document.querySelector("#map"), {
+            zoom: 7,
+            center: center,
+            mapId: "DEMO_MAP_ID",
+            gestureHandling: "greedy",
+        });
+        map.setCenter({ lat: 23.553118, lng: 121.0211024 });
 
-    document.querySelector('#navigation').addEventListener('click', returnToCurrentPositionAndZoomIn);
-};
+        infoWindow = new google.maps.InfoWindow();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsService = new google.maps.DirectionsService();
+        geocoder = new google.maps.Geocoder();
 
-async function setupAutocompleteListener(map, currentPosition) {
-    let autocomplete = await initializeAutocomplete(currentPosition);
-    autocomplete.addListener('place_changed', function() {
-        const place = autocomplete.getPlace();
-        selectedPlace = {
-            location: place.geometry.location,
-            placeId: place.place_id,
-            name: place.name,
-            address: place.formatted_address,
-            rating: place.rating,
-            phoneNumber: place.formatted_phone_number
-        };
-        map.setCenter(selectedPlace.location);
-
-        if (!marker) {
-            marker = new google.maps.Marker({ map: map });
-        };
-        marker.setPosition(selectedPlace.location);
-
-        if (!directionsService) {
-            directionsService = new google.maps.DirectionsService();
-        };
-        if (!directionsRenderer) {
-            directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
-        };
-        directionsRenderer.set('directions', null);
-
-        directionsService.route({
-            origin: new google.maps.LatLng(currentPosition.lat, currentPosition.lng),
-            destination: { placeId: selectedPlace.placeId },
-            travelMode: 'DRIVING',
-        }, onRouteCalculated);
-    });
-}
-
-async function initializeAutocomplete(currentPosition) {
-    const input = document.querySelector('#searchInput');
-    const autocomplete = new google.maps.places.Autocomplete(input, {
-        bounds: {
-            east: currentPosition.lng + 0.001,
-            west: currentPosition.lng - 0.001,
-            south: currentPosition.lat - 0.001,
-            north: currentPosition.lat + 0.001,
-        },
-        strictBounds: false,
-    });
-
-    return autocomplete;
-};
-
-function returnToCurrentPositionAndZoomIn() {
-    if (currentPosition) {
-        map.setCenter(currentPosition);
-        map.setZoom(20);
-        removeClass('.parking_lot-information-container',['parking_lot-information-container-toggled', 'parking_lot-information-container-appear'])
+        //return center
+        currentPosition = await returnCurrentPosition();
+        await displayMarker(currentPosition);
+        //匯入停車場
+        fetchParkingLotData();
+    } catch(error) {
+        console.error(error);
+        const alertContent = document.querySelector("#alert-content")
+        alertContent.textContent = error.message;
+        toggleClass('#alert-page-container', 'alert-page-container-toggled');
+        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
     }
 }
 
-function startTrackingUserPosition() {
-    navigator.geolocation.watchPosition(function(position) {
-        currentPosition = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
+async function calculateAndDisplayRoute(directionsService, directionsRenderer, destination) {
+    try {
+        let currentPosition = await returnCurrentPosition();
+        let query = {
+            "origin":{ "lat": currentPosition.lat, "lng":currentPosition.lng },
+            "destination":destination,
+            travelMode: google.maps.TravelMode.DRIVING
         };
-        console.log("目前位置: ", currentPosition);
+        let response = await directionsService.route(query);
+        directionsRenderer.setDirections(response);   
+    } catch(error) {
+        console.log(error);
+        throw error;
+    }
+  }
 
-        // 如果marker已经存在，更新它的位置
-        if (!marker) {
-            marker = new google.maps.Marker({
-                position: currentPosition,
-                map: map,
-                title: "您的位置"
-            });
+async function reverseGeocoding(geocoder, map, infoWindow, currentPosition) {
+    try {
+        let location = {"location": currentPosition};
+        let response = await geocoder.geocode(location);
+
+        if (response.results[0]) {
+            return response.results[0];
         } else {
-            marker.setPosition(currentPosition);
+            throw new Error("No results found");
         }
-    }, function(error) {
-        console.error("Error watching position: " + error.message);
-    }, {
-        enableHighAccuracy: true,
-        maximumAge: 1000000000, // 每秒更新位置
-        timeout: 30000
-    });
+    } catch(error) {
+        console.error(error);
+        throw error;
+    }
 }
 
-function onRouteCalculated(response, status) {
-    if (status === 'OK') {
-        directionsRenderer.setDirections(response);
-        if (!infoWindow) {
-            infoWindow = new google.maps.InfoWindow();
-        }
-        infoWindow.setContent(
-            `<h3>${selectedPlace.name}</h3>
-            <div>地址: ${selectedPlace.address}</div>
-            <div>電話: ${selectedPlace.phoneNumber}</div>
-            <div>評分: ${selectedPlace.rating}</div>
-            <div>開車時間: ${response.routes[0].legs[0].duration.text}</div>`
-        );
-        infoWindow.open(map, marker);
-    };
-}
-
-// 最短路徑
-async function calculateAndDisplayRoute(directionsService, directionsRenderer, origin, destination) {
-    directionsRenderer.setOptions({preserveViewport: true});
+async function returnCurrentPosition() {
     return new Promise((resolve, reject) => {
-        directionsService.route({
-            origin: { lat: origin.lat, lng: origin.lng },
-            destination: { lat: parseFloat(destination.lat), lng: parseFloat(destination.lng) },
-            travelMode: 'DRIVING'
-        }, (response, status) => {
-            if (status === 'OK') {
-                directionsRenderer.setDirections(response);
-                resolve(response); 
-            } else {
-                window.alert('Directions request failed due to ' + status);
-                reject(status); 
-            };
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                  const pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                  };
+                resolve(pos);  
+                },
+                (error) => {
+                    reject(new Error(error.message));                    
+                },
+              );
+        } else {
+            reject(new Error("Browser doesn't support Geolocation"));
+        }    
+    })
+}
+
+async function renderSearchingLocation(destination) {
+    try {
+        const { Place } = await google.maps.importLibrary("places");
+        const request = {
+            textQuery: destination,
+            fields: ['displayName', 'location', 'businessStatus', 'formattedAddress'],
+            isOpenNow: true,
+            language: 'zh-TW',
+            maxResultCount: 8,
+            minRating: 3.2,
+            region: 'tw', // 使用 region 限定在台灣
+        };
+
+        const { places } = await Place.searchByText(request);
+        let responseArray = [];
+
+        if (places.length) {
+            const { LatLngBounds } = await google.maps.importLibrary("core");
+            const bounds = new LatLngBounds();
+            // Loop through and get all the results.
+            places.forEach((place) => {
+                responseArray.push(place);
+                bounds.extend(place.location);
+            });
+            await displayMarker(null, responseArray);
+            map.fitBounds(bounds);
+        }
+        else {
+            console.log('No results');
+            throw new Error("No results");
+        }
+    } catch(error) {
+        throw new Error(error.message);
+    }
+}
+
+async function displayMarker(currentPosition = null, places = null){
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    map.setCenter(currentPosition || places[0].location);
+    map.setZoom(15);
+    if (places != null) {
+        for (let i=0; i<places.length; i++) {
+            const marker = new AdvancedMarkerElement({
+                map: map,
+                position: places[i].location,
+                title: places[i].displayName,
+            });
+            infoWindow.setPosition(places[i].location);
+            infoWindow.setContent(`${places[i].displayName}<br>${places[i].formattedAddress}`);
+            marker.addEventListener("gmp-click", () => {
+                infoWindow.open(map);
+            })
+        }
+    }
+    if (currentPosition != null) {
+        const marker = new AdvancedMarkerElement({
+            map: map,
+            position: currentPosition,
+            title: "目前所在位置",
         });
-    });
-};
+        infoWindow.setPosition(currentPosition);
+        infoWindow.setContent("目前所在位置");
+        marker.addEventListener("gmp-click", () => {
+            infoWindow.open(map);
+        })
+    }
+}
+
+initMap();
+// window.initMap = initMap;

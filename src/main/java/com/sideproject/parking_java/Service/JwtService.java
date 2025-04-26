@@ -1,5 +1,7 @@
 package com.sideproject.parking_java.service;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,17 +16,21 @@ import com.sideproject.parking_java.utility.JwtUtil;
 public class JwtService {
     @Autowired
     private AuthenticationManager authenticationManager;
-  
 
-    public String returnAuth(Member member) {
-        String account = member.getAccount();
-        String password = member.getPassword();
-        Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
-
-        authentication = authenticationManager.authenticate(authentication);
-        MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
-        String token = JwtUtil.generateToken(getPrincipal);
+    public HashMap<String, Object> returnAuth(Member member) throws RuntimeException{
+        try {
+            String account = member.getAccount();
+            String password = member.getPassword();
+            HashMap<String, Object> tokenObject = new HashMap<>();
+            Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
+            authentication = authenticationManager.authenticate(authentication);
+            MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
+            String token = JwtUtil.generateToken(getPrincipal);
+            tokenObject.put("token", token);
+            return tokenObject;
+        } catch (RuntimeException e) {
+            throw new RuntimeException("帳號或密碼錯誤");
+        }
         
-        return token;
     }
 }

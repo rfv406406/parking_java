@@ -10,16 +10,31 @@ function toggleClass(elementSelector, classToToggle) {
 
 // 事件監聽設置的通用函式
 function setupToggle(buttonSelector, toggles) {
+  const toggleAll = () => {
+    toggles.forEach(function(toggle) {
+      toggleClass(toggle.elementSelector, toggle.classToToggle);
+    });
+  };
   let button = document.querySelector(buttonSelector);
   if (button){
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      toggles.forEach(function(toggle) {
-        toggleClass(toggle.elementSelector, toggle.classToToggle);
-      });
+      toggleAll();  
     });
   }
-};
+  return toggleAll;
+}
+// function setupToggle(buttonSelector, toggles) {
+//   let button = document.querySelector(buttonSelector);
+//   if (button){
+//     button.addEventListener('click', (event) => {
+//       event.preventDefault();
+//       toggles.forEach(function(toggle) {
+//         toggleClass(toggle.elementSelector, toggle.classToToggle);
+//       });
+//     });
+//   }
+// };
 
 // 事件監聽設置的通用函式//排除按鈕
 function setupToggleNotButtonElements(element, toggles) {
@@ -36,17 +51,18 @@ function setupToggleNotButtonElements(element, toggles) {
   }
 }
 
-// 事件監聽設置的通用函式
-function setupAppear(toggles) {
-  toggles.forEach(function(toggle) {
-    const elements = document.querySelectorAll(toggle.elementSelector);
-    elements.forEach(function(element) {
-      if (!element.classList.contains(toggle.classToToggle)) {
-        element.classList.toggle(toggle.classToToggle);
-      };
-    });
-  });
-}
+// // 事件監聽設置的通用函式
+// function setupAppear(toggles) {
+//   toggles.forEach(function(toggle) {
+//     const elements = document.querySelectorAll(toggle.elementSelector);
+//     console.log(elements);
+//     elements.forEach(function(element) {
+//       if (!element.classList.contains(toggle.classToToggle)) {
+//         element.classList.toggle(toggle.classToToggle);
+//       };
+//     });
+//   });
+// }
 
 // 事件監聽設置的通用函式
 function removeClass(elementSelector, classesToRemove) {
@@ -101,7 +117,7 @@ setupRemove('.map', [
 
 //parking_page
 //parking_page block顯示
-setupToggle('#parking-page-button-list', [
+let parkingPageButtonList = setupToggle('#parking-page-button-list', [
   { elementSelector: '#packing-page-container', classToToggle: 'packing-page-container-toggled' },
   { elementSelector: '#packing-page-black-back', classToToggle: 'black-back-toggled' }
 ])
@@ -110,7 +126,7 @@ setupRemoveButton('#close-packing-page', [
   { elementSelector: '#packing-page-container', css: ['packing-page-container-toggled'] },
   { elementSelector: '#packing-page-black-back', css: ['black-back-toggled'] },
   { elementSelector: '#menuContent', css: ['menuContent_toggled'] },
-  // { elementSelector: '#packing-page-information-none', css: ['packing-page-information-none-toggled'] },
+  { elementSelector: '#packing-page-information-none', css: ['packing-page-information-none-toggled'] },
   { elementSelector: '#packing-page-car-board-selected', css: ['packing-page-car-board-selected-toggled'] },
   { elementSelector: '.parking_lot-information-container', css: ['parking_lot-information-container-toggled', 'parking_lot-information-container-appear'] }
 ])
@@ -142,10 +158,10 @@ setupToggle('#return-signin', [
   { elementSelector: '#signon-container', classToToggle: 'signup-container-toggled' }
 ]);
 
-setupToggle('#close-signin', [
+let toggleSignIn = setupToggle('#close-signin', [
   { elementSelector: '#signin-container', classToToggle: 'signin-container-toggled' },
   { elementSelector: '#black-back', classToToggle: 'black-back-toggled' },
-  { elementSelector: '#menuContent', classToToggle: 'menuContent_toggled' }
+  // { elementSelector: '#menuContent', classToToggle: 'menuContent_toggled' }
 ]);
 
 setupToggle('#close-signon', [
@@ -250,25 +266,36 @@ function removeClassOnClickOutside(targetSelector, toggleSelector, classesToRemo
   });
 }
 
-// 使用函数移除 'menuContent_toggled' 类
 removeClassOnClickOutside('#menuContent', '#menu', ['menuContent_toggled']);
 
 function clickButton(buttonSelector, renderTemplate) {
-  document.querySelector(buttonSelector).addEventListener('click', (event) => {
+  document.querySelector(buttonSelector).addEventListener('click', async (event) => {
     event.preventDefault();
-    turnPage(renderTemplate)
+    if (buttonSelector == "#parking-page-button-list" && window.location.pathname !== "/") {
+      await turnPage(renderTemplate, "#parkingPage");
+      return null;
+    } else if (buttonSelector == "#parking-page-button-list" && window.location.pathname === "/") {
+      return null;
+    }
+    await turnPage(renderTemplate);
   });
 }
 
-//turn to other pages
-function turnPage(renderTemplate){
-  window.location.href = renderTemplate;
+async function turnPage(renderTemplate, hash = null){
+  const token = tokenChecking();
+  let response = await fetchAPI(renderTemplate, token, "GET", data = null);
+  if (response.ok && hash == null) {
+    window.location.href = renderTemplate;
+  } else if (response.ok && hash != null) {
+    window.location.href = renderTemplate + hash;
+  }
 }
 
-clickButton('#parking-lot-button-list','/parkinglotpage')
+clickButton('#parking-lot-button-list','/parkingLotPage');
 clickButton('#home','/')
-clickButton('#selector','/selector')
-clickButton('#car_page','/car_page')
-clickButton('#id','/id')
-clickButton('#deposit-and-pay-page-button','/deposit_and_pay_page')
-clickButton('#cash-record-page-button','/cash_flow_record')
+// clickButton('#selector','/selector')
+clickButton('#car_page','/carPage');
+clickButton('#id','/id');
+clickButton('#deposit-and-pay-page-button','/depositPage');
+clickButton('#cash-record-page-button','/cashFlowRecord');
+clickButton('#parking-page-button-list','/');

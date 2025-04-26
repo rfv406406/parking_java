@@ -9,14 +9,14 @@ public class ParkingLot {
     private String name;
     private String address;
     private String nearLandmark;
-    private String openingTimeAm;
-    private String openingTimePm;
+    private String openingTime;
+    private String closingTime;
     private String spaceInOut;
     private Integer price;
     private String carWidth;
     private String carHeight;
-    private String latitude;
-    private String longitude;
+    private double latitude;
+    private double longitude;
 
     private MultipartFile[] img;
     // return type
@@ -25,7 +25,7 @@ public class ParkingLot {
     private List<CarSpaceNumber> carSpaceNumber;
     private List<CarSpaceImage> carSpaceImage;
 
-    public void setParkingLotId(int parkingLotId) {
+    public void setParkingLotId(Integer parkingLotId) {
         this.parkingLotId = parkingLotId;
     }
 
@@ -41,12 +41,12 @@ public class ParkingLot {
         this.nearLandmark = nearLandmark;
     }
 
-    public void setOpeningTimeAm(String openingTimeAm) {
-        this.openingTimeAm = openingTimeAm;
+    public void setOpeningTime(String openingTime) {
+        this.openingTime = openingTime;
     }
 
-    public void setOpeningTimePm(String openingTimePm) {
-        this.openingTimePm = openingTimePm;
+    public void setClosingTime(String closingTime) {
+        this.closingTime = closingTime;
     }
 
     public void setSpaceInOut(String spaceInOut) {
@@ -65,11 +65,11 @@ public class ParkingLot {
         this.carHeight = carHeight;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
@@ -105,12 +105,12 @@ public class ParkingLot {
         return nearLandmark;
     }
 
-    public String getOpeningTimeAm() {
-        return openingTimeAm;
+    public String getOpeningTime() {
+        return openingTime;
     }
 
-    public String getOpeningTimePm() {
-        return openingTimePm;
+    public String getClosingTime() {
+        return closingTime;
     }
 
     public String getSpaceInOut() {
@@ -129,11 +129,11 @@ public class ParkingLot {
         return carHeight;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude; 
     }
 

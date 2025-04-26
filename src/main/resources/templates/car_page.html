@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/plate_board.css">
-    <link rel="stylesheet" href="../static/css/alert.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/plate_board.css">
+    <link rel="stylesheet" href="/css/alert.css">
     <title>首頁</title>
 </head>
 <body>
-    {% include 'nav.html' %} {% include 'sign_system.html' %}
-    {% include 'alert_page.html' %}
+    <div th:replace="nav :: nav"></div>
+    <div th:replace="sign_system :: sign_system"></div>
+    <div th:replace="alert_page :: alert_page"></div>
+    <!-- {% include 'nav.html' %} 
+    {% include 'sign_system.html' %}
+    {% include 'alert_page.html' %} -->
     <div class="plate-board-container">
         <div class="parking-lot-page" id="parking-lot-page">
             <div class="information-page-header">
                 <div>車牌頁面</div>
             </div>
             <div class="separator"></div>
-            <div id="parking-lot-container">
-                <div class="parking-lot-page-table" id="parking-lot-page-table">
+            <div class="parking-lot-container" id="parking-lot-container">
+                <div class="parking-lot-table" id="parking-lot-table">
                     <div class="parking-lot-information-page-go-button" id="parking-lot-information-page-go-button"></div>
                     <div class="image"></div>
                 </div>
@@ -26,7 +30,7 @@
             </div>
             <button class="edit-button" id="plate-board-edit-button">編輯</button> 
         </div>
-        <header class="plate-board-container-header" id="plate-board-container-header">
+        <div class="plate-board-container-header" id="plate-board-container-header">
             <div class="text">上傳車車編號與圖片</div>
             </br>
             車牌編號：<input type="text" name="message_content" class="message_content" id="plate-board-number" placeholder="ex.ABC-1234">
@@ -37,11 +41,12 @@
                 <input type="submit" id="plate-board-data-submit" value="送出">
                 <div class="car-page-message" id="car-page-message"></div>   
             </form>
-        </header>
+        </div>
     </div>
-    {% include 'foot.html' %}
-    <script src="../static/js/sign_system.js"></script>
-    <script src="../static/js/base.js"></script>
-    <script src="../static/js/car_page.js"></script>
+    <div th:replace="foot :: foot"></div>
+    <!-- {% include 'foot.html' %} -->
+    <script src="/js/sign_system.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/car_page.js"></script>
 </body>
 </html>

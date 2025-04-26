@@ -38,7 +38,7 @@ public class Transaction {
         this.depositAccountId = depositAccountId;
     }
 
-    public void setParkingLotId(int parkingLotId) {
+    public void setParkingLotId(Integer parkingLotId) {
         this.parkingLotId = parkingLotId;
     }
 

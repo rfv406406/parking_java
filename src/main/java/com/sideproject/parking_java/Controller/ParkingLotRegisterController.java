@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.ParkingLot;
@@ -35,23 +36,23 @@ public class ParkingLotRegisterController {
     
 
     @PostMapping("/api/parkingLot")
-    public ResponseEntity<String> postParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
+    public ResponseEntity<String> postParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException {
         parkingLotRegisterService.postParkingLotRegister(parkingLot);
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }
 
-    @PutMapping("/api/parkingLot")
-    public ResponseEntity<String> getParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError {
-        parkingLotRegisterService.putParkingLotRegister(parkingLot);
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
+    @PutMapping("/api/parkingLot/{parkingLotId}")
+    public ResponseEntity<String> getParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId, @ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException {
+        parkingLotRegisterService.putParkingLotRegister(parkingLotId, parkingLot);
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }
 
     @DeleteMapping("/api/parkingLot/{parkingLotId}")
     public ResponseEntity<String> deleteParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId) throws InvalidParameterError, DatabaseError {
         parkingLotRegisterService.deleteParkingLotRegister(parkingLotId);
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("ok");
+        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }
     

@@ -1,8 +1,8 @@
-<div class="black-back" id="black-back">
+<div th:fragment="sign_system" class="black-back" id="black-back">
     <div class="signin-container" id="signin-container">
         <div class="header">
             <div>登入帳戶</div>
-            <button class="close" id="close-signin"><img src="../static/image/close.png"></button>
+            <button class="close" id="close-signin"><img src="/image/close.png"></button>
         </div>
         <form class="signin-form" id="signin-form" action="/signin" method="PUT">
             <div class="input-box">
@@ -23,7 +23,7 @@
     <div class="signup-container" id="signon-container">
         <div class="header">
             <div>註冊帳戶</div>
-            <button class="close" id="close-signon"><img src="../static/image/close.png"></button>
+            <button class="close" id="close-signon"><img src="/image/close.png"></button>
         </div>
         <form class="signup-form" id="signup-form" action="/signup" method="POST">
             <div class="input-box">
@@ -48,4 +48,4 @@
         </form>
         <div class="footer"></div>
     </div>
-   </div> 
+</div> 

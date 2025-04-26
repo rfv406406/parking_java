@@ -28,7 +28,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         String authorizationHeader = httpRequest.getHeader("Authorization");
-        
+                
         if (authorizationHeader != null && !authorizationHeader.isEmpty() && authorizationHeader.startsWith("Bearer ")){
             String accessToken = authorizationHeader.replace("Bearer ", "");
             String account = JwtUtil.parseToken(accessToken);
@@ -44,6 +44,5 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
         
         chain.doFilter(request, response);
-        
     }
 }

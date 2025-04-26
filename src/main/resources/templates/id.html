@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/id.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/id.css">
     <title>首頁</title>
 </head>
 <body>
-    {% include 'nav.html' %} {% include 'sign_system.html' %}
+    <div th:replace="nav :: nav"></div>
+    <div th:replace="sign_system :: sign_system"></div>
+    <!-- {% include 'nav.html' %} 
+    {% include 'sign_system.html' %} -->
     <div class="information-container" id="information-container">
         <div class="information-header">
             <div>帳戶資訊</div>
-            <button class="close" id="close-information"><img src="../static/image/close.png"></button>
+            <button class="close" id="close-information"><img src="/image/close.png"></button>
         </div>
         <form class="information-form" id="information-form">
             <!-- <div class="input-box">
                 <label for="account" class="consistent-text">帳號：</label>
                 <input type="text" id="account-information" name="account-signon" class="text" placeholder="請輸入帳號">
             </div> -->
-            <div class="input-box">
+            <!-- <div class="input-box">
                 <label for="password" class="consistent-text">密碼：</label>
                 <input type="text" id="password-information" name="password-signon" class="text" placeholder="請輸入密碼">
+            </div> -->
+            <div class="input-box">
+              <label for="name" class="consistent-text">編號：</label>
+              <div id="id-information" name="id" class="text"></div>
             </div>
             <div class="input-box">
                 <label for="name" class="consistent-text">姓名：</label>
@@ -41,7 +48,7 @@
             </div>
             <button class="storage-button" id="id_page_storage-button" type="button">儲存</button>
         </form>
-        <div class="id-edit-success-message" id="id-edit-success-message"></div>
+        <div class="id-edit-success-message" id="id-edit-message"></div>
         <div class="footer"></div>
     </div>
     <div class="information-page" id="information-page">
@@ -51,37 +58,38 @@
         <div class="information-table" id="information-table">
             <table>
               <tr>
-                <th class="consistent-text">會員編號：</th>
-                <td class="infor-data" id="id_page_id_number">rfv406406</td>
+                <th class="consistent-text">編號：</th>
+                <td class="infor-data" id="id_page_id_number"></td>
               </tr>
               <tr>
                 <th class="consistent-text">帳號：</th>
-                <td class="infor-data" id="id_page_account">rfv406406</td>
+                <td class="infor-data" id="id_page_account"></td>
               </tr>
               <tr>
                 <th class="consistent-text">姓名：</th>
-                <td class="infor-data" id="id_page_name">康智偉</td>
+                <td class="infor-data" id="id_page_name"></td>
               </tr>
               <tr>
                 <th class="consistent-text">e-mail：</th>
-                <td class="infor-data" id="id_page_e-mail">rfv406406@gmail.com</td>
+                <td class="infor-data" id="id_page_e-mail"></td>
               </tr>
               <tr>
                 <th class="consistent-text">生日：</th>
-                <td class="infor-data" id="id_page_birthday">1911.01.10</td>
+                <td class="infor-data" id="id_page_birthday"></td>
               </tr>
               <tr>
                 <th class="consistent-text">手機：</th>
-                <td class="infor-data" id="id_page_phone">0987654321</td>
+                <td class="infor-data" id="id_page_phone"></td>
               </tr>
             </table>
             <button class="edit-button" id="id_page_edit-button">編輯</button>
         </div>
     </div>
-    {% include 'foot.html' %}
+    <div th:replace="foot :: foot"></div>
+    <!-- {% include 'foot.html' %} -->
     <!-- <script src="../static/JS/google map index.js"></script> -->
-    <script src="../static/js/sign_system.js"></script>
-    <script src="../static/js/id.js"></script>
-    <script src="../static/js/base.js"></script>
+    <script src="/js/sign_system.js"></script>
+    <script src="/js/id.js"></script>
+    <script src="/js/base.js"></script>
 </body>
 </html>

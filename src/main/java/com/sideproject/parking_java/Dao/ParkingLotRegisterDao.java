@@ -10,26 +10,32 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
-import jakarta.transaction.Transactional;
-
 @Component
 public class ParkingLotRegisterDao {
 
     @Autowired 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public List<ParkingLot> getParingLotRegisterDao() {
+    public List<ParkingLot> getParingLotRegisterDao(Integer memberId) {
         String sql = "SELECT parkinglotdata.*, " +
-             "GROUP_CONCAT(parkinglotimage.image SEPARATOR ',') AS images, " +
-             "GROUP_CONCAT(CONCAT(parkinglotsquare.parkinglot_id, ',', parkinglotsquare.square_number, ',', parkinglotsquare.status) " +
+             "GROUP_CONCAT(DISTINCT parkinglotimage.image SEPARATOR ',') AS images, " +
+             "GROUP_CONCAT(DISTINCT CONCAT(parkinglotsquare.id,',', parkinglotsquare.parkinglot_id,',', parkinglotsquare.square_number,',', parkinglotsquare.status) " +
              "ORDER BY parkinglotsquare.square_number SEPARATOR ',') AS squares " +
              "FROM parkinglotdata " +
              "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglot_id " +
-             "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglot_id " +
-             "GROUP BY parkinglotdata.id";
+             "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglot_id ";
+        String sql2 = "WHERE member_id = :member_id ";
+        String sql3 = "GROUP BY parkinglotdata.id";
 
         HashMap<String, Object> map = new HashMap<>();
-        List<ParkingLot> parkingLot = namedParameterJdbcTemplate.query(sql, map, new ParkingLotRowMapper());
+        List<ParkingLot> parkingLot;
+        if (memberId == null) {
+            
+            parkingLot = namedParameterJdbcTemplate.query(sql+sql3, map, new ParkingLotRowMapper());
+        } else {
+            map.put("member_id", memberId);
+            parkingLot = namedParameterJdbcTemplate.query(sql+sql2+sql3, map, new ParkingLotRowMapper());
+        }
 
         for (ParkingLot p : parkingLot) {
             System.out.println(p);
@@ -47,8 +53,8 @@ public class ParkingLotRegisterDao {
         map.put("name", parkingLot.getName());
         map.put("address", parkingLot.getAddress());
         map.put("landmark", parkingLot.getNearLandmark());
-        map.put("opening_time", parkingLot.getOpeningTimeAm());
-        map.put("closing_time", parkingLot.getOpeningTimePm());
+        map.put("opening_time", parkingLot.getOpeningTime());
+        map.put("closing_time", parkingLot.getClosingTime());
         map.put("space_in_out", parkingLot.getSpaceInOut());
         map.put("price", parkingLot.getPrice());
         map.put("width_limit", parkingLot.getCarWidth());
@@ -61,7 +67,6 @@ public class ParkingLotRegisterDao {
         return insertId;
     }
     
-    @Transactional
     public int deleteParkingLotRegisterDao(Integer parkingLot, int memberId) {
         String sql1 = "DELETE FROM parkingsquareimage WHERE parkinglotsquare_id IN (SELECT id FROM parkinglotsquare WHERE parkinglot_id = :parkinglot_id)";
         String sql2 = "DELETE FROM parkinglotsquare WHERE parkinglot_id = :parkinglot_id";
@@ -99,8 +104,8 @@ public class ParkingLotRegisterDao {
         map.put("name", parkingLot.getName());
         map.put("address", parkingLot.getAddress());
         map.put("landmark", parkingLot.getNearLandmark());
-        map.put("opening_time", parkingLot.getOpeningTimeAm());
-        map.put("closing_time", parkingLot.getOpeningTimePm());
+        map.put("opening_time", parkingLot.getOpeningTime());
+        map.put("closing_time", parkingLot.getClosingTime());
         map.put("space_in_out", parkingLot.getSpaceInOut());
         map.put("price", parkingLot.getPrice());
         map.put("width_limit", parkingLot.getCarWidth());

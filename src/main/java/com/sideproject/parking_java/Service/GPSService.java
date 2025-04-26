@@ -21,7 +21,7 @@ public class GpsService {
     @Value("${googleMapKey}")
     private String googleMapKey;
 
-    public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException{
+    public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, RuntimeException, JsonProcessingException{
         if (address == null || address.isEmpty()) {
             throw new InvalidParameterError("address is null or empty");
         }
@@ -39,7 +39,6 @@ public class GpsService {
             // 取得 geometry -> location
             JsonNode location = firstResult.path("geometry").path("location");
 
-            System.out.println("Location: " + location);
             double lat = location.path("lat").asDouble();
             double lng = location.path("lng").asDouble();
 
@@ -48,8 +47,8 @@ public class GpsService {
             map.put("lng",lng);
 
             return map;
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException("Error coverting JSON to Object", e);
+        } catch (RuntimeException e) {
+            throw new RuntimeException("gps not found");
         }
     }
 }

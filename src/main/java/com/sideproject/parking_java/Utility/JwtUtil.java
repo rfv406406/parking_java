@@ -18,7 +18,6 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtil {
     private static final long EWPIRATION_TIME = 7*24*60*60*1000;
 
-    // @Value("${secretkey}")
     private static final String SECRET_KEY = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
 
     public static String generateToken(MemberDetails member) {
@@ -31,8 +30,6 @@ public class JwtUtil {
         claim.setSubject(member.getUsername());
         claim.setExpiration(exp);
         claim.put("id", member.getId());
-        // claim.put("email", member.getEmail());
-        // claim.put("role", member.getRole());
 
         return Jwts.builder()
                 .setClaims(claim)

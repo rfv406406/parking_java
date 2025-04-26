@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/deposit_and_pay.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/deposit_and_pay.css">
     <title>首頁</title>
 </head>
 <body>
-    {% include 'nav.html' %} {% include 'sign_system.html' %}
+    <div th:replace="nav :: nav"></div>
+    <div th:replace="sign_system :: sign_system"></div>
+    <!-- {% include 'nav.html' %} 
+    {% include 'sign_system.html' %} -->
     <div class="payment_infor_container">
         <form class="card_information">
             <div class="text">儲值金額：<input type="text" class="input" id="deposit-number"></div>
@@ -22,10 +25,11 @@
         <button class="pay_button">儲值</button>
     </div>
     <div class="pay-success" id="pay-success"></div>
-    {% include 'foot.html' %}
-    <script src="../static/js/sign_system.js"></script>
-    <script src="../static/js/base.js"></script>
+    <div th:replace="foot :: foot"></div>
+    <!-- {% include 'foot.html' %} -->
+    <script src="/js/sign_system.js"></script>
+    <script src="/js/base.js"></script>
     <script src="https://js.tappaysdk.com/sdk/tpdirect/v5.17.0"></script> 
-    <script src="../static/js/deposit_and_pay.js"></script>
+    <script src="/js/deposit_and_pay.js"></script>
 </body>
 </html>

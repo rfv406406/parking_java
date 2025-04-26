@@ -132,4 +132,15 @@ public class MemberDao {
 
         namedParameterJdbcTemplate.update(sql, map);
     }
+
+    public void putUpdateMemberStatusDao(int memberId, Member member) {
+        String sql = "UPDATE member SET status = :status WHERE id = :member_id";
+
+        HashMap<String, Object> map = new HashMap<>();
+
+        map.put("member_id", memberId);
+        map.put("status", member.getStatus());
+
+        namedParameterJdbcTemplate.update(sql, map);
+    }
 }

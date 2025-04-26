@@ -1,41 +1,41 @@
 fetchIdPageData();
 async function fetchIdPageData(){
     try{
-      const token = localStorage.getItem('Token');
+      const token = tokenChecking();
       const response = await fetchAPI("/api/member/memberDetails", token, 'GET');
       const data = await handleResponse(response);
-      idDataInTableAndInput(data);
+      renderIdDataInTableAndInput(data);
     }catch(error){
       handleError(error);
     }
 }
 
-function idDataInTableAndInput(data){
+function renderIdDataInTableAndInput(data){
   document.querySelector('#id_page_id_number').textContent = data.id || '無';
   document.querySelector('#id_page_account').textContent = data.account || '無';
   document.querySelector('#id_page_name').textContent = data.name || '無';
   document.querySelector('#id_page_e-mail').textContent = data.email || '無';
   document.querySelector('#id_page_birthday').textContent = data.birthday || '無';
   document.querySelector('#id_page_phone').textContent = data.cellphone || '無';
-  document.querySelector('#name-information').textContent = data.name || '';
-  document.querySelector('#email-information').textContent = data.email || '';
-  document.querySelector('#birthday-information').textContent = data.birthday || '';
-  document.querySelector('#callPhone-information').textContent = data.cellphone || '';
+  document.querySelector('#id-information').textContent = data.id || '';
+  document.querySelector('#name-information').value = data.name || '';
+  document.querySelector('#email-information').value = data.email || '';
+  document.querySelector('#birthday-information').value = data.birthday || '';
+  document.querySelector('#callPhone-information').value = data.cellphone || '';
 }
 
 const idPageStorageButton = document.querySelector('#id_page_storage-button');
 
-idPageStorageButton.addEventListener('click', InputIdPageData);
+idPageStorageButton.addEventListener('click', inputEditData);
 
-async function InputIdPageData(){
+async function inputEditData(){
   try{
-    const token = localStorage.getItem('Token');
-    let idData  = GetIdDataInInput();
+    const token = tokenChecking();
+    let idData  = getEditData();
     if (!idData) {
       return null;
     } else{
-      const response = await fetchAPI("/api/member/memberDetails", token, 'POST', idData)
-      // const response = await inputIdDataToDB();
+      const response = await fetchAPI(`/api/member/memberDetails/${idData.id}`, token, 'PUT', idData)
       const data = await handleResponse(response);
       idEditMessage(data);
     }
@@ -44,30 +44,35 @@ async function InputIdPageData(){
   }
 }
 
-function GetIdDataInInput() {
+function getEditData() {
+  const id = document.querySelector('#id-information').textContent;
   const name = document.querySelector('#name-information').value;
   const email = document.querySelector('#email-information').value;
   const birthday = document.querySelector('#birthday-information').value;
   const cellphone = document.querySelector('#callPhone-information').value;
-  const password = document.querySelector('#password-information').value;
-  if (!name && !email && !birthday && !cellphone && !password) {
+  // const password = document.querySelector('#password-information').value;
+  if (!name && !email && !birthday && !cellphone) {
     const messageContainer = document.querySelector('#id-edit-success-message');
     messageContainer.textContent = '請輸入編輯資料!';
     return null;
   }
-  return {
+
+  let editData = {
+    "id":id,
     "name": name,
     "email": email,
     "birthday": birthday,
-    "cellphone": cellphone,
-    "password": password
+    "cellphone": cellphone
+    // "password": password
   };
+
+  return editData;
 }
 
 function idEditMessage(data){
-  let messageContainer = document.querySelector('#id-edit-success-message')
-  if (data.ok){
+  let messageContainer = document.querySelector('#id-edit-message')
+  if (data == "OK"){
       messageContainer.textContent = '編輯成功!';
-      window.location.href = '/id'
+      setTimeout(() => {window.location.href = '/id'}, 500);
   }
 };

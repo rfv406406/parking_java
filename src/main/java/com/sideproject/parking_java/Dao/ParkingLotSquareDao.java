@@ -28,17 +28,27 @@ public class ParkingLotSquareDao {
         return insertId;
     }
 
-    public int putParkinglotsquareDao(ParkingLot parkingLot, int parkingLotDataId) {
-        int insertId = 0;
+    public int putParkinglotsquareDao(ParkingLot parkingLot) {
+        int insertNumber = 0;
         for (CarSpaceNumber carSpaceNumber : parkingLot.getCarSpaceNumber()) {
-            String sql = "UPDATE parkinglotsquare SET square_number = :square_number " +
-            "WHERE parkinglot_id = :parkinglot_id";            
             HashMap<String, Object> map = new HashMap<>();
-            map.put("parkinglot_id", parkingLotDataId);
-            map.put("square_number", carSpaceNumber.getValue());
-            int insertCount = namedParameterJdbcTemplate.update(sql, map);
-            insertId += insertCount;
+            if (carSpaceNumber.getId() == null) {
+                String sqlI = "INSERT INTO parkinglotsquare(parkinglot_id, square_number, status) VALUES(:parkinglot_id, :square_number, :status)";
+                map.put("parkinglot_id", parkingLot.getParkingLotId());
+                map.put("square_number", carSpaceNumber.getValue());
+                map.put("status", "閒置中");
+                int updateCount = namedParameterJdbcTemplate.update(sqlI, map);
+                insertNumber += updateCount;
+            } else {
+                String sqlU = "UPDATE parkinglotsquare SET square_number = :square_number " +
+                "WHERE id = :id AND parkinglot_id = :parkinglot_id";            
+                map.put("parkinglot_id", parkingLot.getParkingLotId());
+                map.put("square_number", carSpaceNumber.getValue());
+                map.put("id", carSpaceNumber.getId());
+                int insertCount = namedParameterJdbcTemplate.update(sqlU, map);
+                insertNumber += insertCount;
+            }
         }
-        return insertId;
+        return insertNumber;
     }
 }

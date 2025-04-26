@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.MemberDao;
 import com.sideproject.parking_java.dao.TransactionDao;
+import com.sideproject.parking_java.exception.DatabaseError;
+import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 import com.sideproject.parking_java.utility.TimeUtils;
@@ -29,14 +31,18 @@ public class TransactionService {
         int memberId = MemberIdUtil.getMemberIdUtil();
         int depositAccountId = memberDao.getDepositAccountIdDao(memberId);
         String orderNumber = TimeUtils.timeFormat(new Date()) + Integer.toString(memberId);
+        Member member = new Member();
+        member.setStatus("停車中");
 
         transaction.setTransactionType("CONSUMPTION");
         transaction.setStatus("未付款");
 
         transactionDao.postInsertTransactionDao(memberId, depositAccountId, orderNumber, transaction);
+        // 更改車位狀態
         transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
-        transactionDao.putUpdateMemberStatusDao(memberId);
-        
+        // 更改會員狀態
+        memberDao.putUpdateMemberStatusDao(memberId, member);
+        // income method
         postParkingLotIncomeService(orderNumber, transaction);
     }
     // income method
@@ -57,50 +63,56 @@ public class TransactionService {
     }
     
     @Transactional
-    public void putParkingLotUsageService(String orderNumber, Transaction transaction) {
+    public void putParkingLotUsageService(String orderNumber, Transaction transaction) throws DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
+        Member member = new Member();
         Date currentTime = new Date();
         String currentTimeToString = TimeUtils.timeFormat(currentTime);
         String startTime = transaction.getStartTime();
-        System.out.println("startTime: "+ startTime);
-
-        long usingTime = TimeUtils.timeCalculate(startTime, currentTimeToString);
+        int usingTime = TimeUtils.timeCalculate(startTime, currentTimeToString);
         int cost = 0;
         int income = 0;
 
-        if (usingTime/60 < 5) {
+        int min = usingTime/60;
+        int hour = usingTime/(60*60);
+        int halfhour = (usingTime+1799)/1800;
+        if (min < 5) {
             cost = 0;
             income = 0;
-        }
-
-        if (usingTime/(60*2)<1) {
+        } else if (hour < 1) {
             cost -= transaction.getPrice();
             income += (int) Math.round(transaction.getPrice() * 0.9);
+        } else {
+            cost -= (int) Math.round(transaction.getPrice()*0.5*halfhour);
+            income += (int) Math.round(transaction.getPrice() * 0.5 * halfhour * 0.9);
         }
 
-        if ((usingTime/(60*2))-(usingTime/=(60*2)) > 0.5) {
-            cost -= (int) Math.round(transaction.getPrice() * (usingTime /= (60*2) + 1));
-            income += (int) Math.round(transaction.getPrice() * (usingTime /= (60*2) + 1));
-        }
-
-        if ((usingTime/(60*2))-(usingTime/=(60*2)) < 0.5) {
-            cost -= (int) Math.round(transaction.getPrice() * (usingTime /= (60*2)));
-            income += (int) Math.round(transaction.getPrice() * (usingTime /= (60*2)));
-        }
-        System.out.println(cost);
         transaction.setStopTime(currentTimeToString);
+        transaction.setTransactionType("CONSUMPTION");
         transaction.setAmount(cost);
         transaction.setStatus("已付款");
-        transactionDao.putUpdateParkingLotUsageDao(memberId, orderNumber, transaction);
+        int insertNumber = transactionDao.putUpdateParkingLotUsageDao(memberId, orderNumber, transaction);
+        if (insertNumber== 0) {
+            throw new DatabaseError("transactions failed");
+        }
+        //回復狀態
+        member.setStatus(null);
+        memberDao.putUpdateMemberStatusDao(memberId, member);
+        // 餘額更新
+        transactionDao.putUpdateBalanceDao(memberId, cost);
         //update income
         putParkingLotIncomeService(orderNumber, transaction, income);
+        // 回復車位狀態
+        transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
     }
     // income method
     public void putParkingLotIncomeService(String orderNumber, Transaction transaction, int income) {
         int parkingLotOwnerId = idDao.getMemberIdByParkingLotDataId(transaction.getParkingLotId());
+        transaction.setTransactionType("INCOME");
         transaction.setAmount(income);
         transaction.setStatus("已收款");
         transactionDao.putUpdateParkingLotUsageDao(parkingLotOwnerId, orderNumber, transaction);
+        transactionDao.putUpdateBalanceDao(parkingLotOwnerId, income);
     }
 
     public List<Transaction> getTransactionRecordsService() {

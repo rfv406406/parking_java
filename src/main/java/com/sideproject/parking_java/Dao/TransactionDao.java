@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.model.CarSpaceNumber;
 import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.utility.TransactionRowMapper;
 
@@ -16,23 +17,23 @@ public class TransactionDao {
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public int postInsertTransactionDao(int memberId, int depositAccountId, String orderNumber, Transaction transcation) {
+    public int postInsertTransactionDao(int memberId, int depositAccountId, String orderNumber, Transaction transaction) {
         String sql = "INSERT INTO transactions SET member_id = :member_id, deposit_account_id = :deposit_account_id, car_id = :car_id, order_number = :order_number, "
-        + "parkinglot_id = :parkinglot_id, parkinglotsquare_id = :parkinglotsquare_id, starttime = :starttime, transactions_type = :transactions_type, status = :status";
+        + "parkinglot_id = :parkinglot_id, parkinglotsquare_id = :parkinglotsquare_id, starttime = :starttime, transactions_type = :transactions_type, amount = :amount, status = :status";
 
         HashMap<String, Object> map = new HashMap<>();
 
         map.put("member_id", memberId);
         map.put("deposit_account_id", depositAccountId);
-        map.put("car_id", transcation.getCarId());
+        map.put("car_id", transaction.getCarId());
         map.put("order_number", orderNumber);
-        map.put("parkinglot_id", transcation.getParkingLotId());
-        map.put("parkinglotsquare_id", transcation.getParkingLotSquareId());
-        map.put("starttime", transcation.getStartTime());
-        map.put("transactions_type", transcation.getTransactionType());
-        map.put("status", transcation.getStatus());
-        map.put("amount", transcation.getAmount());
-
+        map.put("parkinglot_id", transaction.getParkingLotId());
+        map.put("parkinglotsquare_id", transaction.getParkingLotSquareId());
+        map.put("starttime", transaction.getStartTime());
+        map.put("transactions_type", transaction.getTransactionType());
+        map.put("status", transaction.getStatus());
+        map.put("amount", transaction.getAmount());
+        
         int insertId = namedParameterJdbcTemplate.update(sql, map);
 
         return insertId;
@@ -40,28 +41,18 @@ public class TransactionDao {
 
     public void putUpdateParkingLotSquareStatusDao(Transaction transcation) {
         String sql = "UPDATE parkinglotsquare SET status = :status WHERE id = :parkinglotsquare_id";
-        
+        List<CarSpaceNumber> carSpaceNumber = transcation.getParkingLot().getCarSpaceNumber();
+        String status = carSpaceNumber.get(0).getStatus();
         HashMap<String, Object> map = new HashMap<>();
 
         map.put("parkinglotsquare_id", transcation.getParkingLotSquareId());
-        map.put("status", "使用中");
-
-        namedParameterJdbcTemplate.update(sql, map);
-    }
-
-    public void putUpdateMemberStatusDao(int memberId) {
-        String sql = "UPDATE member SET status = :status WHERE id = :member_id";
-
-        HashMap<String, Object> map = new HashMap<>();
-
-        map.put("member_id", memberId);
-        map.put("status", "停車中");
+        map.put("status", status);
 
         namedParameterJdbcTemplate.update(sql, map);
     }
 
     public Transaction getUnpaidTransactionDao(int memberId) {
-        String sql = "SELECT t.id, t.order_number, t.starttime, p.*, s.* " + 
+        String sql = "SELECT t.id, t.order_number, t.starttime, t.parkinglotsquare_id, p.*, s.* " + 
                      "FROM transactions t " + 
                      "LEFT JOIN parkinglotdata p ON t.parkinglot_id = p.id " + 
                      "LEFT JOIN parkinglotsquare s ON t.parkinglotsquare_id = s.id " +
@@ -71,7 +62,6 @@ public class TransactionDao {
 
         map.put("member_id", memberId);
         List<Transaction> unpaidParkingLotUasgeData = namedParameterJdbcTemplate.query(sql, map, new TransactionRowMapper());
-
         if (!unpaidParkingLotUasgeData.isEmpty()) {
             return unpaidParkingLotUasgeData.get(0);
         } else {
@@ -79,25 +69,27 @@ public class TransactionDao {
         }
     }
 
-    public void putUpdateParkingLotUsageDao(int memberId, String orderNumber, Transaction transcation) {
-        String sql = "UPDATE transactions SET stoptime = :stoptime, amount = :amount, status = :status, transactions_time = CURRENT_TIMESTAMP WHERE member_id = :member_id AND order_number = :order_number";
+    public int putUpdateParkingLotUsageDao(int memberId, String orderNumber, Transaction transaction) {
+        String sql = "UPDATE transactions SET stoptime = :stoptime, amount = :amount, status = :status, " +
+        "transactions_time = CURRENT_TIMESTAMP WHERE member_id = :member_id AND order_number = :order_number AND transactions_type = :transactions_type";
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);
         map.put("order_number", orderNumber);
-        map.put("stoptime", transcation.getStopTime());
-        map.put("amount", transcation.getAmount());
-        map.put("status", transcation.getStatus());
-
-        namedParameterJdbcTemplate.update(sql, map);
+        map.put("stoptime", transaction.getStopTime());
+        map.put("amount", transaction.getAmount());
+        map.put("status", transaction.getStatus());
+        map.put("transactions_type", transaction.getTransactionType());
+        int insertNumber = namedParameterJdbcTemplate.update(sql, map);
+        return insertNumber;
     }
 
-    public void putUpdateBalanceDao(int memberId, int deposit) {
+    public void putUpdateBalanceDao(int memberId, int amount) {
         String sql = "UPDATE deposit_account SET balance = balance + :balance WHERE member_id = :member_id";
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("member_id", memberId);
-        map.put("balance", deposit);
+        map.put("balance", amount);
         
         namedParameterJdbcTemplate.update(sql, map);
     }

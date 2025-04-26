@@ -95,7 +95,7 @@
 
 .information-form .input-box{
     display:flex;
-    /* justify-content: end; */
+    align-items: center;
     width:100%;
     height:40px;
 }
@@ -121,7 +121,7 @@
 
 .parking-lot-information-container .text-time{
     height:100%;
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -131,18 +131,15 @@
 
 .parking-lot-information-container .consistent-text{
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     font-weight: bold;
-    line-height: 150%; /* 24px */
     white-space: nowrap;
     text-align: right;
-    flex: 0 0 20%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 30% */
-    /* height: 30px; */
+    flex: 0 0 20%; 
 }
 
 @media(max-width: 600px) {
@@ -345,7 +342,7 @@
     height: 40px;
     color: #1E1E1E;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 24px */
@@ -436,24 +433,27 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .parking-lot-page .parking-lot-information-page-go-button{
     width: auto;
     height: auto;
     display: flex;
+    padding: 8px 16px; 
     justify-content: flex-start;
     align-items: center;
-    margin-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
     color: #1E1E1E;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 24px */
-    border-radius: 4px;
+    border-radius: 8px;
     margin-right: auto;
-    border: #edecec solid 1px;
+    border: #e9ebef solid 2px;
     cursor: pointer;
 }
 

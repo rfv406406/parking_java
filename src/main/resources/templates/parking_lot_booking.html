@@ -1,4 +1,4 @@
-<div class="parking_lot-information-container">
+<div th:fragment="parking_lot_booking" id="parking-lot-information-container" class="parking_lot-information-container">
     <div class="parking_lot-image">
         <button class="button-img-left" id="button-img-left"></button>
         <div class="parking_lot_image_container" id="parking_lot_image_container">
@@ -7,6 +7,7 @@
         <button class="button-img-right" id="button-img-right"></button>
     </div>
     <div class="parking_lot-information">
+        <div id="parking-lot-id" style="display: none;"></div>
         <div class="parking_lot-name" id="parking-lot-name">春光公園地下停車場</div>
         </br>
         <div class="parking_lot-address" id="parking-lot-address">11081台北市信義區忠孝東路五段666號</div>
@@ -16,8 +17,7 @@
         <div class="parking_lot-address" id="parking-lot-holder-phone">聯絡電話:0987654321</div>
         <button class="button" id="navigation">導航</button>
         <select class="selector" id="data-type-selector">
-            <option value="title">選擇車位</option>
-            <!-- <option value="" selected disabled>選擇車位</option> -->
+            <option value="" disabled selected hidden>選擇車位</option>
         </select>    
         <div class="parking_lot-information-data">
             <div class="parking_lot-information-data-title">停車每小時</div>
@@ -40,7 +40,7 @@
             <div class="parking_lot-information-data-render-data" id="parking-lot-width">2.0 m以下</div>
         </div>
         <div class="button-container">
-            <button class="button" id="button-parking-reservation">預約車位</button>
+            <!-- <button class="button" id="button-parking-reservation">預約車位</button> -->
             <button class="button" id="button-parking-booking">我要停車</button>
             <p class="full-capacity-message">目前客滿</p>
         </div>

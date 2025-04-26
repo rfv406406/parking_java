@@ -40,7 +40,7 @@ public class TappayService {
 
         TappayPayload tappayPayload = new TappayPayload();
         tappayPayload.setPrime(prime);
-        tappayPayload.setAmount(Integer.toString(tappay.getDeposit()));
+        tappayPayload.setAmount(Integer.toString(deposit));
         tappayPayload.setOrderNumber(orderNumber);
 
         String PARTNER_KEY = tappayPayload.getPartnerKey();

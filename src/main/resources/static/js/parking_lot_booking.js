@@ -1,14 +1,32 @@
 let bookingLocationData;
 let lastClickedButton = '';
 
-buttonBooking = document.querySelector('#button-parking-booking')
-carBoardCheckedButton = document.querySelector('#car-board-checked-button')
+let buttonBooking = document.querySelector('#button-parking-booking');
+let carBoardCheckedButton = document.querySelector('#car-board-checked-button');
+
+// 導航
+async function navigation(parkingLot) {
+    let destination = {
+        "lat": parkingLot.latitude,
+        "lng": parkingLot.longitude
+    }
+    let navigation = document.querySelector("#navigation");
+    let parkingLotInforTable = document.querySelector("#parking-lot-information-container");
+    navigation.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        directionsRenderer.setMap(map);
+        await calculateAndDisplayRoute(directionsService, directionsRenderer, destination);
+        map.setCenter(currentPosition);
+        map.setZoom(25);
+        parkingLotInforTable.style.display = "none";
+    });
+}
 
 
 buttonBooking.addEventListener('click', async () => {
     try{
         lastClickedButton = 'booking';
-        let isMemberStatusChecked = await memberStatus();
+        let isMemberStatusChecked = await memberStatusChecking();
         if (!isMemberStatusChecked) {
             return null; 
         };
@@ -25,21 +43,26 @@ buttonBooking.addEventListener('click', async () => {
 
 carBoardCheckedButton.addEventListener('click', async () => {
     try{
+        const loader = document.querySelector('#loader');
         let isSquareChecked = carBoardChecking();
         if (!isSquareChecked) {
             return null; 
-            };
+        };
+        loader.style.display = 'flex';
         toggleClass('#packing-page-car-board-selected', 'packing-page-car-board-selected-toggled');
-        let squareNumber = document.querySelector('#data-type-selector').value
-        let carBoardSelected = document.querySelector('#car-board-number-selector').value
-        let bookingData = bookingLocationData; // return data get
-        let bookingTime = getCurrentDateTime();
-        await passBookingData(bookingData, bookingTime, carBoardSelected, squareNumber); 
-        await returnBookingData()
-        await fetchData()
+        let parkingLotSquareId = document.querySelector('#data-type-selector').value;
+        let carId = document.querySelector('#car-board-number-selector').value;
+        let parkingLotId = document.querySelector('#parking-lot-id').textContent;
+        // let bookingData = bookingLocationData; // return data get
+        let startTime = getCurrentDateTime();
+        await passBookingData(parkingLotId, startTime, carId, parkingLotSquareId); 
+        await getBookingData();
+        // await fetchData();
+        loader.style.display = 'none';
         startTimer();
         toggleStopButtonReload();
     }catch(error){
+        loader.style.display = 'none';
         handleError(error);
     }
 });
@@ -58,9 +81,8 @@ function carBoardChecking(){
 };
 
 //停車資料取得
-async function getBookingInformation(locationData){
-    console.log(locationData)
-    bookingLocationData = locationData
+function getBookingInformation(parkingLot){
+    bookingLocationData = parkingLot;
 };
 //取得停車當下時間
 function getCurrentDateTime() {
@@ -74,73 +96,103 @@ function getCurrentDateTime() {
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
-async function returnBookingData(){
-    const token = localStorage.getItem('Token');
+async function getBookingData(){
     try{
-        if(!token){
-            throw new Error('please sign in!')
+        const token = tokenChecking();
+        if (token == null) {
+            return null;
         }
-        const showBookingDataOnParkingPage = await fetchAPI("/api/get_booking_information", token, 'GET');
+        // const showBookingDataOnParkingPage = await fetchAPI("/api/get_booking_information", token, 'GET');
+        const showBookingDataOnParkingPage = await fetchAPI("/api/parkingLotUsage", token, 'GET');
         const data = await handleResponse(showBookingDataOnParkingPage);
-        console.log(data)
         renderParkingPage(data)
     }catch(error){
         handleError(error);
     }
 }
-returnBookingData()
+getBookingData()
 
-async function passBookingData(bookingData, bookingTime, carBoardSelected, squareNumber){
+async function passBookingData(parkingLotId, startTime, carId, parkingLotSquareId){
     try{
-        console.log(bookingData);
-        console.log(bookingTime);
-        console.log(carBoardSelected);
-        console.log(squareNumber);
-        const response = await inputBookingDataToDB(bookingData, bookingTime ,carBoardSelected, squareNumber);
+        const token = tokenChecking();
+        carSpaceNumberArray = [
+            {
+                "status": "使用中",
+            }
+        ];
+        const bookingInformationData = {
+            "parkingLotId": parkingLotId,
+            "startTime": startTime,
+            "carId": carId,
+            "parkingLotSquareId": parkingLotSquareId,
+            "parkingLot": {
+                "carSpaceNumber": carSpaceNumberArray
+            }
+        };
+        const response = await fetchAPI("/api/parkingLotUsage", token, 'POST', bookingInformationData)
         const data = await handleResponse(response);
         console.log(data)
     }catch(error){
         handleError(error);
     }
 }
+// async function passBookingData(bookingData, startTime, carBoardSelected, squareNumber){
+//     try{
+//         // console.log(bookingData);
+//         // console.log(startTime);
+//         // console.log(carBoardSelected);
+//         // console.log(squareNumber);
+//         const response = await inputBookingDataToDB(bookingData, startTime ,carBoardSelected, squareNumber);
+//         const data = await handleResponse(response);
+//         console.log(data)
+//     }catch(error){
+//         handleError(error);
+//     }
+// }
 
-async function inputBookingDataToDB(bookingData, bookingTime ,carBoardSelected, squareNumber){
-    const token = localStorage.getItem('Token');
-    const bookingInformationData = {
-        bookingData: bookingData,
-        bookingTime: bookingTime,
-        carBoardSelected: carBoardSelected,
-        squareNumber: squareNumber
-    };
-    console.log(bookingInformationData);
-    const response = await fetchAPI("/api/input_booking_information", token, 'POST', bookingInformationData)
-    return response;
-}
+// async function inputBookingDataToDB(bookingData, startTime ,carBoardSelected, squareNumber){
+//     const token = tokenChecking();
+//     const bookingInformationData = {
+//         bookingData: bookingData,
+//         startTime: startTime,
+//         carBoardSelected: carBoardSelected,
+//         squareNumber: squareNumber
+//     };
+//     // console.log(bookingInformationData);
+//     const response = await fetchAPI("/api/input_booking_information", token, 'POST', bookingInformationData)
+//     return response;
+// }
 
 function parkingLotInformationTable(locationData){
-    console.log(locationData)
+    document.querySelector('#parking-lot-id').textContent = locationData.parkingLotId || '';
     document.querySelector('#parking-lot-name').textContent = locationData.name || '';
     document.querySelector('#parking-lot-address').textContent = locationData.address || '';
-    document.querySelector('#parking-lot-near-landmark').textContent = '附近地標:' + locationData.landmark || '附近地標:'+'無';
+    document.querySelector('#parking-lot-near-landmark').textContent = '附近地標: ' + locationData.nearLandmark || '附近地標: '+'無';
     document.querySelector('#parking-lot-opening-time').textContent = locationData.openingTime && locationData.closingTime 
     ? locationData.openingTime + ' - ' + locationData.closingTime: '';
     document.querySelector('#parking-lot-in-out').textContent = locationData.spaceInOut || '';
-    document.querySelector('#parking-lot-price').textContent = locationData.price + '元' || '';
-    document.querySelector('#parking-lot-width').textContent = locationData.widthLimit + 'm' || '';
-    document.querySelector('#parking-lot-height').textContent = locationData.heightLimit + 'm'|| '';
-    document.querySelector('#parking-lot-holder-phone').textContent = locationData.cellphone || '連絡電話:'+'無';
-    let squaresWithEmptyStatus = locationData.squares ? locationData.squares.filter(square => !square.status).length : 0;
-    let totalSquares = locationData.squares ? locationData.squares.length : 0;
+    document.querySelector('#parking-lot-price').textContent = locationData.price + ' 元' || '';
+    document.querySelector('#parking-lot-width').textContent = locationData.carWidth + ' m' || '';
+    document.querySelector('#parking-lot-height').textContent = locationData.carHeight + ' m'|| '';
+    document.querySelector('#parking-lot-holder-phone').textContent = locationData.cellphone || '連絡電話: '+'無';
+    let squaresWithEmptyStatus = locationData.carSpaceNumber.filter(square => square.status == "閒置中").length || 0;
+    let totalSquares = locationData.carSpaceNumber ? locationData.carSpaceNumber.length : 0;
     document.querySelector('#parking-space-total-number').textContent = `${squaresWithEmptyStatus} / ${totalSquares} 位`;    
     
     let select = document.querySelector('#data-type-selector');
-    select.innerHTML = `<option value="title">選擇車位</option>`;
  
-    locationData.squares.forEach(square => {
-        if(square.status === '閒置中'){
+    locationData.carSpaceNumber.forEach(square => {
+        let options = select.querySelectorAll("option");
+        let optionsArray = [];
+        for (let i=0; i<options.length; i++) {
+            optionsArray.push(options[i].textContent);
+        }
+        if (square.status === '閒置中' && !optionsArray.includes(square.value)) {
             let option = document.createElement('option')
-            option.value = square.square_number;
-            option.textContent = square.square_number;
+            option.value = square.id;
+            option.textContent = square.value;
+            option.style.fontWeight = 'bold';
+            option.style.textAlign  = 'center';
             select.appendChild(option);
         }
     });
@@ -150,10 +202,10 @@ function parkingLotInformationTable(locationData){
 };
 
 function updateParkingAvailability(locationData) {
-    let allOccupied = false;
-    locationData.squares.forEach(square => {
-        if(square.status !== '閒置中') {
-            allOccupied = true;
+    let allOccupied = true;
+    locationData.carSpaceNumber.forEach(square => {
+        if(square.status == '閒置中') {
+            allOccupied = false;
         };
     })
     // const allOccupied = locationData.squares.every(square => square.status !== '閒置中');
@@ -169,24 +221,27 @@ function updateParkingAvailability(locationData) {
 }
 
 function renderParkingPage(data){
-    if (data.data == '目前尚無停車資訊'){
-        return
+    if (data == null){
+        return null;
     }
     let element = document.querySelector('.packing-page-information-none');
-    element.style.display = 'none'
+    element.style.display = 'none';
     toggleClass('#packing-page-information', 'packing-page-information-toggled'); 
-    document.querySelector('#packing-page-parking-lot-id').textContent = data.data[0].id;
-    document.querySelector('#packing-page-parking-lot-name').textContent = data.data[0].parkinglotname;
-    document.querySelector('#packing-page-parking-lot-address').textContent = data.data[0].address;
-    document.querySelector('#packing-page-parking-lot-space-number').textContent = data.data[0].square_number;
-    document.querySelector('#packing-page-parking-lot-price').textContent = data.data[0].price;
-    document.querySelector('#packing-page-parking-lot-start-time').textContent = data.data[0].starttime;
+    document.querySelector('#packing-page-parking-lot-id').textContent = data.id;
+    document.querySelector('#packing-page-parking-lot-order-number').textContent = data.orderNumber;
+    document.querySelector('#packing-page-parking-lot-name').textContent = data.parkingLot.name;
+    document.querySelector('#packing-page-parking-lot-name').setAttribute("value", data.parkingLotId);
+    document.querySelector('#packing-page-parking-lot-address').textContent = data.parkingLot.address;
+    document.querySelector('#packing-page-parking-lot-space-number').textContent = data.parkingLot.carSpaceNumber[0].value;
+    document.querySelector('#packing-page-parking-lot-space-number').setAttribute("value", data.parkingLotSquareId);
+    document.querySelector('#packing-page-parking-lot-price').textContent = data.parkingLot.price;
+    document.querySelector('#packing-page-parking-lot-start-time').textContent = data.startTime;
 };
 
 async function returnCarBoardData(){
-    const token = localStorage.getItem('Token');
+    const token = tokenChecking();
     try{
-        const response = await fetchAPI("/api/input_car_board_data", token, 'GET');
+        const response = await fetchAPI("/api/car", token, 'GET');
         const data = await handleResponse(response);
         return data;
     }catch(error){
@@ -196,17 +251,18 @@ async function returnCarBoardData(){
 
 async function carBoardNumberToSelector(data){
     let select = document.querySelector('#car-board-number-selector');
-    data.data.forEach(item => {
+    data.forEach(item => {
         let exists = false;
         for (let i=0; i< select.options.length; i++) {
-            if( select.options[i].textContent === item.carboard_number) {
+            if( select.options[i].textContent === item.carNumber) {
                 exists = true;
                 return null;
             }
         }
         if (!exists) {
             let option = document.createElement('option');
-            option.textContent = item.carboard_number; 
+            option.value = item.id;
+            option.textContent = item.carNumber; 
             select.appendChild(option);
         }
     });
@@ -214,34 +270,36 @@ async function carBoardNumberToSelector(data){
 
 // 停車資格確認
 //使用者停車狀態for booking
-async function memberStatus(){
+async function memberStatusChecking(){
     try{
         const alertContent = document.querySelector("#alert-content")
         const squareNumber = document.querySelector('#data-type-selector')
-        const token = localStorage.getItem('Token');
-        let parkingStatus = await getMemberStatus()
-        let memberCar = await returnCarBoardData()
-        // console.log(parkingStatus)
-        if (!token){
+        const token = tokenChecking();
+
+        if (token == null){
             // const alertContent = document.querySelector("#alert-content")
             alertContent.textContent = '請先登入以使用完整功能';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
             return false;
         }
-        if (memberCar.data.length === 0){
+
+        let memberBalanceStatus = await getMemberBalanceStatus();
+        let memberCar = await returnCarBoardData();
+        // console.log(memberBalanceStatus)
+        if (memberCar.length === 0){
             alertContent.textContent = '請先登記車輛!';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
             return false;
         }
-        if (parkingStatus.data.Balance <= 0){
+        if (memberBalanceStatus.balance <= 0){
             alertContent.textContent = '餘額不足，請儲值';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
             return false; 
         }
-        if (parkingStatus.data.status !== null){
+        if (memberBalanceStatus.status !== null){
             alertContent.textContent = '您目前正在停車囉';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
@@ -266,17 +324,18 @@ function rotationImg(data) {
     let currentImageIndex = 0;
     let imageDiv = document.querySelector('#parking_lot_image_container');
 
-    imageDiv.innerHTML = '';
+    imageDiv.textContent = '';
 
     let potContainer = document.createElement("div");
     potContainer.classList.add("pot_container");
     imageDiv.appendChild(potContainer);
 
-    let imageURL;
-    if (data.images && data.images.length > 0) {
-        imageURL = data.images;
+    let imageURL = [];
+    if (data.imgUrl != null) {
+        imageURL = data.imgUrl;
     } else {
-        imageURL = ['https://d1hxt3hn1q2xo2.cloudfront.net/1702149637-20210325-121559_U7321_M680292_0f7b.jpg'];
+        // imageURL = ['https://d1hxt3hn1q2xo2.cloudfront.net/1702149637-20210325-121559_U7321_M680292_0f7b.jpg'];
+        imageURL = ['/image/noimage.png','/image/noimage.png'];
     };
 
     for (let i = 0; i < imageURL.length; i++) {
@@ -289,6 +348,10 @@ function rotationImg(data) {
         
         let img = document.createElement("img");
         img.src = imageURL[i];
+        img.onerror = function() {
+            this.onerror = null;
+            img.src = '/image/noimage.png';
+        }
         newDiv.appendChild(img);
         imageDiv.appendChild(newDiv);
     }
@@ -300,7 +363,7 @@ function rotationImg(data) {
     let pot2length = 0;
     pot[pot2length].appendChild(pot2);
     
-    buttonRight.onclick = function () {
+    buttonRight.onclick = () => {
         if (currentImageIndex < images.length - 1) {
             currentImageIndex++;
             pot2length++;
@@ -313,7 +376,7 @@ function rotationImg(data) {
         imageDiv.scrollLeft = images[currentImageIndex].offsetLeft;
     };
 
-    buttonLeft.onclick = function () {
+    buttonLeft.onclick = () => {
         if (currentImageIndex > 0) {
             currentImageIndex--;
             pot2length--;

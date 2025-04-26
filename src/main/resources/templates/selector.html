@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/selector.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/selector.css">
     <title>首頁</title>
 </head>
 <body>
-    {% include 'nav.html' %} {% include 'sign_system.html' %}
+    <div th:replace="nav :: nav"></div>
+    <div th:replace="sign_system :: sign_system"></div>
+    <!-- {% include 'nav.html' %} 
+    {% include 'sign_system.html' %} -->
     <!-- 價格滑塊 -->
     <div class="range-slider">
         <div class="slider-label">價格：</div>
@@ -34,8 +37,9 @@
         <div class="value" id="valueWidth">0 m以下</div>
     </div>
     <button class="main-selector-button">確認</button>
-    <script src="../static/js/selector.js"></script>
-    <script src="../static/js/base.js"></script>
-    {% include 'foot.html' %}
+    <script src="/js/selector.js"></script>
+    <script src="/js/base.js"></script>
+    <div th:replace="foot :: foot"></div>
+    <!-- {% include 'foot.html' %} -->
 </body>
 </html>

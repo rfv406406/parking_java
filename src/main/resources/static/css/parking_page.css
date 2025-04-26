@@ -1,27 +1,41 @@
 
 .packing-page-container{
     width:340px;
-    /* height:100%; */
     display:none;
-    position: absolute; /* 相對於.modal定位 */
-    top: 50%; /* 將其移至父元素的中央 */
-    left: 50%; /* 將其移至父元素的中央 */
-    transform: translate(-50%, -50%); /* 使用transform確保完美居中 */
-    /* padding: 5px; */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     border-radius: 12px;
-    /* margin: auto; */
     border: 0.5px solid #0E578D;
     background: #fefefe;
     margin-top: 5px;
-    z-index: 1000; /* 確保在其他元素之上 */
+    z-index: 1000; 
 }
+
+.packing-page-container .loader {
+    width: 100%;
+    height: 20vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+.packing-page-container .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #1846b0;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .packing-page-container-toggled{
     display:block;
 }
 
 .packing-page-container .header{
-    /* width:100%; */
     height:20px;
     border-radius: 12px 12px 0 0;
     display:flex;
@@ -45,12 +59,15 @@
 }
 
 .packing-page-information-none{
-    /* width: 100%; */
+    height:40vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    height:40vh;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .packing-page-information-none-toggled{

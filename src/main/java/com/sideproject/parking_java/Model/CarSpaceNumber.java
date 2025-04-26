@@ -7,11 +7,11 @@ public class CarSpaceNumber {
     private String value;
     private String status;
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setParkingLotId(int parkingLotId) {
+    public void setParkingLotId(Integer parkingLotId) {
         this.parkingLotId = parkingLotId;
     }
 

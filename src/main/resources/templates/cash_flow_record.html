@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/cash_flow_record.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/cash_flow_record.css">
     <title>首頁</title>
 </head>
 <body>
-    {% include 'nav.html' %} {% include 'sign_system.html' %}
+    <div th:replace="nav :: nav"></div>
+    <div th:replace="sign_system :: sign_system"></div>
+    <!-- {% include 'nav.html' %} 
+    {% include 'sign_system.html' %} -->
     <div class="cash-record-selector">
         <select id="data-type-selector">
             <option value="type1">儲值紀錄</option>
@@ -24,18 +27,19 @@
     </div>
     <div class="plate-board-container">
         <div class="plate-board-information" id="plate-board-information">
-            <div id="record-date">日期: 2023-01-01</div>
-            <div id="record-car-board">收入金額: $1000</div>
-            <div id="record-parking-lot-name">收入金額: $1000</div>
-            <div id="record-square-number">支出金額: $500</div>
-            <div id="record-start-time">備註: 購物</div>
-            <div id="record-stop-time">備註: 購物</div>
-            <div id="record-payment">備註: 購物</div>
+            <div id="record-date"></div>
+            <div id="record-car-board"></div>
+            <div id="record-parking-lot-name"></div>
+            <div id="record-square-number"></div>
+            <div id="record-start-time"></div>
+            <div id="record-stop-time"></div>
+            <div id="record-payment"></div>
         </div>
     </div>
-    {% include 'foot.html' %}
-    <script src="../static/js/sign_system.js"></script>
-    <script src="../static/js/cash_record.js"></script>
-    <script src="../static/js/base.js"></script>
+    <div th:replace="foot :: foot"></div>
+    <!-- {% include 'foot.html' %} -->
+    <script src="/js/sign_system.js"></script>
+    <script src="/js/cash_record.js"></script>
+    <script src="/js/base.js"></script>
 </body>
 </html>

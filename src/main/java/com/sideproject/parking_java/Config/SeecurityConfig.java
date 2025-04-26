@@ -32,13 +32,18 @@ public class SeecurityConfig {
 			// .httpBasic(withDefaults())
 			// .addFilterBefore(new LoggingBasicAuthFilter(), BasicAuthenticationFilter.class)			
 			.authorizeHttpRequests((authorize) -> authorize
+				.requestMatchers(HttpMethod.GET,"/css/**", "/js/**","/image/**").permitAll()
+				.requestMatchers(HttpMethod.GET,"/", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/gps/**","/api/parkingLot").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
-				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status").hasAuthority("user")
-				.requestMatchers(HttpMethod.POST,"/api/parkingLot","/api/tappay").hasAuthority("user")
+				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status","/api/member/balanceStatus","/api/member/memberDetails","/api/car","/api/parkingLotUsage","/api/transactionRecords").hasAuthority("user")
+				.requestMatchers(HttpMethod.POST,"/api/parkingLot","/api/tappay","/api/car","/api/parkingLotUsage").hasAuthority("user")
+				.requestMatchers(HttpMethod.PUT,"/api/parkingLot/**","/api/member/memberDetails/**","/api/parkingLotUsage/**").hasAuthority("user")
+				.requestMatchers(HttpMethod.DELETE,"/api/parkingLot/**","/api/car/**").hasAuthority("user")
 				.anyRequest().authenticated()
 			)
 			.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class)
+			// .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
 			.authenticationManager(authenticationManager());
 
 		return http.build();

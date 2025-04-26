@@ -102,11 +102,11 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         }
 
         if (hasOpeningTime) {
-            parkinglot.setOpeningTimeAm(rs.getString("opening_time"));
+            parkinglot.setOpeningTime(rs.getString("opening_time"));
         }
 
         if (hasClosingTime) {
-            parkinglot.setOpeningTimePm(rs.getString("closing_time"));
+            parkinglot.setClosingTime(rs.getString("closing_time"));
         }
 
         if (hasSpaceInOut) {
@@ -126,11 +126,11 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         }
         
         if (hasLat) {
-            parkinglot.setLatitude(rs.getString("lat"));
+            parkinglot.setLatitude(rs.getDouble("lat"));
         }
 
         if (hasLng) {
-            parkinglot.setLongitude(rs.getString("lng"));
+            parkinglot.setLongitude(rs.getDouble("lng"));
         }
         
         if (hasImages) {
@@ -148,11 +148,12 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
                 String[] carSpaceNumberConcatToStringArray = carSpaceNumberConcatString.split(",");
                 ArrayList<CarSpaceNumber> carSpaceNumberConcat = new ArrayList<>();
 
-                for (int i=0; i<carSpaceNumberConcatToStringArray.length; i=i+3) {
+                for (int i=0; i<carSpaceNumberConcatToStringArray.length; i=i+4) {
                     CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
-                    carSpaceNumber.setParkingLotId(Integer.parseInt(carSpaceNumberConcatToStringArray[i]));
-                    carSpaceNumber.setValue(carSpaceNumberConcatToStringArray[i+1]);
-                    carSpaceNumber.setStatus(carSpaceNumberConcatToStringArray[i+2]);
+                    carSpaceNumber.setId(Integer.parseInt(carSpaceNumberConcatToStringArray[i]));
+                    carSpaceNumber.setParkingLotId(Integer.parseInt(carSpaceNumberConcatToStringArray[i+1]));
+                    carSpaceNumber.setValue(carSpaceNumberConcatToStringArray[i+2]);
+                    carSpaceNumber.setStatus(carSpaceNumberConcatToStringArray[i+3]);
                     carSpaceNumberConcat.add(carSpaceNumber);
                 }
 

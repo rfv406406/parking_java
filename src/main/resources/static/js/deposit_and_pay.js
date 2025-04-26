@@ -90,7 +90,7 @@ document.querySelector('.pay_button').addEventListener('click', (event) => {
 });
 
 async function depositData(prime) {
-    const token = localStorage.getItem('Token');
+    const token = tokenChecking();
     let totalPrice = document.querySelector("#total_price").textContent;
 
     if (totalPrice == '') {
@@ -109,9 +109,9 @@ async function depositData(prime) {
         if (data === 'Success') {
             const paySuccess = document.querySelector('#pay-success');
             paySuccess.textContent = '感謝您的加值!'
-            // setTimeout(function() {
-            //     window.location.href = '/';
-            // }, 2000);
+            setTimeout(function() {
+                window.location.href = '/';
+            }, 2000);
         } else {
             alert('付款失敗');
         }
@@ -119,41 +119,3 @@ async function depositData(prime) {
         handleError(error);
     }    
 };
-
-// function depositData(prime) {
-//     let totalPrice = document.querySelector("#total_price").textContent;
-
-//     if (totalPrice=="" || totalPrice==0){
-//         alert('請輸入金額')
-//         return null;
-//     }
-
-//     const token = localStorage.getItem('Token');
-//     const json = {
-//         "prime": prime,
-//         "deposit": totalPrice,
-//     };
-//     fetch("/api/pay", {
-//             method: 'POST',
-//             body: JSON.stringify(json), 
-//             headers: {
-//                 "Content-type": "application/json",
-//                 'Authorization': `Bearer ${token}`
-//             }
-//         })
-//         .then(handleResponse)
-//         .then(data => {
-//             if(data.data.payment.message === "付款成功"){
-//                 const paySuccess = document.querySelector('#pay-success');
-//                 paySuccess.textContent = '感謝您的加值!'
-//                 // setTimeout(function() {
-//                 //     window.location.href = '/';
-//                 // }, 2000);
-//             }else{
-//                 alert('付款失敗')
-//             }
-//         })
-//         .catch(
-//             handleError
-//         )
-//     };

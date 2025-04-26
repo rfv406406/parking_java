@@ -63,8 +63,8 @@ public class MemberService {
         return memberDetails;
     }
 
-    public void putMemberDetailsService(Member member) {
-        int memberId = MemberIdUtil.getMemberIdUtil();
+    public void putMemberDetailsService(Integer memberId, Member member) {
+        // int memberId = MemberIdUtil.getMemberIdUtil();
         memberDao.putUpdateMemberDetailsDao(memberId, member);
     }
 }

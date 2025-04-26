@@ -1,12 +1,14 @@
 initCashRecord();
-let cashRecords;
+let cashRecords = [];
 
 async function initCashRecord(){
-    const token = localStorage.getItem('Token');
+    const token = tokenChecking();
     try{
         const response = await fetchAPI("/api/transactionRecords", token, 'GET')
         const data = await handleResponse(response);
-        cashRecords = data;
+        if (data != null) {
+            cashRecords = data;
+        }
         filterAndDisplayRecords(cashRecords);
     }catch(error){
         handleError(error);
@@ -14,7 +16,7 @@ async function initCashRecord(){
 }
 
 // async function getCashRecordData(){
-//     const token = localStorage.getItem('Token');
+//     const token = tokenChecking();
 //     const response = await fetchAPI("/api/transactionRecords", token, 'GET')
 //     return response;
 // }
@@ -114,7 +116,6 @@ function displayRecords(cashRecords, dataType) {
         let noDataDiv = document.createElement('div');
         noDataDiv.textContent = '沒有交易資料';
         container.appendChild(noDataDiv);
-        // container.innerHTML = '<div>沒有交易資料</div>';
         return null;
     }
 
@@ -132,14 +133,10 @@ function displayRecords(cashRecords, dataType) {
                 depositDiv.appendChild(depositDate);
                 depositDiv.appendChild(depositAmount);
                 container.appendChild(depositDiv);
-                // htmlContent = `<div class="plate-board-information">
-                // <div>日期: ${record.transactions_time}</div>
-                // <div>儲值金額: ${record.Amount}${'元'}</div>
-                // </div>`;
                 break;
             }
                 
-            case 'COMSUMPTION': {
+            case 'CONSUMPTION': {
                 let comsumptionDiv = document.createElement('div');
                 comsumptionDiv.className = 'plate-board-information';
                 comsumptionDiv.id = record.id;
@@ -150,7 +147,7 @@ function displayRecords(cashRecords, dataType) {
                 let parkingLot = document.createElement('div');
                 parkingLot.textContent = `停車場: ${record.parkingLot.name}`;
                 let carSpaceNumber = document.createElement('div');
-                carSpaceNumber.textContent = `車位編號: ${record.carSpaceNumber.value} 號`;
+                carSpaceNumber.textContent = `車位編號: ${record.parkingLot.carSpaceNumber[0].value} 號`;
                 let parkingTimeStart = document.createElement('div');
                 parkingTimeStart.textContent = `停車時間: ${record.startTime}`;
                 let parkingTimeEnd = document.createElement('div');
@@ -169,15 +166,6 @@ function displayRecords(cashRecords, dataType) {
                 ]
                 elementsC.forEach(element => comsumptionDiv.appendChild(element));
                 container.appendChild(comsumptionDiv); 
-                // htmlContent = `<div class="plate-board-information">
-                //                <div>日期: ${record.date}</div>
-                //                <div>車牌: ${record.car_board}</div>
-                //                <div>停車場: ${record.parkinglotname}</div>
-                //                <div>車位編號: ${record.square_number}</div>
-                //                <div>停車時間: ${record.starttime}</div>
-                //                <div>結束時間: ${record.stoptime}</div>
-                //                <div>停車費: ${record.payment}${'元'}</div>
-                //                </div>`;
                 break;
             }
                 
@@ -192,7 +180,7 @@ function displayRecords(cashRecords, dataType) {
                 let parkingLot = document.createElement('div');
                 parkingLot.textContent = `停車場: ${record.parkingLot.name}`;
                 let carSpaceNumber = document.createElement('div');
-                carSpaceNumber.textContent = `車位編號: ${record.carSpaceNumber.value} 號`;
+                carSpaceNumber.textContent = `車位編號: ${record.parkingLot.carSpaceNumber[0].value} 號`;
                 let parkingTimeStart = document.createElement('div');
                 parkingTimeStart.textContent = `停車時間: ${record.startTime}`;
                 let parkingTimeEnd = document.createElement('div');
@@ -211,17 +199,8 @@ function displayRecords(cashRecords, dataType) {
                 ]
                 elementsI.forEach(element => incomeDiv.appendChild(element));
                 container.appendChild(incomeDiv); 
-                // htmlContent = `<div class="plate-board-information">
-                //                <div>日期: ${record.date}</div>
-                //                <div>停車場: ${record.parkinglotname}</div>
-                //                <div>車牌編號: ${record.car_board}</div>
-                //                <div>停車時間: ${record.starttime}</div>
-                //                <div>結束時間: ${record.stoptime}</div>
-                //                <div>收入: ${record.income}${'元'}</div>
-                //                </div>`;
                 break;
             }
         }
-        // container.innerHTML += htmlContent;
     });
 }
