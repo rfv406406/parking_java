@@ -48,8 +48,14 @@ public class TransactionRowMapper implements RowMapper<Transaction>{
             if (columnName.equals("parkinglot_id")) {
                 transaction.setParkingLotId(rs.getInt("parkinglot_id"));
             }
+            if (columnName.equals("parkinglot_name")) {
+                transaction.setParkingLotName(rs.getString("parkinglot_name"));
+            }
             if (columnName.equals("parkinglotsquare_id")) {
                 transaction.setParkingLotSquareId(rs.getInt("parkinglotsquare_id"));
+            }
+            if (columnName.equals("parkinglotsquare_number")) {
+                transaction.setParkingLotSquareNumber(rs.getInt("parkinglotsquare_number"));
             }
             if (columnName.equals("starttime")) {
                 transaction.setStartTime(rs.getString("starttime"));

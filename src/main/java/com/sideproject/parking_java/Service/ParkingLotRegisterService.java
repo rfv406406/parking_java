@@ -2,25 +2,29 @@ package com.sideproject.parking_java.service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.sideproject.parking_java.dao.IdDao;
+// import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.ParkingLotImagesDao;
 import com.sideproject.parking_java.dao.ParkingLotRegisterDao;
 import com.sideproject.parking_java.dao.ParkingLotSquareDao;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.ParkingLot;
+import com.sideproject.parking_java.redis.RedisService;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 
 @Service
 public class ParkingLotRegisterService{
-    @Autowired
-    private IdDao parkingLotDataIdByMemberIdDao;
+
+    // @Autowired
+    // private IdDao parkingLotDataIdByMemberIdDao;
     @Autowired
     private ParkingLotRegisterDao parkingLotRegisterDao;
     @Autowired
@@ -29,15 +33,28 @@ public class ParkingLotRegisterService{
     private ParkingLotSquareDao parkingLotSquareDao;
     @Autowired
     private GpsService gpsService;
+    @Autowired
+    private RedisOperations<String, Object> operations;
+    @Autowired
+    private RedisService redisService;
 
-    public List<ParkingLot> getParkingLotRegister() {
-        Integer memberId = MemberIdUtil.getMemberIdUtil();   
-        List<ParkingLot> parkingLot = parkingLotRegisterDao.getParingLotRegisterDao(memberId);
-        return parkingLot;
+    public Map<Object, Object> getParkingLotRegister() {
+        Integer memberId = MemberIdUtil.getMemberIdUtil();
+        Boolean isRedisConnected = redisService.isRedisConnected();
+        Boolean hasParkingLotMap = operations.hasKey("parkingLotMap");
+        Map<Object, Object> parkingLotMap = new HashMap<>();
+
+        if (isRedisConnected && hasParkingLotMap != null && hasParkingLotMap) {
+            parkingLotMap = redisService.getParkingLotMapFromRedis(parkingLotMap);
+        } else {
+            List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(memberId, null);
+            parkingLotMap = redisService.putAllParkingLotMapInRedis(parkingLotMap, parkingLotList);
+        }
+        return parkingLotMap;
     }
 
     @Transactional
-    public void postParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, RuntimeException, JsonProcessingException{
+    public void postParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, Exception, JsonProcessingException{
 
         int memberId = MemberIdUtil.getMemberIdUtil();
 
@@ -54,27 +71,24 @@ public class ParkingLotRegisterService{
         }
 
         String address = parkingLot.getAddress();
-        System.out.println("address: "+ address);
         HashMap<String, Object> gps = gpsService.getLatAndLngService(address);
         double lat = (double)gps.get("lat");
         double lng = (double)gps.get("lng");
         parkingLot.setLatitude(lat);
         parkingLot.setLongitude(lng);
 
-        int parkingLotRegisterDaoInsertId = parkingLotRegisterDao.postParkingLotRegisterDao(parkingLot, memberId);
-        if (parkingLotRegisterDaoInsertId == 0) {
-            throw new DatabaseError("ParkingLotRegisterDao inserted failed");
-        }
+        int parkingLotId = parkingLotRegisterDao.postParkingLotRegisterDao(parkingLot, memberId);
 
-        int parkingLotDataId = parkingLotDataIdByMemberIdDao.getParkingLotDataIdByMemberId(memberId);
+        // int parkingLotDataId = parkingLotDataIdByMemberIdDao.getParkingLotDataIdByMemberId(memberId);
 
-        parkingLotImagesDao.postParkinglotimagesDao(parkingLot, parkingLotDataId);
+        parkingLotImagesDao.postParkinglotimagesDao(parkingLot, parkingLotId);
 
-        int parkingLotDataIdByMemberIdDaoInsertId = parkingLotSquareDao.postParkingLotSquareDao(parkingLot, parkingLotDataId);
-        if (parkingLotDataIdByMemberIdDaoInsertId == 0) {
-            throw new DatabaseError("ParkingLotSquareDao inserted failed");
-        }
+        parkingLotSquareDao.postParkingLotSquareDao(parkingLot, parkingLotId);
+ 
+        //Redis
+        redisService.putParkingLotMapInRedis(memberId, parkingLotId);
     }
+
     @Transactional
     public void deleteParkingLotRegister(Integer parkingLotId) throws InvalidParameterError, DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
@@ -83,10 +97,12 @@ public class ParkingLotRegisterService{
         if (insertId == 0) {
             throw new DatabaseError("ParkingLotRegisterDao inserted failed");
         }
+        //Redis
+        redisService.deleteParkinglotMapFromRedis(parkingLotId);
     }
 
     @Transactional
-    public void putParkingLotRegister(Integer parkingLotId, ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException {
+    public void putParkingLotRegister(Integer parkingLotId, ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException, Exception {
         int memberId = MemberIdUtil.getMemberIdUtil();
         parkingLot.setParkingLotId(parkingLotId);
 
@@ -112,17 +128,14 @@ public class ParkingLotRegisterService{
 
         int insertId = parkingLotRegisterDao.putParkingLotRegisterDao(parkingLot, memberId);
 
-        // int parkingLotDataId = parkingLotDataIdByMemberIdDao.getParkingLotDataIdByMemberId(memberId);
-
-        // parkingLotImagesDao.putParkinglotimagesDao(parkingLot, parkingLotDataId);
-
-        // parkingLotSquareDao.putParkinglotsquareDao(parkingLot, parkingLotDataId);
         parkingLotImagesDao.putParkinglotimagesDao(parkingLot);
-
         parkingLotSquareDao.putParkinglotsquareDao(parkingLot);
 
         if (insertId == 0) {
             throw new DatabaseError("ParkingLotRegisterDao inserted failed");
         }
+
+        //Redis
+        redisService.putParkingLotMapInRedis(memberId, parkingLotId);
     }
 }

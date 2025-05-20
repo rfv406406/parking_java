@@ -200,20 +200,17 @@ body{
 }
 
 .signin-container, .signup-container{
-    width:340px;
-    /* height:100%; */
+    width:390px;
     display:none;
-    position: absolute; /* 相對於.modal定位 */
-    top: 30%; /* 將其移至父元素的中央 */
-    left: 50%; /* 將其移至父元素的中央 */
-    transform: translate(-50%, -50%); /* 使用transform確保完美居中 */
-    /* padding: 5px; */
+    position: absolute;
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     border-radius: 12px;
-    /* margin: auto; */
     border: 0.5px solid #0E578D;
     background: #fefefe;
     margin-top: 5px;
-    z-index: 1000; /* 確保在其他元素之上 */
+    z-index: 1000; 
 }
 
 .signin-container-toggled, .signup-container-toggled{
@@ -221,7 +218,6 @@ body{
 }
 
 .signin-container .header, .signup-container .header{
-    /* width:100%; */
     height:20px;
     border-radius: 12px 12px 0 0;
     display:flex;
@@ -252,28 +248,29 @@ body{
 }
 
 .signin-form, .signup-form{
-    /* width: 100%; */
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     gap: 10px;
 }
 
 .signin-form .input-box, .signup-form .input-box{
     display:flex;
-    justify-content: end;
-    width:100%;
+    justify-content: space-between;
+    width:90%;
     height:auto;
 }
 
 .signin-container .text, .signup-container .text{
-    height:20px;
-    margin-right: 20%;
+    /* height:20px; */
+    font-size: 20px;
+    /* margin-right: 20%; */
 }
 
 .signin-container .consistent-text, .signup-container .consistent-text{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
+    font-size: 20px;
     line-height: 1.6;
 }
 

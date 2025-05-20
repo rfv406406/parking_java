@@ -15,10 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.service.TransactionService;
 
-
-
-
-
 @RestController
 public class TransactionController {
     @Autowired

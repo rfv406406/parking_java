@@ -38,7 +38,7 @@ public class MemberController {
     }
 
     @PostMapping("/api/member/login")
-    public ResponseEntity<HashMap<String, Object>> postMemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError {
+    public ResponseEntity<HashMap<String, Object>> postMemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError, Exception {
         HashMap<String, Object> tokenObject = jwtService.returnAuth(member);
         ResponseEntity<HashMap<String, Object>> response = ResponseEntity.status(HttpStatus.OK).body(tokenObject);
         return response;

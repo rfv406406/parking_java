@@ -1,6 +1,7 @@
 package com.sideproject.parking_java.controller;
 
-import java.util.List;
+
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,26 +25,27 @@ import com.sideproject.parking_java.service.ParkingLotRegisterService;
 
 @RestController
 public class ParkingLotRegisterController {
+
     @Autowired
     private ParkingLotRegisterService parkingLotRegisterService;
 
     @GetMapping("/api/parkingLot")
-    public ResponseEntity<List<ParkingLot>> getParkingLotRegister() throws DatabaseError {
-        List<ParkingLot> parkingLot = parkingLotRegisterService.getParkingLotRegister();
-        ResponseEntity<List<ParkingLot>> response = ResponseEntity.status(HttpStatus.OK).body(parkingLot);
+    public ResponseEntity<Map<Object, Object>> getParkingLotRegister() throws DatabaseError {
+        Map<Object, Object> parkingLotMap = parkingLotRegisterService.getParkingLotRegister();
+        ResponseEntity<Map<Object, Object>> response = ResponseEntity.status(HttpStatus.OK).body(parkingLotMap);
         return response;
     }
     
 
     @PostMapping("/api/parkingLot")
-    public ResponseEntity<String> postParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException {
+    public ResponseEntity<String> postParkingLotRegister(@ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException, Exception {
         parkingLotRegisterService.postParkingLotRegister(parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;
     }
 
     @PutMapping("/api/parkingLot/{parkingLotId}")
-    public ResponseEntity<String> getParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId, @ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException {
+    public ResponseEntity<String> getParkingLotRegister(@PathVariable("parkingLotId") Integer parkingLotId, @ModelAttribute ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException, Exception {
         parkingLotRegisterService.putParkingLotRegister(parkingLotId, parkingLot);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;

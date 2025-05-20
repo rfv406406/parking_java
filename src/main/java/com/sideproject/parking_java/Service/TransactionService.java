@@ -11,8 +11,11 @@ import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.MemberDao;
 import com.sideproject.parking_java.dao.TransactionDao;
 import com.sideproject.parking_java.exception.DatabaseError;
+import com.sideproject.parking_java.exception.InternalServerError;
+import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.Transaction;
+import com.sideproject.parking_java.redis.RedisService;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 import com.sideproject.parking_java.utility.TimeUtils;
 
@@ -25,21 +28,32 @@ public class TransactionService {
     private IdDao idDao;
     @Autowired
     private TransactionDao transactionDao;
+    @Autowired
+    private RedisService redisService;
 
     @Transactional
     public void postParkingLotUsageService(Transaction transaction) {
+        if (transaction.getCarId() == null || transaction.getCarId() == 0 ||
+            transaction.getParkingLotId() == null || transaction.getParkingLotId() == 0 ||
+            transaction.getParkingLotSquareId() == null || transaction.getParkingLotSquareId() == 0 ||
+            transaction.getStartTime() == null || transaction.getStartTime().equals("")
+            ) {
+            throw new InvalidParameterError("parameter is null or empty");
+        }
+
         int memberId = MemberIdUtil.getMemberIdUtil();
         int depositAccountId = memberDao.getDepositAccountIdDao(memberId);
         String orderNumber = TimeUtils.timeFormat(new Date()) + Integer.toString(memberId);
         Member member = new Member();
         member.setStatus("停車中");
-
         transaction.setTransactionType("CONSUMPTION");
         transaction.setStatus("未付款");
 
         transactionDao.postInsertTransactionDao(memberId, depositAccountId, orderNumber, transaction);
         // 更改車位狀態
         transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
+        // 更改車位狀態 Redis
+        redisService.updateParkingLotSquareStatusInRedis(transaction);
         // 更改會員狀態
         memberDao.putUpdateMemberStatusDao(memberId, member);
         // income method
@@ -52,7 +66,6 @@ public class TransactionService {
         transaction.setTransactionType("INCOME");
         transaction.setStatus("未收款");
         transactionDao.postInsertTransactionDao(parkingLotOwnerId, parkingLotOwnerDepositAccountId, orderNumber, transaction);
-
     }
 
     public Transaction getUnpaidParkingLotUsageService() {
@@ -91,6 +104,11 @@ public class TransactionService {
         transaction.setTransactionType("CONSUMPTION");
         transaction.setAmount(cost);
         transaction.setStatus("已付款");
+        if (transaction.getBalance() - cost < 0) {
+            throw new InternalServerError("餘額不足!");
+        }
+        // 餘額更新
+        transactionDao.putUpdateBalanceDao(memberId, cost);
         int insertNumber = transactionDao.putUpdateParkingLotUsageDao(memberId, orderNumber, transaction);
         if (insertNumber== 0) {
             throw new DatabaseError("transactions failed");
@@ -98,12 +116,12 @@ public class TransactionService {
         //回復狀態
         member.setStatus(null);
         memberDao.putUpdateMemberStatusDao(memberId, member);
-        // 餘額更新
-        transactionDao.putUpdateBalanceDao(memberId, cost);
         //update income
         putParkingLotIncomeService(orderNumber, transaction, income);
         // 回復車位狀態
         transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
+        // 回復車位狀態 Redis
+        redisService.updateParkingLotSquareStatusInRedis(transaction);
     }
     // income method
     public void putParkingLotIncomeService(String orderNumber, Transaction transaction, int income) {

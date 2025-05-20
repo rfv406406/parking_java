@@ -15,13 +15,6 @@ public class StatusCode {
         DATABASE_ERROR,
         AUTHENTICATION_ERROR;
 
-        // @JsonValue
-        // private final String status;
-
-        // private Base(String status) {
-        //     this.status = status;
-        // }
-
         @Override
         public String getErrorName() {
             return this.name();

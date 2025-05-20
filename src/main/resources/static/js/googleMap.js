@@ -1,11 +1,13 @@
 let map;
-let infoWindow;
+let currentInfoWindow;
 let currentPosition;
 let directionsService;
 let directionsRenderer;
 let geocoder;
 let advancedMarkerElement;
 let markerClusterer;
+let currentPositionMarker;
+let cluster;
 
 async function initMap() {
     try {
@@ -21,19 +23,19 @@ async function initMap() {
         map = new Map(document.querySelector("#map"), {
             zoom: 7,
             center: center,
-            mapId: "DEMO_MAP_ID",
+            mapId: "Parking_Map",
             gestureHandling: "greedy",
         });
         map.setCenter({ lat: 23.553118, lng: 121.0211024 });
 
-        infoWindow = new google.maps.InfoWindow();
+        currentInfoWindow = new google.maps.InfoWindow();
         directionsRenderer = new google.maps.DirectionsRenderer();
         directionsService = new google.maps.DirectionsService();
         geocoder = new google.maps.Geocoder();
 
         //return center
         currentPosition = await returnCurrentPosition();
-        await displayMarker(currentPosition);
+        currentPositionMarker = await displayMarker(currentPosition);
         //匯入停車場
         fetchParkingLotData();
     } catch(error) {
@@ -61,21 +63,21 @@ async function calculateAndDisplayRoute(directionsService, directionsRenderer, d
     }
   }
 
-async function reverseGeocoding(geocoder, map, infoWindow, currentPosition) {
-    try {
-        let location = {"location": currentPosition};
-        let response = await geocoder.geocode(location);
+// async function reverseGeocoding(geocoder, map, infoWindow, currentPosition) {
+//     try {
+//         let location = {"location": currentPosition};
+//         let response = await geocoder.geocode(location);
 
-        if (response.results[0]) {
-            return response.results[0];
-        } else {
-            throw new Error("No results found");
-        }
-    } catch(error) {
-        console.error(error);
-        throw error;
-    }
-}
+//         if (response.results[0]) {
+//             return response.results[0];
+//         } else {
+//             throw new Error("No results found");
+//         }
+//     } catch(error) {
+//         console.error(error);
+//         throw error;
+//     }
+// }
 
 async function returnCurrentPosition() {
     return new Promise((resolve, reject) => {
@@ -134,36 +136,65 @@ async function renderSearchingLocation(destination) {
     }
 }
 
+let displayMarkerArray = [];
+
 async function displayMarker(currentPosition = null, places = null){
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     map.setCenter(currentPosition || places[0].location);
     map.setZoom(15);
     if (places != null) {
+        cleanDisplayMarkerArray();
         for (let i=0; i<places.length; i++) {
-            const marker = new AdvancedMarkerElement({
+            const marker = new advancedMarkerElement({
                 map: map,
                 position: places[i].location,
                 title: places[i].displayName,
             });
+            let infoWindow = new google.maps.InfoWindow();
             infoWindow.setPosition(places[i].location);
             infoWindow.setContent(`${places[i].displayName}<br>${places[i].formattedAddress}`);
-            marker.addEventListener("gmp-click", () => {
+            marker.addListener("click", async () => {
+                let destination = {
+                    "lat": marker.position.lat,
+                    "lng": marker.position.lng
+                }
                 infoWindow.open(map);
+                directionsRenderer.setMap(map);
+                await calculateAndDisplayRoute(directionsService, directionsRenderer, destination);
             })
+            marker.addEventListener("mouseleave", () => {
+                setTimeout(() => {
+                    infoWindow.close(map);
+                }, 1000);
+            })
+            displayMarkerArray.push(marker);
         }
     }
     if (currentPosition != null) {
-        const marker = new AdvancedMarkerElement({
+        const carImage = document.createElement("img");
+        carImage.src = "/image/carImage.png";
+        carImage.style.width = "40px";
+
+        const marker = new advancedMarkerElement({
             map: map,
             position: currentPosition,
+            content: carImage,
             title: "目前所在位置",
         });
-        infoWindow.setPosition(currentPosition);
-        infoWindow.setContent("目前所在位置");
-        marker.addEventListener("gmp-click", () => {
-            infoWindow.open(map);
+        currentInfoWindow.setPosition(currentPosition);
+        currentInfoWindow.setContent("目前所在位置");
+        marker.addEventListener("click", () => {
+            currentInfoWindow.open(map);
         })
+        return marker;
     }
+}
+
+function cleanDisplayMarkerArray() {
+    for (let i=0; i<displayMarkerArray.length; i++) {
+        displayMarkerArray[i].setMap(null);
+        displayMarkerArray[i] = null;
+    }
+    displayMarkerArray = [];
 }
 
 initMap();

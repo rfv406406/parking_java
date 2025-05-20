@@ -19,32 +19,46 @@ public class ParkingLotImagesDao {
     @Autowired NamedParameterJdbcTemplate namedParameterJdbcTemplate;
     @Autowired JdbcTemplate jdbcTemplate;
 
-    public int postParkinglotimagesDao(ParkingLot parkingLot, int parkingLotDataId) throws RuntimeException{
-        int count = 0;
+    public List<Object[]> postParkinglotimagesDao(ParkingLot parkingLot, int parkingLotDataId) {
+        String sql = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (?, ?)";
+        List<Object[]> batch = new ArrayList<>();
         for (MultipartFile img : parkingLot.getImg()) {
-            try {
-                String fileName = img.getOriginalFilename();
-                if(fileName != null && (fileName.endsWith("jpg") || fileName.endsWith("jpeg") ||
+            String fileName = img.getOriginalFilename();
+            if(fileName != null && (fileName.endsWith("jpg") || fileName.endsWith("jpeg") ||
                 fileName.endsWith("png") || fileName.endsWith("jfif"))) {
                     String UniquefileName = UUID.randomUUID().toString() + fileName;
                     // s3_client.upload_fileobj(image, BUCKET_NAME, filename)
-                    String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;
-                    String sql = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (:parkinglot_id, :image)";
-                    HashMap<String, Object> map = new HashMap<>();
-                    map.put("parkinglot_id", parkingLotDataId);
-                    map.put("image", imgUrl);
-                    int insertId = namedParameterJdbcTemplate.update(sql, map);
-                    count = count + insertId;
+                    String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;   
+                    Object[] value = new Object[] {
+                        parkingLot.getParkingLotId(), imgUrl
+                    };
+                    batch.add(value);             
                 }
-            } catch(RuntimeException e) {
-                System.out.println(e);
-            }
         }
-        return count;
+        jdbcTemplate.batchUpdate(sql, batch);
+        // for (MultipartFile img : parkingLot.getImg()) {
+        //     try {
+        //         String fileName = img.getOriginalFilename();
+        //         if(fileName != null && (fileName.endsWith("jpg") || fileName.endsWith("jpeg") ||
+        //         fileName.endsWith("png") || fileName.endsWith("jfif"))) {
+        //             String UniquefileName = UUID.randomUUID().toString() + fileName;
+        //             // s3_client.upload_fileobj(image, BUCKET_NAME, filename)
+        //             String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;
+        //             String sql = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (:parkinglot_id, :image)";
+        //             HashMap<String, Object> map = new HashMap<>();
+        //             map.put("parkinglot_id", parkingLotDataId);
+        //             map.put("image", imgUrl);
+        //             int insertId = namedParameterJdbcTemplate.update(sql, map);
+        //             count = count + insertId;
+        //         }
+        //     } catch(RuntimeException e) {
+        //         System.out.println(e);
+        //     }
+        // }
+        return batch;
     }
 
-    public int[] putParkinglotimagesDao(ParkingLot parkingLot) {
-        // int count = 0;
+    public List<Object[]> putParkinglotimagesDao(ParkingLot parkingLot) {
         String sqlD = "DELETE FROM parkinglotimage WHERE parkinglot_id = :parkinglot_id";
         HashMap<String, Object> map = new HashMap<>();
         map.put("parkinglot_id", parkingLot.getParkingLotId());
@@ -65,7 +79,7 @@ public class ParkingLotImagesDao {
                     batch.add(values);             
                 }
 		}
-        int[] insertNumber = jdbcTemplate.batchUpdate(sqlI, batch);
+        jdbcTemplate.batchUpdate(sqlI, batch);
         // count = count + insertNumber;
 
 
@@ -89,6 +103,6 @@ public class ParkingLotImagesDao {
         //         System.out.println(e);
         //     }
         // }
-        return insertNumber;
+        return batch;
     }
 }

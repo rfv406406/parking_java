@@ -1,4 +1,4 @@
-let memberParkingLotData;
+let memberParkingLotData = [];
 // ------------------------------------------------------------------------------------------------
 document.querySelector('#parking-lot-information-page-edit-button').addEventListener('click', () => {
     document.querySelector('#parking-lot-information-container-storage-button').textContent = "編輯";
@@ -91,10 +91,12 @@ document.querySelector('#parking-lot-container').addEventListener('click', (even
     }
 });
 //刪除停車場資料
-document.querySelector('#parking-lot-container').addEventListener('click', async (event) => {
+const parkingLotContainer = document.querySelector('#parking-lot-container');
+parkingLotContainer.addEventListener('click', async (event) => {
     if (event.target.matches('.parking-lot-delete-button')) {
         event.preventDefault();
 
+        let parkingLotTableContainer = event.target.closest('#parkingLotTableDivContainer');
         let parkingLotTable = event.target.closest('.parking-lot-page-table');
 
         if (parkingLotTable) {
@@ -102,9 +104,12 @@ document.querySelector('#parking-lot-container').addEventListener('click', async
             const parkingLotId = parkingLotName.getAttribute('id');
             try{
                 token = tokenChecking();
+                parkingLotTableContainer.remove();
+                if (!parkingLotContainer.querySelector(".parking-lot-page-table")) {
+                    setEmptyContainerContent(parkingLotContainer);
+                }
                 const response = await fetchAPI(`/api/parkingLot/${parkingLotId}`, token, "DELETE");
                 const data = await handleResponse(response);
-                getMemberParkingLotPData()
             }catch(error){
                 handleError(error);
             }
@@ -193,7 +198,6 @@ function packingData(){
 async function passParkingLotDataToDB(buttonText, formData){
     const token = tokenChecking();
     const parkingLotStorageSuccessMessage = document.querySelector('#parking-lot-storage-success-message');
-    // await displayFormData(formData) 
     try{
         if (buttonText === '儲存') {
             let response = await fetchAPI("/api/parkingLot", token, "POST", formData);
@@ -208,7 +212,7 @@ async function passParkingLotDataToDB(buttonText, formData){
             parkingLotStorageSuccessMessage.textContent = '編輯成功!';
         }
 
-        // setTimeout(() => (location.reload()), 1000)
+        setTimeout(() => (location.reload()), 1000)
 
     }catch(error){
         if (error.message.includes("gps not found")) {
@@ -219,40 +223,44 @@ async function passParkingLotDataToDB(buttonText, formData){
     }
 }
 
-getMemberParkingLotPData();
-// let memberParkingLotData;
-async function getMemberParkingLotPData(){
+getMemberParkingLotData();
+
+async function getMemberParkingLotData(){
     try{
         const token = tokenChecking();
-        // const response = await fetchAPI("/api/input_parking_lot_information", token, 'GET', null)
         const response = await fetchAPI("/api/parkingLot", token, 'GET')
-
-        // const response = await getMemberParkingLotData();
-        memberParkingLotData = await handleResponse(response);
-        // let memberParkingLotData = data;
-        addParkingLotInDiv(memberParkingLotData)
+        const data = await handleResponse(response);
+        for (const item in data) {
+            memberParkingLotData.push(data[item]);
+        }
+        addParkingLotInDiv(memberParkingLotData);
     }catch(error){
         handleError(error);
     }
 }
 
+function setEmptyContainerContent(container) {
+    let separator = document.createElement("div");
+    separator.className = "separator";
+    container.style.display = 'flex';
+    container.style.justifyContent = 'center';
+    container.style.alignItems = 'center';
+    container.style.height = "20vh";
+    container.textContent = '目前無登記的停車場';
+    container.after(separator);
+}
 function addParkingLotInDiv(data) {
     const container = document.querySelector('#parking-lot-container'); 
-    // container.innerHTML = null; 
     container.textContent = ""; 
     if(data.length == 0){
-        let separator = document.createElement("div");
-        separator.className = "separator";
-        container.style.display = 'flex';
-        container.style.justifyContent = 'center';
-        container.style.alignItems = 'center';
-        container.style.height = "20vh";
-        container.textContent = '目前無登記的停車場';
-        container.after(separator);
+        setEmptyContainerContent(container);
     }
-    data.forEach(item => {
-        const parkingLotDiv = document.createElement('div');
-        parkingLotDiv.className = 'parking-lot-page-table';
+    data.forEach((item) => {
+        const parkingLotTableDivContainer = document.createElement('div');
+        parkingLotTableDivContainer.id = "parkingLotTableDivContainer";
+        const parkingLotTableDiv = document.createElement('div');
+        parkingLotTableDiv.className = 'parking-lot-page-table';
+        parkingLotTableDiv.id = item.parkingLotId;
 
         const imageDiv = document.createElement('div');
         imageDiv.className = 'image';
@@ -263,28 +271,29 @@ function addParkingLotInDiv(data) {
             img.src = 'image/noimage.png';
         }
         imageDiv.appendChild(img);
-        parkingLotDiv.appendChild(imageDiv);
+        parkingLotTableDiv.appendChild(imageDiv);
 
         const name = document.createElement('div');
         name.className = 'parking-lot-information-page-go-button';
         name.setAttribute('id', item.parkingLotId);
         name.textContent = item.name;
-        parkingLotDiv.appendChild(name);
+        parkingLotTableDiv.appendChild(name);
 
         const deleteButton = document.createElement('button');
         deleteButton.type = 'button';
         deleteButton.className = 'parking-lot-delete-button';
         deleteButton.id = 'parking-lot-delete-button';
         deleteButton.textContent = '刪除';
-  
-        parkingLotDiv.appendChild(deleteButton);
-
-        container.appendChild(parkingLotDiv);
 
         const separator = document.createElement('div');
         separator.className = 'separator';
-        container.appendChild(separator);
-    });
+        
+        parkingLotTableDiv.appendChild(deleteButton);
+        parkingLotTableDivContainer.appendChild(parkingLotTableDiv);
+        parkingLotTableDivContainer.appendChild(separator);
+
+        container.appendChild(parkingLotTableDivContainer);
+    })
 }
 
 function fillParkingLotForm(parkingLotData) {

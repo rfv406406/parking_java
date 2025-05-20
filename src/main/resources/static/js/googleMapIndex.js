@@ -1,61 +1,74 @@
 //調用停車場DB數據
-let parkingLotArray = [];
+let parkingLotMap = new Map();
+let parkingLotGMPMap = new Map();
+let parkingLotGMPArray = [];
 
 async function fetchParkingLotData(){
     try{
         const response = await fetchAPI("/api/parkingLot", null, 'GET');
         const data = await handleResponse(response);
         await displayParkingLotMarker(data);
-        const cluster = new markerClusterer({
-            map,
-            markers: parkingLotArray
-          });      
+        setMarkerClusterer(parkingLotGMPArray);
     }catch(error){
         handleError(error);
     }
 }
 
+function setMarkerClusterer(parkingLotGMPArray) {
+    cluster = new markerClusterer({
+            map,
+            markers: parkingLotGMPArray
+          });     
+}
+
 async function displayParkingLotMarker(data) {
     if (data) {
-        data.forEach(async (parkingLot) => {
+        for (const parkingLotId in data) {
+            const parkingLot = data[parkingLotId];
             const parkingLotMarker = createParkingLotMarker(parkingLot);
             const parkingLotMarkerDOM = parkingLotMarker.parkingLotDOM;
             const parkingLotMarkerGMP = parkingLotMarker.parkingLotMarker;
-            parkingLotArray.push(parkingLotMarkerGMP);
+            parkingLotGMPArray.push(parkingLotMarkerGMP);
+            parkingLotMap.set(parkingLot.parkingLotId, parkingLot);
+            parkingLotGMPMap.set(parkingLot.parkingLotId, parkingLotMarkerGMP);
             parkingLotMarkerDOM.addEventListener("click", async (event) => {
                 event.stopPropagation();
                 let parkingLotInforTable = document.querySelector("#parking-lot-information-container");
                 parkingLotInforTable.style.display = "block";
-                parkingLotArray.find((parkingLot) => {parkingLot.latitude == parkingLotMarkerDOM.getAttribute("lat") && parkingLot.longitude == parkingLotMarkerDOM.getAttribute("lng")});
-                // const locationData = findDataByGPS(parkingLot.lat, parkingLot.lng, data);
-                // await calculateAndDisplayRoute(directionsService, directionsRenderer, currentPosition, locationData);
-                // setupAppear([{ elementSelector: '.parking_lot-information-container', classToToggle: 'parking_lot-information-container-appear'}]);
+                const parkingLotIdStr = event.currentTarget.getAttribute("parkingLotId");
+                const parkingLot = parkingLotMap.get(Number(parkingLotIdStr));        
                 parkingLotInformationTable(parkingLot);
                 await navigation(parkingLot);
-                // getBookingInformation(parkingLot);
             });
-            // markers.push(marker);
-        });
+        }
     }
 };
+
 //關閉parkinglotTable
 document.querySelector("#map").addEventListener("click", () => {
     document.querySelector("#parking-lot-information-container").style.display = "none";
 })
 
-function createParkingLotMarker(parkingLot) {
+function setParkingLotMarkerLabel(parkingLot) {
     let labelContent = "";
-    // 檢查是否存在停車空間和第一個空間的狀態
     if (parkingLot.carSpaceNumber && parkingLot.carSpaceNumber.every(square => square.status !== '閒置中')) {
         labelContent = "使用中";
     }else{
         labelContent = parkingLot.price + "元";
     }
 
+    return labelContent;
+}
+
+function createParkingLotMarker(parkingLot) {
+    const labelContent = setParkingLotMarkerLabel(parkingLot);
     const parkingLotTag = document.createElement("div");
     const priceTag = document.createElement("div");
     const foot = document.createElement("div");
     
+    parkingLotTag.id = `parkingLotTag${parkingLot.parkingLotId}`;
+    console.log("parkingLotTag.id: " + parkingLotTag.id)
+    parkingLotTag.setAttribute("parkingLotId", parkingLot.parkingLotId);
     parkingLotTag.setAttribute("lat", parkingLot.latitude);
     parkingLotTag.setAttribute("lng", parkingLot.longitude);
 
@@ -63,11 +76,12 @@ function createParkingLotMarker(parkingLot) {
     parkingLotTag.style.justifyContent = "center"; 
     parkingLotTag.style.alignItems = "center";
     parkingLotTag.style.backgroundColor = setColorByPrice(parkingLot.price);
-    parkingLotTag.style.width = "50px";
     parkingLotTag.style.height = "40px";
+    parkingLotTag.style.padding = "0px 5px";    
     parkingLotTag.style.borderRadius = "7px";
     parkingLotTag.style.position = "relative";
 
+    foot.id = "markerFoot";
     foot.style.position = "absolute";
     foot.style.left = "50%";
     foot.style.top = "100%";
@@ -80,19 +94,22 @@ function createParkingLotMarker(parkingLot) {
 
     parkingLotTag.appendChild(foot);
 
+    priceTag.id = "priceLabel";
     priceTag.style.display = "flex";
     priceTag.style.justifyContent = "center"; 
     priceTag.style.alignItems = "center";
     priceTag.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
     priceTag.style.boxSizing = "border-box";
-    priceTag.style.width = "80%";
+    // priceTag.style.width = "80%";
+    priceTag.style.minWidth = "40px";
     priceTag.style.height = "80%";
+    priceTag.style.padding = "5px";
     priceTag.style.overflow = "hidden";
     priceTag.style.borderRadius = "3px";
     priceTag.style.fontSize = "15px";
     priceTag.style.fontWeight = "bold";
     priceTag.style.color = "rgba(0, 0, 0, 0.63)"
-    priceTag.style.whiteSpace = "nowrap";
+    // priceTag.style.whiteSpace = "nowrap";
      
     priceTag.style.textOverflow = "ellipsis";
     
@@ -124,6 +141,7 @@ function createParkingLotMarker(parkingLot) {
         map,
         position: { lat: parkingLot.latitude, lng: parkingLot.longitude },
         content: parkingLotTag,
+        title: parkingLot.name
     });
 
     let parkingLotObject = {

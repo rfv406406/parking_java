@@ -17,7 +17,7 @@ public class JwtService {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    public HashMap<String, Object> returnAuth(Member member) throws RuntimeException{
+    public HashMap<String, Object> returnAuth(Member member) throws Exception{
         try {
             String account = member.getAccount();
             String password = member.getPassword();
@@ -28,8 +28,8 @@ public class JwtService {
             String token = JwtUtil.generateToken(getPrincipal);
             tokenObject.put("token", token);
             return tokenObject;
-        } catch (RuntimeException e) {
-            throw new RuntimeException("帳號或密碼錯誤");
+        } catch (Exception e) {
+            throw new Exception("帳號或密碼錯誤");
         }
         
     }

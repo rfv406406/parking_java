@@ -6,21 +6,12 @@ async function initCashRecord(){
     try{
         const response = await fetchAPI("/api/transactionRecords", token, 'GET')
         const data = await handleResponse(response);
-        if (data != null) {
-            cashRecords = data;
-        }
+        cashRecords = data;
         filterAndDisplayRecords(cashRecords);
     }catch(error){
         handleError(error);
     }
 }
-
-// async function getCashRecordData(){
-//     const token = tokenChecking();
-//     const response = await fetchAPI("/api/transactionRecords", token, 'GET')
-//     return response;
-// }
-
 // ---------------------------------------------------------------------------------
 
 document.querySelector('#data-type-selector').addEventListener('change', () => {
@@ -29,61 +20,38 @@ document.querySelector('#time-range-selector').addEventListener('change', () => 
     filterAndDisplayRecords(cashRecords);});
 
 function filterAndDisplayRecords(cashRecords) {
-    const dataTypeSelector = document.querySelector('#data-type-selector');
+    const cashRecordType = document.querySelector('#data-type-selector').value;
     const timeRange = document.querySelector('#time-range-selector').value;
-
-    const dataTypeMapping = {
-        'type1': 'DEPOSIT',
-        'type2': 'CONSUMPTION',
-        'type3': 'INCOME'
-    };
+    if (cashRecords == null) {
+        displayRecordsIsNull();
+        return null;
+    }
     // const dataTypeMapping = {
-    //     'type1': 'transactions',
-    //     'type2': 'consumption_payment',
-    //     'type3': 'consumption_income'
+    //     'type1': 'DEPOSIT',
+    //     'type2': 'CONSUMPTION',
+    //     'type3': 'INCOME'
     // };
 
-    let selectedDataType = dataTypeMapping[dataTypeSelector.value];
-    // let relevantData = cashRecords[selectedDataType];
-    // 確保 relevantData 是為array
-    
-    // if (!Array.isArray(relevantData)) {
-    //     relevantData = [];
-    // }
-    // console.log(relevantData)
-    // filter
-    // if (selectedDataType === 'transactions') {
-    //     relevantData = relevantData.filter(record => record.Type === 'DEPOSIT');
-    // }
-    let relevantData = cashRecords.filter(item => item.transactionType === selectedDataType);
+    // let selectedDataType = dataTypeMapping[dataTypeSelector.value];
+
+    let relevantData = cashRecords.filter(item => item.transactionType === cashRecordType);
     
     // 根據所選時間過濾data
     let filteredRecords = relevantData.filter(item => {
         return matchesTimeRange(item, timeRange);
     });
 
-    // 動態生成
-    displayRecords(filteredRecords, selectedDataType);
+    displayRecords(filteredRecords, cashRecordType);
 }
 
 function matchesTimeRange(record, timeRange) {
     let recordDate = new Date(record.transactionsTime);
-
-    // // 確定記錄的類型並解析日期
-    // if (record.stoptime) { // 對於 'consumption_income' 和 'consumption_payment'
-    //     recordDate = new Date(record.stoptime);
-    // } else if (record.transactions_time) { // 對於 'transactions'
-    //     recordDate = new Date(record.transactions_time);
-    // } else {
-    //     return false; 
-    // }
-
     // 根據時間範圍進行比較
     switch (timeRange) {
         case 'this_week':
-            return isThisWeek(recordDate);
+            return inSevenDays(recordDate);
         case 'this_month':
-            return isThisMonth(recordDate);
+            return inThirtyDays(recordDate);
         case 'all':
             return true; 
         default:
@@ -91,21 +59,42 @@ function matchesTimeRange(record, timeRange) {
     }
 }
 
-function isThisWeek(date) {
+function inSevenDays(recordDate) {
+    const launchDate = new Date(recordDate);
+    const launchDateInMillis = launchDate.getTime();
+    const sevenDaysInMillis = 7 * 24 * 60 * 60 * 1000;
+    const launchDateAddsevenDays = launchDateInMillis + sevenDaysInMillis;
     const now = new Date();
-    const firstDayOfWeek = new Date(now.setDate(now.getDate() - now.getDay() + (now.getDay() === 0 ? -6 : 1))); // 星期一
-    const lastDayOfWeek = new Date(firstDayOfWeek);
-    lastDayOfWeek.setDate(lastDayOfWeek.getDate() + 6); // 星期天
+    const nowInMillis = now.getTime();
 
-    return date >= firstDayOfWeek && date <= lastDayOfWeek;
+    if (launchDateAddsevenDays - nowInMillis > 0 && nowInMillis > launchDate) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-function isThisMonth(date) {
+function inThirtyDays(date) {
+    const launchDate = new Date(recordDate);
+    const launchDateInMillis = launchDate.getTime();
+    const thirtyDaysInMillis = 30 * 24 * 60 * 60 * 1000;
+    const launchDateAddThirtyDays = launchDateInMillis + thirtyDaysInMillis;
     const now = new Date();
-    const firstDayOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+    const nowInMillis = now.getTime();
 
-    return date >= firstDayOfMonth && date <= lastDayOfMonth;
+    if (launchDateAddThirtyDays - nowInMillis > 0 && nowInMillis > launchDate) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function displayRecordsIsNull() {
+    const container = document.querySelector('#plate-board-information');
+    container.textContent  = ''; 
+    let noDataDiv = document.createElement('div');
+    noDataDiv.textContent = '沒有交易資料';
+    container.appendChild(noDataDiv);
 }
 
 function displayRecords(cashRecords, dataType) {
@@ -113,14 +102,11 @@ function displayRecords(cashRecords, dataType) {
     container.textContent  = ''; 
 
     if (cashRecords.length === 0) {
-        let noDataDiv = document.createElement('div');
-        noDataDiv.textContent = '沒有交易資料';
-        container.appendChild(noDataDiv);
+        displayRecordsIsNull();
         return null;
     }
 
     cashRecords.forEach(record => {
-        // let htmlContent = '';
         switch (dataType) {
             case 'DEPOSIT': {
                 let depositDiv = document.createElement('div');

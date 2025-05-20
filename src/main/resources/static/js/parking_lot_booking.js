@@ -53,11 +53,9 @@ carBoardCheckedButton.addEventListener('click', async () => {
         let parkingLotSquareId = document.querySelector('#data-type-selector').value;
         let carId = document.querySelector('#car-board-number-selector').value;
         let parkingLotId = document.querySelector('#parking-lot-id').textContent;
-        // let bookingData = bookingLocationData; // return data get
         let startTime = getCurrentDateTime();
         await passBookingData(parkingLotId, startTime, carId, parkingLotSquareId); 
         await getBookingData();
-        // await fetchData();
         loader.style.display = 'none';
         startTimer();
         toggleStopButtonReload();
@@ -131,37 +129,10 @@ async function passBookingData(parkingLotId, startTime, carId, parkingLotSquareI
         };
         const response = await fetchAPI("/api/parkingLotUsage", token, 'POST', bookingInformationData)
         const data = await handleResponse(response);
-        console.log(data)
     }catch(error){
         handleError(error);
     }
 }
-// async function passBookingData(bookingData, startTime, carBoardSelected, squareNumber){
-//     try{
-//         // console.log(bookingData);
-//         // console.log(startTime);
-//         // console.log(carBoardSelected);
-//         // console.log(squareNumber);
-//         const response = await inputBookingDataToDB(bookingData, startTime ,carBoardSelected, squareNumber);
-//         const data = await handleResponse(response);
-//         console.log(data)
-//     }catch(error){
-//         handleError(error);
-//     }
-// }
-
-// async function inputBookingDataToDB(bookingData, startTime ,carBoardSelected, squareNumber){
-//     const token = tokenChecking();
-//     const bookingInformationData = {
-//         bookingData: bookingData,
-//         startTime: startTime,
-//         carBoardSelected: carBoardSelected,
-//         squareNumber: squareNumber
-//     };
-//     // console.log(bookingInformationData);
-//     const response = await fetchAPI("/api/input_booking_information", token, 'POST', bookingInformationData)
-//     return response;
-// }
 
 function parkingLotInformationTable(locationData){
     document.querySelector('#parking-lot-id').textContent = locationData.parkingLotId || '';
@@ -305,7 +276,7 @@ async function memberStatusChecking(){
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
             return false;
         }
-        if (squareNumber.value === "title"){
+        if (!squareNumber.value || squareNumber.value == null){
             alertContent.textContent = '請選擇車位編號';
             toggleClass('#alert-page-container', 'alert-page-container-toggled');
             toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
@@ -334,7 +305,6 @@ function rotationImg(data) {
     if (data.imgUrl != null) {
         imageURL = data.imgUrl;
     } else {
-        // imageURL = ['https://d1hxt3hn1q2xo2.cloudfront.net/1702149637-20210325-121559_U7321_M680292_0f7b.jpg'];
         imageURL = ['/image/noimage.png','/image/noimage.png'];
     };
 

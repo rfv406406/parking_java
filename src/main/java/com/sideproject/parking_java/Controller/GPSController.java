@@ -20,7 +20,7 @@ public class GPSController {
     private GpsService gpsService;
 
     @GetMapping("/api/gps/{address}")
-    public ResponseEntity<String> getLatAndLng(@PathVariable String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException{
+    public ResponseEntity<String> getLatAndLng(@PathVariable String address) throws InvalidParameterError, JsonProcessingException, JsonMappingException, Exception {
         HashMap<String, Object> latLng = gpsService.getLatAndLngService(address);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("GPS" + latLng);
         

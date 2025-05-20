@@ -8,8 +8,8 @@
     <title>首頁</title>
 </head>
 <body>
-    <div th:replace="nav :: nav"></div>
-    <div th:replace="sign_system :: sign_system"></div>
+    <div th:replace="~{nav :: nav}"></div>
+    <div th:replace="~{sign_system :: sign_system}"></div>
     <!-- {% include 'nav.html' %} 
     {% include 'sign_system.html' %} -->
     <div class="payment_infor_container">
@@ -25,7 +25,7 @@
         <button class="pay_button">儲值</button>
     </div>
     <div class="pay-success" id="pay-success"></div>
-    <div th:replace="foot :: foot"></div>
+    <div th:replace="~{foot :: foot}"></div>
     <!-- {% include 'foot.html' %} -->
     <script src="/js/sign_system.js"></script>
     <script src="/js/base.js"></script>

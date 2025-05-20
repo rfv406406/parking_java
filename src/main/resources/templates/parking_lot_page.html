@@ -9,12 +9,9 @@
     <title>停車場頁面</title>
 </head>
 <body>
-    <div th:replace="nav :: nav"></div>
-    <div th:replace="sign_system :: sign_system"></div>
-    <div th:replace="alert_page :: alert_page"></div>
-    <!-- {% include 'nav.html' %} 
-    {% include 'sign_system.html' %}
-    {% include 'alert_page.html' %} -->
+    <div th:replace="~{nav :: nav}"></div>
+    <div th:replace="~{sign_system :: sign_system}"></div>
+    <div th:replace="~{alert_page :: alert_page}"></div>
     <main class="main">
     <div class="parking-lot-page" id="parking-lot-page">
         <div class="information-page-header">
@@ -163,7 +160,7 @@
         <div class="footer"></div>
     </div>
     </main>
-    <div th:replace="foot :: foot"></div>
+    <div th:replace="~{foot :: foot}"></div>
     <!-- {% include 'foot.html' %} -->
     <script src="/js/sign_system.js"></script>
     <script src="/js/base.js"></script>

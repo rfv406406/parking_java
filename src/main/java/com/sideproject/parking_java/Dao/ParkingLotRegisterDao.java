@@ -4,9 +4,13 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.model.ParkingLot;
 import com.sideproject.parking_java.utility.ParkingLotRowMapper;
 
@@ -16,7 +20,7 @@ public class ParkingLotRegisterDao {
     @Autowired 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public List<ParkingLot> getParingLotRegisterDao(Integer memberId) {
+    public List<ParkingLot> getParingLotRegisterDao(Integer memberId, Integer parkingLotId) {
         String sql = "SELECT parkinglotdata.*, " +
              "GROUP_CONCAT(DISTINCT parkinglotimage.image SEPARATOR ',') AS images, " +
              "GROUP_CONCAT(DISTINCT CONCAT(parkinglotsquare.id,',', parkinglotsquare.parkinglot_id,',', parkinglotsquare.square_number,',', parkinglotsquare.status) " +
@@ -25,30 +29,32 @@ public class ParkingLotRegisterDao {
              "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglot_id " +
              "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglot_id ";
         String sql2 = "WHERE member_id = :member_id ";
-        String sql3 = "GROUP BY parkinglotdata.id";
+        String sql3 = "AND parkinglotdata.id = :id ";
+        String sql4 = "GROUP BY parkinglotdata.id";
 
         HashMap<String, Object> map = new HashMap<>();
-        List<ParkingLot> parkingLot;
+        List<ParkingLot> parkingLotList;
         if (memberId == null) {
-            
-            parkingLot = namedParameterJdbcTemplate.query(sql+sql3, map, new ParkingLotRowMapper());
+            parkingLotList = namedParameterJdbcTemplate.query(sql+sql4, map, new ParkingLotRowMapper());
+        } else if (parkingLotId != null) {
+            map.put("member_id", memberId);
+            map.put("id", parkingLotId);
+            parkingLotList = namedParameterJdbcTemplate.query(sql+sql2+sql3+sql4, map, new ParkingLotRowMapper());
         } else {
             map.put("member_id", memberId);
-            parkingLot = namedParameterJdbcTemplate.query(sql+sql2+sql3, map, new ParkingLotRowMapper());
-        }
-
-        for (ParkingLot p : parkingLot) {
-            System.out.println(p);
+            parkingLotList = namedParameterJdbcTemplate.query(sql+sql2+sql4, map, new ParkingLotRowMapper());
         }
       
-        return parkingLot;
+        return parkingLotList;
     }
 
-    public int postParkingLotRegisterDao(ParkingLot parkingLot, int memberId) {
+    public int postParkingLotRegisterDao(ParkingLot parkingLot, int memberId) throws DatabaseError {
         String sql = "INSERT INTO parkinglotdata(member_id, name, address, landmark, opening_time, closing_time, space_in_out, price, width_limit, height_limit, lat, lng)" 
         + "VALUES (:member_id, :name, :address, :landmark, :opening_time, :closing_time, :space_in_out, :price, :width_limit, :height_limit, :lat, :lng)";
-
+        
+        KeyHolder keyHolder = new GeneratedKeyHolder();
         HashMap<String, Object> map = new HashMap<>();
+
         map.put("member_id", memberId);
         map.put("name", parkingLot.getName());
         map.put("address", parkingLot.getAddress());
@@ -62,9 +68,18 @@ public class ParkingLotRegisterDao {
         map.put("lat", parkingLot.getLatitude());
         map.put("lng", parkingLot.getLongitude());
         
-        int insertId = namedParameterJdbcTemplate.update(sql, map);   
+        namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(map), keyHolder);
+        Number key = keyHolder.getKey();
 
-        return insertId;
+        if (key == null) {
+            throw new DatabaseError("No key returned");
+        }
+
+        int parkingLotId = key.intValue();
+    
+        // int insertId = namedParameterJdbcTemplate.update(sql, map);   
+
+        return parkingLotId;
     }
     
     public int deleteParkingLotRegisterDao(Integer parkingLot, int memberId) {

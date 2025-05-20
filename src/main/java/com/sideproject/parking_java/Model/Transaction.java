@@ -7,13 +7,16 @@ public class Transaction {
     private Integer carId;
     private Integer depositAccountId;
     private Integer parkingLotId;
+    private String parkingLotName;
     private Integer parkingLotSquareId;
+    private Integer parkingLotSquareNumber;
     private Integer price;
     private String startTime;
     private String stopTime;
     private String transactionType;
     private Integer amount;
     private String status;
+    private Integer balance;
     private String transactionsTime;
     private ParkingLot parkingLot;
     private Car car;
@@ -42,11 +45,19 @@ public class Transaction {
         this.parkingLotId = parkingLotId;
     }
 
+    public void setParkingLotName(String parkingLotName) {
+        this.parkingLotName = parkingLotName;
+    }
+
     public void setParkingLotSquareId(int parkingLotSquareId) {
         this.parkingLotSquareId = parkingLotSquareId;
     }
 
-    public void setPrice(int price) {
+    public void setParkingLotSquareNumber(int parkingLotSquareNumber) {
+        this.parkingLotSquareNumber = parkingLotSquareNumber;
+    }
+
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -62,12 +73,16 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 
     public void setTransactionsTime(String transactionsTime) {
@@ -105,9 +120,17 @@ public class Transaction {
     public Integer getParkingLotId() {
         return this.parkingLotId;
     }
+
+    public String getParkingLotName() {
+        return this.parkingLotName;
+    }
     
     public Integer getParkingLotSquareId() {
         return this.parkingLotSquareId;
+    }
+
+    public Integer getParkingLotSquareNumber() {
+        return this.parkingLotSquareNumber;
     }
 
     public Integer getPrice() {
@@ -132,6 +155,10 @@ public class Transaction {
     
     public String getStatus() {
         return this.status;
+    }
+
+    public Integer getBalance() {
+        return this.balance;
     }
     
     public String getTransactionsTime() {

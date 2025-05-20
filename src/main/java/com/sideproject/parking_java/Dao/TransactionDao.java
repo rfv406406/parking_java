@@ -19,7 +19,9 @@ public class TransactionDao {
 
     public int postInsertTransactionDao(int memberId, int depositAccountId, String orderNumber, Transaction transaction) {
         String sql = "INSERT INTO transactions SET member_id = :member_id, deposit_account_id = :deposit_account_id, car_id = :car_id, order_number = :order_number, "
-        + "parkinglot_id = :parkinglot_id, parkinglotsquare_id = :parkinglotsquare_id, starttime = :starttime, transactions_type = :transactions_type, amount = :amount, status = :status";
+        + "parkinglot_id = :parkinglot_id, parkinglot_name = (SELECT name FROM parkinglotdata WHERE id = :parkinglot_id), "
+        + "parkinglotsquare_id = :parkinglotsquare_id, parkinglotsquare_number = (SELECT square_number FROM parkinglotsquare WHERE id = :parkinglotsquare_id), "
+        + "starttime = :starttime, transactions_type = :transactions_type, amount = :amount, status = :status";
 
         HashMap<String, Object> map = new HashMap<>();
 
@@ -39,13 +41,13 @@ public class TransactionDao {
         return insertId;
     }
 
-    public void putUpdateParkingLotSquareStatusDao(Transaction transcation) {
+    public void putUpdateParkingLotSquareStatusDao(Transaction transaction) {
         String sql = "UPDATE parkinglotsquare SET status = :status WHERE id = :parkinglotsquare_id";
-        List<CarSpaceNumber> carSpaceNumber = transcation.getParkingLot().getCarSpaceNumber();
+        List<CarSpaceNumber> carSpaceNumber = transaction.getParkingLot().getCarSpaceNumber();
         String status = carSpaceNumber.get(0).getStatus();
         HashMap<String, Object> map = new HashMap<>();
 
-        map.put("parkinglotsquare_id", transcation.getParkingLotSquareId());
+        map.put("parkinglotsquare_id", transaction.getParkingLotSquareId());
         map.put("status", status);
 
         namedParameterJdbcTemplate.update(sql, map);

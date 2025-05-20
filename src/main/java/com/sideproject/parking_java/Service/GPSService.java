@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sideproject.parking_java.exception.InvalidParameterError;
@@ -21,7 +20,7 @@ public class GpsService {
     @Value("${googleMapKey}")
     private String googleMapKey;
 
-    public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, RuntimeException, JsonProcessingException{
+    public HashMap<String, Object> getLatAndLngService(String address) throws InvalidParameterError, Exception, JsonProcessingException{
         if (address == null || address.isEmpty()) {
             throw new InvalidParameterError("address is null or empty");
         }
@@ -47,8 +46,8 @@ public class GpsService {
             map.put("lng",lng);
 
             return map;
-        } catch (RuntimeException e) {
-            throw new RuntimeException("gps not found");
+        } catch (Exception e) {
+            throw new Exception("gps not found");
         }
     }
 }

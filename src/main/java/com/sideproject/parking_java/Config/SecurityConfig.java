@@ -19,7 +19,7 @@ import com.sideproject.parking_java.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
-public class SeecurityConfig {
+public class SecurityConfig {
     @Autowired
     private UserDetailsServiceImpl userDetailsServiceImpl;
 	@Autowired
@@ -28,14 +28,17 @@ public class SeecurityConfig {
     @Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
-            .csrf((AbstractHttpConfigurer::disable))
-			// .httpBasic(withDefaults())
-			// .addFilterBefore(new LoggingBasicAuthFilter(), BasicAuthenticationFilter.class)			
+            .csrf(
+				// csrf -> csrf
+                // .ignoringRequestMatchers("/parkingLot-websocket/**")
+				(AbstractHttpConfigurer::disable)
+				)
 			.authorizeHttpRequests((authorize) -> authorize
 				.requestMatchers(HttpMethod.GET,"/css/**", "/js/**","/image/**").permitAll()
 				.requestMatchers(HttpMethod.GET,"/", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/gps/**","/api/parkingLot").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
+				.requestMatchers("/parkingLot-websocket/**").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status","/api/member/balanceStatus","/api/member/memberDetails","/api/car","/api/parkingLotUsage","/api/transactionRecords").hasAuthority("user")
 				.requestMatchers(HttpMethod.POST,"/api/parkingLot","/api/tappay","/api/car","/api/parkingLotUsage").hasAuthority("user")
 				.requestMatchers(HttpMethod.PUT,"/api/parkingLot/**","/api/member/memberDetails/**","/api/parkingLotUsage/**").hasAuthority("user")
@@ -43,7 +46,6 @@ public class SeecurityConfig {
 				.anyRequest().authenticated()
 			)
 			.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class)
-			// .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
 			.authenticationManager(authenticationManager());
 
 		return http.build();

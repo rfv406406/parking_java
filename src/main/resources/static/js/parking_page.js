@@ -10,6 +10,8 @@ function startTimer() {
     // 計算已經過去的時間並開始計時
     // let elapsedTime = currentTimeToSec - parseInt(localStorage.getItem("timerStart"), 10);
     let elapsedTime = currentTimeToSec - localStorage.getItem("timerStart");
+    // 避免初始的停頓
+    updateTimerDisplay(elapsedTime);
     timerInterval = setInterval(() => {
         elapsedTime++;
         updateTimerDisplay(elapsedTime);
@@ -90,23 +92,29 @@ buttonParkingStop.addEventListener('click', async () => {
         const orderNumberElement = document.querySelector('#packing-page-parking-lot-order-number');
         const startTimeElement = document.querySelector('#packing-page-parking-lot-start-time');
         const priceElement = document.querySelector('#packing-page-parking-lot-price');
+        const balanceElement = document.querySelector('#balanceDiv');
 
         const parkingLotId = parkingLotIdElement;
         const parkingLotSquareId = parkingLotSquareIdElement;
         const orderNumber = orderNumberElement.textContent;
         const startTime = startTimeElement.textContent;
         const price = priceElement.textContent;
-        await passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, orderNumber);
-        await getBookingData();
+        const balance = balanceElement.textContent.replace(/\D/g, '');
+        await passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, balance, orderNumber);
         stopTimer();
-        removeClass('#packing-page-container', ['packing-page-container-toggled'])
-        thankMessage()
+        thankMessage();
     } catch(error) {
         handleError(error);
+        const alertContent = document.querySelector("#alert-content");
+        if (error.message.includes("餘額不足")) {
+            alertContent.textContent = "餘額不足! 請先加值!";
+        }
+        toggleClass('#alert-page-container', 'alert-page-container-toggled');
+        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
     }
 });
 
-async function passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, orderNumber){
+async function passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, balance, orderNumber){
     try{
         const token = tokenChecking();
         carSpaceNumberArray = [
@@ -119,19 +127,23 @@ async function passParkingStopData(parkingLotId, parkingLotSquareId, startTime, 
             "parkingLotSquareId": parkingLotSquareId,
             "startTime": startTime,
             "price": price,
+            "balance": balance,
             "parkingLot": {
                 "carSpaceNumber": carSpaceNumberArray
             }
         };
+        console.log(parkingStopData)
         const response = await fetchAPI(`/api/parkingLotUsage/${orderNumber}`, token, "PUT", parkingStopData);
         await handleResponse(response);
     }catch(error){
         handleError(error);
+        throw error;
     }
 }
 
 function thankMessage(){
-    const alertContent = document.querySelector("#alert-content")
+    removeClass('#packing-page-container', ['packing-page-container-toggled']);
+    const alertContent = document.querySelector("#alert-content");
     alertContent.textContent = '感謝您的消費!';
     toggleClass('#alert-page-container', 'alert-page-container-toggled');
     toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
