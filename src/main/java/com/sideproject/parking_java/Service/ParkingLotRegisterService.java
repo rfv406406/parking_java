@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-// import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.ParkingLotImagesDao;
 import com.sideproject.parking_java.dao.ParkingLotRegisterDao;
 import com.sideproject.parking_java.dao.ParkingLotSquareDao;
@@ -22,9 +21,6 @@ import com.sideproject.parking_java.utility.MemberIdUtil;
 
 @Service
 public class ParkingLotRegisterService{
-
-    // @Autowired
-    // private IdDao parkingLotDataIdByMemberIdDao;
     @Autowired
     private ParkingLotRegisterDao parkingLotRegisterDao;
     @Autowired
@@ -50,7 +46,7 @@ public class ParkingLotRegisterService{
             List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(memberId, null);
             parkingLotMap = redisService.putAllParkingLotMapInRedis(parkingLotMap, parkingLotList);
         }
-        return parkingLotMap;
+        return parkingLotMap.isEmpty() ? null:parkingLotMap;
     }
 
     @Transactional
@@ -78,8 +74,6 @@ public class ParkingLotRegisterService{
         parkingLot.setLongitude(lng);
 
         int parkingLotId = parkingLotRegisterDao.postParkingLotRegisterDao(parkingLot, memberId);
-
-        // int parkingLotDataId = parkingLotDataIdByMemberIdDao.getParkingLotDataIdByMemberId(memberId);
 
         parkingLotImagesDao.postParkinglotimagesDao(parkingLot, parkingLotId);
 

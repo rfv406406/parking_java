@@ -4,15 +4,20 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.CarSpaceNumber;
 import com.sideproject.parking_java.model.Transaction;
 import com.sideproject.parking_java.utility.TransactionRowMapper;
 
 @Component
 public class TransactionDao {
+
+    @Autowired 
+    JdbcTemplate jdbcTemplate;
 
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
@@ -42,6 +47,13 @@ public class TransactionDao {
     }
 
     public void putUpdateParkingLotSquareStatusDao(Transaction transaction) {
+        String aqlS = "SELECT status FROM parkinglotsquare WHERE id = ?"; 
+        String statusChecking = jdbcTemplate.queryForObject(aqlS, String.class,  transaction.getParkingLotSquareId());
+
+        if ("使用中".equals(statusChecking) && "未付款".equals(transaction.getStatus())) {
+            throw new InvalidParameterError("CarSpaceNumber is using");
+        }
+        
         String sql = "UPDATE parkinglotsquare SET status = :status WHERE id = :parkinglotsquare_id";
         List<CarSpaceNumber> carSpaceNumber = transaction.getParkingLot().getCarSpaceNumber();
         String status = carSpaceNumber.get(0).getStatus();

@@ -40,10 +40,11 @@ async function initMap() {
         fetchParkingLotData();
     } catch(error) {
         console.error(error);
-        const alertContent = document.querySelector("#alert-content")
-        alertContent.textContent = error.message;
-        toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+        displayAlertMessage(error.message);
+        // const alertContent = document.querySelector("#alert-content")
+        // alertContent.textContent = error.message;
+        // toggleClass('#alert-page-container', 'alert-page-container-toggled');
+        // toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
     }
 }
 

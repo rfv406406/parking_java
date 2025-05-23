@@ -67,12 +67,10 @@ carBoardCheckedButton.addEventListener('click', async () => {
 
 function carBoardChecking(){
     let selector = document.querySelector('#car-board-number-selector');
-    // 檢查選擇器是否有值
+
     if (!selector.value) {
-        const alertContent = document.querySelector("#alert-content")
-        alertContent.textContent = '請選擇車牌';
-        toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+        const alertMessage = '請選擇車牌';
+        displayAlertMessage(alertMessage);
         return false; 
     }
     return true; 
@@ -100,7 +98,6 @@ async function getBookingData(){
         if (token == null) {
             return null;
         }
-        // const showBookingDataOnParkingPage = await fetchAPI("/api/get_booking_information", token, 'GET');
         const showBookingDataOnParkingPage = await fetchAPI("/api/parkingLotUsage", token, 'GET');
         const data = await handleResponse(showBookingDataOnParkingPage);
         renderParkingPage(data)
@@ -151,14 +148,16 @@ function parkingLotInformationTable(locationData){
     document.querySelector('#parking-space-total-number').textContent = `${squaresWithEmptyStatus} / ${totalSquares} 位`;    
     
     let select = document.querySelector('#data-type-selector');
- 
-    locationData.carSpaceNumber.forEach(square => {
-        let options = select.querySelectorAll("option");
-        let optionsArray = [];
-        for (let i=0; i<options.length; i++) {
-            optionsArray.push(options[i].textContent);
+    // return option to 0
+    select.selectedIndex = 0
+    let options = select.querySelectorAll("option");
+    for (let i=0; i<options.length; i++) {
+        if (Number(options[i].value) != 0) {
+            options[i].remove();
         }
-        if (square.status === '閒置中' && !optionsArray.includes(square.value)) {
+    }
+    locationData.carSpaceNumber.forEach(square => {
+        if (square.status === '閒置中') {
             let option = document.createElement('option')
             option.value = square.id;
             option.textContent = square.value;
@@ -179,7 +178,6 @@ function updateParkingAvailability(locationData) {
             allOccupied = false;
         };
     })
-    // const allOccupied = locationData.squares.every(square => square.status !== '閒置中');
     const button = document.querySelector('#button-parking-booking');
     const runOut = document.querySelector('.full-capacity-message')
     if (allOccupied) {
@@ -243,43 +241,36 @@ async function carBoardNumberToSelector(data){
 //使用者停車狀態for booking
 async function memberStatusChecking(){
     try{
-        const alertContent = document.querySelector("#alert-content")
         const squareNumber = document.querySelector('#data-type-selector')
         const token = tokenChecking();
 
         if (token == null){
-            // const alertContent = document.querySelector("#alert-content")
-            alertContent.textContent = '請先登入以使用完整功能';
-            toggleClass('#alert-page-container', 'alert-page-container-toggled');
-            toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            const alertMessage = '請先登入以使用完整功能';
+            displayAlertMessage(alertMessage);
             return false;
         }
 
         let memberBalanceStatus = await getMemberBalanceStatus();
         let memberCar = await returnCarBoardData();
-        // console.log(memberBalanceStatus)
+
         if (memberCar.length === 0){
-            alertContent.textContent = '請先登記車輛!';
-            toggleClass('#alert-page-container', 'alert-page-container-toggled');
-            toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            const alertMessage = '請先登記車輛!';
+            displayAlertMessage(alertMessage);
             return false;
         }
         if (memberBalanceStatus.balance <= 0){
-            alertContent.textContent = '餘額不足，請儲值';
-            toggleClass('#alert-page-container', 'alert-page-container-toggled');
-            toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            const alertMessage = '餘額不足，請儲值';
+            displayAlertMessage(alertMessage);
             return false; 
         }
         if (memberBalanceStatus.status !== null){
-            alertContent.textContent = '您目前正在停車囉';
-            toggleClass('#alert-page-container', 'alert-page-container-toggled');
-            toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            const alertMessage = '您目前正在停車囉';
+            displayAlertMessage(alertMessage);
             return false;
         }
         if (!squareNumber.value || squareNumber.value == null){
-            alertContent.textContent = '請選擇車位編號';
-            toggleClass('#alert-page-container', 'alert-page-container-toggled');
-            toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+            const alertMessage = '請選擇車位編號';
+            displayAlertMessage(alertMessage);
             return false; 
         }
         return true;

@@ -28,6 +28,7 @@ async function displayParkingLotMarker(data) {
             const parkingLotMarker = createParkingLotMarker(parkingLot);
             const parkingLotMarkerDOM = parkingLotMarker.parkingLotDOM;
             const parkingLotMarkerGMP = parkingLotMarker.parkingLotMarker;
+            console.log(parkingLotMarkerGMP)
             parkingLotGMPArray.push(parkingLotMarkerGMP);
             parkingLotMap.set(parkingLot.parkingLotId, parkingLot);
             parkingLotGMPMap.set(parkingLot.parkingLotId, parkingLotMarkerGMP);
@@ -65,9 +66,9 @@ function createParkingLotMarker(parkingLot) {
     const parkingLotTag = document.createElement("div");
     const priceTag = document.createElement("div");
     const foot = document.createElement("div");
-    
-    parkingLotTag.id = `parkingLotTag${parkingLot.parkingLotId}`;
-    console.log("parkingLotTag.id: " + parkingLotTag.id)
+    parkingLotTag.id = parkingLot.parkingLotId;
+
+    // parkingLotTag.id = `parkingLotTag${parkingLot.parkingLotId}`;
     parkingLotTag.setAttribute("parkingLotId", parkingLot.parkingLotId);
     parkingLotTag.setAttribute("lat", parkingLot.latitude);
     parkingLotTag.setAttribute("lng", parkingLot.longitude);
@@ -209,10 +210,8 @@ document.querySelector("#search-bar-button").addEventListener("click", async () 
         }
     } catch(error) {
         console.error(error);
-        const alertContent = document.querySelector("#alert-content")
-        alertContent.textContent = '您輸入的地點不存在';
-        toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+        const alertMessage = '您輸入的地點不存在';
+        displayAlertMessage(alertMessage);
     }
 
 })

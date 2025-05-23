@@ -1,11 +1,10 @@
 initCarPage();
-// let memberCarData;
+
 async function initCarPage(){
   const token = tokenChecking();
   try{
       const getCarBoardData = await fetchAPI("/api/car", token, "GET");
       const data = await handleResponse(getCarBoardData);
-      // memberCarData = data;
       renderCarInformations(data);
     }catch(error){
       handleError(error);
@@ -17,7 +16,6 @@ const carBoardDataStorage = document.querySelector('#plate-board-data-submit')
 carBoardDataStorage.addEventListener('click', async (event) => {
   event.preventDefault();
   const token = tokenChecking();
-  // let carNumberFormatTest = carNumberFormatTest();
   let re = new RegExp('^[A-Z]{3}-\\d{4}$');
   let message = document.querySelector('#car-page-message');
   let carNumber = document.querySelector('#plate-board-number').value;
@@ -34,9 +32,9 @@ carBoardDataStorage.addEventListener('click', async (event) => {
     let formData = getCarInformation();
     const response = await fetchAPI("/api/car", token, 'POST', formData);
     const data = await handleResponse(response);
-    // console.log(data);
-    // await passCarBoardData(formData); 
-    initCarPage();
+    message.style.color = "green";
+    message.textContent = '新增成功!';
+    setTimeout(() => (location.reload()), 1000)
   } catch(error) {
     handleError(error);
   }
@@ -50,34 +48,16 @@ document.querySelector('.parking-lot-container').addEventListener('click', async
       let carTable = event.target.closest('.parking-lot-table');
       if (carTable) {
           try{
-            // const cartBoardNumber = carTable.querySelector('.parking-lot-information-page-go-button').textContent;
-            // const carData = memberCarData.data.find(lot => lot.carboard_number === cartBoardNumber); 
-            // const response = await deleteCarData(carData);
             const carId = carTable.id;
             const response = await fetchAPI(`/api/car/${carId}`, token, 'DELETE')
             const data = await handleResponse(response);
-            initCarPage();
+            await initCarPage();
           }catch(error){
             handleError(error);
           }
       }
   }
 });
-
-// function carNumberFormatTest() {
-//   let re = new RegExp('^[A-Z]{3}-\\d{4}$');
-//   let message = document.querySelector('#car-page-message');
-//   let carNumber = document.querySelector('#plate-board-number').value;
-//   if (carNumber.isEmpty()){
-//     message.textContent = '請輸入車牌';
-//     return false;
-//   }
-//   if (!re.test(carNumber)) {
-//     message.textContent = '車牌格是錯誤';
-//     return false;
-//   }
-//   return true;
-// }
 
 function getCarInformation(){
   let carNumber = document.querySelector('#plate-board-number').value;
@@ -93,22 +73,6 @@ function getCarInformation(){
   return formData;
 };
 
-// async function passCarBoardData(formData){
-//   try{
-//       const response = await inputCarBoardDataToDB(formData);
-//       const data = await handleResponse(response);
-//       // await fetchData();
-//   }catch(error){
-//       handleError(error);
-//   }
-// }
-
-// async function inputCarBoardDataToDB(formData){
-//   const token = tokenChecking();
-//   const response = await fetchAPI("/api/input_car_board_data", token, 'POST', formData)
-//   return response;
-// }
-
 function renderCarInformations(data) {
   const container = document.querySelector('#parking-lot-container'); 
   container.textContent = ''; 
@@ -122,7 +86,7 @@ function renderCarInformations(data) {
     container.textContent = '目前無登記的車牌';
     container.after(separator);
     return true;
-  }
+  } 
 
   data.forEach(item => {
     const parkingLotDivContainer = document.createElement('div');
@@ -133,7 +97,6 @@ function renderCarInformations(data) {
     
     const nameDiv = document.createElement('div');
     nameDiv.className = 'parking-lot-information-page-go-button';
-    // nameDiv.textContent = item.carboard_number;
     nameDiv.textContent = item.carNumber;
     parkingLotDiv.appendChild(nameDiv);
 
@@ -171,9 +134,3 @@ function renderCarInformations(data) {
     container.appendChild(separator);
   });
 }
-
-// async function deleteCarData(data){
-//   const token = tokenChecking();
-//   const response = await fetchAPI("/api/input_car_board_data", token, 'DELETE', data)
-//   return response;
-// }

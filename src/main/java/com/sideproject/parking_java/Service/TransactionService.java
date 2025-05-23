@@ -100,13 +100,14 @@ public class TransactionService {
             income += (int) Math.round(transaction.getPrice() * 0.5 * halfhour * 0.9);
         }
 
+        if (transaction.getBalance() - cost < 0) {
+            throw new InternalServerError("餘額不足!");
+        }
+
         transaction.setStopTime(currentTimeToString);
         transaction.setTransactionType("CONSUMPTION");
         transaction.setAmount(cost);
         transaction.setStatus("已付款");
-        if (transaction.getBalance() - cost < 0) {
-            throw new InternalServerError("餘額不足!");
-        }
         // 餘額更新
         transactionDao.putUpdateBalanceDao(memberId, cost);
         int insertNumber = transactionDao.putUpdateParkingLotUsageDao(memberId, orderNumber, transaction);

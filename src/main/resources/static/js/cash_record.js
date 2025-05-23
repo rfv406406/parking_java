@@ -26,17 +26,9 @@ function filterAndDisplayRecords(cashRecords) {
         displayRecordsIsNull();
         return null;
     }
-    // const dataTypeMapping = {
-    //     'type1': 'DEPOSIT',
-    //     'type2': 'CONSUMPTION',
-    //     'type3': 'INCOME'
-    // };
-
-    // let selectedDataType = dataTypeMapping[dataTypeSelector.value];
 
     let relevantData = cashRecords.filter(item => item.transactionType === cashRecordType);
     
-    // 根據所選時間過濾data
     let filteredRecords = relevantData.filter(item => {
         return matchesTimeRange(item, timeRange);
     });
@@ -46,7 +38,7 @@ function filterAndDisplayRecords(cashRecords) {
 
 function matchesTimeRange(record, timeRange) {
     let recordDate = new Date(record.transactionsTime);
-    // 根據時間範圍進行比較
+
     switch (timeRange) {
         case 'this_week':
             return inSevenDays(recordDate);
@@ -74,7 +66,7 @@ function inSevenDays(recordDate) {
     }
 }
 
-function inThirtyDays(date) {
+function inThirtyDays(recordDate) {
     const launchDate = new Date(recordDate);
     const launchDateInMillis = launchDate.getTime();
     const thirtyDaysInMillis = 30 * 24 * 60 * 60 * 1000;

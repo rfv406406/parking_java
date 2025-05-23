@@ -8,24 +8,28 @@ const client = new StompJs.Client({
         console.log('Connected: ' + frame);
         client.subscribe('/topic/parkingLot', (parkingLotMapMessage) => {
             const parkingLotMapMessageToJSON = JSON.parse(parkingLotMapMessage.body);
-            console.log(parkingLotMapMessageToJSON)
             if (typeof(parkingLotMapMessageToJSON) == "object") {
                 handleParkingMapMessage(parkingLotMapMessageToJSON)
             } else if (typeof(parkingLotMapMessageToJSON) == "number") {
-                console.log(true)
                 handleParkingLotIdMessage(parkingLotMapMessageToJSON)
             }
         });
-    }
+    },
+    reconnectDelay: 5000,
+    heartbeatIncoming: 10000, 
+    heartbeatOutgoing: 10000,
 });
 
 function handleParkingMapMessage(parkingLotMapMessageToJSON) {
-    const parkingLotId = Object.keys(parkingLotMapMessageToJSON)[0];
-    if (parkingLotMap.get(Number(parkingLotId))) {
-        const parkingLotMarker = document.querySelector(`#parkingLotTag${parkingLotId}`);
+    const parkingLotId = Number(Object.keys(parkingLotMapMessageToJSON)[0]);
+    const parkingLotData = Object.values(parkingLotMapMessageToJSON)[0];
+    parkingLotMap.set(parkingLotId, parkingLotData);
+    const parkingLot = parkingLotMap.get(parkingLotId);
+    if (parkingLotGMPMap.get(parkingLotId)) {
+        let parkingLotGMP = parkingLotGMPMap.get(parkingLotId);
+        const parkingLotMarker = parkingLotGMP.content;
         const priceTag = parkingLotMarker.querySelector("#priceLabel");
         const markerFoot = parkingLotMarker.querySelector("#markerFoot");
-        const parkingLot = Object.values(parkingLotMapMessageToJSON)[0];
         priceTag.textContent = setParkingLotMarkerLabel(parkingLot);
         parkingLotMarker.style.backgroundColor = setColorByPrice(parkingLot.price);
         markerFoot.style.borderTop = "8px solid " + setColorByPrice(parkingLot.price);

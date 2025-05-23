@@ -105,12 +105,10 @@ buttonParkingStop.addEventListener('click', async () => {
         thankMessage();
     } catch(error) {
         handleError(error);
-        const alertContent = document.querySelector("#alert-content");
         if (error.message.includes("餘額不足")) {
-            alertContent.textContent = "餘額不足! 請先加值!";
+            const errorMessage =  "餘額不足! 請先加值!";
+            displayAlertMessage(errorMessage);
         }
-        toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
     }
 });
 
@@ -143,11 +141,10 @@ async function passParkingStopData(parkingLotId, parkingLotSquareId, startTime, 
 
 function thankMessage(){
     removeClass('#packing-page-container', ['packing-page-container-toggled']);
-    const alertContent = document.querySelector("#alert-content");
-    alertContent.textContent = '感謝您的消費!';
-    toggleClass('#alert-page-container', 'alert-page-container-toggled');
-    toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
-    document.querySelector("#alert-content-checked-button").addEventListener("click", () => {
+    const alertMessage =  '感謝您的消費!';
+    const alertButton = displayAlertMessage(alertMessage);
+    console.log(alertButton)
+    alertButton.addEventListener("click", () => {
         location.reload();
     })
 };

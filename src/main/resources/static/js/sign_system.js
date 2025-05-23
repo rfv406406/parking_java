@@ -276,10 +276,20 @@ window.addEventListener('load', init);
   
 function firstLoggingMessage() {
     if (document.cookie.includes('RegistrationCompleted=TRUE')) {
-        const alertContent = document.querySelector("#alert-content")
-        alertContent.textContent = '請先前往"你的車車"頁面，登入至少一個車牌才可以使用停車服務喔!';
-        toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+        const errorMessage = '請先前往"你的車車"頁面，登入至少一個車牌才可以使用停車服務喔!';
+        displayAlertMessage(errorMessage);
         document.cookie = 'RegistrationCompleted=; Max-Age=0; path=/;';
     }
+}
+
+function displayAlertMessage(alertMessage) {
+    const alertContainer = document.querySelector("#alert-page-container");
+    const alertContent = alertContainer.querySelector("#alert-content");
+    const alertButton = alertContainer.querySelector("#alert-content-checked-button");
+
+    alertContent.textContent = alertMessage;
+    toggleClass('#alert-page-container', 'alert-page-container-toggled');
+    toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
+
+    return alertButton;
 }
