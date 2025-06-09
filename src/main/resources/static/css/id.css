@@ -4,10 +4,11 @@
     padding: 10px;
     width:100%;
     max-width: 1200px;
-    height: 100%; /* vh 替換為您希望的百分比 */
+    height: 100%; 
     background-color: #F5FBFF;
     box-sizing: border-box;
     margin: auto;
+    flex: 1;
 }
 
 .information-container{
@@ -38,7 +39,7 @@
      align-items: center;
      padding: 5px;
      background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-     font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+     font-family: 'Noto Sans TC', sans-serif; 
      line-height: 1.6;
      font-size: 24px;
      font-weight: bold;
@@ -84,7 +85,7 @@
 .information-container .text{
     display: flex;
     align-items: center;
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 20px;
     flex: 0.6;
@@ -97,7 +98,7 @@
 }
 
 .information-container .consistent-text{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 24px;
     font-weight: bold;
@@ -159,7 +160,7 @@
     align-items: center;
     padding: 5px;
     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 20px;
     font-weight: bold;
@@ -205,20 +206,19 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     margin-top: 10px;
     cursor: pointer;
 }
-/* 媒体查询，当屏幕宽度小于某个值时，改变布局 */
+
 @media(max-width: 800px) {
     .information-table, .information-table th, .information-table td {
-         /* 在小屏幕上，th和td都将宽度设置为100% */
-        display: block; /* 使它们表现得像块级元素 */
+        display: block; 
     }
 
     .information-table th {
-        text-align: left; /* 小屏幕上标题左对齐 */
+        text-align: left; 
         width: 100%;
         text-align: center;
         padding: 10px 0 10px 0;
@@ -243,23 +243,23 @@
 }
 
 .information-table .infor-data{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }
 
 .information-table .consistent-text{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: bold;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }
 
 
@@ -277,5 +277,5 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }

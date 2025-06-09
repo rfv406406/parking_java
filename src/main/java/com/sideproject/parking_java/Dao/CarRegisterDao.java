@@ -11,11 +11,15 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.exception.InternalServerError;
 import com.sideproject.parking_java.model.Car;
 import com.sideproject.parking_java.utility.CarRowMapper;
+import com.sideproject.parking_java.utility.S3Util;
 
 @Component
 public class CarRegisterDao {
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
+    @Autowired
+    private S3Util s3Util;
 
     public List<Car> getCarRegisterDataDao(int memberId) {
         String sql = "SELECT car.*, GROUP_CONCAT(ci.image SEPARATOR ',') AS images FROM car " +
@@ -51,21 +55,13 @@ public class CarRegisterDao {
     }
 
     public void postInsertCarImageDao(int carId, Car car) {
-        String fileName = car.getCarImage().getOriginalFilename();
+        String imgUrl = s3Util.uploadToS3(car.getCarImage());
+        String sql = "INSERT INTO car_image(car_id, image) VALUES(:car_id, :image)";
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("car_id", carId);
+        map.put("image", imgUrl);
 
-        if(fileName != null && (fileName.endsWith("jpg") || fileName.endsWith("jpeg") ||
-        fileName.endsWith("png") || fileName.endsWith("jfif"))) {
-            String UniquefileName = UUID.randomUUID().toString() + fileName;
-            // s3_client.upload_fileobj(image, BUCKET_NAME, filename)
-            String imgUrl = "https://d1hxt3hn1q2xo2.cloudfront.net/" + UniquefileName;
-            String sql = "INSERT INTO car_image(car_id, image) VALUES(:car_id, :image)";
-            HashMap<String, Object> map = new HashMap<>();
-            map.put("car_id", carId);
-            map.put("image", imgUrl);
-    
-            namedParameterJdbcTemplate.update(sql, map);
-        }
-       
+        namedParameterJdbcTemplate.update(sql, map);
     }
 
     public void deleteCarDao(int carId, int memberId) {

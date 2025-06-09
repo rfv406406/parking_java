@@ -1,17 +1,17 @@
 package com.sideproject.parking_java.service;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sideproject.parking_java.exception.InvalidParameterError;
-
-import java.util.HashMap;
-
-import org.springframework.stereotype.Service;
 
 
 @Service
@@ -25,7 +25,7 @@ public class GpsService {
             throw new InvalidParameterError("address is null or empty");
         }
         try {
-            String url = String.format("https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s", address, googleMapKey);
+            String url = "https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s".formatted(address, googleMapKey);
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<String> GPS = restTemplate.getForEntity(url, String.class);
             // 建立 ObjectMapper
@@ -46,7 +46,7 @@ public class GpsService {
             map.put("lng",lng);
 
             return map;
-        } catch (Exception e) {
+        } catch (JsonProcessingException | RestClientException e) {
             throw new Exception("gps not found");
         }
     }

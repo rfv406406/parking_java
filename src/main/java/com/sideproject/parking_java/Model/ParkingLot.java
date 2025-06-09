@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ParkingLot {
+    private Member member;
     private Integer parkingLotId;
     private String name;
     private String address;
@@ -24,6 +25,10 @@ public class ParkingLot {
 
     private List<CarSpaceNumber> carSpaceNumber;
     private List<CarSpaceImage> carSpaceImage;
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
 
     public void setParkingLotId(Integer parkingLotId) {
         this.parkingLotId = parkingLotId;
@@ -87,6 +92,10 @@ public class ParkingLot {
 
     public void setCarSpaceImage(List<CarSpaceImage> carSpaceImage) {
         this.carSpaceImage = carSpaceImage;
+    }
+
+    public Member getMember() {
+        return member;
     }
 
     public Integer getParkingLotId() {

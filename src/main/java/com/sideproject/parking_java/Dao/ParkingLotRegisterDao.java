@@ -21,14 +21,15 @@ public class ParkingLotRegisterDao {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public List<ParkingLot> getParingLotRegisterDao(Integer memberId, Integer parkingLotId) {
-        String sql = "SELECT parkinglotdata.*, " +
+        String sql = "SELECT parkinglotdata.*, member.*, " +
              "GROUP_CONCAT(DISTINCT parkinglotimage.image SEPARATOR ',') AS images, " +
              "GROUP_CONCAT(DISTINCT CONCAT(parkinglotsquare.id,',', parkinglotsquare.parkinglot_id,',', parkinglotsquare.square_number,',', parkinglotsquare.status) " +
              "ORDER BY parkinglotsquare.square_number SEPARATOR ',') AS squares " +
              "FROM parkinglotdata " +
+             "LEFT JOIN member ON parkinglotdata.member_id = member.id " +
              "LEFT JOIN parkinglotimage ON parkinglotdata.id = parkinglotimage.parkinglot_id " +
              "LEFT JOIN parkinglotsquare ON parkinglotdata.id = parkinglotsquare.parkinglot_id ";
-        String sql2 = "WHERE member_id = :member_id ";
+        String sql2 = "WHERE parkinglotdata.member_id = :member_id ";
         String sql3 = "AND parkinglotdata.id = :id ";
         String sql4 = "GROUP BY parkinglotdata.id";
 
@@ -44,7 +45,8 @@ public class ParkingLotRegisterDao {
             map.put("member_id", memberId);
             parkingLotList = namedParameterJdbcTemplate.query(sql+sql2+sql4, map, new ParkingLotRowMapper());
         }
-      
+        System.out.println("parkingLotList: "+ parkingLotList);
+
         return parkingLotList;
     }
 
@@ -77,8 +79,6 @@ public class ParkingLotRegisterDao {
 
         int parkingLotId = key.intValue();
     
-        // int insertId = namedParameterJdbcTemplate.update(sql, map);   
-
         return parkingLotId;
     }
     

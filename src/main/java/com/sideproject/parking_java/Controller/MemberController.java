@@ -18,6 +18,7 @@ import com.sideproject.parking_java.exception.AuthenticationError;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.model.MemberDetails;
 import com.sideproject.parking_java.service.JwtService;
 import com.sideproject.parking_java.service.MemberService;
 
@@ -45,9 +46,9 @@ public class MemberController {
     }
 
     @GetMapping("/api/member/auth")
-    public ResponseEntity<String> getMemberAuth() throws AuthenticationError {
-        String payload = memberService.getMemberAuthService();
-        ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body(payload);
+    public ResponseEntity<MemberDetails> getMemberAuth() throws AuthenticationError {
+        MemberDetails payload = memberService.getMemberAuthService();
+        ResponseEntity<MemberDetails> response = ResponseEntity.status(HttpStatus.OK).body(payload);
         return response;
     }
 
@@ -67,7 +68,7 @@ public class MemberController {
     }
 
     @PutMapping("/api/member/memberDetails/{memberId}")
-    public ResponseEntity<String> putMethodName(@PathVariable("memberId") Integer memberId, @RequestBody Member member) {
+    public ResponseEntity<String> putMethodName(@PathVariable Integer memberId, @RequestBody Member member) {
         memberService.putMemberDetailsService(memberId, member);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         

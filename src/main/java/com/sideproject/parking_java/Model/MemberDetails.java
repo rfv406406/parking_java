@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.security.core.CredentialsContainer;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class MemberDetails implements UserDetails{
+public class MemberDetails implements UserDetails, CredentialsContainer {
 
     private final Member member;
 
@@ -53,5 +54,10 @@ public class MemberDetails implements UserDetails{
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
+    }
+
+    @Override
+    public void eraseCredentials() {
+        member.setPassword(null); 
     }
 }

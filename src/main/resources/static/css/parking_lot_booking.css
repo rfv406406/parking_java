@@ -2,15 +2,15 @@
     display: none;
     width: 500px;
     min-width: 360px;
-    height:85vh; /* 初始高度为页面高度的 30% */
+    height:85vh; 
     position: relative;
     z-index: 10;
     background-color: #F5FBFF;
     bottom: 0;
-    /* overflow: hidden; */
     cursor: pointer;
-    transition: height 0.5s; /* 使用 transform 实现过渡效果 */
-    overflow: auto; /* 如果内容超出自身高度，则显示滚动条 */
+    transition: height 0.5s; 
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .parking_lot-information-container-toggled{
@@ -19,7 +19,7 @@
 
 @media(max-width: 600px) {
     .parking_lot-information-container{
-        height:30%; /* 初始高度为页面高度的 30% */
+        height:30%; 
         position: absolute;
         width: auto;
         right: 10px;
@@ -29,7 +29,7 @@
     .parking_lot-information-container-toggled{
         height: 100%;
     }
-    }
+}
 
 
 
@@ -169,7 +169,7 @@
     font-size:20px;
     font-style: normal;
     font-weight: bold;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     cursor: pointer;
 }
 
@@ -211,8 +211,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    gap:20%;
     cursor: pointer;
 }
 
@@ -244,11 +242,7 @@
 
 
 .parking_lot-information .separator {
-    width: 100%;
-    height: 1px;
     border: #d4d6d7 solid 1px;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .button-container .full-capacity-message {

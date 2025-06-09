@@ -13,11 +13,6 @@ public class Member {
     private String status;
     private Integer balance;
     
-    //MemberRowMapper
-    // public Member(String account) {
-    //     this.account = account;
-    // }
-
     public void setId(int id) {
         this.id =  id;
     }

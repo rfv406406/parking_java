@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/alert.css">
+    <link rel="stylesheet" href="/css/chatroom.css">
+    <title>通報頁面</title>
+</head>
+<body>
+    <div th:replace="~{nav :: nav}"></div>
+    <div th:replace="~{sign_system :: sign_system}"></div>
+    <div th:replace="~{alert_page :: alert_page}"></div>
+    <main class="main">
+        <div class="chatroom-container" id="chat-page">
+            <div class="chatroom-list">
+                <div class="users-list-container" id="users-list-container">
+                    <h2>Members</h2>
+                    <div class="userAccount-container" id="userAccount-container">
+                        <img src="/image/user_icon.png">
+                        <div class="userAccount" id="userAccount"></div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="chatroom-element-container" id="chatroom-element-container">
+                    <!-- <div class="chatroom-element" id="chatroom-element">
+                        <img src="/image/chatparkingimg.png">
+                        <div class="chatroom-name">123停車場</div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="chat-area">
+                <div class="chat-messages-header">
+                    <img src="/image/returnArrow.png" id="returnArrow">
+                    <div class="chatroom-name" id="chat-messages-name"></div>
+                </div>
+                <div class="chat-messages-container" id="chat-messages-container">
+                    <div class="message"></div>
+                </div>
+                <div id="messageForm" name="messageForm">
+                    <div class="message-input">
+                        <label for="upload-files" class="upload-files"> 
+                            <img src="/image/addimg.png">
+                        </label>
+                        <input type="file" id="upload-files" style="display: none;" accept="image/*">
+                        <input autocomplete="off" type="text" id="message" placeholder="Type your message...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div th:replace="~{foot :: foot}"></div>
+    <script src="/js/sign_system.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/chatroom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="/js/webSocket.js"></script>
+</body>
+</html>

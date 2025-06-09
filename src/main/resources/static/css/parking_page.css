@@ -97,12 +97,12 @@
 }
 
 .packing-page-container-input-box .consistent-text{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
 }
 
 .packing-page-container-input-box .text{
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
 }
 

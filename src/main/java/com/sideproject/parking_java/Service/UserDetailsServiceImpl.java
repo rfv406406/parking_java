@@ -1,7 +1,6 @@
 package com.sideproject.parking_java.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	private MemberDao memberDao;
  
 	@Override
-    public UserDetails loadUserByUsername(String account) throws UsernameNotFoundException {
+    public MemberDetails loadUserByUsername(String account) throws UsernameNotFoundException {
         Member memberAuth = memberDao.getMemberAuthDao(account);
         if (memberAuth == null) {
             throw new UsernameNotFoundException("Can't find member: " + memberAuth);

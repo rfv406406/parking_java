@@ -89,13 +89,15 @@ body{
     cursor: pointer;
 }
 
-.footer {
+.base-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height: 50px;
     background-color: #0E578D;
+    /* position: fixed;
+    bottom: 0; */
     /* border-radius:0 0 12px 12px; */
     /* position: fixed;
     bottom: 0; */
@@ -128,7 +130,7 @@ body{
 }
 
 .menuContent_toggled {
-    right: 0; /* the width you want for your menu */
+    right: 0; 
 }
 
 .list-sign-in{
@@ -185,14 +187,14 @@ body{
 }
 
 .black-back{
-    display: none; /* 預設為隱藏 */
-    position: fixed; /* 讓彈出窗口固定在畫面上，不受滾動影響 */
+    display: none; 
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%; /* 覆蓋整個視窗的寬度 */
-    height: 100%; /* 覆蓋整個視窗的高度 */
-    background-color: rgba(0, 0, 0, 0.25); /* 透明黑色背景，可產生半透明的遮罩效果 */
-    z-index: 1000; /* 確保在其他元素之上 */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.25); 
+    z-index: 1000; 
 }
 
 .black-back-toggled{

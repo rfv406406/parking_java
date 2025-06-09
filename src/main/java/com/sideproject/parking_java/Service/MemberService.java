@@ -13,6 +13,7 @@ import com.sideproject.parking_java.exception.AuthenticationError;
 import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
+import com.sideproject.parking_java.model.MemberDetails;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 
 @Component
@@ -35,16 +36,16 @@ public class MemberService {
         return memberDao.postMemberDao(member);
     }
 
-    public String getMemberAuthService() throws AuthenticationError {
+    public MemberDetails getMemberAuthService() throws AuthenticationError {
         SecurityContext context = SecurityContextHolder.getContext();
         Authentication auth = context.getAuthentication();
         Object principal = auth.getPrincipal();
-        UserDetails userDetails = (UserDetails)principal;
-        if (userDetails == null) {
+        MemberDetails memberDetails = (MemberDetails) principal;
+        if (memberDetails == null) {
             throw new AuthenticationError("userDetails is null");
         }
 
-        return userDetails.getUsername();
+        return memberDetails;
     }
 
     public Member getMemberBalanceAndStatusService() throws AuthenticationError {

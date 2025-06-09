@@ -46,7 +46,7 @@ public class ParkingLotRegisterService{
             List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(memberId, null);
             parkingLotMap = redisService.putAllParkingLotMapInRedis(parkingLotMap, parkingLotList);
         }
-        return parkingLotMap.isEmpty() ? null:parkingLotMap;
+        return parkingLotMap.isEmpty() ? null : parkingLotMap;
     }
 
     @Transactional

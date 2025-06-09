@@ -15,10 +15,9 @@
 }
 
 @media (max-width:1200px){
-    /*螢幕寬度小於1200，套用此區塊CSS*/
-.payment_infor_container{
-    width:90%;
-}    
+    .payment_infor_container{
+        width:90%;
+    }    
 }
 
 .card_information{
@@ -85,10 +84,9 @@
 }
 
 @media (max-width:1200px){
-    /*螢幕寬度小於1200，套用此區塊CSS*/
     .payment{
-    width: 90%;
-}    
+        width: 90%;
+    }    
 }
 
 .payment .pay_button{

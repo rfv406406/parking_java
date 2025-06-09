@@ -50,7 +50,7 @@
     font-size:20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
@@ -109,7 +109,6 @@
 
 
 .parking-lot-page .parking-lot-delete-button {
-    /* 刪除按钮样式 */
     padding: 5px 10px;
     margin-right: 10px;
     border: none;
@@ -188,10 +187,6 @@
     flex-direction: column;
     align-items: center;
 }
-
-/* .parking-lot-page .parking-lot-table:hover {
-    background-color: #edecec;
-} */
 
 .parking-lot-page .parking-lot-infor {
     width: 100%;

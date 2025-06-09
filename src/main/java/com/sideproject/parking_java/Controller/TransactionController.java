@@ -37,7 +37,7 @@ public class TransactionController {
     }
 
     @PutMapping("/api/parkingLotUsage/{orderNumber}")
-    public ResponseEntity<String> putParkingLotUsingController(@PathVariable("orderNumber") String orderNumber, @RequestBody Transaction transaction) {
+    public ResponseEntity<String> putParkingLotUsingController(@PathVariable String orderNumber, @RequestBody Transaction transaction) {
         transactionService.putParkingLotUsageService(orderNumber, transaction);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;

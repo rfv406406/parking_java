@@ -24,17 +24,6 @@ function setupToggle(buttonSelector, toggles) {
   }
   return toggleAll;
 }
-// function setupToggle(buttonSelector, toggles) {
-//   let button = document.querySelector(buttonSelector);
-//   if (button){
-//     button.addEventListener('click', (event) => {
-//       event.preventDefault();
-//       toggles.forEach(function(toggle) {
-//         toggleClass(toggle.elementSelector, toggle.classToToggle);
-//       });
-//     });
-//   }
-// };
 
 // 事件監聽設置的通用函式//排除按鈕
 function setupToggleNotButtonElements(element, toggles) {
@@ -50,19 +39,6 @@ function setupToggleNotButtonElements(element, toggles) {
     });
   }
 }
-
-// // 事件監聽設置的通用函式
-// function setupAppear(toggles) {
-//   toggles.forEach(function(toggle) {
-//     const elements = document.querySelectorAll(toggle.elementSelector);
-//     console.log(elements);
-//     elements.forEach(function(element) {
-//       if (!element.classList.contains(toggle.classToToggle)) {
-//         element.classList.toggle(toggle.classToToggle);
-//       };
-//     });
-//   });
-// }
 
 // 事件監聽設置的通用函式
 function removeClass(elementSelector, classesToRemove) {
@@ -299,3 +275,4 @@ clickButton('#id','/id');
 clickButton('#deposit-and-pay-page-button','/depositPage');
 clickButton('#cash-record-page-button','/cashFlowRecord');
 clickButton('#parking-page-button-list','/');
+clickButton('#chat-page-button','/chatroom');

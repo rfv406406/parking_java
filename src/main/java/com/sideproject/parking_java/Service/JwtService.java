@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
@@ -22,15 +23,14 @@ public class JwtService {
             String account = member.getAccount();
             String password = member.getPassword();
             HashMap<String, Object> tokenObject = new HashMap<>();
-            Authentication authentication = new UsernamePasswordAuthenticationToken(account, password);
-            authentication = authenticationManager.authenticate(authentication);
+            Authentication authToken = new UsernamePasswordAuthenticationToken(account, password);
+            Authentication authentication = authenticationManager.authenticate(authToken);
             MemberDetails getPrincipal = (MemberDetails)authentication.getPrincipal();
             String token = JwtUtil.generateToken(getPrincipal);
             tokenObject.put("token", token);
             return tokenObject;
-        } catch (Exception e) {
+        } catch (BadCredentialsException e) {
             throw new Exception("帳號或密碼錯誤");
         }
-        
     }
 }

@@ -12,7 +12,6 @@ async function initCashRecord(){
         handleError(error);
     }
 }
-// ---------------------------------------------------------------------------------
 
 document.querySelector('#data-type-selector').addEventListener('change', () => {
     filterAndDisplayRecords(cashRecords);});

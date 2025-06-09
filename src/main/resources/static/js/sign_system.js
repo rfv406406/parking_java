@@ -49,11 +49,8 @@ async function signupSubmit(event) {
 
 async function signinSubmit(event) {
     event.preventDefault();
-    // const signinInput = getSigninData();
     const account = document.querySelector("input[name=account]").value;
     const password = document.querySelector("input[name=password]").value;
-
-    // const inputResults = isSigninInputEmpty(signinInput);
     const signinData = {
         "account": account,
         "password": password
@@ -167,19 +164,16 @@ async function displaySignSystemResponse(data, error) {
             case error.message.includes("該帳號已被使用!"): {
                 signupAlert.textContent = "該帳號已被使用!";
                 signupAlert.style.color = "red";
-                // signupForfailure(signupAlert, error.message);
                 break;
             }
             case error.message.includes("Email已經註冊帳戶"): {
                 signupAlert.textContent = "Email已經註冊帳戶";
                 signupAlert.style.color = "red";
-                // signupForfailure(signupAlert, error.message);
                 break;
             }
             case error.message.includes("帳號或密碼錯誤"): {
                 signinAlert.textContent = "帳號或密碼錯誤";
                 signinAlert.style.color = "red";
-                // signinForfailure(signinAlert, error.message);
                 break;
             }
             case error.message.includes("databaseError"): {
@@ -187,15 +181,11 @@ async function displaySignSystemResponse(data, error) {
                 signupAlert.style.color = "red";
                 signinAlert.textContent = "databaseError";
                 signinAlert.style.color = "red";
-                // signupForfailure(signupAlert, error.message);
-                // signinForfailure(signinAlert, error.message);
                 break;
             }
             case error.message.includes("帳號或密碼錯誤"): {
                 signinAlert.textContent = "帳號或密碼錯誤";
                 signinAlert.style.color = "red";
-                // signupForfailure(signupAlert, error.message);
-                // signinForfailure(signinAlert, error.message);
                 break;
             }
         };
@@ -209,18 +199,19 @@ async function init(){
         return null;
     }
     try{
-        let signOutButtonList = document.querySelector('#signout-button-list');
+        const signOutButtonList = document.querySelector('#signout-button-list');
         signOutButtonList.addEventListener('click', logout);
         toggleClass('#signin-button-list', 'list-sign-in-toggled');
         toggleClass('#signout-button-list', 'list-sign-out-toggled'); 
-        const userAccountData = await fetchAPI("/api/member/auth", token, 'GET');
-        let payload = await handleResponse(userAccountData);
+
+        const payload = await getPayload(token);
         if (payload == null) {
             logout();
         }
-        let balance = await getMemberBalanceStatus();
-        showCashPointOnMenu(payload, balance);
-        let headList = document.querySelectorAll(".list");
+        const userAccount = payload.username;
+        const balance = await getMemberBalanceStatus();
+        showCashPointOnMenu(userAccount, balance);
+        const headList = document.querySelectorAll(".list");
         headList.forEach(item => {
             item.style.display = "flex";
         });
@@ -259,6 +250,12 @@ function tokenChecking() {
         return null;
     }
     return token;
+}
+
+async function getPayload(token) {
+    const userAccountData = await fetchAPI("/api/member/auth", token, 'GET');
+    let payload = await handleResponse(userAccountData);
+    return payload;
 }
 
 //登出

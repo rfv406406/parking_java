@@ -38,7 +38,7 @@ public class CarRegisterController {
     }
 
     @DeleteMapping("/api/car/{carId}")
-    public ResponseEntity<String> deleteCarRegisterDataController(@PathVariable("carId") Integer carId) {
+    public ResponseEntity<String> deleteCarRegisterDataController(@PathVariable Integer carId) {
         carRegisterService.deleteCarRegisterDataService(carId);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;

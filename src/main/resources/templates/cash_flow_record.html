@@ -10,8 +10,6 @@
 <body>
     <div th:replace="~{nav :: nav}"></div>
     <div th:replace="~{sign_system :: sign_system}"></div>
-    <!-- {% include 'nav.html' %} 
-    {% include 'sign_system.html' %} -->
     <div class="cash-record-selector">
         <select id="data-type-selector">
             <option value="DEPOSIT">儲值紀錄</option>
@@ -22,7 +20,6 @@
             <option value="this_week">7天內</option>
             <option value="this_month">30天內</option>
             <option value="all">全部</option>
-            <!-- 其他時間範圍 -->
         </select>
     </div>
     <div class="plate-board-container">
@@ -37,7 +34,6 @@
         </div>
     </div>
     <div th:replace="~{foot :: foot}"></div>
-    <!-- {% include 'foot.html' %} -->
     <script src="/js/sign_system.js"></script>
     <script src="/js/cash_record.js"></script>
     <script src="/js/base.js"></script>

@@ -4,7 +4,7 @@
     padding: 10px;
     width:100%;
     max-width: 1200px;
-    height: 100%; /* vh 替換為您希望的百分比 */
+    height: 100%; 
     background-color: #F5FBFF;
     box-sizing: border-box;
     margin: auto;
@@ -17,7 +17,7 @@
     .main{
         flex-direction: column;
     }
-    }
+}
 
 .parking-lot-information-container{
     width:70%;
@@ -32,11 +32,9 @@
 }
 
 @media(max-width: 800px) {
-    
-.parking-lot-information-container{
-    width:100%;
-}
-
+    .parking-lot-information-container{
+        width:100%;
+    }
 }
 
 
@@ -53,7 +51,7 @@
     align-items: center;
     padding: 5px;
     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 20px;
     font-weight: bold;
@@ -70,7 +68,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     cursor: pointer;
 }
@@ -112,11 +110,11 @@
     width: 100%;
     height:auto;
     flex: 1;
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }
 
 .parking-lot-information-container .text-time{
@@ -125,7 +123,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     flex-grow: 0.5;
 }
 
@@ -169,7 +167,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -182,7 +180,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }
 
 .add-input-car-space-container-button{
@@ -193,7 +191,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     cursor: pointer;
 }
@@ -237,7 +235,7 @@
     align-items: center;
     padding: 5px;
     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 24px;
     font-weight: bold;
@@ -276,12 +274,11 @@
 
 @media(max-width: 800px) {
     .information-table, .information-table th, .information-table td {
-         /* 在小屏幕上，th和td都将宽度设置为100% */
-        display: block; /* 使它们表现得像块级元素 */
+        display: block;
     }
 
     .information-table th {
-        text-align: left; /* 小屏幕上标题左对齐 */
+        text-align: left; 
         width: 100%;
         text-align: center;
         padding: 10px 0 10px 0;
@@ -345,7 +342,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     margin-top: 10px;
     cursor: pointer;
@@ -405,7 +402,7 @@
     align-items: center;
     padding: 5px;
     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 20px;
     font-weight: bold;
@@ -450,7 +447,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 8px;
     margin-right: auto;
     border: #e9ebef solid 2px;
@@ -464,12 +461,10 @@
 }
 
 .parking-lot-page .parking-lot-delete-button {
-    /* 刪除按钮样式 */
     display: none;
 }
 
 .parking-lot-page .parking-lot-delete-button-toggled {
-    /* 刪除按钮样式 */
     display: block;
     padding: 5px 10px;
     margin-right: 10px;
@@ -497,7 +492,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     text-align: center;
 }
 
@@ -512,7 +507,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
     border-radius: 12px;
     cursor: pointer;
 }
@@ -550,7 +545,7 @@
     align-items: center;
     padding: 5px;
     background: linear-gradient(270deg, #0E578D 0%, #6AB 100%);
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 24px;
     font-weight: bold;
@@ -578,7 +573,7 @@
 .parking-lot-square-table .text{
     width: auto;
     height:auto;
-    font-family: 'Noto Sans TC', sans-serif; /* 選擇支持中文標點的字體 */
+    font-family: 'Noto Sans TC', sans-serif; 
     line-height: 1.6;
     font-size: 20px;
 }

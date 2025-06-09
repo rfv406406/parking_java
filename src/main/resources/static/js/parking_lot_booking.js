@@ -1,26 +1,9 @@
 let bookingLocationData;
 let lastClickedButton = '';
 
-let buttonBooking = document.querySelector('#button-parking-booking');
-let carBoardCheckedButton = document.querySelector('#car-board-checked-button');
-
-// 導航
-async function navigation(parkingLot) {
-    let destination = {
-        "lat": parkingLot.latitude,
-        "lng": parkingLot.longitude
-    }
-    let navigation = document.querySelector("#navigation");
-    let parkingLotInforTable = document.querySelector("#parking-lot-information-container");
-    navigation.addEventListener('click', async (event) => {
-        event.stopPropagation();
-        directionsRenderer.setMap(map);
-        await calculateAndDisplayRoute(directionsService, directionsRenderer, destination);
-        map.setCenter(currentPosition);
-        map.setZoom(25);
-        parkingLotInforTable.style.display = "none";
-    });
-}
+const buttonBooking = document.querySelector('#button-parking-booking');
+const carBoardCheckedButton = document.querySelector('#car-board-checked-button');
+const chatroomButton = document.querySelector("#button-turning-chatroom");
 
 
 buttonBooking.addEventListener('click', async () => {
@@ -64,6 +47,32 @@ carBoardCheckedButton.addEventListener('click', async () => {
         handleError(error);
     }
 });
+//跳轉聯絡頁面
+chatroomButton.addEventListener('click', async () => {
+    const ownerId = chatroomButton.getAttribute("ownerId");
+    const ownerAccount = chatroomButton.getAttribute("ownerAccount");
+    const parkingLotId = document.querySelector('#parking-lot-id').textContent;
+    const parkingLotName = document.querySelector('#parking-lot-name').textContent
+    window.location.href = `/chatroom/${ownerId}/${ownerAccount}/${parkingLotId}/${parkingLotName}`;
+})
+
+// 導航
+async function navigation(parkingLot) {
+    let destination = {
+        "lat": parkingLot.latitude,
+        "lng": parkingLot.longitude
+    }
+    let navigation = document.querySelector("#navigation");
+    let parkingLotInforTable = document.querySelector("#parking-lot-information-container");
+    navigation.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        directionsRenderer.setMap(map);
+        await calculateAndDisplayRoute(directionsService, directionsRenderer, destination);
+        map.setCenter(currentPosition);
+        map.setZoom(25);
+        parkingLotInforTable.style.display = "none";
+    });
+}
 
 function carBoardChecking(){
     let selector = document.querySelector('#car-board-number-selector');
@@ -84,7 +93,7 @@ function getBookingInformation(parkingLot){
 function getCurrentDateTime() {
     const now = new Date();
     const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份是從 0 開始的
+    const month = String(now.getMonth() + 1).padStart(2, '0'); 
     const day = String(now.getDate()).padStart(2, '0');
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -145,7 +154,9 @@ function parkingLotInformationTable(locationData){
     document.querySelector('#parking-lot-holder-phone').textContent = locationData.cellphone || '連絡電話: '+'無';
     let squaresWithEmptyStatus = locationData.carSpaceNumber.filter(square => square.status == "閒置中").length || 0;
     let totalSquares = locationData.carSpaceNumber ? locationData.carSpaceNumber.length : 0;
-    document.querySelector('#parking-space-total-number').textContent = `${squaresWithEmptyStatus} / ${totalSquares} 位`;    
+    document.querySelector('#parking-space-total-number').textContent = `${squaresWithEmptyStatus} / ${totalSquares} 位`;
+    document.querySelector("#button-turning-chatroom").setAttribute("ownerId", locationData.member.id);
+    document.querySelector("#button-turning-chatroom").setAttribute("ownerAccount", locationData.member.account);
     
     let select = document.querySelector('#data-type-selector');
     // return option to 0

@@ -31,6 +31,7 @@ public class ParkingLotSquareDao {
         return batch;
     }
 
+    @SuppressWarnings("null")
     public int putParkinglotsquareDao(ParkingLot parkingLot) {
         int count = 0;
 

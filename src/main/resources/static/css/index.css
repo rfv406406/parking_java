@@ -57,65 +57,65 @@
 }
 
 .returnToCurrentPosition {
-    position: absolute; /* 讓按鈕可以定位在地圖上的任意位置 */
-    top: 60px; /* 距離地圖頂部的距離 */
-    right: 10px; /* 距離地圖右側的距離 */
-    background-color: white; /* 背景顏色 */
-    color: black; /* 文字顏色 */
-    border: none; /* 無邊框 */
-    border-radius: 100%; /* 完全圓角邊框 */
-    width: 40px; /* 按鈕寬度 */
-    height: 40px; /* 按鈕高度，和寬度相同以形成圓形 */
-    font-size: 14px; /* 字體大小 */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 陰影效果 */
-    cursor: pointer; /* 鼠標懸停時的光標樣式 */
-    z-index: 1; /* 確保按鈕在地圖層之上 */
-    display: flex; /* 使用 Flexbox 進行布局 */
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    padding: 0; /* 移除內邊距 */
+    position: absolute; 
+    top: 60px; 
+    right: 10px; 
+    background-color: white; 
+    color: black; 
+    border: none; 
+    border-radius: 100%; 
+    width: 40px;
+    height: 40px; 
+    font-size: 14px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+    z-index: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
 }
 
 .returnToCurrentPosition img{
-    width: 20px; /* 控制圖片的寬度 */
-    height: 20px; /* 控制圖片的高度 */
-    object-fit: contain; /* 確保圖片保持其比例 */
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain; 
 }
 
 .returnToCurrentPosition:hover {
-    background-color: #f8f8f8; /* 鼠標懸停時的背景顏色變化 */
+    background-color: #f8f8f8; 
 }
 
 .search-goal-button {
-    position: absolute; /* 讓按鈕可以定位在地圖上的任意位置 */
-    top: 110px; /* 距離地圖頂部的距離 */
-    right: 10px; /* 距離地圖右側的距離 */
-    background-color: white; /* 背景顏色 */
-    color: black; /* 文字顏色 */
-    border: none; /* 無邊框 */
-    border-radius: 100%; /* 完全圓角邊框 */
-    width: 40px; /* 按鈕寬度 */
-    height: 40px; /* 按鈕高度，和寬度相同以形成圓形 */
-    font-size: 14px; /* 字體大小 */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 陰影效果 */
-    cursor: pointer; /* 鼠標懸停時的光標樣式 */
-    z-index: 1; /* 確保按鈕在地圖層之上 */
-    display: flex; /* 使用 Flexbox 進行布局 */
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    padding: 0; /* 移除內邊距 */
+    position: absolute; 
+    top: 110px; 
+    right: 10px; 
+    background-color: white; 
+    color: black; 
+    border: none; 
+    border-radius: 100%; 
+    width: 40px; 
+    height: 40px; 
+    font-size: 14px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+    z-index: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
     cursor: pointer;
 }
 
 .search-goal-button img{
-    width: 20px; /* 控制圖片的寬度 */
-    height: 20px; /* 控制圖片的高度 */
-    object-fit: contain; /* 確保圖片保持其比例 */
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain; 
     background-color: transparent;
     cursor: pointer;
 }
 
 .search-goal-button {
-    background-color: #f8f8f8; /* 鼠標懸停時的背景顏色變化 */
+    background-color: #f8f8f8; 
     cursor: pointer;
 }

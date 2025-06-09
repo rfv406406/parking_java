@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.sideproject.parking_java.model.CarSpaceNumber;
+import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.ParkingLot;
 
 public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
@@ -17,6 +18,8 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         ResultSetMetaData metaData = rs.getMetaData();
         int length = metaData.getColumnCount();
 
+        boolean hasOwnerId = false;
+        boolean hasOwnerAccount = false;
         boolean hasId = false;
         boolean hasName = false;
         boolean hasAddress = false;
@@ -35,6 +38,14 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
 
         for (int i = 1; i <= length; i++) {
             String columnName = metaData.getColumnName(i);
+
+            if (columnName.equals("member_id")) {
+                hasOwnerId = true;
+            }
+
+            if (columnName.equals("account")) {
+                hasOwnerAccount = true;
+            }
             
             if (columnName.equals("id")) {
                 hasId = true;
@@ -84,6 +95,7 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
         }
 
         ParkingLot parkinglot = new ParkingLot();
+        Member member = new Member();
 
         if (hasId) {
             parkinglot.setParkingLotId(rs.getInt("id"));
@@ -150,8 +162,8 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
 
                 for (int i=0; i<carSpaceNumberConcatToStringArray.length; i=i+4) {
                     CarSpaceNumber carSpaceNumber = new CarSpaceNumber();
-                    carSpaceNumber.setId(Integer.parseInt(carSpaceNumberConcatToStringArray[i]));
-                    carSpaceNumber.setParkingLotId(Integer.parseInt(carSpaceNumberConcatToStringArray[i+1]));
+                    carSpaceNumber.setId(Integer.valueOf(carSpaceNumberConcatToStringArray[i]));
+                    carSpaceNumber.setParkingLotId(Integer.valueOf(carSpaceNumberConcatToStringArray[i+1]));
                     carSpaceNumber.setValue(carSpaceNumberConcatToStringArray[i+2]);
                     carSpaceNumber.setStatus(carSpaceNumberConcatToStringArray[i+3]);
                     carSpaceNumberConcat.add(carSpaceNumber);
@@ -169,6 +181,16 @@ public class ParkingLotRowMapper implements RowMapper<ParkingLot>{
             carSpaceNumberArray.add(carSpaceNumber);
             parkinglot.setCarSpaceNumber(carSpaceNumberArray);
         }
+
+        if (hasOwnerId) {
+            member.setId(rs.getInt("member_id"));
+        }
+
+        if (hasOwnerAccount) {
+            member.setAccount(rs.getString("account"));
+        }
+
+        parkinglot.setMember(member);
         
         return parkinglot;
     }

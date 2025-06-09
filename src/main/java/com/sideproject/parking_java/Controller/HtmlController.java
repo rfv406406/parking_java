@@ -41,4 +41,9 @@ public class HtmlController {
     public String cashFlowRecord() {
         return "cash_flow_record";
     }
+
+    @GetMapping("/chatroom/**")
+    public String chatroom() {
+        return "chat_page";
+    }
 }

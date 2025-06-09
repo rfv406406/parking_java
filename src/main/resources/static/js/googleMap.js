@@ -41,10 +41,6 @@ async function initMap() {
     } catch(error) {
         console.error(error);
         displayAlertMessage(error.message);
-        // const alertContent = document.querySelector("#alert-content")
-        // alertContent.textContent = error.message;
-        // toggleClass('#alert-page-container', 'alert-page-container-toggled');
-        // toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
     }
 }
 

@@ -26,21 +26,19 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
             .csrf(
-				// csrf -> csrf
-                // .ignoringRequestMatchers("/parkingLot-websocket/**")
 				(AbstractHttpConfigurer::disable)
 				)
 			.authorizeHttpRequests((authorize) -> authorize
 				.requestMatchers(HttpMethod.GET,"/css/**", "/js/**","/image/**").permitAll()
-				.requestMatchers(HttpMethod.GET,"/", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage").permitAll()
+				.requestMatchers(HttpMethod.GET,"/", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage", "/chatroom/**").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/gps/**","/api/parkingLot").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
 				.requestMatchers("/parkingLot-websocket/**").permitAll()
-				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status","/api/member/balanceStatus","/api/member/memberDetails","/api/car","/api/parkingLotUsage","/api/transactionRecords").hasAuthority("user")
-				.requestMatchers(HttpMethod.POST,"/api/parkingLot","/api/tappay","/api/car","/api/parkingLotUsage").hasAuthority("user")
+				.requestMatchers(HttpMethod.GET,"/api/member/auth","/api/member/status","/api/member/balanceStatus","/api/member/memberDetails","/api/car","/api/parkingLotUsage","/api/transactionRecords","/api/chatroom","/api/chatmessage/**").hasAuthority("user")
+				.requestMatchers(HttpMethod.POST,"/api/parkingLot","/api/tappay","/api/car","/api/parkingLotUsage","/api/chatroom","/api/chatmessage").hasAuthority("user")
 				.requestMatchers(HttpMethod.PUT,"/api/parkingLot/**","/api/member/memberDetails/**","/api/parkingLotUsage/**").hasAuthority("user")
 				.requestMatchers(HttpMethod.DELETE,"/api/parkingLot/**","/api/car/**").hasAuthority("user")
 				.anyRequest().authenticated()
@@ -52,20 +50,19 @@ public class SecurityConfig {
 	}
 
     @Bean
-	public AuthenticationManager authenticationManager() {
+    AuthenticationManager authenticationManager() {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(userDetailsServiceImpl);
 		authenticationProvider.setPasswordEncoder(passwordEncoder());
 		ProviderManager providerManager = new ProviderManager(authenticationProvider);
-		providerManager.setEraseCredentialsAfterAuthentication(false);
+		providerManager.setEraseCredentialsAfterAuthentication(true);
 
 		return providerManager;
 	}
 
-	
 
     @Bean
-	public PasswordEncoder passwordEncoder() {
+    PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 		// return NoOpPasswordEncoder.getInstance();
 	}

@@ -2,23 +2,40 @@ const socketFactory = function() {
     return new SockJS('http://localhost:9999/parkingLot-websocket');
 }
 
-const client = new StompJs.Client({
+const stompClient = new StompJs.Client({
     webSocketFactory: socketFactory,
     onConnect: (frame) => {
         console.log('Connected: ' + frame);
-        client.subscribe('/topic/parkingLot', (parkingLotMapMessage) => {
-            const parkingLotMapMessageToJSON = JSON.parse(parkingLotMapMessage.body);
-            if (typeof(parkingLotMapMessageToJSON) == "object") {
-                handleParkingMapMessage(parkingLotMapMessageToJSON)
-            } else if (typeof(parkingLotMapMessageToJSON) == "number") {
-                handleParkingLotIdMessage(parkingLotMapMessageToJSON)
-            }
-        });
+        stompClient.subscribe('/topic/parkingLot', onParkingMessageReceived);
     },
     reconnectDelay: 5000,
     heartbeatIncoming: 10000, 
     heartbeatOutgoing: 10000,
 });
+
+stompClient.onStompError = function (frame) {
+  console.log('Broker reported error: ' + frame.headers['message']);
+  console.log('Additional details: ' + frame.body);
+};
+
+stompClient.onWebSocketError = (error) => {
+    console.error('Error with websocket', error);
+};
+
+function onChatMessageReceived(chatMessage) {
+    const parkingLotMapMessageToJSON = JSON.parse(chatMessage.body);
+    console.log(parkingLotMapMessageToJSON);
+    displayMessage(parkingLotMapMessageToJSON.senderId, parkingLotMapMessageToJSON.message, parkingLotMapMessageToJSON.timestamp);
+}
+
+function onParkingMessageReceived(parkingLotMapMessage) {
+    const parkingLotMapMessageToJSON = JSON.parse(parkingLotMapMessage.body);
+    if (typeof(parkingLotMapMessageToJSON) == "object") {
+        handleParkingMapMessage(parkingLotMapMessageToJSON)
+    } else if (typeof(parkingLotMapMessageToJSON) == "number") {
+        handleParkingLotIdMessage(parkingLotMapMessageToJSON)
+    }
+}
 
 function handleParkingMapMessage(parkingLotMapMessageToJSON) {
     const parkingLotId = Number(Object.keys(parkingLotMapMessageToJSON)[0]);
@@ -51,14 +68,9 @@ function handleParkingLotIdMessage(parkingLotMapMessageToJSON) {
 }
 
 function webSocketConnect() {
-    client.activate();
+    stompClient.activate();
 }
 
-client.onStompError = function (frame) {
-  console.log('Broker reported error: ' + frame.headers['message']);
-  console.log('Additional details: ' + frame.body);
-};
-
-client.onWebSocketError = (error) => {
-    console.error('Error with websocket', error);
-};
+function webSocketDisConnect() {
+    stompClient.disconnect();
+}

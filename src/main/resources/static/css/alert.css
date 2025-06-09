@@ -17,17 +17,17 @@
     width:340px;
     /* height:100%; */
     display:none;
-    position: absolute; /* 相對於.modal定位 */
-    top: 50%; /* 將其移至父元素的中央 */
-    left: 50%; /* 將其移至父元素的中央 */
-    transform: translate(-50%, -50%); /* 使用transform確保完美居中 */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     /* padding: 5px; */
     border-radius: 12px;
     /* margin: auto; */
     border: 0.5px solid #0E578D;
     background: #fefefe;
     margin-top: 5px;
-    z-index: 1000; /* 確保在其他元素之上 */
+    z-index: 1000; 
 }
 
 .alert-page-container-toggled{

@@ -342,7 +342,7 @@ function fillParkingLotForm(parkingLotData) {
     let inputBoxContainer = document.querySelector(".input-box-container");
     let parkingLotNumberInput = inputBoxContainer.querySelectorAll(".input-box");
     for (let i=0; i<parkingLotData.carSpaceNumber.length; i++) {
-        if(i==0) {
+        if(i == 0) {
             parkingLotNumberInput[i].querySelector('input[name="parkingSquareNumber"]').value = parkingLotData.carSpaceNumber[i].value;
         } else {
             parkingLotNumberInput[i*2].querySelector('input[name="parkingSquareNumber"]').value = parkingLotData.carSpaceNumber[i].value;

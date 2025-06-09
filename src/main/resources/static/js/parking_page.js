@@ -8,7 +8,6 @@ function startTimer() {
         localStorage.setItem("timerStart", currentTimeToSec);
     }
     // 計算已經過去的時間並開始計時
-    // let elapsedTime = currentTimeToSec - parseInt(localStorage.getItem("timerStart"), 10);
     let elapsedTime = currentTimeToSec - localStorage.getItem("timerStart");
     // 避免初始的停頓
     updateTimerDisplay(elapsedTime);
@@ -19,10 +18,6 @@ function startTimer() {
 }
 
 function updateTimerDisplay(timerValue) {
-    // // 如果 timerValue 不是數字，設置為 0
-    // if (isNaN(timerValue)) {
-    //     timerValue = 0;
-    // }
     // 將總秒數轉換為天、小時、分、秒
     let seconds = timerValue % 60;
     let totalMinutes = Math.floor(timerValue / 60);
@@ -44,9 +39,7 @@ function getElapsedTime() {
     if (!storedStartTime) {
         return 0;
     }
-    // const startTime = parseInt(storedStartTime, 10);
     const now = Math.floor(Date.now() / 1000);
-    // return now - startTime;
     return now - storedStartTime;
 }
 
