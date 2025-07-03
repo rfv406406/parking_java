@@ -45,7 +45,6 @@ public class ParkingLotRegisterDao {
             map.put("member_id", memberId);
             parkingLotList = namedParameterJdbcTemplate.query(sql+sql2+sql4, map, new ParkingLotRowMapper());
         }
-        System.out.println("parkingLotList: "+ parkingLotList);
 
         return parkingLotList;
     }

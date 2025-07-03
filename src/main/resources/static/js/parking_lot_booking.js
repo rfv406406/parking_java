@@ -144,7 +144,11 @@ function parkingLotInformationTable(locationData){
     document.querySelector('#parking-lot-id').textContent = locationData.parkingLotId || '';
     document.querySelector('#parking-lot-name').textContent = locationData.name || '';
     document.querySelector('#parking-lot-address').textContent = locationData.address || '';
-    document.querySelector('#parking-lot-near-landmark').textContent = '附近地標: ' + locationData.nearLandmark || '附近地標: '+'無';
+    if (locationData.nearLandmark) {
+        document.querySelector('#parking-lot-near-landmark').textContent = '附近地標: ' + locationData.nearLandmark
+    } else {
+        document.querySelector('#parking-lot-near-landmark').textContent = '附近地標: ' + '無';
+    }
     document.querySelector('#parking-lot-opening-time').textContent = locationData.openingTime && locationData.closingTime 
     ? locationData.openingTime + ' - ' + locationData.closingTime: '';
     document.querySelector('#parking-lot-in-out').textContent = locationData.spaceInOut || '';
@@ -279,11 +283,12 @@ async function memberStatusChecking(){
             displayAlertMessage(alertMessage);
             return false;
         }
-        if (!squareNumber.value || squareNumber.value == null){
+        if (!squareNumber.value || squareNumber.value == null || squareNumber.value == 0){
             const alertMessage = '請選擇車位編號';
             displayAlertMessage(alertMessage);
             return false; 
         }
+        
         return true;
     }catch(error) {
         handleError(error);

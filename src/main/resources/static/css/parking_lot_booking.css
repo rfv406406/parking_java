@@ -72,7 +72,6 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 540px;   */
     overflow-x: hidden;
     scroll-behavior: smooth;
     width: 100%;
@@ -93,7 +92,6 @@
     height:100%;
     object-fit: cover;
     flex-shrink: 0;
-    /* border-radius: 4px; */
 }
 
 .button-img-left{

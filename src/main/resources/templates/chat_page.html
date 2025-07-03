@@ -33,7 +33,7 @@
             <div class="chat-area">
                 <div class="chat-messages-header">
                     <img src="/image/returnArrow.png" id="returnArrow">
-                    <div class="chatroom-name" id="chat-messages-name"></div>
+                    <div class="chatroom-name" id="chat-messages-name" chatroom-id=""></div>
                 </div>
                 <div class="chat-messages-container" id="chat-messages-container">
                     <div class="message"></div>
@@ -54,9 +54,9 @@
     <div th:replace="~{foot :: foot}"></div>
     <script src="/js/sign_system.js"></script>
     <script src="/js/base.js"></script>
-    <script src="/js/chatroom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
     <script src="/js/webSocket.js"></script>
+    <script src="/js/chatroom.js"></script>
 </body>
 </html>

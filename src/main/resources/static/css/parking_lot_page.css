@@ -8,9 +8,10 @@
     background-color: #F5FBFF;
     box-sizing: border-box;
     margin: auto;
-    /* flex-grow: 1; */
     position: relative;
     gap:10px;
+    flex: 1 1 0;
+    overflow-y: auto;
 }
 
 @media(max-width: 600px) {
@@ -21,7 +22,7 @@
 
 .parking-lot-information-container{
     width:70%;
-    height:100%;
+    height:auto;
     display:none;
     /* padding: 5px; */
     border-radius: 12px;
@@ -81,9 +82,8 @@
 }
 
 .parking-lot-information-container .information-form{
-    /* width: 100%; */
     display:flex;
-    height: 100%;
+    height: auto;
     flex-direction: column;
     align-items: center;
     padding: 5px;
@@ -373,11 +373,6 @@
     width:70%;
     height:100%;
     display:block;
-    /* padding: 5px; */
-    /* border-radius: 12px; */
-    /* margin: auto; */
-    /* border: 0.5px solid #0E578D; */
-    background: #fefefe;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -449,9 +444,11 @@
     font-weight: 500;
     line-height: 150%; 
     border-radius: 8px;
-    margin-right: auto;
     border: #e9ebef solid 2px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media(max-width: 600px) {
@@ -494,6 +491,8 @@
     font-weight: 500;
     line-height: 150%; 
     text-align: center;
+    background: #fefefe;
+    padding: 10px 0px 0px 0px;
 }
 
 .parking-lot-page .close {

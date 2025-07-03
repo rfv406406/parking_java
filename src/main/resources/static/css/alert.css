@@ -55,14 +55,14 @@
 }
 
 .alert-page-information-none{
-    /* width: 100%; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     padding: 5px;
     height:20vh;
     font-size: 20px;
+    overflow-wrap: break-word;
 }
 
 .alert-page-information-none-toggled{

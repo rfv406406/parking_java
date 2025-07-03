@@ -47,8 +47,10 @@ public class TransactionDao {
     }
 
     public void putUpdateParkingLotSquareStatusDao(Transaction transaction) {
+        System.out.println("transaction.getParkingLotSquareId(): "+transaction.getParkingLotSquareId());
         String aqlS = "SELECT status FROM parkinglotsquare WHERE id = ?"; 
-        String statusChecking = jdbcTemplate.queryForObject(aqlS, String.class,  transaction.getParkingLotSquareId());
+        String statusChecking = jdbcTemplate.queryForObject(aqlS, String.class, transaction.getParkingLotSquareId());
+        System.out.println("statusChecking: "+statusChecking);
 
         if ("使用中".equals(statusChecking) && "未付款".equals(transaction.getStatus())) {
             throw new InvalidParameterError("CarSpaceNumber is using");

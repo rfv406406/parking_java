@@ -10,33 +10,45 @@
 <body>
     <div th:replace="~{nav :: nav}"></div>
     <div th:replace="~{sign_system :: sign_system}"></div>
-    <!-- 價格滑塊 -->
-    <div class="range-slider">
-        <div class="slider-label">價格：</div>
-        <input class="consistent-text" type="range" min="0" max="100" value="0" id="rangeMaxPrice" step="5">
-        <div class="value" id="valuePrice">0元</div>
+    <div class="slider-container">
+        <div class="range-slider">
+            <div class="value" id="valuePrice">0元</div>
+            <div class="label-container">
+                <div class="slider-label">價格：</div>
+                <input class="consistent-text" type="range" min="0" max="1000" value="0" id="rangeMaxPrice" step="5">
+            </div>
+        </div>
+        <div class="range-slider">
+            <div class="value" id="valueDistance">0 m</div>
+            <div class="label-container">
+                <div class="slider-label">距離：</div>
+                <input class="consistent-text" type="range" min="0" max="2000" value="0" id="rangeMaxDistance" step="500">
+            </div>
+        </div>
+        <div class="range-slider">
+            <div class="value" id="valueWidth">0 m</div>
+            <div class="label-container">
+                <div class="slider-label">車寬：</div>
+                <input class="consistent-text" type="range" min="0" max="6" value="0" id="rangeMaxWidth" step="1">
+            </div>
+        </div>
+        <div class="range-slider">
+            <div class="value" id="valueHeight">0 m</div>
+            <div class="label-container">
+                <div class="slider-label">車高：</div>
+                <input class="consistent-text" type="range" min="0" max="10" value="0" id="rangeMaxHeight" step="1">
+            </div>
+        </div>
+        <div class="range-slider">
+            <button class="main-selector-button">確認</button>
+        </div>
     </div>
-    <!-- 距離滑塊 -->
-    <div class="range-slider">
-        <div class="slider-label">距離：</div>
-        <input class="consistent-text" type="range" min="0" max="2000" value="0" id="rangeMaxDistance" step="200">
-        <div class="value" id="valueDistance">0 m</div>
-    </div>
-    <!-- 車長滑塊 -->
-    <div class="range-slider">
-        <div class="slider-label">車長：</div>
-        <input class="consistent-text" type="range" min="0" max="10" value="0" id="rangeMaxLength" step="0.5">
-        <div class="value" id="valueLength">0 m以下</div>
-    </div>
-    <!-- 車寬滑塊 -->
-    <div class="range-slider">
-        <div class="slider-label">車寬：</div>
-        <input class="consistent-text" type="range" min="0" max="6" value="0" id="rangeMaxWidth" step="0.5">
-        <div class="value" id="valueWidth">0 m以下</div>
-    </div>
-    <button class="main-selector-button">確認</button>
+    <div th:replace="~{foot :: foot}"></div>
+    <script src="/js/sign_system.js"></script>
     <script src="/js/selector.js"></script>
     <script src="/js/base.js"></script>
-    <div th:replace="~{foot :: foot}"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="/js/webSocket.js"></script>
 </body>
 </html>

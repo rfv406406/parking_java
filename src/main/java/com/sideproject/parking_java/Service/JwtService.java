@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
 import com.sideproject.parking_java.model.Member;
@@ -29,7 +29,7 @@ public class JwtService {
             String token = JwtUtil.generateToken(getPrincipal);
             tokenObject.put("token", token);
             return tokenObject;
-        } catch (BadCredentialsException e) {
+        } catch (AuthenticationException e) {
             throw new Exception("帳號或密碼錯誤");
         }
     }

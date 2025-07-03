@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,30 +30,97 @@ public class ParkingLotRegisterService{
     @Autowired
     private GpsService gpsService;
     @Autowired
-    private RedisOperations<String, Object> operations;
+    private RedisTemplate<String, Object> redisTemplate;
     @Autowired
     private RedisService redisService;
 
-    public Map<Object, Object> getParkingLotRegister() {
-        Integer memberId = MemberIdUtil.getMemberIdUtil();
-        Boolean isRedisConnected = redisService.isRedisConnected();
-        Boolean hasParkingLotMap = operations.hasKey("parkingLotMap");
-        Map<Object, Object> parkingLotMap = new HashMap<>();
+    public Map<String, ParkingLot> getParkingLotRegister(Integer memberId, Double lng, Double lat,  Integer distance, Integer price, Integer carWidth, Integer carHeight) {
+        boolean isRedisConnected = redisService.isRedisConnected();
+        boolean hasParkingLotMap = redisTemplate.hasKey("parkingLotMap");
+        boolean hasGeoParkingLotMap = redisTemplate.hasKey("geoParkingLotMap");
+        Map<String, ParkingLot> parkingLotMap = new HashMap<>();
 
-        if (isRedisConnected && hasParkingLotMap != null && hasParkingLotMap) {
-            parkingLotMap = redisService.getParkingLotMapFromRedis(parkingLotMap);
+        if (isRedisConnected && memberId == null) {
+            if (hasParkingLotMap && hasGeoParkingLotMap) {
+                List<String> parkingLotIdList = redisService.getGeoParkingLotMapFromRedis(lng, lat, distance);
+                Map<String, ParkingLot> parkingLotMapFromRedis = redisService.getParkingLotMapFromRedis(parkingLotIdList);
+                parkingLotMap = parkingLotFiltByParknigLotParas(price, carWidth, carHeight, parkingLotMapFromRedis);
+            } else {
+                List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(null, null);
+                if (parkingLotList.isEmpty()) {
+                    return null;
+                }
+                redisService.putGeoParkingLotMapInRedis(parkingLotList);
+                redisService.putAllParkingLotMapInRedis(parkingLotList);
+                List<String> parkingLotIdList = redisService.getGeoParkingLotMapFromRedis(lng, lat, distance);
+                Map<String, ParkingLot> parkingLotMapFromRedis = redisService.getParkingLotMapFromRedis(parkingLotIdList);
+                parkingLotMap = parkingLotFiltByParknigLotParas(price, carWidth, carHeight, parkingLotMapFromRedis);
+            }
         } else {
-            List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(memberId, null);
-            parkingLotMap = redisService.putAllParkingLotMapInRedis(parkingLotMap, parkingLotList);
+            if (memberId == null) {
+                Map<String, ParkingLot> parkingLotMapFromDB = new HashMap<>();
+                List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(null, null);
+                if (parkingLotList.isEmpty()) {
+                    return null;
+                }
+                for (ParkingLot e : parkingLotList) {
+                    parkingLotMapFromDB.put(e.getParkingLotId().toString(), e);
+                }
+                parkingLotMapFromDB = parkingLotFiltByDistance(lat, lng, distance, parkingLotMapFromDB);
+                parkingLotMap = parkingLotFiltByParknigLotParas(price, carWidth, carHeight, parkingLotMapFromDB);
+            } else {
+                List<ParkingLot> parkingLotList = parkingLotRegisterDao.getParingLotRegisterDao(memberId, null);
+                if (parkingLotList.isEmpty()) {
+                    return null;
+                }
+                for (ParkingLot e : parkingLotList) {
+                    parkingLotMap.put(e.getParkingLotId().toString(), e);
+                }
+            }
         }
-        return parkingLotMap.isEmpty() ? null : parkingLotMap;
+        
+        return parkingLotMap;
+    }
+
+    public Map<String, ParkingLot> parkingLotFiltByDistance(Double lng, Double lat, Integer distance, Map<String, ParkingLot> parkingLotMap) {
+        Double latPlus = lat + (distance/1000) * 0.00904;
+        Double lngPlus = lng + (distance/1000) * (0.00904 / Math.cos(lat));
+        Double latMinus = lat - (distance/1000) * 0.00904;
+        Double lngMinus = lng - (distance/1000) * (0.00904 / Math.cos(lat));
+        Map<String, ParkingLot> filterMap = new HashMap<>();
+
+        for (String key : parkingLotMap.keySet()) {
+            ParkingLot parkingLot = parkingLotMap.get(key);
+            if ((parkingLot.getLatitude() < latPlus && parkingLot.getLatitude() > latMinus) &&
+                (parkingLot.getLongitude() < lngPlus && parkingLot.getLongitude() > lngMinus)) {
+                filterMap.put(key, parkingLot);
+            }
+        }
+
+        return filterMap;
+    }
+
+    public Map<String, ParkingLot> parkingLotFiltByParknigLotParas(Integer price, Integer carWidth, Integer carHeight, Map<String, ParkingLot> parkingLotMap) {
+        Map<String, ParkingLot> filterMap = new HashMap<>();
+        for (String key : parkingLotMap.keySet()) {
+            ParkingLot parkingLot = parkingLotMap.get(key);
+            if (parkingLot.getPrice() <= price && 
+                Integer.valueOf(parkingLot.getCarWidth()) <= carWidth && 
+                Integer.valueOf(parkingLot.getCarHeight()) <= carHeight) {
+                filterMap.put(key, parkingLot);
+                System.out.println("parkingLot: "+parkingLot);
+            }
+        }
+
+        return filterMap;
     }
 
     @Transactional
     public void postParkingLotRegister(ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, Exception, JsonProcessingException{
-
-        int memberId = MemberIdUtil.getMemberIdUtil();
-
+        System.out.println(parkingLot.getCarWidth());
+        System.out.println(parkingLot.getCarHeight());
+        System.out.println(parkingLot.getCarSpaceNumber());
+        
         if (parkingLot.getName() == null || parkingLot.getName().equals("") ||
             parkingLot.getAddress() == null || parkingLot.getAddress().equals("") ||
             parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().equals("") ||
@@ -66,6 +133,8 @@ public class ParkingLotRegisterService{
             throw new InvalidParameterError("parameter is null or empty");
         }
 
+        int memberId = MemberIdUtil.getMemberIdUtil();
+        boolean isRedisConnected = redisService.isRedisConnected();
         String address = parkingLot.getAddress();
         HashMap<String, Object> gps = gpsService.getLatAndLngService(address);
         double lat = (double)gps.get("lat");
@@ -74,35 +143,41 @@ public class ParkingLotRegisterService{
         parkingLot.setLongitude(lng);
 
         int parkingLotId = parkingLotRegisterDao.postParkingLotRegisterDao(parkingLot, memberId);
+        parkingLot.setParkingLotId(parkingLotId);
 
         parkingLotImagesDao.postParkinglotimagesDao(parkingLot, parkingLotId);
 
         parkingLotSquareDao.postParkingLotSquareDao(parkingLot, parkingLotId);
- 
-        //Redis
-        redisService.putParkingLotMapInRedis(memberId, parkingLotId);
+        
+        if (isRedisConnected) {
+            redisService.putParkingLotMapInRedis(memberId, parkingLotId);
+            redisService.updateGeoParkingLotMapInRedis(parkingLot);
+        }
     }
 
     @Transactional
     public void deleteParkingLotRegister(Integer parkingLotId) throws InvalidParameterError, DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
+        boolean isRedisConnected = redisService.isRedisConnected();
         
         int insertId = parkingLotRegisterDao.deleteParkingLotRegisterDao(parkingLotId, memberId);
         if (insertId == 0) {
             throw new DatabaseError("ParkingLotRegisterDao inserted failed");
         }
-        //Redis
-        redisService.deleteParkinglotMapFromRedis(parkingLotId);
+        if (isRedisConnected) {
+            redisService.deleteGeoParkinglotMapFromRedis(parkingLotId);
+            redisService.deleteParkinglotMapFromRedis(parkingLotId);
+        }
     }
 
     @Transactional
     public void putParkingLotRegister(Integer parkingLotId, ParkingLot parkingLot) throws InvalidParameterError, DatabaseError, JsonProcessingException, Exception {
         int memberId = MemberIdUtil.getMemberIdUtil();
+        boolean isRedisConnected = redisService.isRedisConnected();
         parkingLot.setParkingLotId(parkingLotId);
 
         if (parkingLot.getName() == null || parkingLot.getName().equals("") ||
             parkingLot.getAddress() == null || parkingLot.getAddress().equals("") ||
-            parkingLot.getNearLandmark() == null || parkingLot.getNearLandmark().equals("") ||
             parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().equals("") ||
             parkingLot.getClosingTime() == null || parkingLot.getClosingTime().equals("") ||
             parkingLot.getSpaceInOut() == null || parkingLot.getSpaceInOut().equals("") ||
@@ -128,8 +203,8 @@ public class ParkingLotRegisterService{
         if (insertId == 0) {
             throw new DatabaseError("ParkingLotRegisterDao inserted failed");
         }
-
-        //Redis
-        redisService.putParkingLotMapInRedis(memberId, parkingLotId);
+        if (isRedisConnected) {
+            redisService.putParkingLotMapInRedis(memberId, parkingLotId);
+        }
     }
 }

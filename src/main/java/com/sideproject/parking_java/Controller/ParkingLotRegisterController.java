@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -30,9 +31,17 @@ public class ParkingLotRegisterController {
     private ParkingLotRegisterService parkingLotRegisterService;
 
     @GetMapping("/api/parkingLot")
-    public ResponseEntity<Map<Object, Object>> getParkingLotRegister() throws DatabaseError {
-        Map<Object, Object> parkingLotMap = parkingLotRegisterService.getParkingLotRegister();
-        ResponseEntity<Map<Object, Object>> response = ResponseEntity.status(HttpStatus.OK).body(parkingLotMap);
+    public ResponseEntity<Map<String, ParkingLot>> getParkingLotRegister(
+            @RequestParam(required = false) Integer memberId,
+            @RequestParam(required = false) Double lng,
+            @RequestParam(required = false) Double lat,
+            @RequestParam(required = false) Integer distance,
+            @RequestParam(required = false) Integer price,
+            @RequestParam(required = false) Integer carWidth,
+            @RequestParam(required = false) Integer carHeight
+        ) throws DatabaseError {
+        Map<String, ParkingLot> parkingLotMap = parkingLotRegisterService.getParkingLotRegister(memberId, lng, lat, distance, price, carWidth, carHeight);
+        ResponseEntity<Map<String, ParkingLot>> response = ResponseEntity.status(HttpStatus.OK).body(parkingLotMap);
         return response;
     }
     

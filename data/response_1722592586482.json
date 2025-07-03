@@ -1,0 +1,5210 @@
+{
+  "UpdateTime": "2024-08-02T17:25:56+08:00",
+  "UpdateInterval": 14400,
+  "SrcUpdateTime": "2024-08-02T17:25:55+08:00",
+  "SrcUpdateInterval": 86400,
+  "AuthorityCode": "ILA",
+  "VersionID": 5037,
+  "CarParks": [
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "45",
+      "CarParkName": {
+        "Zh_tw": "南安國小社區公共停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.578540802001953,
+        "PositionLon": 121.8682632446289
+      },
+      "Address": "蘇澳鎮南建里學府路122號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "40",
+      "CarParkName": {
+        "Zh_tw": "奇利停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.679920196533203,
+        "PositionLon": 121.76988220214844
+      },
+      "Address": "羅東鎮天津路43號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "50",
+      "CarParkName": {
+        "Zh_tw": "蘭陽博物館停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "54239682",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.870460510253906,
+        "PositionLon": 121.8350830078125
+      },
+      "Address": "宜蘭縣頭城鎮青雲路3段750號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "45",
+      "CarParkName": {
+        "Zh_tw": "南安國小社區公共停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.578540802001953,
+        "PositionLon": 121.8682632446289
+      },
+      "Address": "蘇澳鎮南建里學府路122號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "61",
+      "CarParkName": {
+        "Zh_tw": "五峰旗停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.83016014099121,
+        "PositionLon": 121.7523193359375
+      },
+      "Address": "宜蘭縣礁溪鄉得石新段643地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "94",
+      "CarParkName": {
+        "Zh_tw": "TIMES宜蘭礁溪路第2停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "42953583",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.831939697265625,
+        "PositionLon": 121.77857971191406
+      },
+      "Address": "礁溪鄉公園段1地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "4",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府警察局拖吊車輛保管場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.734100341796875,
+        "PositionLon": 121.7618179321289
+      },
+      "Address": "宜蘭市建蘭北路66號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "71",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣大同鄉旅遊服務中心附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672779083251953,
+        "PositionLon": 121.60169219970703
+      },
+      "Address": "宜蘭縣大同鄉崙埤村林家巷2-15號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "5",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.731449127197266,
+        "PositionLon": 121.7635269165039
+      },
+      "Address": "宜蘭市縣政北路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "4",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府警察局拖吊車輛保管場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.734100341796875,
+        "PositionLon": 121.7618179321289
+      },
+      "Address": "宜蘭市建蘭北路66號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "72",
+      "CarParkName": {
+        "Zh_tw": "清水地熱停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40594751",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.614490509033203,
+        "PositionLon": 121.63665771484375
+      },
+      "Address": "宜蘭縣大同鄉清溪段13-1地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "8",
+      "CarParkName": {
+        "Zh_tw": "和睦停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "42953583",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.75366973876953,
+        "PositionLon": 121.75615692138672
+      },
+      "Address": "宜蘭縣宜蘭市和睦段51地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "31",
+      "CarParkName": {
+        "Zh_tw": "羅東公正國小地下停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "53056468",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.67889976501465,
+        "PositionLon": 121.76705169677734
+      },
+      "Address": "羅東鎮賢文里中華路47號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "3",
+      "CarParkName": {
+        "Zh_tw": "宜蘭市公共造產中央臨時收費停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "80665204",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.756410598754883,
+        "PositionLon": 121.755126953125
+      },
+      "Address": "宜蘭市崇聖街40號(巽門一段180、180-1、180-2、181、182、182-1地號)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "40",
+      "CarParkName": {
+        "Zh_tw": "奇利停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.679920196533203,
+        "PositionLon": 121.76988220214844
+      },
+      "Address": "羅東鎮天津路43號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "61",
+      "CarParkName": {
+        "Zh_tw": "五峰旗停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.83016014099121,
+        "PositionLon": 121.7523193359375
+      },
+      "Address": "宜蘭縣礁溪鄉得石新段643地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "64",
+      "CarParkName": {
+        "Zh_tw": "中興文化創意產業園區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.694299697875977,
+        "PositionLon": 121.76972961425781
+      },
+      "Address": "宜蘭縣五結鄉中正路2段6-8號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "71",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣大同鄉旅遊服務中心附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672779083251953,
+        "PositionLon": 121.60169219970703
+      },
+      "Address": "宜蘭縣大同鄉崙埤村林家巷2-15號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "28",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣羅東鎮民生大樓停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "42011922",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.67668914794922,
+        "PositionLon": 121.77088928222656
+      },
+      "Address": "羅東鎮民生路6號5-7樓",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "5",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.731449127197266,
+        "PositionLon": 121.7635269165039
+      },
+      "Address": "宜蘭市縣政北路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "40",
+      "CarParkName": {
+        "Zh_tw": "奇利停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.679920196533203,
+        "PositionLon": 121.76988220214844
+      },
+      "Address": "羅東鎮天津路43號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "5",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.731449127197266,
+        "PositionLon": 121.7635269165039
+      },
+      "Address": "宜蘭市縣政北路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "49",
+      "CarParkName": {
+        "Zh_tw": "傳忠有限公司-頭城站停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.858440399169922,
+        "PositionLon": 121.8227767944336
+      },
+      "Address": "頭城鎮頭圍二段43-3、131地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "71",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣大同鄉旅遊服務中心附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672779083251953,
+        "PositionLon": 121.60169219970703
+      },
+      "Address": "宜蘭縣大同鄉崙埤村林家巷2-15號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "45",
+      "CarParkName": {
+        "Zh_tw": "南安國小社區公共停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.578540802001953,
+        "PositionLon": 121.8682632446289
+      },
+      "Address": "蘇澳鎮南建里學府路122號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "78",
+      "CarParkName": {
+        "Zh_tw": "羅東民生大樓地下停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "28858068",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676610946655273,
+        "PositionLon": 121.77091979980469
+      },
+      "Address": "羅東鎮民生路6號地下1樓",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "49",
+      "CarParkName": {
+        "Zh_tw": "傳忠有限公司-頭城站停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.858440399169922,
+        "PositionLon": 121.8227767944336
+      },
+      "Address": "頭城鎮頭圍二段43-3、131地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "64",
+      "CarParkName": {
+        "Zh_tw": "中興文化創意產業園區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.694299697875977,
+        "PositionLon": 121.76972961425781
+      },
+      "Address": "宜蘭縣五結鄉中正路2段6-8號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "64",
+      "CarParkName": {
+        "Zh_tw": "中興文化創意產業園區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.694299697875977,
+        "PositionLon": 121.76972961425781
+      },
+      "Address": "宜蘭縣五結鄉中正路2段6-8號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "40",
+      "CarParkName": {
+        "Zh_tw": "奇利停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.679920196533203,
+        "PositionLon": 121.76988220214844
+      },
+      "Address": "羅東鎮天津路43號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "34",
+      "CarParkName": {
+        "Zh_tw": "羅東停三停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "70369154",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.678199768066406,
+        "PositionLon": 121.7750015258789
+      },
+      "Address": "羅東鎮站前東路2號(信義段307地號)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "69",
+      "CarParkName": {
+        "Zh_tw": "冬山停一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.636289596557617,
+        "PositionLon": 121.79209899902344
+      },
+      "Address": "宜蘭縣冬山鄉冬梅段325、339地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "61",
+      "CarParkName": {
+        "Zh_tw": "五峰旗停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.83016014099121,
+        "PositionLon": 121.7523193359375
+      },
+      "Address": "宜蘭縣礁溪鄉得石新段643地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "4",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府警察局拖吊車輛保管場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.734100341796875,
+        "PositionLon": 121.7618179321289
+      },
+      "Address": "宜蘭市建蘭北路66號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "84",
+      "CarParkName": {
+        "Zh_tw": "TIMES羅東光榮路停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.678430557250977,
+        "PositionLon": 121.77747344970703
+      },
+      "Address": "宜蘭縣羅東鎮光榮路327號旁空地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "62",
+      "CarParkName": {
+        "Zh_tw": "台灣聯通礁溪麒麟場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827350616455078,
+        "PositionLon": 121.77232360839844
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段116號B2~B4",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "64",
+      "CarParkName": {
+        "Zh_tw": "中興文化創意產業園區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.694299697875977,
+        "PositionLon": 121.76972961425781
+      },
+      "Address": "宜蘭縣五結鄉中正路2段6-8號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "84",
+      "CarParkName": {
+        "Zh_tw": "TIMES羅東光榮路停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.678430557250977,
+        "PositionLon": 121.77747344970703
+      },
+      "Address": "宜蘭縣羅東鎮光榮路327號旁空地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "107",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣文化中心停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.749509811401367,
+        "PositionLon": 121.74513244628906
+      },
+      "Address": "宜蘭縣宜蘭市復興路二段101號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "87",
+      "CarParkName": {
+        "Zh_tw": "羅東停四停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "70369154",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.677980422973633,
+        "PositionLon": 121.77458190917969
+      },
+      "Address": "宜蘭縣羅東鎮站東路與東宜二路口之西北側（羅東鎮信義段307地號部分土地）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "69",
+      "CarParkName": {
+        "Zh_tw": "冬山停一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.636289596557617,
+        "PositionLon": 121.79209899902344
+      },
+      "Address": "宜蘭縣冬山鄉冬梅段325、339地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "86",
+      "CarParkName": {
+        "Zh_tw": "寶昌停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676809310913086,
+        "PositionLon": 121.7753677368164
+      },
+      "Address": "宜蘭縣羅東鎮東榮一段61地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "29",
+      "CarParkName": {
+        "Zh_tw": "羅東鎮公共造產停車場(公所前停車場)"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "42011922",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.676969528198242,
+        "PositionLon": 121.76760864257812
+      },
+      "Address": "羅東鎮中興路3號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "71",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣大同鄉旅遊服務中心附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672779083251953,
+        "PositionLon": 121.60169219970703
+      },
+      "Address": "宜蘭縣大同鄉崙埤村林家巷2-15號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "2",
+      "CarParkName": {
+        "Zh_tw": "友愛百貨股份有限公司"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "97008719",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.757789611816406,
+        "PositionLon": 121.75659942626953
+      },
+      "Address": "宜蘭市舊城東路50號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "14",
+      "CarParkName": {
+        "Zh_tw": "TIMES宜蘭中山路停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "28858068",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.748689651489258,
+        "PositionLon": 121.75444030761719
+      },
+      "Address": "宜蘭市中山路2段260號旁",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "69",
+      "CarParkName": {
+        "Zh_tw": "冬山停一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.636289596557617,
+        "PositionLon": 121.79209899902344
+      },
+      "Address": "宜蘭縣冬山鄉冬梅段325、339地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "51",
+      "CarParkName": {
+        "Zh_tw": "忠僕停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "99424043",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.8604793548584,
+        "PositionLon": 121.82740020751953
+      },
+      "Address": "頭城鎮烏石港段460地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "62",
+      "CarParkName": {
+        "Zh_tw": "台灣聯通礁溪麒麟場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827350616455078,
+        "PositionLon": 121.77232360839844
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段116號B2~B4",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "69",
+      "CarParkName": {
+        "Zh_tw": "冬山停一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.636289596557617,
+        "PositionLon": 121.79209899902344
+      },
+      "Address": "宜蘭縣冬山鄉冬梅段325、339地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "105",
+      "CarParkName": {
+        "Zh_tw": "川湯春天溫泉酒店站前停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "70369154",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.828529357910156,
+        "PositionLon": 121.77201843261719
+      },
+      "Address": "宜蘭縣礁溪鄉德陽村溫泉路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "84",
+      "CarParkName": {
+        "Zh_tw": "TIMES羅東光榮路停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.678430557250977,
+        "PositionLon": 121.77747344970703
+      },
+      "Address": "宜蘭縣羅東鎮光榮路327號旁空地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "45",
+      "CarParkName": {
+        "Zh_tw": "南安國小社區公共停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.578540802001953,
+        "PositionLon": 121.8682632446289
+      },
+      "Address": "蘇澳鎮南建里學府路122號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "62",
+      "CarParkName": {
+        "Zh_tw": "台灣聯通礁溪麒麟場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827350616455078,
+        "PositionLon": 121.77232360839844
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段116號B2~B4",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "59",
+      "CarParkName": {
+        "Zh_tw": "礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "70393302",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827199935913086,
+        "PositionLon": 121.77204895019531
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段106號旁",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "61",
+      "CarParkName": {
+        "Zh_tw": "五峰旗停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.83016014099121,
+        "PositionLon": 121.7523193359375
+      },
+      "Address": "宜蘭縣礁溪鄉得石新段643地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "22",
+      "CarParkName": {
+        "Zh_tw": "國立陽明交通大學附設醫院蘭陽院區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40406603",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.75031089782715,
+        "PositionLon": 121.75869750976562
+      },
+      "Address": "宜蘭市校舍路169號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "45",
+      "CarParkName": {
+        "Zh_tw": "南安國小社區公共停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.578540802001953,
+        "PositionLon": 121.8682632446289
+      },
+      "Address": "蘇澳鎮南建里學府路122號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "104",
+      "CarParkName": {
+        "Zh_tw": "宜蘭宜興（停一）停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "28858068",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.756969451904297,
+        "PositionLon": 121.75885772705078
+      },
+      "Address": "宜蘭縣宜蘭市大東段406、453地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "69",
+      "CarParkName": {
+        "Zh_tw": "冬山停一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.636289596557617,
+        "PositionLon": 121.79209899902344
+      },
+      "Address": "宜蘭縣冬山鄉冬梅段325、339地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "64",
+      "CarParkName": {
+        "Zh_tw": "中興文化創意產業園區停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.694299697875977,
+        "PositionLon": 121.76972961425781
+      },
+      "Address": "宜蘭縣五結鄉中正路2段6-8號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "93",
+      "CarParkName": {
+        "Zh_tw": "江陵建設股份有限公司礁溪停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.825130462646484,
+        "PositionLon": 121.77263641357422
+      },
+      "Address": "宜蘭縣礁溪鄉中山路二段90號旁（義結段31、31-4地號）",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "65",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉仁山植物園停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "72818065",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.623319625854492,
+        "PositionLon": 121.752197265625
+      },
+      "Address": "冬山鄉仁山段地號353、354-1(冬山鄉中山村新寮路370號)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "41",
+      "CarParkName": {
+        "Zh_tw": "羅東夜市停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "53808799",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.67569923400879,
+        "PositionLon": 121.77217102050781
+      },
+      "Address": "宜蘭縣羅東鎮信義段898地號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "55",
+      "CarParkName": {
+        "Zh_tw": "臺鐵礁溪站前停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "27858527",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.826990127563477,
+        "PositionLon": 121.77496337890625
+      },
+      "Address": "礁溪火車站前左側",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "66",
+      "CarParkName": {
+        "Zh_tw": "冬山鄉第一公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.63220977783203,
+        "PositionLon": 121.793701171875
+      },
+      "Address": "冬山鄉興平段(冬山鄉冬山路一段及照安路口)",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "71",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣大同鄉旅遊服務中心附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672779083251953,
+        "PositionLon": 121.60169219970703
+      },
+      "Address": "宜蘭縣大同鄉崙埤村林家巷2-15號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "5",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.731449127197266,
+        "PositionLon": 121.7635269165039
+      },
+      "Address": "宜蘭市縣政北路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "37",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府文化局羅東文化工場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.672359466552734,
+        "PositionLon": 121.76432800292969
+      },
+      "Address": "宜蘭縣羅東鎮純精路一段96號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "7",
+      "CarParkName": {
+        "Zh_tw": "國立陽明交通大學附設醫院停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40406603",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.757570266723633,
+        "PositionLon": 121.75395202636719
+      },
+      "Address": "宜蘭市新民路152號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "62",
+      "CarParkName": {
+        "Zh_tw": "台灣聯通礁溪麒麟場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827350616455078,
+        "PositionLon": 121.77232360839844
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段116號B2~B4",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "4",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府警察局拖吊車輛保管場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.734100341796875,
+        "PositionLon": 121.7618179321289
+      },
+      "Address": "宜蘭市建蘭北路66號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "49",
+      "CarParkName": {
+        "Zh_tw": "傳忠有限公司-頭城站停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.858440399169922,
+        "PositionLon": 121.8227767944336
+      },
+      "Address": "頭城鎮頭圍二段43-3、131地號部分土地",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "5",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣政府停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.731449127197266,
+        "PositionLon": 121.7635269165039
+      },
+      "Address": "宜蘭市縣政北路1號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "62",
+      "CarParkName": {
+        "Zh_tw": "台灣聯通礁溪麒麟場停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.827350616455078,
+        "PositionLon": 121.77232360839844
+      },
+      "Address": "宜蘭縣礁溪鄉礁溪路五段116號B2~B4",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    },
+    {
+      "CarParkID": "107",
+      "CarParkName": {
+        "Zh_tw": "宜蘭縣文化中心停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "\r\n      ",
+      "OperatorID": "40401902",
+      "Description": "",
+      "CarParkType": 255,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.749509811401367,
+        "PositionLon": 121.74513244628906
+      },
+      "Address": "宜蘭縣宜蘭市復興路二段101號",
+      "FareDescription": "未知",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "YilanCounty",
+      "CityCode": "ILA"
+    }
+  ]
+}

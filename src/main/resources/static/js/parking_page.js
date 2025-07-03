@@ -18,7 +18,6 @@ function startTimer() {
 }
 
 function updateTimerDisplay(timerValue) {
-    // 將總秒數轉換為天、小時、分、秒
     let seconds = timerValue % 60;
     let totalMinutes = Math.floor(timerValue / 60);
     let minutes = totalMinutes % 60;
@@ -26,10 +25,8 @@ function updateTimerDisplay(timerValue) {
     let hours = totalHours % 24;
     let days = Math.floor(totalHours / 24);
 
-    // 創建顯示字符串
     let displayString = `${days}天 ${hours}小時 ${minutes}分 ${seconds}秒`;
 
-    // 更新DOM元素
     const timerDisplay = document.querySelector('#timerDisplay');
     timerDisplay.textContent = displayString;
 }
@@ -136,7 +133,6 @@ function thankMessage(){
     removeClass('#packing-page-container', ['packing-page-container-toggled']);
     const alertMessage =  '感謝您的消費!';
     const alertButton = displayAlertMessage(alertMessage);
-    console.log(alertButton)
     alertButton.addEventListener("click", () => {
         location.reload();
     })

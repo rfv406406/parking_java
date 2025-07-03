@@ -33,6 +33,7 @@ public class TransactionService {
 
     @Transactional
     public void postParkingLotUsageService(Transaction transaction) {
+        boolean isRedisConnected = redisService.isRedisConnected();
         if (transaction.getCarId() == null || transaction.getCarId() == 0 ||
             transaction.getParkingLotId() == null || transaction.getParkingLotId() == 0 ||
             transaction.getParkingLotSquareId() == null || transaction.getParkingLotSquareId() == 0 ||
@@ -53,7 +54,9 @@ public class TransactionService {
         // 更改車位狀態
         transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
         // 更改車位狀態 Redis
-        redisService.updateParkingLotSquareStatusInRedis(transaction);
+        if (isRedisConnected) {
+            redisService.updateParkingLotSquareStatusInRedis(transaction);
+        }
         // 更改會員狀態
         memberDao.putUpdateMemberStatusDao(memberId, member);
         // income method
@@ -78,6 +81,7 @@ public class TransactionService {
     @Transactional
     public void putParkingLotUsageService(String orderNumber, Transaction transaction) throws DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
+        boolean isRedisConnected = redisService.isRedisConnected();
         Member member = new Member();
         Date currentTime = new Date();
         String currentTimeToString = TimeUtils.timeFormat(currentTime);
@@ -122,7 +126,9 @@ public class TransactionService {
         // 回復車位狀態
         transactionDao.putUpdateParkingLotSquareStatusDao(transaction);
         // 回復車位狀態 Redis
-        redisService.updateParkingLotSquareStatusInRedis(transaction);
+        if (isRedisConnected) {
+            redisService.updateParkingLotSquareStatusInRedis(transaction);
+        }
     }
     // income method
     public void putParkingLotIncomeService(String orderNumber, Transaction transaction, int income) {

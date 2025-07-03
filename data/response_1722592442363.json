@@ -1,0 +1,5510 @@
+{
+  "UpdateTime": "2024-08-02T14:25:55+08:00",
+  "UpdateInterval": 14400,
+  "SrcUpdateTime": "2024-08-02T14:25:53+08:00",
+  "SrcUpdateInterval": 86400,
+  "AuthorityCode": "KHH",
+  "VersionID": 5004,
+  "CarParks": [
+    {
+      "CarParkID": "G18",
+      "CarParkName": {
+        "Zh_tw": "啟文"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數40格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.674049377441406,
+        "PositionLon": 120.28365325927734
+      },
+      "Address": "高雄市左營區先峰路與啟文路口東北側",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "999",
+      "CarParkName": {
+        "Zh_tw": "青埔"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數39格,機車格數16格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.729679107666016,
+        "PositionLon": 120.32364654541016
+      },
+      "Address": "高雄市楠梓區青埔街50巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "854",
+      "CarParkName": {
+        "Zh_tw": "瑞泰"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數26格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.607059478759766,
+        "PositionLon": 120.33505249023438
+      },
+      "Address": "高雄市前鎮區瑞泰街近瑞福路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "A22",
+      "CarParkName": {
+        "Zh_tw": "後昌"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數13格,機車格數10格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.712419509887695,
+        "PositionLon": 120.29451751708984
+      },
+      "Address": "後昌路862之1號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "457",
+      "CarParkName": {
+        "Zh_tw": "鳳山田中央"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "70576576",
+      "Description": "大型車格數0格,小型車格數28格,機車格數10格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.594539642333984,
+        "PositionLon": 120.35942840576172
+      },
+      "Address": "高雄市鳳山區鳳頂路與田中央路口旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "899",
+      "CarParkName": {
+        "Zh_tw": "海光"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數40格,小型車格數73格,機車格數71格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.67867088317871,
+        "PositionLon": 120.29254913330078
+      },
+      "Address": "高雄市左營區勝利路、新庄仔路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "大型車計次60元/6小時，小型車計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "590",
+      "CarParkName": {
+        "Zh_tw": "時代大道"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數48格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.596410751342773,
+        "PositionLon": 120.3089370727539
+      },
+      "Address": "高雄市前鎮區中華五路與時代大道口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "819",
+      "CarParkName": {
+        "Zh_tw": "和平公園"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數22格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.797500610351562,
+        "PositionLon": 120.3038330078125
+      },
+      "Address": "高雄市岡山區大德一路、竹圍東路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "A123",
+      "CarParkName": {
+        "Zh_tw": "安樂三街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數20格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.708009719848633,
+        "PositionLon": 120.34623718261719
+      },
+      "Address": "高雄市仁武區安樂三街76巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "749",
+      "CarParkName": {
+        "Zh_tw": "岡山戶政旁"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數57格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.79734992980957,
+        "PositionLon": 120.2944107055664
+      },
+      "Address": "高雄市岡山區區公所後方",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "A23",
+      "CarParkName": {
+        "Zh_tw": "裕興"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數6格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.667320251464844,
+        "PositionLon": 120.29019927978516
+      },
+      "Address": "高雄市鼓山區中華一路29巷20弄、近中華一路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "996",
+      "CarParkName": {
+        "Zh_tw": "前峰"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "24450981",
+      "Description": "大型車格數0格,小型車格數65格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.66666030883789,
+        "PositionLon": 120.28238677978516
+      },
+      "Address": "高雄市鼓山區內惟路與銘傳路口旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/30分",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "095a",
+      "CarParkName": {
+        "Zh_tw": "重平"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "25147332",
+      "Description": "大型車格數0格,小型車格數54格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.685020446777344,
+        "PositionLon": 120.31066131591797
+      },
+      "Address": "高雄市左營區華夏路與重平路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "449",
+      "CarParkName": {
+        "Zh_tw": "立民"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數32格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.74224090576172,
+        "PositionLon": 120.3367691040039
+      },
+      "Address": "高雄市楠梓區立民路、立仁路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "475",
+      "CarParkName": {
+        "Zh_tw": "建樹"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數31格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.763179779052734,
+        "PositionLon": 120.30406188964844
+      },
+      "Address": "高雄市橋頭區美德街與中正路旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "867",
+      "CarParkName": {
+        "Zh_tw": "陽明"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "28371994",
+      "Description": "大型車格數0格,小型車格數48格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.64289093017578,
+        "PositionLon": 120.34221649169922
+      },
+      "Address": "高雄市三民區陽明路298號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "827",
+      "CarParkName": {
+        "Zh_tw": "楠梓運動場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數143格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.732349395751953,
+        "PositionLon": 120.33181762695312
+      },
+      "Address": "高雄市楠梓區東寧路、楠裕街口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B58",
+      "CarParkName": {
+        "Zh_tw": "民族一路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數110格,機車格數12格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.639799118041992,
+        "PositionLon": 120.3136978149414
+      },
+      "Address": "高雄市三民區九如二路13巷(民族陸橋西側)空地停車場",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "128",
+      "CarParkName": {
+        "Zh_tw": "八德大型車"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "22763918",
+      "Description": "大型車格數79格,小型車格數0格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.68082046508789,
+        "PositionLon": 120.34175109863281
+      },
+      "Address": "高雄市仁武區八德南路與澄觀路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次60元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C06",
+      "CarParkName": {
+        "Zh_tw": "正憲第二"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數161格,機車格數86格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.63735008239746,
+        "PositionLon": 120.3202133178711
+      },
+      "Address": "安康路(舊苓雅監理站)",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "599",
+      "CarParkName": {
+        "Zh_tw": "中興市場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數18格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.573949813842773,
+        "PositionLon": 120.29651641845703
+      },
+      "Address": "高雄市旗津區廣澤街、商港街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "週五至週日及國定假日計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD04",
+      "CarParkName": {
+        "Zh_tw": "文化中心(立體)"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數830格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.6247501373291,
+        "PositionLon": 120.3169937133789
+      },
+      "Address": "高雄市苓雅區五福一路67號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時30元、月票：里民2000元、全日2700元、一般日間1800元、一般夜間1800元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "520",
+      "CarParkName": {
+        "Zh_tw": "臥龍"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數28格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.638629913330078,
+        "PositionLon": 120.33000183105469
+      },
+      "Address": "高雄市三民區九如一路、臥龍路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "Z05",
+      "CarParkName": {
+        "Zh_tw": "烏樹林"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數12格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.817869186401367,
+        "PositionLon": 120.22451782226562
+      },
+      "Address": "高雄市永安區公所對面",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "465",
+      "CarParkName": {
+        "Zh_tw": "左營站前"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數25格,小型車格數248格,機車格數500格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.687700271606445,
+        "PositionLon": 120.30520629882812
+      },
+      "Address": "高雄市左營區站前路、站前南路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "機車每日每次15元；小型車計時(15元/半小時)；大型車計時(30元/半小時)",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C09",
+      "CarParkName": {
+        "Zh_tw": "港興社區"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數45格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.566370010375977,
+        "PositionLon": 120.34221649169922
+      },
+      "Address": "高雄市小港區小港路90巷3弄、小港路120巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "917",
+      "CarParkName": {
+        "Zh_tw": "金獅湖"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數37格,機車格數42格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.665889739990234,
+        "PositionLon": 120.32845306396484
+      },
+      "Address": "高雄市三民區鼎金一巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "984",
+      "CarParkName": {
+        "Zh_tw": "微笑"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數145格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.671680450439453,
+        "PositionLon": 120.31086730957031
+      },
+      "Address": "高雄市左營區自由三路157號旁空地停車場",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "467",
+      "CarParkName": {
+        "Zh_tw": "慈惠六街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數119格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.674480438232422,
+        "PositionLon": 120.35140228271484
+      },
+      "Address": "高雄市仁武區赤勇三街近慈惠五街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "695",
+      "CarParkName": {
+        "Zh_tw": "鳳山行政中心西側"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "70369154",
+      "Description": "大型車格數0格,小型車格數318格,機車格數198格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.62969970703125,
+        "PositionLon": 120.34221649169922
+      },
+      "Address": "高雄市鳳山區光復路二段132號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD9",
+      "CarParkName": {
+        "Zh_tw": "財稅大樓"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數131格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.6306095123291,
+        "PositionLon": 120.30960083007812
+      },
+      "Address": "高雄市新興區中正三路25號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "汽車30元/時，汽車當日上限300元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "857e",
+      "CarParkName": {
+        "Zh_tw": "小港鳳陽"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數20格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.562480926513672,
+        "PositionLon": 120.3702163696289
+      },
+      "Address": "高雄市小港區鳳陽街18巷、6巷中間",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "812a",
+      "CarParkName": {
+        "Zh_tw": "錦田機車"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數0格,機車格數124格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.631479263305664,
+        "PositionLon": 120.31018829345703
+      },
+      "Address": "高雄市新興區中正三路、錦田路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "不收費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B4",
+      "CarParkName": {
+        "Zh_tw": "厚泰"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數61格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.64582061767578,
+        "PositionLon": 120.27954864501953
+      },
+      "Address": "高雄市鼓山區厚泰街、厚安路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "不收費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B54",
+      "CarParkName": {
+        "Zh_tw": "瑞昌"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數11格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.606380462646484,
+        "PositionLon": 120.33573150634766
+      },
+      "Address": "瑞隆路190巷4弄、瑞福路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD2",
+      "CarParkName": {
+        "Zh_tw": "民權輕鋼架(立體)"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數256格,機車格數203格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.623720169067383,
+        "PositionLon": 120.31160736083984
+      },
+      "Address": "高雄市新興區民權一路221號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時30元、月票：里民1500元、一般民眾日間2100元、一般民眾夜間600元、一般全日2700元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "949",
+      "CarParkName": {
+        "Zh_tw": "澄觀大型車"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "42819875",
+      "Description": "大型車格數154格,小型車格數0格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.6771297454834,
+        "PositionLon": 120.33097076416016
+      },
+      "Address": "高雄市仁武區八德西路、京富路(澄觀派出所旁)",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次60元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "955",
+      "CarParkName": {
+        "Zh_tw": "南成"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數73格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.590560913085938,
+        "PositionLon": 120.33833312988281
+      },
+      "Address": "高雄市鳳山區南和一路與和成路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C41",
+      "CarParkName": {
+        "Zh_tw": "松埔"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數22格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.6607608795166,
+        "PositionLon": 120.38233947753906
+      },
+      "Address": "松埔路37巷8弄&松埔路37巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "全日收費 30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B40",
+      "CarParkName": {
+        "Zh_tw": "時代大道第二"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數149格,機車格數93格,腳踏車格數0格,身心障礙汽車格數3格,身心障礙機車格數3格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.597200393676758,
+        "PositionLon": 120.31101989746094
+      },
+      "Address": "中華五路、時代南二路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "908",
+      "CarParkName": {
+        "Zh_tw": "自強三路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數50格,機車格數86格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.62071990966797,
+        "PositionLon": 120.2972412109375
+      },
+      "Address": "高雄市前金區自強三路與光明街口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日:計時15元/半小時；假日:計時20元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "c46",
+      "CarParkName": {
+        "Zh_tw": "五甲"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "50885758",
+      "Description": "大型車格數0格,小型車格數45格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.61941909790039,
+        "PositionLon": 120.35075378417969
+      },
+      "Address": "國光路65巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次收費:每次30元(離場再停、停車逾6小時或跨日則另計次收費)。月租收費:(1)國光里里民：每月1,500元。(2)非上述里民：每月3,000元。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD24",
+      "CarParkName": {
+        "Zh_tw": "高雄鼓山國小地下停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80682490",
+      "Description": "大型車格數0格,小型車格數184格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.62470054626465,
+        "PositionLon": 120.27174377441406
+      },
+      "Address": "高雄市鼓山區登山街35-1號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "汽車30元/時，汽車當日上限300元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "919",
+      "CarParkName": {
+        "Zh_tw": "環潭"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數32格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.686159133911133,
+        "PositionLon": 120.29998779296875
+      },
+      "Address": "高雄市左營區環潭路332之1號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "822",
+      "CarParkName": {
+        "Zh_tw": "旗山體育場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數20格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.88726043701172,
+        "PositionLon": 120.48069763183594
+      },
+      "Address": "高雄市旗山區體育場右側",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "週六假日計時15元/半小時，平日計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "448",
+      "CarParkName": {
+        "Zh_tw": "常德"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數30格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.731950759887695,
+        "PositionLon": 120.33667755126953
+      },
+      "Address": "高雄市楠梓區常德路、常德路32巷口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "815",
+      "CarParkName": {
+        "Zh_tw": "鳳頂"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數64格,機車格數32格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.59062957763672,
+        "PositionLon": 120.35871887207031
+      },
+      "Address": "高雄市鳳山區鳳頂路、過埤路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "862",
+      "CarParkName": {
+        "Zh_tw": "鼎泰"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數62格,機車格數83格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.663860321044922,
+        "PositionLon": 120.31513977050781
+      },
+      "Address": "高雄市三民區裕誠路、鼎瑞街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "954",
+      "CarParkName": {
+        "Zh_tw": "本和"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數153格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.65743064880371,
+        "PositionLon": 120.32511138916016
+      },
+      "Address": "高雄市三民區鼎勇街與大園街口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "857c",
+      "CarParkName": {
+        "Zh_tw": "小港鳳盛"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數17格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.524219512939453,
+        "PositionLon": 120.3479232788086
+      },
+      "Address": "高雄市小港區鳳盛街38號對面",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "107",
+      "CarParkName": {
+        "Zh_tw": "鎮賢"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80682490",
+      "Description": "大型車格數0格,小型車格數23格,機車格數19格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數1格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.589860916137695,
+        "PositionLon": 120.30938720703125
+      },
+      "Address": "高雄市前鎮區鎮賢街52巷旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C96",
+      "CarParkName": {
+        "Zh_tw": "龍江公園"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數28格,機車格數47格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.639890670776367,
+        "PositionLon": 120.30835723876953
+      },
+      "Address": "高雄市三民區龍江街、復興一路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C47",
+      "CarParkName": {
+        "Zh_tw": "樂仁"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數24格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.63698959350586,
+        "PositionLon": 120.32524108886719
+      },
+      "Address": "高雄市苓雅區樂仁路125巷6弄&大順三路305巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD7",
+      "CarParkName": {
+        "Zh_tw": "四維(立體)"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數819格,機車格數921格,腳踏車格數16格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.621429443359375,
+        "PositionLon": 120.31108093261719
+      },
+      "Address": "高雄市苓雅區苓雅一路226號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時30元、月票：里民1500元、苓雅區里民夜間600元、苓雅區里民夜間加假日900元、一般民眾日間2100元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "988",
+      "CarParkName": {
+        "Zh_tw": "惠民"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數63格,機車格數68格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.723360061645508,
+        "PositionLon": 120.2940902709961
+      },
+      "Address": "高雄市楠梓區惠民路、壽豐路間",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "861",
+      "CarParkName": {
+        "Zh_tw": "君毅"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數47格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.602149963378906,
+        "PositionLon": 120.30381774902344
+      },
+      "Address": "高雄市前鎮區正勤路、君毅社區旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "G17",
+      "CarParkName": {
+        "Zh_tw": "鳳青"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數18格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.634279251098633,
+        "PositionLon": 120.3482437133789
+      },
+      "Address": "高雄市鳳山區文教路81號對面",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/8小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD28",
+      "CarParkName": {
+        "Zh_tw": "高雄高工立體停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數470格,機車格數171格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.647220611572266,
+        "PositionLon": 120.32556915283203
+      },
+      "Address": "大豐二路與大順二路交叉口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "(一)\t臨停收費： (1)小型車-每半小時15元。(進場後15分鐘內離場者免費，逾15分鐘未滿半小時以半小時計費;當日連續停放最高收費300元(隔日另計);持有本府核發之身心 障礙者專用停車位識別證者，當日當次前4小時內免費，第5小時起半價，優  惠以當日1次為限;設籍外縣市之身心障礙者半價優惠。) (2)機車-當日計次15元。(隔日另計) (二)月租收費： (1)一般月票:汽車每月2,700元;",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "E34",
+      "CarParkName": {
+        "Zh_tw": "仁愛三街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80682490",
+      "Description": "大型車格數0格,小型車格數19格,機車格數11格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數1格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.61540985107422,
+        "PositionLon": 120.31109619140625
+      },
+      "Address": "高雄市前鎮區仁愛三街18號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "946",
+      "CarParkName": {
+        "Zh_tw": "八卦里"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數60格,機車格數24格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.68269920349121,
+        "PositionLon": 120.33209991455078
+      },
+      "Address": "高雄市仁武區永仁街、永新二街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "844",
+      "CarParkName": {
+        "Zh_tw": "大社自強街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數28格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.73027992248535,
+        "PositionLon": 120.34681701660156
+      },
+      "Address": "高雄市大社區區公所對面自強街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "597",
+      "CarParkName": {
+        "Zh_tw": "中洲"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數23格,機車格數40格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.58275032043457,
+        "PositionLon": 120.29105377197266
+      },
+      "Address": "高雄市旗津區中洲二路、中洲二路204號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "週五至週日及國定假日計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "825",
+      "CarParkName": {
+        "Zh_tw": "岡山(平面)"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數177格,機車格數59格,腳踏車格數29格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.791919708251953,
+        "PositionLon": 120.29666900634766
+      },
+      "Address": "高雄市岡山區岡山路與民有路交叉口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B59",
+      "CarParkName": {
+        "Zh_tw": "忠孝一路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數40格,機車格數7格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.63071060180664,
+        "PositionLon": 120.30609893798828
+      },
+      "Address": "高雄市新興區中正三路與忠孝一路口旁停車場",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "848",
+      "CarParkName": {
+        "Zh_tw": "金山"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數8格,機車格數17格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.66192054748535,
+        "PositionLon": 120.31868743896484
+      },
+      "Address": "高雄市三民區金山路、金山路360巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "466",
+      "CarParkName": {
+        "Zh_tw": "東門"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "53898519",
+      "Description": "大型車格數0格,小型車格數42格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.674280166625977,
+        "PositionLon": 120.29012298583984
+      },
+      "Address": "高雄市左營區翠華路601巷與城峰路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "855",
+      "CarParkName": {
+        "Zh_tw": "明仁"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數111格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.662660598754883,
+        "PositionLon": 120.31318664550781
+      },
+      "Address": "高雄市三民區明仁路與明吉路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "814b",
+      "CarParkName": {
+        "Zh_tw": "鳳山捷運站機車"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數0格,機車格數172格,腳踏車格數10格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.625850677490234,
+        "PositionLon": 120.3563003540039
+      },
+      "Address": "高雄市鳳山區捷運鳳山站旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "不收費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "820",
+      "CarParkName": {
+        "Zh_tw": "民權二路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數47格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.60926055908203,
+        "PositionLon": 120.31310272216797
+      },
+      "Address": "高雄市前鎮區民權二路、衡山街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "969",
+      "CarParkName": {
+        "Zh_tw": "允文"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數13格,機車格數16格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.618610382080078,
+        "PositionLon": 120.29485321044922
+      },
+      "Address": "高雄市苓雅區允文街、永明街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "840",
+      "CarParkName": {
+        "Zh_tw": "歡樂17"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數36格,機車格數22格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.710269927978516,
+        "PositionLon": 120.29295349121094
+      },
+      "Address": "高雄市楠梓區軍校路、後昌路837巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "103",
+      "CarParkName": {
+        "Zh_tw": "平和"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數46格,機車格數0格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.562509536743164,
+        "PositionLon": 120.33580780029297
+      },
+      "Address": "高雄市小港區平和路、平和南路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "832",
+      "CarParkName": {
+        "Zh_tw": "榮光"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數26格,機車格數24格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.684959411621094,
+        "PositionLon": 120.32160186767578
+      },
+      "Address": "高雄市左營區榮光街與榮總路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "991",
+      "CarParkName": {
+        "Zh_tw": "福德"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數35格,機車格數55格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.632780075073242,
+        "PositionLon": 120.32804870605469
+      },
+      "Address": "高雄市苓雅區建國一路與福德二路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "459a",
+      "CarParkName": {
+        "Zh_tw": "仁德116"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數145格,機車格數103格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.593019485473633,
+        "PositionLon": 120.39779663085938
+      },
+      "Address": "高雄市大寮區大寮地政對面",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "不收費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "957",
+      "CarParkName": {
+        "Zh_tw": "鳳甲"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數97格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.59654998779297,
+        "PositionLon": 120.343017578125
+      },
+      "Address": "高雄市鳳山區鳳甲二街與南華一路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "716",
+      "CarParkName": {
+        "Zh_tw": "鳥松勞工公園"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "50885758",
+      "Description": "大型車格數0格,小型車格數198格,機車格數292格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.65056037902832,
+        "PositionLon": 120.35871124267578
+      },
+      "Address": "高雄市鳥松區長庚路北側",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "G19",
+      "CarParkName": {
+        "Zh_tw": "實踐"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數65格,機車格數0格,腳踏車格數0格,身心障礙汽車格數2格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.690189361572266,
+        "PositionLon": 120.28959655761719
+      },
+      "Address": "高雄市左營區實踐路海富路口東北側",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "828",
+      "CarParkName": {
+        "Zh_tw": "常順"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數78格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.73217010498047,
+        "PositionLon": 120.3370132446289
+      },
+      "Address": "高雄市楠梓區常順街、常德街32巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C123",
+      "CarParkName": {
+        "Zh_tw": "左東"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數60格,機車格數0格,腳踏車格數0格,身心障礙汽車格數2格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.690820693969727,
+        "PositionLon": 120.29979705810547
+      },
+      "Address": "高雄市左營區菜公路、菜公路146巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時25元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "936",
+      "CarParkName": {
+        "Zh_tw": "觀音山"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數108格,機車格數25格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.727989196777344,
+        "PositionLon": 120.37077331542969
+      },
+      "Address": "高雄市大社區觀音山旁（停七、停八）",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "863",
+      "CarParkName": {
+        "Zh_tw": "松崗"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80682490",
+      "Description": "大型車格數0格,小型車格數19格,機車格數14格,腳踏車格數0格,身心障礙汽車格數1格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.574800491333008,
+        "PositionLon": 120.37420654296875
+      },
+      "Address": "高雄市小港區松崗路、松崗路18巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "AD15",
+      "CarParkName": {
+        "Zh_tw": "林園(立體)"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數244格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.50200080871582,
+        "PositionLon": 120.3957290649414
+      },
+      "Address": "高雄市林園區林園南路77號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時10元、月票800元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "547",
+      "CarParkName": {
+        "Zh_tw": "八德小型車"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數0格,小型車格數122格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.68121910095215,
+        "PositionLon": 120.34027862548828
+      },
+      "Address": "高雄市仁武區八德南路與京吉一路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "C05",
+      "CarParkName": {
+        "Zh_tw": "正憲"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數42格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.637100219726562,
+        "PositionLon": 120.32170104980469
+      },
+      "Address": "憲政路242巷&安康路20巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "913",
+      "CarParkName": {
+        "Zh_tw": "新光"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數15格,小型車格數677格,機車格數569格,腳踏車格數0格,身心障礙汽車格數19格,身心障礙機車格數12格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.60633087158203,
+        "PositionLon": 120.300537109375
+      },
+      "Address": "復興三路、成功二路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "大客車平日30元/半小時,週六日及國定假日40元/半小時;小型車平日15元/半小時,週六日及國定假日20元/半小時；機車平日15元/日.次,週六日及國定假日30元/日.次",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "469",
+      "CarParkName": {
+        "Zh_tw": "五甲七老爺"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12745271",
+      "Description": "大型車格數22格,小型車格數77格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.600250244140625,
+        "PositionLon": 120.3412094116211
+      },
+      "Address": "高雄市鳳山區五甲二路105巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "大型車計時30元/半小時,小型車計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "BB1",
+      "CarParkName": {
+        "Zh_tw": "文恩站"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數106格,機車格數292格,腳踏車格數0格,身心障礙汽車格數3格,身心障礙機車格數6格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.68461036682129,
+        "PositionLon": 120.31915283203125
+      },
+      "Address": "高雄市左營區民族一路1101巷50號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時40元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "a126",
+      "CarParkName": {
+        "Zh_tw": "旗山老街觀光"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數300格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.88817024230957,
+        "PositionLon": 120.48562622070312
+      },
+      "Address": "高雄市旗山區延平一路307巷59號對面",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "不收費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "983",
+      "CarParkName": {
+        "Zh_tw": "瑞福"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數55格,機車格數26格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.607749938964844,
+        "PositionLon": 120.33541107177734
+      },
+      "Address": "瑞福路、瑞安街口(A區:31格、B區:24格)",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "560",
+      "CarParkName": {
+        "Zh_tw": "旗津老街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數105格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.610509872436523,
+        "PositionLon": 120.26809692382812
+      },
+      "Address": "高雄市旗津區旗津三路與發祥街口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "週五至週日及國定假日計時25元/半小時；週一至週四計次50元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "995",
+      "CarParkName": {
+        "Zh_tw": "輔仁"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數27格,機車格數40格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.62540054321289,
+        "PositionLon": 120.33202362060547
+      },
+      "Address": "高雄市苓雅區輔仁路&輔仁路89巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "A74",
+      "CarParkName": {
+        "Zh_tw": "凱旋三路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80682490",
+      "Description": "大型車格數0格,小型車格數24格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.608440399169922,
+        "PositionLon": 120.32510375976562
+      },
+      "Address": "凱旋三路與賢明路",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "B46c",
+      "CarParkName": {
+        "Zh_tw": "德宜"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數36格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.884719848632812,
+        "PositionLon": 120.33228302001953
+      },
+      "Address": "高雄市阿蓮區文學一街與成功街德宜自辦重劃區",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "837",
+      "CarParkName": {
+        "Zh_tw": "仁武澄仁"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數39格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.679189682006836,
+        "PositionLon": 120.3453369140625
+      },
+      "Address": "高雄市仁武區澄仁路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "125",
+      "CarParkName": {
+        "Zh_tw": "廣三"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數9格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.620609283447266,
+        "PositionLon": 120.27442169189453
+      },
+      "Address": "高雄市鼓山區鼓山一路、近鼓元街",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "E35",
+      "CarParkName": {
+        "Zh_tw": "延平"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "15756996",
+      "Description": "大型車格數0格,小型車格數42格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.858110427856445,
+        "PositionLon": 120.25672912597656
+      },
+      "Address": "高雄市路竹區延平路及中和街交叉口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "874",
+      "CarParkName": {
+        "Zh_tw": "廣昌"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "24450981",
+      "Description": "大型車格數0格,小型車格數57格,機車格數68格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.70587921142578,
+        "PositionLon": 120.28543090820312
+      },
+      "Address": "高雄市楠梓區右昌忠義9巷、廣昌街113巷",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "916",
+      "CarParkName": {
+        "Zh_tw": "頂新"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "12681939",
+      "Description": "大型車格數0格,小型車格數26格,機車格數0格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.588329315185547,
+        "PositionLon": 120.3649673461914
+      },
+      "Address": "高雄市鳳山區頂庄路、頂新五街旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次30元/6小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    },
+    {
+      "CarParkID": "813",
+      "CarParkName": {
+        "Zh_tw": "英德街"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "大型車格數0格,小型車格數85格,機車格數25格,腳踏車格數0格,身心障礙汽車格數0格,身心障礙機車格數0格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        254
+      ],
+      "CarParkPosition": {
+        "PositionLat": 22.613859176635742,
+        "PositionLon": 120.32234954833984
+      },
+      "Address": "高雄市前鎮區英德街與和平二路口",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時20元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 0,
+      "SupervisionType": 254,
+      "City": "Kaohsiung",
+      "CityCode": "KHH"
+    }
+  ]
+}

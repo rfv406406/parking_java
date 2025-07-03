@@ -117,7 +117,6 @@ function renderCarInformations(data) {
     deleteButton.textContent = '刪除';
     deleteButton.style.display = 'none';
 
-    // 點擊 parking-lot-page-table 切換刪除按鈕成顯示
     parkingLotDiv.addEventListener('click', () => {
         if(deleteButton.style.display === "none") {
           deleteButton.style.display = 'block';

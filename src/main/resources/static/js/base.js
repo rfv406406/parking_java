@@ -30,7 +30,6 @@ function setupToggleNotButtonElements(element, toggles) {
   let clickElement = document.querySelector(element)
   if (clickElement){
     clickElement.addEventListener('click', function(event) {
-      // 檢查點擊的目標是否不是按鈕
       if (!event.target.matches('button') && !event.target.matches('#data-type-selector')) {
         toggles.forEach(function(toggle) {
           toggleClass(toggle.elementSelector, toggle.classToToggle);
@@ -107,7 +106,7 @@ setupRemoveButton('#close-packing-page', [
   { elementSelector: '.parking_lot-information-container', css: ['parking_lot-information-container-toggled', 'parking_lot-information-container-appear'] }
 ])
 
-  //alert_page none顯示
+//alert_page none顯示
 setupRemoveButton('#alert-content-checked-button', [
     { elementSelector: '#alert-page-container', css: ['alert-page-container-toggled'] },
     { elementSelector: '#alert-page-black-back', css: ['alert-page-black-back-toggled'] },
@@ -212,7 +211,6 @@ function setupToggleDeleteButton(parentSelector, avoidArea, avoidButton, toggle)
   
       if(parkingLotTable && !isGoButton) {
         if(toggle) {
-          // 只對當前 parkingLotTable 範圍內的元素操作
           let element = parkingLotTable.querySelector(toggle.elementSelector);
           if (element) {
             element.classList.toggle(toggle.classToToggle);
@@ -231,10 +229,8 @@ function removeClassOnClickOutside(targetSelector, toggleSelector, classesToRemo
   document.addEventListener('click', function(event) {
       let targetElement = document.querySelector(targetSelector);
       let toggleElement = document.querySelector(toggleSelector);
-      // 檢查點擊事件是否發生在目標元素或棋子元素上，以及切換元素或棋子元素上
       if (targetElement && !targetElement.contains(event.target) &&
           (!toggleElement || !toggleElement.contains(event.target))) {
-          // 如果點擊事件發生再目標元素和切換元素外部，則進行移除
           classesToRemove.forEach(cssClass => {
               targetElement.classList.remove(cssClass);
           });
@@ -247,10 +243,10 @@ removeClassOnClickOutside('#menuContent', '#menu', ['menuContent_toggled']);
 function clickButton(buttonSelector, renderTemplate) {
   document.querySelector(buttonSelector).addEventListener('click', async (event) => {
     event.preventDefault();
-    if (buttonSelector == "#parking-page-button-list" && window.location.pathname !== "/") {
+    if (buttonSelector == "#parking-page-button-list" && window.location.pathname !== "/index") {
       await turnPage(renderTemplate, "#parkingPage");
       return null;
-    } else if (buttonSelector == "#parking-page-button-list" && window.location.pathname === "/") {
+    } else if (buttonSelector == "#parking-page-button-list" && window.location.pathname === "/index") {
       return null;
     }
     await turnPage(renderTemplate);
@@ -268,11 +264,11 @@ async function turnPage(renderTemplate, hash = null){
 }
 
 clickButton('#parking-lot-button-list','/parkingLotPage');
-clickButton('#home','/')
-// clickButton('#selector','/selector')
+clickButton('#home','/index')
+clickButton('#selector','/selector')
 clickButton('#car_page','/carPage');
 clickButton('#id','/id');
 clickButton('#deposit-and-pay-page-button','/depositPage');
 clickButton('#cash-record-page-button','/cashFlowRecord');
-clickButton('#parking-page-button-list','/');
+clickButton('#parking-page-button-list','/index');
 clickButton('#chat-page-button','/chatroom');

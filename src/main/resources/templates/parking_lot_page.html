@@ -18,7 +18,6 @@
             <div>出租停車場</div>
             <button class="close" id="parking-lot-page-increase">新增</button>
         </div>
-        <div class="separator"></div>
         <div id="parking-lot-container">
             <!-- <div class="parking-lot-page-table" id="parking-lot-page-table">
                 <div class="image"></div>
@@ -90,46 +89,46 @@
         </div>
         <form class="information-form" id="information-form">
             <div style="display:none" class="input-box">
-                <label for="parking-lot-name" class="consistent-text">*ID：</label>
+                <label for="parking-lot-id-input" class="consistent-text">*ID：</label>
                 <input type="text" id="parking-lot-id-input" name="parking-lot-name-input" class="text" placeholder="請輸入ID">
             </div>
             <div class="input-box">
-                <label for="parking-lot-name" class="consistent-text">*名稱：</label>
+                <label for="parking-lot-name-input" class="consistent-text">*名稱：</label>
                 <input type="text" id="parking-lot-name-input" name="parking-lot-name-input" class="text" placeholder="請輸入名稱">
             </div>
             <div class="input-box">
-                <label for="parking-lot-address" class="consistent-text">*地址：</label>
+                <label for="parking-lot-address-input" class="consistent-text">*地址：</label>
                 <input type="text" id="parking-lot-address-input" name="parking-lot-address-input" class="text" placeholder="請輸入地址">
             </div>
             <div class="input-box">
-                <label for="parking-lot-near" class="consistent-text">附近地標：</label>
+                <label for="parking-lot-near-input" class="consistent-text">附近地標：</label>
                 <input type="text" id="parking-lot-near-input" name="parking-lot-near-input" class="text" placeholder="請輸入地標">
             </div>
             <div class="input-box">
-                <label for="parking-lot-image" class="consistent-text">*上傳圖片：</label>
+                <label for="parking-lot-image-input" class="consistent-text">*上傳圖片：</label>
                 <input type="file" id="parking-lot-image-input" name="parking-lot-image-input" class="text" multiple>
             </div>
             <div class="input-box">
-                <label for="parking-lot-opening-time" class="consistent-text">*開放時間：</label>
+                <label for="parking-lot-opening-time-am-input" class="consistent-text">*開放時間：</label>
                 <input type="time" id="parking-lot-opening-time-am-input" name="parking-lot-opening-time-input" class="text-time" min="00:00" max="24:00" placeholder="08:00">
                 <div style="width: 5px;"></div>
                 <input type="time" id="parking-lot-closing-time-pm-input" name="parking-lot-closing-time-input" class="text-time" min="00:00" max="24:00" placeholder="18:00">
             </div>
             <div class="input-box">
-                <label for="parking-lot-in-out" class="consistent-text">空間位置：</label>
+                <label for="parking-lot-in-out-input" class="consistent-text">空間位置：</label>
                 <input type="text" id="parking-lot-in-out-input" name="parking-lot-in-out-input" class="text" placeholder="室內、室外、室外含遮蔽">
             </div>
             <div class="input-box">
-                <label for="parking-lot-price" class="consistent-text">*價格：</label>
-                <input type="number" id="parking-lot-price-input" name="parking-lot-price-input" class="text" placeholder="請輸入價格">
+                <label for="parking-lot-price-input" class="consistent-text">*價格：</label>
+                <input type="number" inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '')" id="parking-lot-price-input" name="parking-lot-price-input" class="text" placeholder="請輸入價格">
             </div>
             <div class="input-box">
-                <label for="parking-lot-width" class="consistent-text">*車寬限制：</label>
-                <input type="number" id="parking-lot-width-input" name="parking-lot-width-input" class="text" placeholder="請輸入寬度">
+                <label for="parking-lot-width-input" class="consistent-text">*車寬限制：</label>
+                <input type="number" inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '')" id="parking-lot-width-input" name="parking-lot-width-input" class="text" placeholder="請輸入寬度">
             </div>
             <div class="input-box">
-                <label for="parking-lot-height" class="consistent-text">*車高限制：</label>
-                <input type="number" id="parking-lot-height-input" name="parking-lot-height-input" class="text" placeholder="請輸入高度">
+                <label for="parking-lot-height-input" class="consistent-text">*車高限制：</label>
+                <input type="number" inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '')" id="parking-lot-height-input" name="parking-lot-height-input" class="text" placeholder="請輸入高度">
             </div>
             <div class="input-box-container" id="input-car-space-container">
                 <!-- <div class="input-box">
@@ -164,5 +163,8 @@
     <script src="/js/sign_system.js"></script>
     <script src="/js/base.js"></script>
     <script src="/js/parkingLotPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="/js/webSocket.js"></script>
 </body>
 </html>

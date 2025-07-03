@@ -37,7 +37,7 @@ async function initMap() {
         currentPosition = await returnCurrentPosition();
         currentPositionMarker = await displayMarker(currentPosition);
         //匯入停車場
-        fetchParkingLotData();
+        await fetchParkingLotData(currentPosition);
     } catch(error) {
         console.error(error);
         displayAlertMessage(error.message);
@@ -97,7 +97,7 @@ async function returnCurrentPosition() {
     })
 }
 
-async function renderSearchingLocation(destination) {
+async function getSearchingLocation(destination) {
     try {
         const { Place } = await google.maps.importLibrary("places");
         const request = {
@@ -111,18 +111,19 @@ async function renderSearchingLocation(destination) {
         };
 
         const { places } = await Place.searchByText(request);
-        let responseArray = [];
 
         if (places.length) {
             const { LatLngBounds } = await google.maps.importLibrary("core");
             const bounds = new LatLngBounds();
-            // Loop through and get all the results.
+            let responseArray = [];
+
             places.forEach((place) => {
                 responseArray.push(place);
                 bounds.extend(place.location);
             });
-            await displayMarker(null, responseArray);
             map.fitBounds(bounds);
+
+            return responseArray;
         }
         else {
             console.log('No results');
@@ -195,4 +196,3 @@ function cleanDisplayMarkerArray() {
 }
 
 initMap();
-// window.initMap = initMap;

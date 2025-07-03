@@ -139,12 +139,11 @@
     max-width:1200px;
     width:90%;
     height:100%;
-    display:block;
     padding: 5px;
-    /* border-radius: 12px; */
     margin: auto;
-    /* border: 0.5px solid #0E578D; */
     background: #fefefe;
+    overflow-y: auto;
+    flex: 0.95 1 0;
 }
 
 .information-page-toggled{
@@ -177,7 +176,7 @@
 }
 
 .information-table table{
-    width: 60%;
+    width: 80%;
     border-collapse: collapse;
     table-layout: fixed;
 }

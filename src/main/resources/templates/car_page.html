@@ -25,24 +25,29 @@
                 </div>
                 <div class="separator"></div>
             </div>
-            <button class="edit-button" id="plate-board-edit-button">編輯</button> 
-        </div>
-        <div class="plate-board-container-header" id="plate-board-container-header">
-            <div class="text">上傳車車編號與圖片</div>
-            </br>
-            車牌編號：<input type="text" name="message_content" class="message_content" id="plate-board-number" placeholder="ex.ABC-1234">
-            <form>
-                <label for="file">上傳車車圖片檔案</label>
-                <input type="file" id="car-img-file" name="file">
+            <div class="edit-button-container"> 
+                <button class="edit-button" id="plate-board-edit-button">編輯</button> 
+            </div>
+            <div class="plate-board-container-header" id="plate-board-container-header">
+                <div class="text">上傳車車編號與圖片</div>
                 </br>
-                <input type="submit" id="plate-board-data-submit" value="送出">
-                <div class="car-page-message" id="car-page-message"></div>   
-            </form>
+                車牌編號：<input type="text" name="message_content" class="message_content" id="plate-board-number" placeholder="ex.ABC-1234">
+                <form>
+                    <label for="car-img-file">上傳車車圖片檔案</label>
+                    <input type="file" id="car-img-file" name="file">
+                    </br>
+                    <input type="submit" id="plate-board-data-submit" value="送出">
+                    <div class="car-page-message" id="car-page-message"></div>   
+                </form>
+            </div>
         </div>
     </div>
     <div th:replace="~{foot :: foot}"></div>
     <script src="/js/sign_system.js"></script>
     <script src="/js/base.js"></script>
     <script src="/js/car_page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="/js/webSocket.js"></script>
 </body>
 </html>

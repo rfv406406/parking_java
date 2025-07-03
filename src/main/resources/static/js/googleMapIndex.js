@@ -3,12 +3,12 @@ let parkingLotMap = new Map();
 let parkingLotGMPMap = new Map();
 let parkingLotGMPArray = [];
 
-async function fetchParkingLotData(){
+async function fetchParkingLotData(currentPosition){
     try{
-        const response = await fetchAPI("/api/parkingLot", null, 'GET');
+        const parkingLotParameters = JSON.parse(localStorage.getItem("parkingLotParameters"));
+        const response = await getParkingLotMap(currentPosition.lng, currentPosition.lat, parkingLotParameters, null);
         const data = await handleResponse(response);
         await displayParkingLotMarker(data);
-        setMarkerClusterer(parkingLotGMPArray);
     }catch(error){
         handleError(error);
     }
@@ -24,11 +24,13 @@ function setMarkerClusterer(parkingLotGMPArray) {
 async function displayParkingLotMarker(data) {
     if (data) {
         for (const parkingLotId in data) {
+            if (parkingLotMap.get(Number(parkingLotId)) || parkingLotGMPMap.get(Number(parkingLotId))) {
+                continue;
+            }
             const parkingLot = data[parkingLotId];
             const parkingLotMarker = createParkingLotMarker(parkingLot);
             const parkingLotMarkerDOM = parkingLotMarker.parkingLotDOM;
             const parkingLotMarkerGMP = parkingLotMarker.parkingLotMarker;
-            console.log(parkingLotMarkerGMP)
             parkingLotGMPArray.push(parkingLotMarkerGMP);
             parkingLotMap.set(parkingLot.parkingLotId, parkingLot);
             parkingLotGMPMap.set(parkingLot.parkingLotId, parkingLotMarkerGMP);
@@ -42,6 +44,7 @@ async function displayParkingLotMarker(data) {
                 await navigation(parkingLot);
             });
         }
+        setMarkerClusterer(parkingLotGMPArray);
     }
 };
 
@@ -68,74 +71,32 @@ function createParkingLotMarker(parkingLot) {
     const foot = document.createElement("div");
     parkingLotTag.id = parkingLot.parkingLotId;
 
-    // parkingLotTag.id = `parkingLotTag${parkingLot.parkingLotId}`;
     parkingLotTag.setAttribute("parkingLotId", parkingLot.parkingLotId);
     parkingLotTag.setAttribute("lat", parkingLot.latitude);
     parkingLotTag.setAttribute("lng", parkingLot.longitude);
-
-    parkingLotTag.style.display = "flex";
-    parkingLotTag.style.justifyContent = "center"; 
-    parkingLotTag.style.alignItems = "center";
     parkingLotTag.style.backgroundColor = setColorByPrice(parkingLot.price);
-    parkingLotTag.style.height = "40px";
-    parkingLotTag.style.padding = "0px 5px";    
-    parkingLotTag.style.borderRadius = "7px";
-    parkingLotTag.style.position = "relative";
 
     foot.id = "markerFoot";
-    foot.style.position = "absolute";
-    foot.style.left = "50%";
-    foot.style.top = "100%";
-    foot.style.transform = "translate(-50%, 0)";
-    foot.style.width = "0";
-    foot.style.height = "0";
-    foot.style.borderLeft = "8px solid transparent";
-    foot.style.borderRight = "8px solid transparent";
-    foot.style.borderTop = "8px solid " + setColorByPrice(parkingLot.price);
+    foot.className = 'parking-lot-tag-foot';
+    foot.style.borderTopColor  = setColorByPrice(parkingLot.price);
 
     parkingLotTag.appendChild(foot);
 
+    priceTag.className = 'priceTag';
     priceTag.id = "priceLabel";
-    priceTag.style.display = "flex";
-    priceTag.style.justifyContent = "center"; 
-    priceTag.style.alignItems = "center";
-    priceTag.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-    priceTag.style.boxSizing = "border-box";
-    // priceTag.style.width = "80%";
-    priceTag.style.minWidth = "40px";
-    priceTag.style.height = "80%";
-    priceTag.style.padding = "5px";
-    priceTag.style.overflow = "hidden";
-    priceTag.style.borderRadius = "3px";
-    priceTag.style.fontSize = "15px";
-    priceTag.style.fontWeight = "bold";
-    priceTag.style.color = "rgba(0, 0, 0, 0.63)"
-    // priceTag.style.whiteSpace = "nowrap";
-     
     priceTag.style.textOverflow = "ellipsis";
     
     priceTag.textContent = labelContent;
     parkingLotTag.appendChild(priceTag);
 
-    //建立 style 標籤，定義 keyframes 動畫
-    const style = document.createElement('style');
-    style.textContent = `
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(10px); }
-        100% { transform: translateY(0); }
-    }
-    `;
-    //無限CSS、逐漸加速進入特效、逐漸緩出特效
-    document.head.appendChild(style);
-    parkingLotTag.style.animation = "float 2s infinite ease-in-out";
+    parkingLotTag.classList.add('parking-lot-tag', 'parking-float');
 
     parkingLotTag.addEventListener('mouseenter', () => {
-        parkingLotTag.style.animation = 'none';
+        parkingLotTag.classList.add('parking-float--paused');
     });
 
     parkingLotTag.addEventListener('mouseleave', () => {
-        parkingLotTag.style.animation = 'float 2s infinite ease-in-out';
+        parkingLotTag.classList.remove('parking-float--paused');
     });
 
     const parkingLotMarker = new advancedMarkerElement({
@@ -152,14 +113,13 @@ function createParkingLotMarker(parkingLot) {
     return parkingLotObject;
 }
 
-//依照價錢分顏色
 function setColorByPrice(price) {
     if (price <= 25) {
-        return 'rgba(0, 255, 68, 0.6)'; // 綠色
+        return 'rgba(0, 255, 68, 0.6)'; 
     } else if (price <= 50) {
-        return 'rgba(255, 145, 0, 0.6)'; // 橘色
+        return 'rgba(255, 145, 0, 0.6)'; 
     } else {
-        return 'rgba(255, 25, 0, 0.6)'; // 紅色
+        return 'rgba(255, 25, 0, 0.6)'; 
     }
 }
 
@@ -199,15 +159,22 @@ function openSearchBar(){
 
 document.querySelector("#search-bar-button").addEventListener("click", async () => {
     try {
-        let searchBar = document.querySelector('.search-bar');
-        let blackBackground = document.querySelector('.black-back-background');
-        let destination = document.querySelector("#searchInput").value;
-        let response = await renderSearchingLocation(destination);
+        const searchBar = document.querySelector('.search-bar');
+        const blackBackground = document.querySelector('.black-back-background');
+        const destination = document.querySelector("#searchInput").value;
+        const responseArray = await getSearchingLocation(destination);
+        const destinationPosition = {
+            "lat" : responseArray[0].location.lat(),
+            "lng" : responseArray[0].location.lng()
+        }
+
+        await displayMarker(null, responseArray);
         map.setZoom(15);
         if (blackBackground) {
             document.body.removeChild(blackBackground);
             searchBar.style.display = 'none';
         }
+        await fetchParkingLotData(destinationPosition);
     } catch(error) {
         console.error(error);
         const alertMessage = '您輸入的地點不存在';

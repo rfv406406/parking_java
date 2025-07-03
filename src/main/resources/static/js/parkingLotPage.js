@@ -1,5 +1,5 @@
 let memberParkingLotDataMap = new Map();
-// ------------------------------------------------------------------------------------------------
+
 document.querySelector('#parking-lot-information-page-edit-button').addEventListener('click', () => {
     document.querySelector('#parking-lot-information-container-storage-button').textContent = "編輯";
     document.querySelector('#parking-lot-storage-success-message').textContent = '';
@@ -9,7 +9,6 @@ document.querySelector('#parking-lot-page-increase').addEventListener('click', (
     createSquareInput();
     document.querySelector('#parking-lot-information-container-storage-button').textContent = "儲存";
 });
-// ------------------------------------------------------------------------------------------------
 //新增車位輸入框
 let inputCount = 0;
 const addButton = document.querySelector('#add-input-car-space-container-button');
@@ -30,13 +29,16 @@ function createSquareInput(parkingSquareId = null) {
     labelNumber.textContent = `*車位編號${inputCount}：`;
     // 建立車位編號的 input
     const inputNumber = document.createElement('input');
-    inputNumber.type = 'text';
+    inputNumber.type = 'number';
     if (parkingSquareId != null) {
         inputNumber.setAttribute("parkingSquareId", parkingSquareId);
     }
+    inputNumber.id = `parking-lot-number-${inputCount}`;
     inputNumber.name = `parkingSquareNumber`;
     inputNumber.classList.add('text');
     inputNumber.placeholder = '請輸入車牌編號';
+    inputNumber.setAttribute('inputmode', 'numeric');
+    inputNumber.setAttribute('oninput', 'this.value = this.value.replace(/\\D/g, "")');
     // 將 label 與 input 加入車位編號的容器
     newInputBoxNumber.appendChild(labelNumber);
     newInputBoxNumber.appendChild(inputNumber);
@@ -104,15 +106,34 @@ parkingLotContainer.addEventListener('click', async (event) => {
 });
 // 匯入停車場資訊
 document.querySelector('#parking-lot-information-container-storage-button').addEventListener('click', async () => {
-    let buttonText = document.querySelector('#parking-lot-information-container-storage-button').textContent;
-    let formData = packingData(); 
-    if (!formData) {
+    try {
+        const buttonText = document.querySelector('#parking-lot-information-container-storage-button').textContent;
+        const formData = packingData(); 
+        if (!formData) {
+            const parkingLotStorageSuccessMessage = document.querySelector('#parking-lot-storage-success-message');
+            parkingLotStorageSuccessMessage.textContent = '*號欄位為必填項目';
+            parkingLotStorageSuccessMessage.style.color = "red";
+            return null; 
+        }
+        await passParkingLotDataToDB(buttonText, formData); 
+    } catch(error) {
         const parkingLotStorageSuccessMessage = document.querySelector('#parking-lot-storage-success-message');
-        parkingLotStorageSuccessMessage.textContent = '*號欄位為必填項目';
-        parkingLotStorageSuccessMessage.style.color = "red";
-        return null; 
+        
+        if (error.message.includes("gps not found")) {
+            parkingLotStorageSuccessMessage.style.color = "red";  
+            parkingLotStorageSuccessMessage.textContent = '地址無效或不位於台灣，請重新確認';
+        } else if (error.message.includes("ParkingLot is using")) {
+            const errorMessage = '停車場目前正在使用中，請勿修改內容資訊。';
+            displayAlertMessage(errorMessage);
+        } else if (error.message.includes("data type is not number")) {
+            parkingLotStorageSuccessMessage.textContent = '輸入格式錯誤! 價格、車長寬、車位編號等請輸入數字。';
+            parkingLotStorageSuccessMessage.style.color = "red";
+        } else if (error.message.includes("img size too much")) {
+            parkingLotStorageSuccessMessage.textContent = '總圖片大小物超過20 MB!';
+            parkingLotStorageSuccessMessage.style.color = "red";
+        }
+        handleError(error);
     }
-    await passParkingLotDataToDB(buttonText, formData); 
 });
 
 function packingData(){
@@ -125,17 +146,26 @@ function packingData(){
     let openingTime = document.querySelector('#parking-lot-opening-time-am-input').value;
     let closingTime = document.querySelector('#parking-lot-closing-time-pm-input').value;
     let spaceInOut = document.querySelector('#parking-lot-in-out-input').value;
-    let price = document.querySelector('#parking-lot-price-input').value;
-    let carWidth = document.querySelector('#parking-lot-width-input').value;
-    let carHeight = document.querySelector('#parking-lot-height-input').value;
+    let price = document.querySelector('#parking-lot-price-input').valueAsNumber;
+    let carWidth = document.querySelector('#parking-lot-width-input').valueAsNumber;
+    let carHeight = document.querySelector('#parking-lot-height-input').valueAsNumber;
     let imgArray = [];
     let img = document.querySelector('#parking-lot-image-input').files
+    let imgSize = 0;
     for (let i = 0; i < img.length; i++) {
-        imgArray.push(img[i]);
+        imgArray.push(img[i]);   
+        imgSize += img[i].size;
+        if (imgSize > 2* 10 * 1024 * 1024) {
+            throw new Error("img size too much");
+        }     
     }
 
     if (!name || !address || imgArray.length === 0 || !openingTime || !closingTime || !price || !carWidth || !carHeight) {
         return null;
+    }
+
+    if (typeof(price) !== "number" || typeof(carWidth) !== "number" || typeof(carHeight) !== "number") {
+        throw new Error("data type is not number");
     }
 
     formData.append('parkingLotId', parkingLotId);
@@ -152,17 +182,18 @@ function packingData(){
 
     let inputCarSpaceContainer = document.querySelector('#input-car-space-container');
     let isEmptyInputFound = false;
-    let textInputs = inputCarSpaceContainer.querySelectorAll('input[type="text"]');
+    let textInputs = inputCarSpaceContainer.querySelectorAll('input[type="number"]');
     let carSpaceNumberArray = [];
     textInputs.forEach(input => {
         if (input.value.trim() === "") {
-            isEmptyInputFound = true; // 空值
+            isEmptyInputFound = true; 
         }
         let carSpaceNumber = {
-            "id": input.getAttribute("parkingSquareId") ? input.getAttribute("parkingSquareId"):null,
+            "id": input.getAttribute("parkingSquareId") ? input.getAttribute("parkingSquareId") : null,
             "name": input.name,
-            "value": input.value
+            "value": input.valueAsNumber
         }
+
         carSpaceNumberArray.push(carSpaceNumber);
     });
     carSpaceNumberArray.forEach((item, i) => {
@@ -184,32 +215,20 @@ function packingData(){
 async function passParkingLotDataToDB(buttonText, formData){
     const token = tokenChecking();
     const parkingLotStorageSuccessMessage = document.querySelector('#parking-lot-storage-success-message');
-    try{
-        if (buttonText === '儲存') {
-            let response = await fetchAPI("/api/parkingLot", token, "POST", formData);
-            const data = await handleResponse(response);  
-            parkingLotStorageSuccessMessage.style.color = "green";  
-            parkingLotStorageSuccessMessage.textContent = '儲存成功!';
-        } 
-        if (buttonText === '編輯') {
-            let response = await fetchAPI(`/api/parkingLot/${formData.get('parkingLotId')}`, token, "PUT", formData);
-            const data = await handleResponse(response);
-            parkingLotStorageSuccessMessage.style.color = "green";  
-            parkingLotStorageSuccessMessage.textContent = '編輯成功!';
-        }
-
-        setTimeout(() => (location.reload()), 1000)
-
-    }catch(error){
-        if (error.message.includes("gps not found")) {
-            parkingLotStorageSuccessMessage.style.color = "red";  
-            parkingLotStorageSuccessMessage.textContent = '地址無效或不位於台灣，請重新確認';
-        } else if (error.message.includes("ParkingLot is using")) {
-            const errorMessage = '停車場目前正在使用中，請勿修改相關內容。';
-            displayAlertMessage(errorMessage);
-        }
-        handleError(error);
+    if (buttonText === '儲存') {
+        let response = await fetchAPI("/api/parkingLot", token, "POST", formData);
+        const data = await handleResponse(response);  
+        parkingLotStorageSuccessMessage.style.color = "green";  
+        parkingLotStorageSuccessMessage.textContent = '儲存成功!';
+    } 
+    if (buttonText === '編輯') {
+        let response = await fetchAPI(`/api/parkingLot/${formData.get('parkingLotId')}`, token, "PUT", formData);
+        const data = await handleResponse(response);
+        parkingLotStorageSuccessMessage.style.color = "green";  
+        parkingLotStorageSuccessMessage.textContent = '編輯成功!';
     }
+
+    setTimeout(() => (location.reload()), 1000)
 }
 
 getMemberParkingLotData();
@@ -217,7 +236,8 @@ getMemberParkingLotData();
 async function getMemberParkingLotData(){
     try{
         const token = tokenChecking();
-        const response = await fetchAPI("/api/parkingLot", token, 'GET')
+        const payload = await getPayload(token);
+        const response = await getParkingLotMap(null, null, null, payload.id);
         const data = await handleResponse(response);
         memberParkingLotDataMap = data;
         displayParkingLotDiv(memberParkingLotDataMap);
@@ -317,7 +337,6 @@ function createParkingLotDiv(container, memberParkingLotData) {
 }
 
 function fillParkingLotForm(parkingLotData) {
-    // 更新表格中的數據
     document.querySelector('#parking-lot-id').textContent = parkingLotData.parkingLotId || '無';
     document.querySelector('#parking-lot-name').textContent = parkingLotData.name || '無';
     document.querySelector('#parking-lot-address').textContent = parkingLotData.address || '無';

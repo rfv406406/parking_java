@@ -1,0 +1,2205 @@
+{
+  "UpdateTime": "2023-01-17T11:29:37+08:00",
+  "UpdateInterval": 14400,
+  "AuthorityCode": "HSQ",
+  "VersionID": 2,
+  "CarParks": [
+    {
+      "CarParkID": "HSC029",
+      "CarParkName": {
+        "Zh_tw": "湖口鄉王爺壟停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "HSQ46806205",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        4
+      ],
+      "Telephone": "03-5518101",
+      "CarParkPosition": {
+        "PositionLat": 24.894060134887695,
+        "PositionLon": 121.04276275634766
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣湖口鄉達生五路313號",
+      "FareDescription": "免費",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 1,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC016",
+      "CarParkName": {
+        "Zh_tw": "成壠停3停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        4
+      ],
+      "Telephone": "03-5515919#313",
+      "EmergencyPhone": "03-5515919#313",
+      "CarParkPosition": {
+        "PositionLat": 24.836339950561523,
+        "PositionLon": 121.02478790283203
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市水瀧3街93巷2號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "免費停車",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC020",
+      "CarParkName": {
+        "Zh_tw": "遠東百貨竹北店停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第160號",
+      "OperatorID": "HSQ42571044",
+      "Description": "地下停車場（身障及婦幼車格各14格）",
+      "CarParkType": 3,
+      "ParkingGuideType": 2,
+      "ParkingTypes": [
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        5,
+        11,
+        20,
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.823070526123047,
+        "PositionLon": 121.02471923828125
+      },
+      "Email": "10014987@hchg.gov.tw",
+      "Address": "新竹縣竹北市勝利二路2號",
+      "FareDescription": "每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 1,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "LandMark": "竹北大遠百",
+      "BuildingName": "竹北大遠百",
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC003",
+      "CarParkName": {
+        "Zh_tw": "停7光明停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第021-7號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        18,
+        20
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.822540283203125,
+        "PositionLon": 121.01476287841797
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市光明九路5號",
+      "FareDescription": "每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 1,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC004",
+      "CarParkName": {
+        "Zh_tw": "竹北市縣治停車場(綜合商業大樓)"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第157號",
+      "OperatorID": "HSQ86711789",
+      "Description": "停車場綜合商業大樓",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3
+      ],
+      "ParkingSiteTypes": [
+        4,
+        5,
+        19
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.82636070251465,
+        "PositionLon": 121.00917053222656
+      },
+      "Email": "10014987@hchg.gov.tw",
+      "Address": "新竹縣竹北市光明六路89號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareURL": "http://www.parchere.com/page_search01.html#",
+      "FareDescription": "每小時20元",
+      "SpecialOfferDescription": "家樂福消費免費2小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC032",
+      "CarParkName": {
+        "Zh_tw": "新瓦屋客家文化保存區附設停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第059-1號",
+      "OperatorID": "HSQ33029464",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        8
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-26550818",
+      "EmergencyPhone": "02-26550818",
+      "CarParkPosition": {
+        "PositionLat": 24.811370849609375,
+        "PositionLon": 121.0263671875
+      },
+      "Email": "TW017925@chem.com.tw",
+      "Address": "新竹縣竹北市文興路一段136號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "30",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC007",
+      "CarParkName": {
+        "Zh_tw": "縣華停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第032-6號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        19,
+        16
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.82636070251465,
+        "PositionLon": 121.00917053222656
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市光明六路89號",
+      "FareDescription": "每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 0,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC014",
+      "CarParkName": {
+        "Zh_tw": "成壠停1停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        4
+      ],
+      "Telephone": "5515919#313",
+      "EmergencyPhone": "5515919#313",
+      "CarParkPosition": {
+        "PositionLat": 24.83877944946289,
+        "PositionLon": 121.02477264404297
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市中山六街90號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "無",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC018",
+      "CarParkName": {
+        "Zh_tw": "泰和停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第081-1號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.847700119018555,
+        "PositionLon": 120.99720001220703
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市新工二路1號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC011",
+      "CarParkName": {
+        "Zh_tw": "停16福興停車場(台科大福興路)"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第070-2號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.825450897216797,
+        "PositionLon": 121.00708770751953
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市福興路790號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC012",
+      "CarParkName": {
+        "Zh_tw": "嘉德停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第060-2號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.820390701293945,
+        "PositionLon": 121.01394653320312
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市嘉德路122號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC017",
+      "CarParkName": {
+        "Zh_tw": "斗星停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第061-3號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.828609466552734,
+        "PositionLon": 121.00586700439453
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市光明八街20號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC010",
+      "CarParkName": {
+        "Zh_tw": "自強七街立體停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第168號",
+      "OperatorID": "HSQ54993414",
+      "Description": "立體式停車場（汽車596格，機車280格）",
+      "CarParkType": 2,
+      "ParkingGuideType": 2,
+      "ParkingTypes": [
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        5,
+        9
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "Telephone": "02-22461708",
+      "CarParkPosition": {
+        "PositionLat": 24.819520950317383,
+        "PositionLon": 121.0261001586914
+      },
+      "Email": "sales@pss-group.com",
+      "Address": "新竹縣竹北市自強七街33號",
+      "FareURL": "https://www.cityparking888.com/parking.php?country=1&city=64&area=287&q=",
+      "FareDescription": "小型車臨時停車收費： 全日計時：每小時30元，當日最高收費180元  機車臨時停車收費： 平日計時：每小時10元，當日最高收費30元 假日計時：每小時10元，無上限",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC019",
+      "CarParkName": {
+        "Zh_tw": "文興停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第147號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.812599182128906,
+        "PositionLon": 121.02397918701172
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市文興路一段16號",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC028",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停9停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第127號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.811559677124023,
+        "PositionLon": 121.03578186035156
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市嘉豐九路10號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC035",
+      "CarParkName": {
+        "Zh_tw": "嘉豐二街路外停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第149號",
+      "OperatorID": "HSQ84136348",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-24551299",
+      "EmergencyPhone": "02-24551299",
+      "CarParkPosition": {
+        "PositionLat": 24.809370040893555,
+        "PositionLon": 121.02391815185547
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣竹北市六家六街118號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/",
+      "FareURL": "https://hcpark.hchg.gov.tw/web/",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "VehicleRestriction": "只允許停放小型車",
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC027",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停6停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第048-4號",
+      "OperatorID": "HSQ90371143",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "03-6218228",
+      "EmergencyPhone": "03-6218228",
+      "CarParkPosition": {
+        "PositionLat": 24.808719635009766,
+        "PositionLon": 121.0353012084961
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣竹北市嘉豐十一路一段106號",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "ZD0001",
+      "CarParkName": {
+        "Zh_tw": "竹東鎮信義立體停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "HSQ86711789",
+      "Description": "立體式(地上2~5層、RF)",
+      "CarParkType": 2,
+      "ParkingGuideType": 2,
+      "ParkingTypes": [],
+      "ParkingSiteTypes": [
+        22
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "03 657 3700",
+      "CarParkPosition": {
+        "PositionLat": 24.738510131835938,
+        "PositionLon": 121.090087890625
+      },
+      "Email": "a0921869178@gmail.com",
+      "Address": "新竹縣竹東鎮信義路188號",
+      "FareDescription": "20/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC033",
+      "CarParkName": {
+        "Zh_tw": "停18停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第081-1號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "03-5539039",
+      "EmergencyPhone": "03-5539039",
+      "CarParkPosition": {
+        "PositionLat": 24.815479278564453,
+        "PositionLon": 121.01937103271484
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣莊敬南路188號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 1,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC001",
+      "CarParkName": {
+        "Zh_tw": "竹北市莊敬二街公有停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第152號",
+      "OperatorID": "HSQ42571044",
+      "Description": "大遠百公有停車場",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        23
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "Telephone": "(03)5518101",
+      "CarParkPosition": {
+        "PositionLat": 24.822040557861328,
+        "PositionLon": 121.02403259277344
+      },
+      "Email": "10014987@hchg.gvo.tw",
+      "Address": "新竹縣竹北市莊敬二街11號",
+      "FareDescription": "20元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "ZD0002",
+      "CarParkName": {
+        "Zh_tw": "竹東二重停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第117號",
+      "OperatorID": "HSQ86711789",
+      "Description": "小型一般車位34格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        1
+      ],
+      "ParkingSiteTypes": [
+        11
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "036573700",
+      "CarParkPosition": {
+        "PositionLat": 24.76905059814453,
+        "PositionLon": 121.05785369873047
+      },
+      "Email": "a0921869178@gamil.com",
+      "Address": "新竹縣竹東鎮光明路126巷",
+      "FareDescription": "20/時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC021",
+      "CarParkName": {
+        "Zh_tw": "停15停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第043-3號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        5
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.832229614257812,
+        "PositionLon": 121.00879669189453
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市光明一路315號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC009",
+      "CarParkName": {
+        "Zh_tw": "停5成功停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第019-7號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        5,
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.81831932067871,
+        "PositionLon": 121.02633666992188
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市成功三路163號",
+      "FareDescription": "每小時收費20元，第一小時後每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "ZD0005",
+      "CarParkName": {
+        "Zh_tw": "龍鳳停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第118號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面小客車",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        254
+      ],
+      "ParkingSiteTypes": [
+        20
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "Telephone": "036573700",
+      "CarParkPosition": {
+        "PositionLat": 24.729890823364258,
+        "PositionLon": 121.09234619140625
+      },
+      "Email": "a0921869178@gmail.com",
+      "Address": "新竹縣竹東鎮中正路15號",
+      "FareDescription": "20/時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC025",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停4停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第125號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.802900314331055,
+        "PositionLon": 121.03719329833984
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市高鐵二路188號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC013",
+      "CarParkName": {
+        "Zh_tw": "竹仁停十三停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第144號",
+      "OperatorID": "HSQ86711789",
+      "Description": "立體停車場",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        22
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.835250854492188,
+        "PositionLon": 121.01177215576172
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市中正東路321號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC005",
+      "CarParkName": {
+        "Zh_tw": "光明商圈停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第169號",
+      "OperatorID": "HSQ33029464",
+      "Description": "地下停車場",
+      "CarParkType": 3,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23,
+        4
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-26550818",
+      "EmergencyPhone": "0926-315903",
+      "CarParkPosition": {
+        "PositionLat": 24.8305606842041,
+        "PositionLon": 121.01595306396484
+      },
+      "Email": "TW018326@chem.com.tw",
+      "Address": "新竹縣竹北市光明一路197號",
+      "WebURL": "https://www.dodohome.com.tw/p10_contact.aspx",
+      "FareURL": "https://hcpark.hchg.gov.tw/web/",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC008",
+      "CarParkName": {
+        "Zh_tw": "停4勝利停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第018-7號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        20,
+        15
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.821950912475586,
+        "PositionLon": 121.02915954589844
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市勝利二路169號",
+      "FareDescription": "計時:每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "CL0001",
+      "CarParkName": {
+        "Zh_tw": "芎林鄉停1路外停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第050-04號",
+      "OperatorID": "HSQ90371143",
+      "Geometry": "",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        5
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "03-6218228",
+      "EmergencyPhone": "03-6218228",
+      "CarParkPosition": {
+        "PositionLat": 24.777109146118164,
+        "PositionLon": 121.07798767089844
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣芎林鄉文山路520號",
+      "FareURL": "https://hcpark.hchg.gov.tw/web/",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "SpecialOfferDescription": "",
+      "IsFreeParkingOutOfHours": 1,
+      "VehicleRestriction": "只允許小型車停放",
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 255,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC036",
+      "CarParkName": {
+        "Zh_tw": "勝利十一街路外停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第150號",
+      "OperatorID": "HSQ84136348",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23,
+        20
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-24551299",
+      "EmergencyPhone": "02-24551299",
+      "CarParkPosition": {
+        "PositionLat": 24.827600479125977,
+        "PositionLon": 121.02760314941406
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣竹北市勝利十一路65號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 1,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC026",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停5停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第126號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.801959991455078,
+        "PositionLon": 121.04216766357422
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市隘口三街231號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC024",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停3停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第124號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.808330535888672,
+        "PositionLon": 121.02938842773438
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市嘉政二街42號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC015",
+      "CarParkName": {
+        "Zh_tw": "成壠停2停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        4
+      ],
+      "Telephone": "03-5515919#313",
+      "EmergencyPhone": "03-5515919#313",
+      "CarParkPosition": {
+        "PositionLat": 24.837860107421875,
+        "PositionLon": 121.02471160888672
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市中山五街96號",
+      "FareDescription": "免費停車",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC002",
+      "CarParkName": {
+        "Zh_tw": "公2停5地下停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第039-5號",
+      "OperatorID": "HSQ86711789",
+      "Description": "地下停車場共456格汽車格",
+      "CarParkType": 3,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3
+      ],
+      "ParkingSiteTypes": [
+        4
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.831140518188477,
+        "PositionLon": 121.01171112060547
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市光明一路408號",
+      "FareURL": "https://www.chupei.gov.tw/iframsoe_contain.php?menu=856&typeid=881&typeid2=906&news_id=142",
+      "FareDescription": "每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 0,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC030",
+      "CarParkName": {
+        "Zh_tw": "湖口工業區仁樂路停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第056-3號",
+      "OperatorID": "HSQ24450981",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        23
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "0987-932555",
+      "EmergencyPhone": "0987-932555",
+      "CarParkPosition": {
+        "PositionLat": 24.8714599609375,
+        "PositionLon": 121.01309967041016
+      },
+      "Email": "10009466@hchg.gov.tw",
+      "Address": "新竹縣湖口鄉民富街26號",
+      "FareURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC022",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停1停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第122號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.812450408935547,
+        "PositionLon": 121.03373718261719
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市復興一街242號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC023",
+      "CarParkName": {
+        "Zh_tw": "高鐵特區停2停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第123號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255,
+        4
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-25573722",
+      "EmergencyPhone": "02-25573722",
+      "CarParkPosition": {
+        "PositionLat": 24.810340881347656,
+        "PositionLon": 121.03257751464844
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市復興三路一段228號",
+      "WebURL": "https://hcpark.hchg.gov.tw/web",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 1,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 0,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC034",
+      "CarParkName": {
+        "Zh_tw": "嘟嘟博愛站停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第165號",
+      "OperatorID": "HSQ33029464",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "Telephone": "02-26550818",
+      "EmergencyPhone": "02-26550818",
+      "CarParkPosition": {
+        "PositionLat": 24.8352108001709,
+        "PositionLon": 121.00773620605469
+      },
+      "Email": "TW019453@chem.com.tw",
+      "Address": "新竹縣竹北市博愛街321號",
+      "WebURL": "https://www.dodohome.com.tw/index.aspx",
+      "FareURL": "https://hcpark.hchg.gov.tw/web/Parking",
+      "FareDescription": "第一小時20元，逾1小時以半小時計費，每半小時10元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    },
+    {
+      "CarParkID": "HSC006",
+      "CarParkName": {
+        "Zh_tw": "東元醫院停車場(廣停13)"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "竹縣停場登字第012-8號",
+      "OperatorID": "HSQ86711789",
+      "Description": "平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 24.823930740356445,
+        "PositionLon": 121.01325988769531
+      },
+      "Email": "planner@secom.tw",
+      "Address": "新竹縣竹北市縣政三街29號",
+      "FareDescription": "每小時20元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "HsinchuCounty",
+      "CityCode": "HSQ"
+    }
+  ]
+}

@@ -23,6 +23,8 @@ async function signupSubmit(event) {
     const signupAccount = document.querySelector("input[name=account-signup]").value;
     const signupEmail = document.querySelector("input[name=e-mail]").value;
     const signupPassword = document.querySelector("input[name=password-signup]").value;
+    const signupAlert = document.querySelector("#signup-alert");
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     const signupData = {
         "account": signupAccount,
@@ -31,19 +33,26 @@ async function signupSubmit(event) {
     };
     
     if (!signupAccount || !signupEmail || !signupPassword) {
-        let signupAlert = document.querySelector("#signup-alert");
         signupAlert.textContent = "請輸入完整資訊"
         signupAlert.style.color = "red";
         return null;
-    }
-
-    try{
-        const response = await fetchAPI("/api/member", null, "POST", signupData);
-        const data = await handleResponse(response);
-        displaySignSystemResponse(data, null);
-    }catch(error){
-        handleError(error);
-        displaySignSystemResponse(null, error);
+    } else if (!passwordRegex.test(signupPassword)) {
+        signupAlert.textContent = "密碼格式不正確"
+        signupAlert.style.color = "red";
+        return null;
+    } else if (!signupEmail.includes('@')) {
+        signupAlert.textContent = "Email格式不正確"
+        signupAlert.style.color = "red";
+        return null;
+    } else {
+        try{
+            const response = await fetchAPI("/api/member", null, "POST", signupData);
+            const data = await handleResponse(response);
+            displaySignSystemResponse(data, null);
+        }catch(error){
+            handleError(error);
+            displaySignSystemResponse(null, error);
+        }
     }
 }
 
@@ -87,7 +96,6 @@ async function getMemberBalanceStatus() {
 }
 
 async function fetchAPI(api, token, method, data = null) {
-    //credentials cookie設置
     let request = {
         "headers":{},
         "method":method,
@@ -142,7 +150,6 @@ function handleError(error) {
     console.error('Stack trace: ', error.stack);
 }
 
-//後端註冊及登入回應處理
 async function displaySignSystemResponse(data, error) {
     let signupAlert = document.querySelector("#signup-alert");
     let signinAlert = document.querySelector("#signin-alert");
@@ -219,7 +226,7 @@ async function init(){
             parkingPageButtonList();
             window.location.hash = "";  
         }
-        webSocketConnect();
+        await webSocketConnect();
     }catch(error){
         handleError(error);
     }
@@ -254,15 +261,16 @@ function tokenChecking() {
 
 async function getPayload(token) {
     const userAccountData = await fetchAPI("/api/member/auth", token, 'GET');
-    let payload = await handleResponse(userAccountData);
+    const payload = await handleResponse(userAccountData);
     return payload;
 }
 
 //登出
 function logout() {
     localStorage.removeItem('token');
-    if(window.location.pathname !== '/') {
-        window.location.href = '/'; 
+    unsubscribeAll();
+    if(window.location.pathname !== '/index') {
+        window.location.href = '/index'; 
     } else {
         location.reload(); 
     }
@@ -289,4 +297,27 @@ function displayAlertMessage(alertMessage) {
     toggleClass('#alert-page-black-back', 'alert-page-black-back-toggled');
 
     return alertButton;
+}
+
+async function getParkingLotMap(lng, lat, parkingLotParameters, memberId) {
+    const params = new URLSearchParams();
+    if (memberId != null) params.append('memberId', memberId);
+    if (lng != null)      params.append('lng', lng);
+    if (lat != null)      params.append('lat', lat);
+    if (parkingLotParameters) {
+        params.append('distance', parkingLotParameters["distance"]);
+        params.append('price', parkingLotParameters["price"]);
+        params.append('carWidth', parkingLotParameters["carWidth"]);
+        params.append('carHeight', parkingLotParameters["carHeight"]);
+    } else {
+        params.append('distance', 10000);
+        params.append('price', 1000);
+        params.append('carWidth', 6);
+        params.append('carHeight', 6);
+    }
+
+    const url = `/api/parkingLot?${params.toString()}`;
+    const response = await fetchAPI(url, null, 'GET');
+    
+    return response;
 }

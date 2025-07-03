@@ -119,3 +119,55 @@
     background-color: #f8f8f8; 
     cursor: pointer;
 }
+
+.parking-lot-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0px 5px;
+    border-radius: 7px;
+    position: relative;
+}
+
+.parking-lot-tag-foot {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid;
+}
+
+.priceTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    min-width: 40px;
+    height: 80%;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.63);
+    text-overflow: ellipsis;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+.parking-float {
+  animation: float 2s infinite ease-in-out;
+}
+.parking-float--paused {
+  animation: none;
+}

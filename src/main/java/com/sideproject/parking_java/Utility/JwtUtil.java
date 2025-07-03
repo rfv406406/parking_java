@@ -21,7 +21,6 @@ public class JwtUtil {
     private static final String SECRET_KEY = "ewrhkerhwekrh28323623423hkjsdhfksdlhfkj234jh23k4hkjsdhfksjdfhlasd123124dsfsdgz";
 
     public static String generateToken(MemberDetails member) {
-        // 使用 hmacShaKeyFor 生成 Key 物件
         Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
         Date now = new Date();
         Date exp = new Date(now.getTime() + EWPIRATION_TIME);

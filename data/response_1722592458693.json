@@ -1,0 +1,2385 @@
+{
+  "UpdateTime": "2024-08-02T13:25:57+08:00",
+  "UpdateInterval": 14400,
+  "SrcUpdateTime": "2024-08-02T13:25:55+08:00",
+  "SrcUpdateInterval": 86400,
+  "AuthorityCode": "KEE",
+  "VersionID": 3553,
+  "CarParks": [
+    {
+      "CarParkID": "KEE11104",
+      "CarParkName": {
+        "Zh_tw": "中正區行政大樓地下停車場",
+        "En": "Zhongzheng Dist. Administration Building Parking"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "107026",
+      "OperatorID": "82202975",
+      "Description": "中正區行政大樓地下停車場",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4
+      ],
+      "ChargeTypes": [
+        4
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.140859603881836,
+        "PositionLon": 121.75900268554688
+      },
+      "Address": "中正路236號B1",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "每小時30元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12402",
+      "CarParkName": {
+        "Zh_tw": "西三停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "00277104",
+      "Description": "平面式小型車464格(含無障礙車位20格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        2
+      ],
+      "ParkingSiteTypes": [
+        3
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.136289596557617,
+        "PositionLon": 121.74156188964844
+      },
+      "Address": "基隆市仁愛區港西街16號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日30元/小時，當日最高150元；假日40元/小時，當日最高200元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 2,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11102",
+      "CarParkName": {
+        "Zh_tw": "正濱國小收費立體停車場",
+        "En": "Zhengbin Primary School Parking Garage"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "107027",
+      "OperatorID": "82197305",
+      "Description": "正濱國小收費立體停車場",
+      "CarParkType": 6,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4,
+        2
+      ],
+      "ParkingSiteTypes": [
+        2,
+        4
+      ],
+      "ChargeTypes": [
+        4,
+        2
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.146289825439453,
+        "PositionLon": 121.77008819580078
+      },
+      "Address": "基隆市祥豐街216號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "小型車每小時收費30元，半小時收費15元，月租收費3,000元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11303",
+      "CarParkName": {
+        "Zh_tw": "南榮公墓殯儀館停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "92571049",
+      "Description": "計時收費 : 一小時30元 , 月租2500元",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "EmergencyPhone": "0224281210",
+      "CarParkPosition": {
+        "PositionLat": 25.11277961730957,
+        "PositionLon": 121.74063110351562
+      },
+      "Address": "基隆市仁愛區南榮路509巷2號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時收費 : 一小時30元 , 月租2500元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "LandMark": "0",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12705",
+      "CarParkName": {
+        "Zh_tw": "光明停一停車場",
+        "En": "Guangming 1st Parking Lot"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "基市停車登字第109012號",
+      "OperatorID": "80682490",
+      "Description": "平面式小型車 56 格(含身心障礙停車位2格 婦幼專用車位1格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        19,
+        20
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0900219002",
+      "CarParkPosition": {
+        "PositionLat": 25.098079681396484,
+        "PositionLon": 121.71691131591797
+      },
+      "Address": "基隆市七堵區光明路空地(七堵區行政大樓旁)",
+      "ImageURLs": [
+        ""
+      ],
+      "WebURL": "https://www.altob.com.tw/",
+      "FareDescription": "計時：30 元 月租2500元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 1,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "LandMark": "七堵區行政大樓",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12119",
+      "CarParkName": {
+        "Zh_tw": "基隆義一路停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "70369154",
+      "Description": "戶外平面停車",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        7,
+        5,
+        8,
+        21,
+        20
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.1358699798584,
+        "PositionLon": 121.74752044677734
+      },
+      "Address": "基隆市中正區義一路177號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "臨停15元/半小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12109",
+      "CarParkName": {
+        "Zh_tw": "濱海遊憩區停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式小型車60格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        2,
+        3,
+        1
+      ],
+      "ParkingSiteTypes": [
+        10,
+        8,
+        255
+      ],
+      "ChargeTypes": [
+        2
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.1364803314209,
+        "PositionLon": 121.80204010009766
+      },
+      "Address": "基隆市中正區長潭段513地號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日50元/次及假日100元/次",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12113",
+      "CarParkName": {
+        "Zh_tw": "基隆和一停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "申辦中",
+      "OperatorID": "80304384",
+      "Geometry": "???????",
+      "Description": "和一平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10,
+        20,
+        8
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.15484046936035,
+        "PositionLon": 121.76811981201172
+      },
+      "Address": "基隆市中正區和一路和平街交叉口空地",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "小型車30元/時，另提供免費機車格21格",
+      "IsFreeParkingOutOfHours": 0,
+      "VehicleRestriction": "小型車",
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE22206",
+      "CarParkName": {
+        "Zh_tw": "基隆義三路"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "28858068",
+      "Description": "平面小型車13格(含身心障礙停車位1格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        254,
+        4
+      ],
+      "ParkingSiteTypes": [
+        254,
+        20
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.130510330200195,
+        "PositionLon": 121.74694061279297
+      },
+      "Address": "基隆市信義區信二路281號旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日 40元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "LandMark": "0",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11305",
+      "CarParkName": {
+        "Zh_tw": "基隆東岸停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "93724769",
+      "Description": "地下小型車666格(含身心障礙停車位14格,婦幼停車位14格)",
+      "CarParkType": 3,
+      "ParkingGuideType": 2,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        21,
+        4
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.130409240722656,
+        "PositionLon": 121.74373626708984
+      },
+      "Address": "基隆市仁愛區仁二路236號B1-B4",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "每半小時15元不分平假日",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12111",
+      "CarParkName": {
+        "Zh_tw": "65高地停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面小型車33格",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        1,
+        2
+      ],
+      "ParkingSiteTypes": [
+        8,
+        10
+      ],
+      "ChargeTypes": [
+        2
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.14505958557129,
+        "PositionLon": 121.7985610961914
+      },
+      "Address": "基隆市中正區長潭段168-9地號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日50元/次,假日100元/次",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12117",
+      "CarParkName": {
+        "Zh_tw": "基隆社寮橋停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "80304384",
+      "Description": "戶外停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.15472984313965,
+        "PositionLon": 121.773193359375
+      },
+      "Address": "基隆市中正區正濱路116巷5弄旁空地停車場",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "臨停15元/30分",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11106",
+      "CarParkName": {
+        "Zh_tw": "海洋劇場停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式小型車297格。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        2,
+        1,
+        3
+      ],
+      "ParkingSiteTypes": [
+        8,
+        13,
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "EmergencyPhone": "02-87718502",
+      "CarParkPosition": {
+        "PositionLat": 25.140100479125977,
+        "PositionLon": 121.79791259765625
+      },
+      "Address": "基隆市中正區北寧路367號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日20元/小時，假日50元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11201",
+      "CarParkName": {
+        "Zh_tw": "信義國中停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "72852534",
+      "Description": "",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        1,
+        4
+      ],
+      "ParkingSiteTypes": [
+        4,
+        10,
+        8
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.128910064697266,
+        "PositionLon": 121.76847076416016
+      },
+      "Address": "基隆區.東信路4號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE22111",
+      "CarParkName": {
+        "Zh_tw": "非凡物業管理顧問有限公司和平島停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "82160102",
+      "Description": "非凡物業和平島停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.156129837036133,
+        "PositionLon": 121.77024841308594
+      },
+      "Address": "基隆市中正區和一路2巷內",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "收費60元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12203",
+      "CarParkName": {
+        "Zh_tw": "基隆六合停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "50885758",
+      "Description": "492格小型車停車位10格殘障車位88格大型車位",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        8,
+        1,
+        4
+      ],
+      "ParkingSiteTypes": [
+        20,
+        5,
+        3
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.127410888671875,
+        "PositionLon": 121.75824737548828
+      },
+      "Address": "基隆市信義區東明路177號旁空地",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "小型車每小時 30 元大型車每小時60元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 1,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "LandMark": "全聯福利中心",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12107",
+      "CarParkName": {
+        "Zh_tw": "區域探索館平面停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式小型車148格。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        2,
+        1,
+        3
+      ],
+      "ParkingSiteTypes": [
+        8,
+        13,
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "EmergencyPhone": "02-87718502",
+      "CarParkPosition": {
+        "PositionLat": 25.14076042175293,
+        "PositionLon": 121.79483032226562
+      },
+      "Address": "基隆市中正區北寧路367號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日20元/小時，假日50元/小時，假日單日上限250元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12103",
+      "CarParkName": {
+        "Zh_tw": "義二路停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "72882495",
+      "Description": "50格小型車格(含1格身障)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        1,
+        3
+      ],
+      "ParkingSiteTypes": [
+        4,
+        10,
+        8
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.136579513549805,
+        "PositionLon": 121.74890899658203
+      },
+      "Address": "基隆市.中正區.日新段七小段18等11筆地號及港灣段一小段24-23等10筆地號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12501",
+      "CarParkName": {
+        "Zh_tw": "鶯歌石溪停車場",
+        "En": "Yingge-Shixi Parking Lot"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "基市停車登字第109009號",
+      "OperatorID": "80682490",
+      "Description": "平面式小型車 76 格(含身心障礙停車位2格 婦幼專用車位2格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        20
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0900219002",
+      "CarParkPosition": {
+        "PositionLat": 25.12932014465332,
+        "PositionLon": 121.72029876708984
+      },
+      "Address": "基隆市安樂區麥金路與安和二街交叉口",
+      "ImageURLs": [
+        ""
+      ],
+      "WebURL": "https://www.altob.com.tw/",
+      "FareDescription": "計時：30 元 月租2500元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 1,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11101",
+      "CarParkName": {
+        "Zh_tw": "信二停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "92794317",
+      "Description": "512格小型車格(含16格身障、11格婦幼)",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        1,
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        8,
+        10,
+        4
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.13089942932129,
+        "PositionLon": 121.746337890625
+      },
+      "Address": "基隆市中正區信二路299號4-13樓(基隆市中正區忠義段一小段25、段25-1地號)",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12204",
+      "CarParkName": {
+        "Zh_tw": "基隆醫院停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "70369154",
+      "Description": "戶外平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        4
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.130739212036133,
+        "PositionLon": 121.74845886230469
+      },
+      "Address": "基隆市信義區信二路268號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "小型車30元/時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11703",
+      "CarParkName": {
+        "Zh_tw": "基隆七堵停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "50885758",
+      "Description": "293(含身障6)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        2
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.095239639282227,
+        "PositionLon": 121.71395111083984
+      },
+      "Address": "基隆市七堵區光明路122號對面空地",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "緩衝15分鐘無須繳費，平日.半小時15元當日最高100元\n                假日.半小時15元當日最高150元，夜間.半小時5元(19-04)",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12602",
+      "CarParkName": {
+        "Zh_tw": "源遠路第二停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "72884374",
+      "Description": "計時：30 元/時。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4,
+        1,
+        3
+      ],
+      "ParkingSiteTypes": [
+        10,
+        8,
+        4
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.099260330200195,
+        "PositionLon": 121.7529067993164
+      },
+      "Address": "基隆市.暖暖區.源遠路249巷189號對面空地",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12502",
+      "CarParkName": {
+        "Zh_tw": "基隆安和停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "28726861",
+      "Description": "平面小型車44格(含身心障礙停車位1格,婦幼停車位1格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        254
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.12133026123047,
+        "PositionLon": 121.7237319946289
+      },
+      "Address": "基隆市安樂區安國段23-2地號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "每半小時15元不分平假日",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE22112",
+      "CarParkName": {
+        "Zh_tw": "非凡物業管理顧問有限公司八尺門停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "申辦中",
+      "OperatorID": "92762321",
+      "Geometry": "????????",
+      "Description": "八尺門平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.159130096435547,
+        "PositionLon": 121.77345275878906
+      },
+      "Address": "基隆市中正區和一路2巷11之28號東南側",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "收費60元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "VehicleRestriction": "小型車",
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12601",
+      "CarParkName": {
+        "Zh_tw": "源遠路停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "72882930",
+      "Description": "55格小型車格(含2格身障)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4,
+        1,
+        3
+      ],
+      "ParkingSiteTypes": [
+        8,
+        4,
+        10
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.10000991821289,
+        "PositionLon": 121.75450897216797
+      },
+      "Address": "基隆市.暖暖區.源遠段568.569.570.571地號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12110",
+      "CarParkName": {
+        "Zh_tw": "潮境公園停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式小客車33格。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        1,
+        2
+      ],
+      "ParkingSiteTypes": [
+        10,
+        13,
+        8
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "EmergencyPhone": "02-87718502",
+      "CarParkPosition": {
+        "PositionLat": 25.142719268798828,
+        "PositionLon": 121.80297088623047
+      },
+      "Address": "基隆市中正區北寧路369巷45號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日20元/小時，假日50元/小時，假日單日上限250元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11205",
+      "CarParkName": {
+        "Zh_tw": "中興國小停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "91669804",
+      "Description": "計時收費 : 一小時20 , 月租3000",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0224265609",
+      "CarParkPosition": {
+        "PositionLat": 25.13031005859375,
+        "PositionLon": 121.75723266601562
+      },
+      "Address": "基隆市信義區信二路40號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時收費 : 一小時20 , 月租3000",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "LandMark": "0",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12706",
+      "CarParkName": {
+        "Zh_tw": "光明停二停車場",
+        "En": "Guangming 2st Parking Lot"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "基市停車登字第109011號",
+      "OperatorID": "80682490",
+      "Description": "平面式小型車 101 格(含身心障礙停車位3格 婦幼專用車位2格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        20,
+        21
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0900219002",
+      "CarParkPosition": {
+        "PositionLat": 25.096750259399414,
+        "PositionLon": 121.71562194824219
+      },
+      "Address": "基隆市七堵區光明路與七堵地下道交叉口",
+      "ImageURLs": [
+        ""
+      ],
+      "WebURL": "https://www.altob.com.tw/",
+      "FareDescription": "計時：30 元 月租2500元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 1,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12401",
+      "CarParkName": {
+        "Zh_tw": "基隆市中和路168巷停車場",
+        "En": "Zhonghe Rd., Parking Lot"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "基市停車登字第109010號",
+      "OperatorID": "80682490",
+      "Description": "平面式小型車 49 格(含身心障礙停車位1格 婦幼專用車位1格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        20
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "EmergencyPhone": "0900219002",
+      "CarParkPosition": {
+        "PositionLat": 25.151269912719727,
+        "PositionLon": 121.7149887084961
+      },
+      "Address": "基隆市中山區中和路168巷大慶大城社區旁",
+      "ImageURLs": [
+        ""
+      ],
+      "WebURL": "https://www.altob.com.tw/",
+      "FareDescription": "計時：20 元 月租1000元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 1,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "LandMark": "大慶大城社區",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12114",
+      "CarParkName": {
+        "Zh_tw": "八斗子觀光漁港停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "02550590",
+      "Description": "計時收費 : 一小時30",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0224693606",
+      "CarParkPosition": {
+        "PositionLat": 25.144819259643555,
+        "PositionLon": 121.786376953125
+      },
+      "Address": "基隆市中正區北寧路211號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時收費 : 一小時30",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "LandMark": "0",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12108",
+      "CarParkName": {
+        "Zh_tw": "復育環保公園停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式小客車100格。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        2,
+        1
+      ],
+      "ParkingSiteTypes": [
+        13,
+        8,
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "EmergencyPhone": "02-87718502",
+      "CarParkPosition": {
+        "PositionLat": 25.145999908447266,
+        "PositionLon": 121.8048095703125
+      },
+      "Address": "基隆市中正區北寧路369巷61號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日20元/小時，假日50元/小時，假日單日上限250元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12112",
+      "CarParkName": {
+        "Zh_tw": "南區大客車停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "52492792",
+      "Description": "平面式大客車41格。",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        3,
+        1,
+        2
+      ],
+      "ParkingSiteTypes": [
+        8,
+        13,
+        10
+      ],
+      "ChargeTypes": [
+        2
+      ],
+      "EmergencyPhone": "02-87718502",
+      "CarParkPosition": {
+        "PositionLat": 25.139690399169922,
+        "PositionLon": 121.79904174804688
+      },
+      "Address": "基隆市中正區北寧路446號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日40元/次，假日60元/次",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12115",
+      "CarParkName": {
+        "Zh_tw": "八斗子漁港C區停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "02550590",
+      "Description": "計次收費 : 每日80/次 , 季租4500",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        255
+      ],
+      "ParkingSiteTypes": [
+        255
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "EmergencyPhone": "0224690552",
+      "CarParkPosition": {
+        "PositionLat": 25.144010543823242,
+        "PositionLon": 121.78819274902344
+      },
+      "Address": "基隆市中正區環港街3號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計次收費 : 每日80/次 , 季租4500",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 0,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "LandMark": "0",
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12707",
+      "CarParkName": {
+        "Zh_tw": "福六街停車場",
+        "En": "Fu 6th St., Parking Lot"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "基市停車登字第109013號",
+      "OperatorID": "80682490",
+      "Description": "平面式小型車 30 格(含身心障礙停車位1格 婦幼專用車位1格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        20
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "EmergencyPhone": "0900219002",
+      "CarParkPosition": {
+        "PositionLat": 25.085250854492188,
+        "PositionLon": 121.69927215576172
+      },
+      "Address": "基隆市七堵區福六街131號對面空地",
+      "ImageURLs": [
+        ""
+      ],
+      "WebURL": "https://www.altob.com.tw/",
+      "FareDescription": "計時：30 元 月租2500元",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 0,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 1,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12105",
+      "CarParkName": {
+        "Zh_tw": "非凡物業管理顧問有限公司和平島停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "82160102",
+      "Description": "非凡物業和平島停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.156129837036133,
+        "PositionLon": 121.77024841308594
+      },
+      "Address": "基隆市中正區和一路2巷內",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "收費60元/小時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 0,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12704",
+      "CarParkName": {
+        "Zh_tw": "崇孝街停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "72635093",
+      "Description": "210格小型車格(含5格身障)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        1,
+        3,
+        4
+      ],
+      "ParkingSiteTypes": [
+        10,
+        8,
+        4
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.09695053100586,
+        "PositionLon": 121.71044158935547
+      },
+      "Address": "基隆市.七堵區.大華段303.1034.1294地號)",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11307",
+      "CarParkName": {
+        "Zh_tw": "信義國小地下停車場"
+      },
+      "CarParkShortName": {},
+      "CarParkRegNo": "111039",
+      "OperatorID": "80304384",
+      "Geometry": "???????????",
+      "Description": "信義國小地下平面停車場",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4,
+        2
+      ],
+      "ParkingSiteTypes": [
+        4,
+        8,
+        20,
+        10
+      ],
+      "ChargeTypes": [
+        3,
+        1
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.127450942993164,
+        "PositionLon": 121.74720764160156
+      },
+      "Address": "基隆市仁愛區仁二路135號B1",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "小型車30元/時",
+      "IsFreeParkingOutOfHours": 0,
+      "VehicleRestriction": "小型車",
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 1,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 1,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE11302",
+      "CarParkName": {
+        "Zh_tw": "基隆成功站"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "33029464",
+      "Description": "小車：447(格)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        10
+      ],
+      "ChargeTypes": [
+        1
+      ],
+      "EmergencyPhone": "02-26550818",
+      "CarParkPosition": {
+        "PositionLat": 25.127389907836914,
+        "PositionLon": 121.73739624023438
+      },
+      "Address": "基隆市成功一路88號",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "平日$10/0.5H假日$15/0.5H",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 0,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE22410",
+      "CarParkName": {
+        "Zh_tw": "基隆新橫濱停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "70369154",
+      "Description": "戶外平面停車場",
+      "CarParkType": 2,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4
+      ],
+      "ParkingSiteTypes": [
+        20
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.14879035949707,
+        "PositionLon": 121.72457122802734
+      },
+      "Address": "基隆市中山區復興路221號新橫濱社區A棟建築北方空地",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "臨停20元/時",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 0,
+      "IsMotorcycle": 0,
+      "OperationType": 3,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 1,
+      "SeasonTicketAvailable": 1,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 1,
+      "OvernightPermitted": 1,
+      "TicketMachine": 1,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 1,
+      "TicketOffice": 1,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "SupervisionType": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    },
+    {
+      "CarParkID": "KEE12202",
+      "CarParkName": {
+        "Zh_tw": "基隆信義停車場"
+      },
+      "CarParkShortName": {},
+      "OperatorID": "87547338",
+      "Description": "54格小型車格(含1格身障、1格婦幼)",
+      "CarParkType": 1,
+      "ParkingGuideType": 1,
+      "ParkingTypes": [
+        4,
+        3,
+        1
+      ],
+      "ParkingSiteTypes": [
+        10,
+        4,
+        8
+      ],
+      "ChargeTypes": [
+        1,
+        3
+      ],
+      "CarParkPosition": {
+        "PositionLat": 25.129369735717773,
+        "PositionLon": 121.75169372558594
+      },
+      "Address": "基隆市.信二路.179號空地旁",
+      "ImageURLs": [
+        ""
+      ],
+      "FareDescription": "計時：30 元/時。",
+      "IsFreeParkingOutOfHours": 0,
+      "IsPublic": 1,
+      "IsMotorcycle": 0,
+      "OperationType": 1,
+      "LiveOccuppancyAvailable": 1,
+      "EVRechargingAvailable": 0,
+      "MonthlyTicketAvailable": 0,
+      "SeasonTicketAvailable": 0,
+      "ReservationAvailable": 0,
+      "WheelchairAccessible": 0,
+      "OvernightPermitted": 1,
+      "TicketMachine": 0,
+      "Toilet": 0,
+      "Restaurant": 0,
+      "GasStation": 0,
+      "Shop": 0,
+      "Gated": 1,
+      "Lighting": 1,
+      "SecureParking": 0,
+      "TicketOffice": 0,
+      "ProhibitedForAnyHazardousMaterialLoads": 0,
+      "SecurityGuard": 1,
+      "Supervision": 1,
+      "City": "Keelung",
+      "CityCode": "KEE"
+    }
+  ]
+}
