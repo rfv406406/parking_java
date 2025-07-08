@@ -1,5 +1,6 @@
 package com.sideproject.parking_java.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class CarRegisterController {
     
 
     @PostMapping("/api/car")
-    public ResponseEntity<String> postCarRegisterController(@ModelAttribute Car car) {
+    public ResponseEntity<String> postCarRegisterController(@ModelAttribute Car car) throws IOException {
         carRegisterService.postCarRegisterService(car);
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
         return response;

@@ -22,7 +22,7 @@ public class RedisSubscriber implements MessageListener {
     private NotificationService notificationService;
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     Logger logger = LoggerFactory.getLogger(RedisSubscriber.class);
 
@@ -32,9 +32,6 @@ public class RedisSubscriber implements MessageListener {
 
         Object payload = redisTemplate.getValueSerializer().deserialize(message.getBody());
         String channel = new String(message.getChannel());
-
-        // System.out.println("channel: " + channel);
-        // System.out.println("payload: " + payload);
 
         if (payload instanceof Map<?,?> map) {
             try {

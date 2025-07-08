@@ -84,11 +84,10 @@ function onChatroomReceived(chatroomMessage) {
 
 async function unreadCheck() {
     const token = tokenChecking();
-    if (!token) {
+    const chatroomArray = await getChatroomArray();
+    if (!token || !chatroomArray) {
         return null;
     }
-
-    const chatroomArray = await getChatroomArray();
     for (let i=0; i<chatroomArray.length; i++) {
         const lastReadTime = new Date(chatroomArray[i].lastRead);
         const lastReceivedMessageTime = new Date(chatroomArray[i].lastReceivedMessage);

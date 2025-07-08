@@ -1,5 +1,6 @@
 package com.sideproject.parking_java.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sideproject.parking_java.dao.ChatDao;
 import com.sideproject.parking_java.dto.ChatMessageListDto;
+import com.sideproject.parking_java.exception.DatabaseError;
 import com.sideproject.parking_java.model.ChatMessage;
 import com.sideproject.parking_java.model.ChatRoom;
 import com.sideproject.parking_java.model.MemberDetails;
@@ -48,7 +50,7 @@ public class ChatController {
     }
 
     @PostMapping("/api/chatmessage")
-    public ResponseEntity<String> postChatMessage(@ModelAttribute("chatMessage") ChatMessageListDto chatMessageList) {
+    public ResponseEntity<String> postChatMessage(@ModelAttribute("chatMessage") ChatMessageListDto chatMessageList) throws DatabaseError, IOException {
         chatService.postChatMessageService(chatMessageList.getChatMessage());
         ResponseEntity<String> response = ResponseEntity.status(HttpStatus.OK).body("OK");
 

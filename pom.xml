@@ -30,6 +30,17 @@
 		<java.version>17</java.version>
 		<lombok.version>1.18.38</lombok.version>
 	</properties>
+	<dependencyManagement>
+    <dependencies>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>bom</artifactId>
+			<version>2.31.77</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -133,6 +144,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+		<!--AWS S3-->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>s3-transfer-manager</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk.crt</groupId>
+			<artifactId>aws-crt</artifactId>
+			<version>0.38.5</version>
 		</dependency>
 	</dependencies>
 

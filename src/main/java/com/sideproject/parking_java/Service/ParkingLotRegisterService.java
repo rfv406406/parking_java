@@ -1,5 +1,6 @@
 package com.sideproject.parking_java.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sideproject.parking_java.dao.ParkingLotImagesDao;
@@ -33,6 +35,8 @@ public class ParkingLotRegisterService{
     private RedisTemplate<String, Object> redisTemplate;
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private AwsS3Service awsS3Service;
 
     public Map<String, ParkingLot> getParkingLotRegister(Integer memberId, Double lng, Double lat,  Integer distance, Integer price, Integer carWidth, Integer carHeight) {
         boolean isRedisConnected = redisService.isRedisConnected();
@@ -145,7 +149,14 @@ public class ParkingLotRegisterService{
         int parkingLotId = parkingLotRegisterDao.postParkingLotRegisterDao(parkingLot, memberId);
         parkingLot.setParkingLotId(parkingLotId);
 
-        parkingLotImagesDao.postParkinglotimagesDao(parkingLot, parkingLotId);
+        List<String> imgUrlList = new ArrayList<>();
+        for (MultipartFile img : parkingLot.getImg()) {
+            String fileName = awsS3Service.uploadFile(img);
+            String imgUrl = awsS3Service.returnUrl(fileName);
+            imgUrlList.add(imgUrl);
+        }
+        
+        parkingLotImagesDao.postParkinglotimagesDao(imgUrlList, parkingLotId);
 
         parkingLotSquareDao.postParkingLotSquareDao(parkingLot, parkingLotId);
         
@@ -197,7 +208,14 @@ public class ParkingLotRegisterService{
 
         int insertId = parkingLotRegisterDao.putParkingLotRegisterDao(parkingLot, memberId);
 
-        parkingLotImagesDao.putParkinglotimagesDao(parkingLot);
+        List<String> imgUrlList = new ArrayList<>();
+        for (MultipartFile img : parkingLot.getImg()) {
+            String fileName = awsS3Service.uploadFile(img);
+            String imgUrl = awsS3Service.returnUrl(fileName);
+            imgUrlList.add(imgUrl);
+        }
+
+        parkingLotImagesDao.putParkinglotimagesDao(parkingLot, imgUrlList);
         parkingLotSquareDao.putParkinglotsquareDao(parkingLot);
 
         if (insertId == 0) {

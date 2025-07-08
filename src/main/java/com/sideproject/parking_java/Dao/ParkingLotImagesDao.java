@@ -8,27 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.sideproject.parking_java.model.ParkingLot;
-import com.sideproject.parking_java.utility.S3Util;
 
 @Component
 public class ParkingLotImagesDao {
 
-    @Autowired NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-    @Autowired JdbcTemplate jdbcTemplate;
+    @Autowired 
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    @Autowired 
+    private JdbcTemplate jdbcTemplate;
 
-    @Autowired S3Util s3Util;
 
-    public List<Object[]> postParkinglotimagesDao(ParkingLot parkingLot, int parkingLotDataId) {
+    public List<Object[]> postParkinglotimagesDao(List<String> imgUrlList, int parkingLotDataId) {
         String sql = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (?, ?)";
         List<Object[]> batch = new ArrayList<>();
-        for (MultipartFile img : parkingLot.getImg()) {
+        for (String url : imgUrlList) {
             Object[] value = new Object[2];
-            String imgUrl = s3Util.uploadToS3(img);
             value[0] = parkingLotDataId;
-            value[1] = imgUrl;
+            value[1] = url;
             batch.add(value);  
         }
         jdbcTemplate.batchUpdate(sql, batch);
@@ -36,7 +34,7 @@ public class ParkingLotImagesDao {
         return batch;
     }
 
-    public List<Object[]> putParkinglotimagesDao(ParkingLot parkingLot) {
+    public List<Object[]> putParkinglotimagesDao(ParkingLot parkingLot, List<String> imgUrlList) {
         String sqlD = "DELETE FROM parkinglotimage WHERE parkinglot_id = :parkinglot_id";
         HashMap<String, Object> map = new HashMap<>();
         map.put("parkinglot_id", parkingLot.getParkingLotId());
@@ -45,9 +43,8 @@ public class ParkingLotImagesDao {
 
         String sqlI = "INSERT INTO parkinglotimage(parkinglot_id, image) VALUES (?, ?)";
         List<Object[]> batch = new ArrayList<>();
-		for (MultipartFile img : parkingLot.getImg()) {
+		for (String imgUrl : imgUrlList) {
             Object[] value = new Object[2];
-            String imgUrl = s3Util.uploadToS3(img);
             value[0] = parkingLotDataId;
             value[1] = imgUrl;
             batch.add(value);  

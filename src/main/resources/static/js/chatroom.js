@@ -198,7 +198,7 @@ function displayMessage(chatroomId, senderId, content, currentTime) {
         timesDiv.classList.add("receiver-time");
     }
 
-    if (typeof(content) == "string" && content.includes("d1hxt3hn1q2xo2")) {
+    if (typeof(content) == "string" && content.includes("parkingshare-bucket.s3")) {
         const img = document.createElement("img");
         message = document.createElement('div');
         message.style.overflow = "hidden";

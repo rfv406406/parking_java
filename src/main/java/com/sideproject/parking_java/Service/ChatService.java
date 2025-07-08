@@ -1,5 +1,6 @@
 package com.sideproject.parking_java.service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -15,7 +16,6 @@ import com.sideproject.parking_java.model.ChatMessage;
 import com.sideproject.parking_java.model.ChatRoom;
 import com.sideproject.parking_java.redis.RedisService;
 import com.sideproject.parking_java.utility.MemberIdUtil;
-import com.sideproject.parking_java.utility.S3Util;
 
 @Service
 @Transactional
@@ -31,7 +31,7 @@ public class ChatService {
     private RedisService redisService;
 
     @Autowired
-    private S3Util s3Util;
+    private AwsS3Service awsS3Service;
 
     public Integer postChatRoomService(ChatRoom chatRoom) throws DatabaseError {
         int memberId = MemberIdUtil.getMemberIdUtil();
@@ -76,7 +76,7 @@ public class ChatService {
         return returnedChatroomId;
     }
 
-    public void postChatMessageService(List<ChatMessage> chatMessage) throws DatabaseError {
+    public void postChatMessageService(List<ChatMessage> chatMessage) throws DatabaseError, IOException {
         int memberId = MemberIdUtil.getMemberIdUtil();
         Integer chatroomId = chatMessage.get(chatMessage.size() - 1).getChatroomId();
         String chatroomMapKey = "memberId-" + Integer.toString(memberId) + "-chatRoomMap";
@@ -87,15 +87,13 @@ public class ChatService {
 
         for (int i=0; i<chatMessage.size(); i++) {
             if (chatMessage.get(i).getImg() != null) {
-                String imgUrl = s3Util.uploadToS3(chatMessage.get(i).getImg()[0]);
+                String fileName = awsS3Service.uploadFile(chatMessage.get(i).getImg()[0]);
+                String imgUrl = awsS3Service.returnUrl(fileName);
                 chatMessage.get(i).setMessage(imgUrl);
                 chatMessage.get(i).setImg(null);
             }
         }
 
-        chatDao.postChatMessageDao(chatMessage);
-        chatDao.putChatRoomActivityTimeDao(chatroomId, chatMessage.get(chatMessage.size() - 1).getTimestamp());
-        // chatDao.postChatFileDao(chatMessage);
         if (isRedisConnected) {
             boolean hasChatRoomMap = redisTemplate.hasKey(chatroomMapKey);
             boolean hasChatMessageList = redisTemplate.hasKey(chatMessageListKey);
@@ -110,6 +108,10 @@ public class ChatService {
             if (hasRecipientChatroomMapKey) {
                 redisService.updateChatRoomMapInRedis(recipientChatroomMapKey, chatroomId, recipientId, null, null, null, null, chatMessage.get(chatMessage.size() - 1).getTimestamp());
             }
+        } else {
+            chatDao.postChatMessageDao(chatMessage);
+            chatDao.putChatRoomActivityTimeDao(chatroomId, chatMessage.get(chatMessage.size() - 1).getTimestamp());
+            // chatDao.postChatFileDao(chatMessage);
         }
     }
 

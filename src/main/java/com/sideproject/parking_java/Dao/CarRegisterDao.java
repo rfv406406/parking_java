@@ -10,15 +10,11 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.exception.InternalServerError;
 import com.sideproject.parking_java.model.Car;
 import com.sideproject.parking_java.utility.CarRowMapper;
-import com.sideproject.parking_java.utility.S3Util;
 
 @Component
 public class CarRegisterDao {
     @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
-    @Autowired
-    private S3Util s3Util;
 
     public List<Car> getCarRegisterDataDao(int memberId) {
         String sql = "SELECT car.*, GROUP_CONCAT(ci.image SEPARATOR ',') AS images FROM car " +
@@ -53,8 +49,7 @@ public class CarRegisterDao {
         namedParameterJdbcTemplate.update(sql, map);
     }
 
-    public void postInsertCarImageDao(int carId, Car car) {
-        String imgUrl = s3Util.uploadToS3(car.getCarImage());
+    public void postInsertCarImageDao(int carId, Car car, String imgUrl) {
         String sql = "INSERT INTO car_image(car_id, image) VALUES(:car_id, :image)";
         HashMap<String, Object> map = new HashMap<>();
         map.put("car_id", carId);
