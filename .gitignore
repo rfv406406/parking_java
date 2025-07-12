@@ -34,7 +34,7 @@ build/
 .vscode/
 
 ### log ###
-.log
+*.log
 *.gz
 
 ### env ###
