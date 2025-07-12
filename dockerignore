@@ -19,7 +19,6 @@ target/
 
 # 專案外的資料或臨時檔
 *.txt
-*.properties
 
 # 作業系統或其他
 .DS_Store
