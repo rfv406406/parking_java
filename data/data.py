@@ -9,15 +9,15 @@ load_dotenv(find_dotenv())
 
 
 config = {
-    "host":os.getenv('HOST'),
-    "user":os.getenv('USER'),
-    "password":os.getenv('PASSWORD'),
+    # "host":os.getenv('HOST'),
+    # "user":os.getenv('USER'),
+    # "password":os.getenv('PASSWORD'),
+    # "database":os.getenv('DATABASE'),
+    "host":os.getenv("RDSHOST"),
+    "port":3306,
+    "user":os.getenv("RDSUSER"),
+    "password":os.getenv('RDSPASSWORD'),
     "database":os.getenv('DATABASE'),
-    # "host":"db-stage3-week1.cxzjwrl3yccb.us-east-1.rds.amazonaws.com",
-    # "port":3306,
-    # "user":"root",
-    # "password":"12345678",
-    # "database":"Stage3",
 }
 con = pooling.MySQLConnectionPool(pool_name = "mypool",
                               pool_size = 20,

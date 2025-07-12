@@ -1,0 +1,25 @@
+# Git 相關
+.git
+.gitignore
+
+# 環境變數設定檔
+.env
+
+# IDE 設定檔
+.idea
+.vscode
+
+# 日誌檔案
+*.log
+*.log.*       
+*.gz
+
+# 編譯或打包輸出
+target/
+
+# 專案外的資料或臨時檔
+*.txt
+*.properties
+
+# 作業系統或其他
+.DS_Store

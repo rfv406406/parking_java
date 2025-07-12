@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sideproject.parking_java.redis.RedisSubscriber;
 import com.sideproject.parking_java.utility.MemberIdUtil;
 
 import lombok.extern.slf4j.Slf4j;
