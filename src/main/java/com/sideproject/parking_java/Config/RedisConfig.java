@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -38,6 +39,7 @@ public class RedisConfig {
     // private String redisPassword;
 
     @Bean
+    @Primary
     LettuceConnectionFactory connectionFactory() {
         // RedisClusterConfiguration clusterConfig = new RedisClusterConfiguration()
         //     .clusterNode("parkingjava-3f4b3j.serverless.apse2.cache.amazonaws.com", 6379);
