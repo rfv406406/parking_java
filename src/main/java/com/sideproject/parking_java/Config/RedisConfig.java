@@ -6,11 +6,11 @@ import java.time.Duration;
 import javax.sql.DataSource;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisClusterConfiguration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -35,19 +35,20 @@ import com.sideproject.parking_java.redis.RedisSubscriber;
 @EnableScheduling
 public class RedisConfig {
 
-    @Value("${redisPassword}")
-    private String redisPassword;
+    // @Value("${redisPassword}")
+    // private String redisPassword;
 
     @Bean
+    @Primary
     LettuceConnectionFactory connectionFactory() {
-        RedisClusterConfiguration clusterConfig = new RedisClusterConfiguration()
-            .clusterNode("parkingjava-3f4b3j.serverless.apse2.cache.amazonaws.com", 6379);
+        // RedisClusterConfiguration clusterConfig = new RedisClusterConfiguration()
+        //     .clusterNode("parkingjava-3f4b3j.serverless.apse2.cache.amazonaws.com", 6379);
             
-        // RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
-        // config.setHostName("127.0.0.1");
-        // config.setPort(6379); 
+        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
+        config.setHostName("parkingjava-3f4b3j.serverless.apse2.cache.amazonaws.com");
+        config.setPort(6379); 
         // config.setPassword(redisPassword); 
-        // config.setDatabase(0);
+        config.setDatabase(0);
 
         GenericObjectPoolConfig<Object> poolConfig = new GenericObjectPoolConfig<>();
         poolConfig.setMaxIdle(30); 
@@ -61,7 +62,7 @@ public class RedisConfig {
             .useSsl() // 啟用 TLS
             .build();
         
-        LettuceConnectionFactory factory = new LettuceConnectionFactory(clusterConfig, poolingClientConfig);
+        LettuceConnectionFactory factory = new LettuceConnectionFactory(config, poolingClientConfig);
         factory.setValidateConnection(false);
 
         return factory;
