@@ -1,18 +1,13 @@
 package com.sideproject.parking_java.config;
 
 import java.sql.SQLException;
-import java.time.Duration;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
-import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.PatternTopic;
@@ -39,31 +34,30 @@ public class RedisConfig {
     // private String redisPassword;
 
     @Bean
-    @Primary
     LettuceConnectionFactory connectionFactory() {
         // RedisClusterConfiguration clusterConfig = new RedisClusterConfiguration()
         //     .clusterNode("parkingjava-3f4b3j.serverless.apse2.cache.amazonaws.com", 6379);
             
-        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
-        config.setHostName("master.parkingjava.3f4b3j.apse2.cache.amazonaws.com");
-        config.setPort(6379); 
-        // config.setPassword(redisPassword); 
-        config.setDatabase(0);
+        // RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
+        // config.setHostName("master.parkingjava.3f4b3j.apse2.cache.amazonaws.com");
+        // config.setPort(6379); 
+        // // config.setPassword(redisPassword); 
+        // config.setDatabase(0);
 
-        GenericObjectPoolConfig<Object> poolConfig = new GenericObjectPoolConfig<>();
-        poolConfig.setMaxIdle(30); 
-        poolConfig.setMinIdle(0); 
-        poolConfig.setMaxTotal(300); 
+        // GenericObjectPoolConfig<Object> poolConfig = new GenericObjectPoolConfig<>();
+        // poolConfig.setMaxIdle(30); 
+        // poolConfig.setMinIdle(0); 
+        // poolConfig.setMaxTotal(300); 
 
-        LettucePoolingClientConfiguration poolingClientConfig = 
-            LettucePoolingClientConfiguration.builder()
-            .commandTimeout(Duration.ofMillis(3000))
-            .poolConfig(poolConfig)
-            .useSsl() // 啟用 TLS
-            .disablePeerVerification() // 禁用對等驗證
-            .build();
+        // LettucePoolingClientConfiguration poolingClientConfig = 
+        //     LettucePoolingClientConfiguration.builder()
+        //     .commandTimeout(Duration.ofMillis(3000))
+        //     .poolConfig(poolConfig)
+        //     .useSsl() // 啟用 TLS
+        //     .disablePeerVerification() // 禁用對等驗證
+        //     .build();
         
-        LettuceConnectionFactory factory = new LettuceConnectionFactory(config, poolingClientConfig);
+        LettuceConnectionFactory factory = new LettuceConnectionFactory();
         factory.setValidateConnection(false);
 
         return factory;
