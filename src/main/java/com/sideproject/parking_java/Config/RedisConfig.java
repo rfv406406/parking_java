@@ -58,6 +58,7 @@ public class RedisConfig {
             .commandTimeout(Duration.ofMillis(3000))
             .poolConfig(poolConfig)
             .useSsl() // 啟用 TLS
+            .disablePeerVerification() // 禁用對等驗證
             .build();
         
         LettuceConnectionFactory factory = new LettuceConnectionFactory(config, poolingClientConfig);
