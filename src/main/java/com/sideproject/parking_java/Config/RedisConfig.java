@@ -58,6 +58,10 @@ public class RedisConfig {
 
     //     return factory;
     // }
+    @Bean
+    public configureRedisAction configureRedisAction() {
+        return ConfigureRedisAction.NO_OP;
+    }
 
     @Bean
     RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
