@@ -140,10 +140,10 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-pool2</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-data-redis</artifactId>
-		</dependency>
+		</dependency> -->
 		<!--WebSocket-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
