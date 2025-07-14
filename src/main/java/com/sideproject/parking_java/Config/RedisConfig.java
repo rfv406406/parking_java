@@ -7,7 +7,7 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.RedisKeyValueAdapter.EnableKeyspaceEvents;
+import org.springframework.data.redis.core.RedisKeyValueAdapter;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.PatternTopic;
@@ -18,7 +18,6 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.session.data.redis.config.ConfigureRedisAction;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -28,8 +27,8 @@ import com.sideproject.parking_java.redis.RedisSubscriber;
 @EnableTransactionManagement
 @EnableScheduling
 @EnableRedisRepositories(
-  enableKeyspaceEvents = EnableKeyspaceEvents.ON_STARTUP,
-  keyspaceNotificationsConfigParameter = ""
+    enableKeyspaceEvents = RedisKeyValueAdapter.EnableKeyspaceEvents.OFF,
+    keyspaceNotificationsConfigParameter = ""
 )
 public class RedisConfig {
 
@@ -65,10 +64,6 @@ public class RedisConfig {
 
     //     return factory;
     // }
-    @Bean
-    public ConfigureRedisAction configureRedisAction() {
-        return ConfigureRedisAction.NO_OP;
-    }
 
     @Bean
     RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
