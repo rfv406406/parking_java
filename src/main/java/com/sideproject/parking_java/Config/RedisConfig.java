@@ -16,6 +16,7 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.session.data.redis.config.ConfigureRedisAction;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -59,7 +60,7 @@ public class RedisConfig {
     //     return factory;
     // }
     @Bean
-    public configureRedisAction configureRedisAction() {
+    public ConfigureRedisAction configureRedisAction() {
         return ConfigureRedisAction.NO_OP;
     }
 
