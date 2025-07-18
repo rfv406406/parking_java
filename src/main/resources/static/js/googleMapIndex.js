@@ -6,6 +6,7 @@ let parkingLotGMPArray = [];
 async function fetchParkingLotData(currentPosition){
     try{
         const parkingLotParameters = JSON.parse(localStorage.getItem("parkingLotParameters"));
+        console.log("parkingLotParameters", parkingLotParameters);
         const response = await getParkingLotMap(currentPosition.lng, currentPosition.lat, parkingLotParameters, null);
         const data = await handleResponse(response);
         await displayParkingLotMarker(data);
