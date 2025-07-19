@@ -4,11 +4,13 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.TimeZone;
 
 
 public class TimeUtils {
     public static String timeFormat(Object timeObj) {
         SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+        ft.setTimeZone(TimeZone.getTimeZone("Asia/Taipei"));
         return ft.format(timeObj);
     }
 
