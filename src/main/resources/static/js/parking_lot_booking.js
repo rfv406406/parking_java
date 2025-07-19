@@ -4,6 +4,8 @@ let lastClickedButton = '';
 const buttonBooking = document.querySelector('#button-parking-booking');
 const carBoardCheckedButton = document.querySelector('#car-board-checked-button');
 const chatroomButton = document.querySelector("#button-turning-chatroom");
+const parkingLotInforTable = document.querySelector("#parking-lot-information-container");
+const navigation = document.querySelector("#navigation");
 
 
 buttonBooking.addEventListener('click', async () => {
@@ -57,22 +59,21 @@ chatroomButton.addEventListener('click', async () => {
 })
 
 // 導航
-async function navigation(parkingLot) {
-    let destination = {
-        "lat": parkingLot.latitude,
-        "lng": parkingLot.longitude
-    }
-    let navigation = document.querySelector("#navigation");
-    let parkingLotInforTable = document.querySelector("#parking-lot-information-container");
-    navigation.addEventListener('click', async (event) => {
+navigation.addEventListener('click', async (event) => {
         event.stopPropagation();
+        if (navigationLocation == null) {
+            return null;
+        }
+        const destination = {
+            "lat": navigationLocation.latitude,
+            "lng": navigationLocation.longitude
+        }
         directionsRenderer.setMap(map);
         await calculateAndDisplayRoute(directionsService, directionsRenderer, destination);
         map.setCenter(currentPosition);
         map.setZoom(25);
         parkingLotInforTable.style.display = "none";
     });
-}
 
 function carBoardChecking(){
     let selector = document.querySelector('#car-board-number-selector');

@@ -7,7 +7,6 @@
     z-index: 10;
     background-color: #F5FBFF;
     bottom: 0;
-    cursor: pointer;
     transition: height 0.5s; 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -209,7 +208,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .parking_lot-information .selector {

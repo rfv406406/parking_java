@@ -76,22 +76,23 @@ function toggleStopButtonReload() {
 buttonParkingStop = document.querySelector('#parking-stop-button');
 
 buttonParkingStop.addEventListener('click', async () => {
-    try {
-        const parkingLotIdElement = document.querySelector('#packing-page-parking-lot-name').getAttribute("value");
-        const parkingLotSquareIdElement = document.querySelector('#packing-page-parking-lot-space-number').getAttribute("value");
-        const orderNumberElement = document.querySelector('#packing-page-parking-lot-order-number');
-        const startTimeElement = document.querySelector('#packing-page-parking-lot-start-time');
-        const priceElement = document.querySelector('#packing-page-parking-lot-price');
-        const balanceElement = document.querySelector('#balanceDiv');
+    const parkingLotIdElement = document.querySelector('#packing-page-parking-lot-name').getAttribute("value");
+    const parkingLotSquareIdElement = document.querySelector('#packing-page-parking-lot-space-number').getAttribute("value");
+    const orderNumberElement = document.querySelector('#packing-page-parking-lot-order-number');
+    const startTimeElement = document.querySelector('#packing-page-parking-lot-start-time');
+    const priceElement = document.querySelector('#packing-page-parking-lot-price');
+    const balanceElement = document.querySelector('#balanceDiv');
 
-        const parkingLotId = parkingLotIdElement;
-        const parkingLotSquareId = parkingLotSquareIdElement;
-        const orderNumber = orderNumberElement.textContent;
-        const startTime = startTimeElement.textContent;
-        const price = priceElement.textContent;
-        const balance = balanceElement.textContent.replace(/\D/g, '');
-        await passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, balance, orderNumber);
+    const parkingLotId = parkingLotIdElement;
+    const parkingLotSquareId = parkingLotSquareIdElement;
+    const orderNumber = orderNumberElement.textContent;
+    const startTime = startTimeElement.textContent;
+    const price = priceElement.textContent;
+    const balance = balanceElement.textContent.replace(/\D/g, '');
+
+    try {
         stopTimer();
+        await passParkingStopData(parkingLotId, parkingLotSquareId, startTime, price, balance, orderNumber);
         thankMessage();
     } catch(error) {
         handleError(error);

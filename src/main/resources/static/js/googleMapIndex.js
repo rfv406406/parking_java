@@ -2,11 +2,11 @@
 let parkingLotMap = new Map();
 let parkingLotGMPMap = new Map();
 let parkingLotGMPArray = [];
+let navigationLocation = null;
 
 async function fetchParkingLotData(currentPosition){
     try{
         const parkingLotParameters = JSON.parse(localStorage.getItem("parkingLotParameters"));
-        console.log("parkingLotParameters", parkingLotParameters);
         const response = await getParkingLotMap(currentPosition.lng, currentPosition.lat, parkingLotParameters, null);
         const data = await handleResponse(response);
         await displayParkingLotMarker(data);
@@ -42,7 +42,8 @@ async function displayParkingLotMarker(data) {
                 const parkingLotIdStr = event.currentTarget.getAttribute("parkingLotId");
                 const parkingLot = parkingLotMap.get(Number(parkingLotIdStr));        
                 parkingLotInformationTable(parkingLot);
-                await navigation(parkingLot);
+                // await navigation(parkingLot);
+                navigationLocation = parkingLot;
             });
         }
         setMarkerClusterer(parkingLotGMPArray);
@@ -133,8 +134,8 @@ document.querySelector("#returnToCurrentPosition").addEventListener("click", asy
 document.querySelector('#search-goal-button').addEventListener('click',openSearchBar);
 
 function openSearchBar(){
-    let searchBar = document.querySelector('.search-bar');
-    let blackBackground = document.querySelector('.black-back-background');
+    const searchBar = document.querySelector('.search-bar');
+    const blackBackground = document.querySelector('.black-back-background');
     searchBar.style.display = 'flex';
 
     if (!blackBackground) {
@@ -151,18 +152,18 @@ function openSearchBar(){
         document.body.appendChild(blackBackground);
 
         blackBackground.addEventListener('click', () => {
-            document.body.removeChild(blackBackground);
-            searchBar.style.display = 'none';
+            blackBackground.remove();
             document.querySelector("#searchInput").value = "";
+            searchBar.style.display = 'none';
         });  
     } 
 }
 
 document.querySelector("#search-bar-button").addEventListener("click", async () => {
+    const searchBar = document.querySelector('.search-bar');
+    const blackBackground = document.querySelector('.black-back-background');
+    let destination = document.querySelector("#searchInput").value;
     try {
-        const searchBar = document.querySelector('.search-bar');
-        const blackBackground = document.querySelector('.black-back-background');
-        const destination = document.querySelector("#searchInput").value;
         const responseArray = await getSearchingLocation(destination);
         const destinationPosition = {
             "lat" : responseArray[0].location.lat(),
@@ -171,15 +172,14 @@ document.querySelector("#search-bar-button").addEventListener("click", async () 
 
         await displayMarker(null, responseArray);
         map.setZoom(15);
-        if (blackBackground) {
-            document.body.removeChild(blackBackground);
-            searchBar.style.display = 'none';
-        }
         await fetchParkingLotData(destinationPosition);
     } catch(error) {
         console.error(error);
         const alertMessage = '您輸入的地點不存在';
         displayAlertMessage(alertMessage);
+    } finally {
+        if (blackBackground) blackBackground.remove();
+        document.querySelector("#searchInput").value = "";
+        searchBar.style.display = 'none';
     }
-
 })
