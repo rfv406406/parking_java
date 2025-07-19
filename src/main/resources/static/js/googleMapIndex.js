@@ -42,7 +42,6 @@ async function displayParkingLotMarker(data) {
                 const parkingLotIdStr = event.currentTarget.getAttribute("parkingLotId");
                 const parkingLot = parkingLotMap.get(Number(parkingLotIdStr));        
                 parkingLotInformationTable(parkingLot);
-                // await navigation(parkingLot);
                 navigationLocation = parkingLot;
             });
         }
