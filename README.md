@@ -58,7 +58,7 @@ Usung Redis as a temperary database.
 * Including location search, return current location, parking lot DOM, DOM cluster, navigation.
 
 <p align="center">
-  <img src="readmefile/地圖功能.mp4" alt="Car Information Input" width="40%"/>
+  <img src="readmefile/地圖功能.gif" alt="Car Information Input" width="40%"/>
 </p>
 <br/>
 
@@ -67,7 +67,7 @@ Usung Redis as a temperary database.
 * Input the parameters to select relative parking lots.
 
 <p align="center">
-  <img src="readmefile/停車場篩選.mp4" alt="Car Information Input" width="40%"/>
+  <img src="readmefile/停車場篩選.gif" alt="Car Information Input" width="40%"/>
 </p>
 <br/>
 
@@ -94,7 +94,7 @@ Usung Redis as a temperary database.
 * Data input into MySQL to provide rental information for users.
 
 <p align="center">
-  <img src="readmefile/停車場匯入.mp4" alt="Parking Space Rental Input" width="40%"/>
+  <img src="readmefile/停車場匯入.gif" alt="Parking Space Rental Input" width="40%"/>
 </p>
 <br/>
 
@@ -104,7 +104,7 @@ Usung Redis as a temperary database.
 * Real time data achieve by redis and websocket.
 
 <p align="center">
-  <img src="readmefile/及時同步.mp4" alt="Parking Demo" width="40%"/>
+  <img src="readmefile/及時同步.gif" alt="Parking Demo" width="40%"/>
 </p>
 <br/>
 
