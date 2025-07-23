@@ -58,7 +58,7 @@ Usung Redis as a temperary database.
 * Including location search, return current location, parking lot DOM, DOM cluster, navigation.
 
 <p align="center">
-  <img src="readmefile/地圖功能.gif" alt="Car Information Input" width="40%"/>
+  <img src="readmefile/地圖功能.gif" alt="Car Information Input" width="80%"/>
 </p>
 <br/>
 
@@ -67,7 +67,7 @@ Usung Redis as a temperary database.
 * Input the parameters to select relative parking lots.
 
 <p align="center">
-  <img src="readmefile/停車場篩選.gif" alt="Car Information Input" width="40%"/>
+  <img src="readmefile/停車場篩選.gif" alt="Car Information Input" width="80%"/>
 </p>
 <br/>
 
@@ -76,7 +76,7 @@ Usung Redis as a temperary database.
 * Users need to input at least one car information for parking service.
 
 <p align="center">
-  <img src="readmefile/車牌登記.gif" alt="Car Information Input" width="40%"/>
+  <img src="readmefile/車牌登記.gif" alt="Car Information Input" width="80%"/>
 </p>
 <br/>
 
@@ -85,7 +85,7 @@ Usung Redis as a temperary database.
 * Users need to deposit. If the cash point is 0 or negative, parking service is forbidden.
 
 <p align="center">
-  <img src="readmefile/儲值.gif" alt="Deposit" width="40%"/>
+  <img src="readmefile/儲值.gif" alt="Deposit" width="80%"/>
 </p>
 <br/>
 
@@ -94,7 +94,7 @@ Usung Redis as a temperary database.
 * Data input into MySQL to provide rental information for users.
 
 <p align="center">
-  <img src="readmefile/停車場匯入.gif" alt="Parking Space Rental Input" width="40%"/>
+  <img src="readmefile/停車場匯入.gif" alt="Parking Space Rental Input" width="80%"/>
 </p>
 <br/>
 
@@ -104,7 +104,7 @@ Usung Redis as a temperary database.
 * Real time data achieve by redis and websocket.
 
 <p align="center">
-  <img src="readmefile/及時同步.gif" alt="Parking Demo" width="40%"/>
+  <img src="readmefile/及時同步.gif" alt="Parking Demo" width="80%"/>
 </p>
 <br/>
 
@@ -113,7 +113,7 @@ Usung Redis as a temperary database.
 * Finish the parking protocal and payment.
 
 <p align="center">
-  <img src="readmefile/結帳.gif" alt="Parking Demo" width="40%"/>
+  <img src="readmefile/結帳.gif" alt="Parking Demo" width="80%"/>
 </p>
 <br/>
 
@@ -122,7 +122,7 @@ Usung Redis as a temperary database.
 * Offering chatroom to connect parking lot owner.
 
 <p align="center">
-  <img src="readmefile/通報系統.gif" alt="Parking Space Rental Input" width="40%"/>
+  <img src="readmefile/通報系統.gif" alt="Parking Space Rental Input" width="80%"/>
 </p>
 <br/>
 
@@ -131,7 +131,7 @@ Usung Redis as a temperary database.
 * Including deposit, comsumption, income datas.
 
 <p align="center">
-  <img src="readmefile/交易紀錄.gif" alt="Parking Space Rental Input" width="40%"/>
+  <img src="readmefile/交易紀錄.gif" alt="Parking Space Rental Input" width="80%"/>
 </p>
 <br/>
 
