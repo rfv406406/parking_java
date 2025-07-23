@@ -104,7 +104,7 @@ Usung Redis as a temperary database.
 * Real time data achieve by redis and websocket.
 
 <p align="center">
-  <img src="readmefile/及時同步.gif" alt="Parking Demo" width="80%"/>
+  <img src="readmefile/即時同步.gif" alt="Parking Demo" width="80%"/>
 </p>
 <br/>
 
