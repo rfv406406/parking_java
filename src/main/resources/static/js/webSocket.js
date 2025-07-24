@@ -1,7 +1,7 @@
 const path = window.location.pathname;
 
 let subscriptionMap = new Map();
-let stompClient;
+let stompClient = null;
 
 const socketFactory = function() {
     return new SockJS(`/parkingLot-websocket`);
@@ -57,7 +57,7 @@ async function getUserId() {
 
 function onChatroomReceived(chatroomMessage) {
     const chatroomMessageToJSON = JSON.parse(chatroomMessage.body);
-    const chatroomElement = getChatroomElement(chatroomMessageToJSON.id);
+    let chatroomElement = getChatroomElement(chatroomMessageToJSON.id);
 
     if (chatroomElement) {
         const chatroomNameDiv = chatroomElement.querySelector(".chatroom-name");

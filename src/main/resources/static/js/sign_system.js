@@ -226,7 +226,9 @@ async function init(){
             parkingPageButtonList();
             window.location.hash = "";  
         }
-        await webSocketConnect();
+        if (stompClient == null || !stompClient.active) {
+            await webSocketConnect();
+        }
     }catch(error){
         handleError(error);
     }
@@ -250,7 +252,7 @@ function showCashPointOnMenu(payload, balance){
 
 function tokenChecking() {
     let token = localStorage.getItem('token');
-    if (token == null){
+    if (!token || token == null){
         if (window.location.pathname !== '/') {
             window.location.href = '/';
         }

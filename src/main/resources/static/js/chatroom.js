@@ -180,7 +180,6 @@ function getCurrentDateTime() {
 
 function displayMessage(chatroomId, senderId, content, currentTime) {
     const chatAreaId = chatMessagesName.getAttribute("chatroom-id");
-    console.log(chatroomId != chatAreaId);
     if (chatroomId != chatAreaId) {
         return null;
     }
