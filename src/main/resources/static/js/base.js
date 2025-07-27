@@ -243,12 +243,13 @@ removeClassOnClickOutside('#menuContent', '#menu', ['menuContent_toggled']);
 function clickButton(buttonSelector, renderTemplate) {
   document.querySelector(buttonSelector).addEventListener('click', async (event) => {
     event.preventDefault();
-    if (buttonSelector == "#parking-page-button-list" && window.location.pathname !== "/index") {
+    if ((buttonSelector == "#parking-page-button-list" && window.location.pathname === "/index") ||
+        (buttonSelector == "#parking-page-button-list" && window.location.pathname == "/")) {
+      return null;
+    } else if (buttonSelector == "#parking-page-button-list" && window.location.pathname !== "/index") {
       await turnPage(renderTemplate, "#parkingPage");
       return null;
-    } else if (buttonSelector == "#parking-page-button-list" && window.location.pathname === "/index") {
-      return null;
-    }
+    } 
     await turnPage(renderTemplate);
   });
 }
