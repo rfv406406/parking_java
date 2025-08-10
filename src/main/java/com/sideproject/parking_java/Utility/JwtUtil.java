@@ -9,10 +9,12 @@ import org.springframework.stereotype.Component;
 import com.sideproject.parking_java.model.MemberDetails;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
 
 @Component
 public class JwtUtil {
@@ -38,11 +40,16 @@ public class JwtUtil {
 
     public static String parseToken(String token) {
         Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes(StandardCharsets.UTF_8));
+        try {
+            Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
+            Claims claims = parser.getBody();
+            String account = claims.getSubject();
 
-        Jws<Claims> parser = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
-        Claims claims = parser.getBody();
-        String account = claims.getSubject();
-
-        return account;
+            return account;
+        } catch (ExpiredJwtException e) {
+            throw new RuntimeException("Token has expired");
+        } catch (SignatureException e) {
+            throw new RuntimeException("Invalid token signature");
+        }
     }
 }

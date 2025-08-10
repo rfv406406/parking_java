@@ -212,9 +212,6 @@ async function init(){
         toggleClass('#signout-button-list', 'list-sign-out-toggled'); 
 
         const payload = await getPayload(token);
-        if (payload == null) {
-            logout();
-        }
         const userAccount = payload.username;
         const balance = await getMemberBalanceStatus();
         showCashPointOnMenu(userAccount, balance);
