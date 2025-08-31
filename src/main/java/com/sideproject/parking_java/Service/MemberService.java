@@ -28,7 +28,7 @@ public class MemberService {
             member.getPassword() == null || member.getPassword().equals("") ||
             member.getEmail() == null || member.getEmail().equals("")) {
                 throw new InvalidParameterError("parameter is null or empty");
-            }
+        }
         if (!memberDao.getAccountByValueDao(member)) {
             throw new InvalidParameterError("該帳號已被使用!");
         }

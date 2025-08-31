@@ -52,17 +52,12 @@ public class TappayService {
             if (insertID == 0) {
                 throw new DatabaseError("transaction insert failed");
             }
-            // 建立 RestTemplate
             RestTemplate restTemplate = new RestTemplate();
-            // 設置請求頭
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             headers.set("x-api-key", PARTNER_KEY);
-            // 將 payload 與 headers 封裝到 HttpEntity 中
             HttpEntity<Object> requestEntity = new HttpEntity<>(tappayPayload, headers);
-            // 請求 URL
             String url = "https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime";
-            // 發送 POST 請求，並接收回應字串
             TappayResponse tappayResponse = restTemplate.postForObject(url, requestEntity, TappayResponse.class);
 
             if (tappayResponse == null) {

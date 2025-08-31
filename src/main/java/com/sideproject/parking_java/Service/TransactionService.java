@@ -11,7 +11,6 @@ import com.sideproject.parking_java.dao.IdDao;
 import com.sideproject.parking_java.dao.MemberDao;
 import com.sideproject.parking_java.dao.TransactionDao;
 import com.sideproject.parking_java.exception.DatabaseError;
-import com.sideproject.parking_java.exception.InternalServerError;
 import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.Transaction;
@@ -105,7 +104,7 @@ public class TransactionService {
         }
 
         if (transaction.getBalance() - cost < 0) {
-            throw new InternalServerError("餘額不足!");
+            throw new RuntimeException("餘額不足!");
         }
 
         transaction.setStopTime(currentTimeToString);

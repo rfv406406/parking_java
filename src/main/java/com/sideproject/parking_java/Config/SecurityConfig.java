@@ -33,7 +33,7 @@ public class SecurityConfig {
 				)
 			.authorizeHttpRequests((authorize) -> authorize
 				.requestMatchers(HttpMethod.GET,"/css/**", "/js/**","/image/**").permitAll()
-				.requestMatchers(HttpMethod.GET,"/", "/index", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage", "/chatroom/**", "/selector").permitAll()
+				.requestMatchers(HttpMethod.GET,"/", "/index", "/id", "/carPage", "/cashFlowRecord", "/depositPage", "/parkingLotPage", "/chatroom/**", "/selector", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
 				.requestMatchers(HttpMethod.GET,"/api/gps/**","/api/parkingLot").permitAll()
 				.requestMatchers(HttpMethod.POST,"/api/member","/api/member/login").permitAll()
 				.requestMatchers("/parkingLot-websocket/**").permitAll()
