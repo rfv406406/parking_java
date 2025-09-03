@@ -7,6 +7,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,8 +28,16 @@ import com.sideproject.parking_java.service.MemberService;
 
 @RestController
 public class MemberController {
+
+    private final AuthenticationManager authenticationManager;
+
+	public MemberController (AuthenticationManager authenticationManager) {
+		this.authenticationManager = authenticationManager;
+	}
+
     @Autowired
     private MemberService memberService;
+
     @Autowired
     private JwtService jwtService;
     
@@ -40,6 +51,9 @@ public class MemberController {
 
     @PostMapping("/api/member/login")
     public ResponseEntity<HashMap<String, Object>> postMemberAuth(@RequestBody Member member) throws DatabaseError, InvalidParameterError, Exception {
+        Authentication authenticationRequest = UsernamePasswordAuthenticationToken.unauthenticated(member.getAccount(), member.getPassword());
+		Authentication authenticationResponse = this.authenticationManager.authenticate(authenticationRequest);
+        System.out.println("authenticationResponse:" + authenticationResponse);
         HashMap<String, Object> tokenObject = jwtService.returnAuth(member);
         ResponseEntity<HashMap<String, Object>> response = ResponseEntity.status(HttpStatus.OK).body(tokenObject);
         return response;

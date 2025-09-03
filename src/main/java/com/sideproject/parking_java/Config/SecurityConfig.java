@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.sideproject.parking_java.service.UserDetailsServiceImpl;
 
@@ -43,7 +43,7 @@ public class SecurityConfig {
 				.requestMatchers(HttpMethod.DELETE,"/api/parkingLot/**","/api/car/**").hasAuthority("user")
 				.anyRequest().authenticated()
 			)
-			.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class)
+			.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
 			.authenticationManager(authenticationManager());
 
 		return http.build();
