@@ -125,12 +125,12 @@ public class ParkingLotRegisterService{
         System.out.println(parkingLot.getCarHeight());
         System.out.println(parkingLot.getCarSpaceNumber());
         
-        if (parkingLot.getName() == null || parkingLot.getName().equals("") ||
-            parkingLot.getAddress() == null || parkingLot.getAddress().equals("") ||
-            parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().equals("") ||
-            parkingLot.getClosingTime() == null || parkingLot.getClosingTime().equals("") ||
-            parkingLot.getCarWidth() == null || parkingLot.getCarWidth().equals("") ||
-            parkingLot.getCarHeight() == null || parkingLot.getCarHeight().equals("") ||
+        if (parkingLot.getName() == null || parkingLot.getName().isEmpty() ||
+            parkingLot.getAddress() == null || parkingLot.getAddress().isEmpty() ||
+            parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().isEmpty() ||
+            parkingLot.getClosingTime() == null || parkingLot.getClosingTime().isEmpty() ||
+            parkingLot.getCarWidth() == null || parkingLot.getCarWidth().isEmpty() ||
+            parkingLot.getCarHeight() == null || parkingLot.getCarHeight().isEmpty() ||
             parkingLot.getImg().length == 0 ||
             parkingLot.getCarSpaceNumber() == null || parkingLot.getCarSpaceNumber().isEmpty() 
             ) {
@@ -187,13 +187,13 @@ public class ParkingLotRegisterService{
         boolean isRedisConnected = redisService.isRedisConnected();
         parkingLot.setParkingLotId(parkingLotId);
 
-        if (parkingLot.getName() == null || parkingLot.getName().equals("") ||
-            parkingLot.getAddress() == null || parkingLot.getAddress().equals("") ||
-            parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().equals("") ||
-            parkingLot.getClosingTime() == null || parkingLot.getClosingTime().equals("") ||
-            parkingLot.getSpaceInOut() == null || parkingLot.getSpaceInOut().equals("") ||
-            parkingLot.getCarWidth() == null || parkingLot.getCarWidth().equals("") ||
-            parkingLot.getCarHeight() == null || parkingLot.getCarHeight().equals("") ||
+        if (parkingLot.getName() == null || parkingLot.getName().isEmpty() ||
+            parkingLot.getAddress() == null || parkingLot.getAddress().isEmpty() ||
+            parkingLot.getOpeningTime() == null || parkingLot.getOpeningTime().isEmpty() ||
+            parkingLot.getClosingTime() == null || parkingLot.getClosingTime().isEmpty() ||
+            parkingLot.getSpaceInOut() == null || parkingLot.getSpaceInOut().isEmpty() ||
+            parkingLot.getCarWidth() == null || parkingLot.getCarWidth().isEmpty() ||
+            parkingLot.getCarHeight() == null || parkingLot.getCarHeight().isEmpty() ||
             parkingLot.getCarSpaceNumber() == null || parkingLot.getCarSpaceNumber().isEmpty() 
             ) {
             throw new InvalidParameterError("parameter is null or empty");

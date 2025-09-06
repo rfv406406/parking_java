@@ -24,9 +24,9 @@ public class MemberService {
 	private PasswordEncoder passwordEncoder;
 
     public Integer postMemberService(Member member) throws DatabaseError, InvalidParameterError {
-        if (member.getAccount() == null || member.getAccount().equals("") ||
-            member.getPassword() == null || member.getPassword().equals("") ||
-            member.getEmail() == null || member.getEmail().equals("")) {
+        if (member.getAccount() == null || member.getAccount().isEmpty() ||
+            member.getPassword() == null || member.getPassword().isEmpty() ||
+            member.getEmail() == null || member.getEmail().isEmpty()) {
                 throw new InvalidParameterError("parameter is null or empty");
         }
         if (!memberDao.getAccountByValueDao(member)) {
@@ -39,12 +39,17 @@ public class MemberService {
     public MemberDetails getMemberAuthService() throws AuthenticationError {
         SecurityContext context = SecurityContextHolder.getContext();
         Authentication auth = context.getAuthentication();
-        Object principal = auth.getPrincipal();
-        MemberDetails memberDetails = (MemberDetails) principal;
-        if (memberDetails == null) {
-            throw new AuthenticationError("userDetails is null");
+
+        if (auth == null || !auth.isAuthenticated() || auth.getPrincipal() == null) {
+            throw new AuthenticationError("Unauthenticated");
         }
 
+        Object principal = auth.getPrincipal();
+        
+        if (!(principal instanceof MemberDetails memberDetails)) {
+            throw new AuthenticationError("Invalid user details");
+        }
+    
         return memberDetails;
     }
 

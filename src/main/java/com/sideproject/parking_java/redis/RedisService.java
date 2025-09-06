@@ -154,6 +154,8 @@ public class RedisService {
                         carSpaceNumber.get(i).setStatus(transaction.getParkingLot().getCarSpaceNumber().get(0).getStatus());
                     }
                 }
+            } else {
+                return;
             }
             redisTemplate.opsForHash().put("parkingLotMap", parkingLotIdtoString, parkingLot);
             parkingLotMap.put(parkingLotIdtoString, parkingLot);
