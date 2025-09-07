@@ -77,8 +77,6 @@ public class MemberServiceTest {
 
     @Test 
     public void testGetMemberAuthServiceWhenUnauthenticated() throws AuthenticationError{
-        Member member = new Member();
-        MemberDetails memberDetails = new MemberDetails(member);
         SecurityContext context = SecurityContextHolder.createEmptyContext();
         context.setAuthentication(new UsernamePasswordAuthenticationToken(null, null));
         SecurityContextHolder.setContext(context);
@@ -122,4 +120,59 @@ public class MemberServiceTest {
         MemberDetails result = memberService.getMemberAuthService();
         Assertions.assertSame(memberDetails, result);
     }
+
+    @Test
+    public void testGetMemberBalanceAndStatusServiceWhenUnauthenticated() {
+        SecurityContext context = SecurityContextHolder.createEmptyContext();
+        SecurityContextHolder.setContext(context);
+
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            memberService.getMemberBalanceAndStatusService();
+        });
+    }
+
+    @Test
+    public void testGetMemberBalanceAndStatusServiceWhenPrincipalTypeError() {
+        Member member = new Member();
+        member.setAccount("testAccount");
+        member.setPassword("testPassword");
+        member.setEmail("testEmail");
+        member.setRole("testRole");
+        
+        MemberDetails memberDetails = new MemberDetails(member);
+        SecurityContext context = SecurityContextHolder.createEmptyContext();
+        context.setAuthentication(new UsernamePasswordAuthenticationToken("anonymousUser", null, memberDetails.getAuthorities()));
+        SecurityContextHolder.setContext(context);
+
+        Assertions.assertThrows(ClassCastException.class, () -> {
+            memberService.getMemberBalanceAndStatusService();
+        });
+    }
+
+    @Test
+    public void testGetMemberBalanceAndStatusServiceWhenSuccess() {
+        Member member = new Member();
+        member.setAccount("testAccount");
+        member.setPassword("testPassword");
+        member.setEmail("testEmail");
+        member.setRole("testRole");
+        
+        MemberDetails memberDetails = new MemberDetails(member);
+        SecurityContext context = SecurityContextHolder.createEmptyContext();
+        context.setAuthentication(new UsernamePasswordAuthenticationToken(memberDetails, null, memberDetails.getAuthorities()));
+        SecurityContextHolder.setContext(context);
+
+        Member mockMember = new Member();
+        mockMember.setBalance(100);
+        mockMember.setStatus("閒置");
+
+        when(memberDao.getMemberBalanceAndStatusByAccount("testAccount")).thenReturn(mockMember);
+
+        Member result = memberService.getMemberBalanceAndStatusService();
+
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(100, result.getBalance());
+        Assertions.assertEquals("閒置", result.getStatus());
+    }
 }
+
