@@ -7,6 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -21,6 +23,7 @@ import com.sideproject.parking_java.exception.InvalidParameterError;
 import com.sideproject.parking_java.model.Member;
 import com.sideproject.parking_java.model.MemberDetails;
 import com.sideproject.parking_java.service.MemberService;
+import com.sideproject.parking_java.utility.MemberIdUtil;
 
 @ExtendWith(MockitoExtension.class)
 public class MemberServiceTest {
@@ -173,6 +176,19 @@ public class MemberServiceTest {
         Assertions.assertNotNull(result);
         Assertions.assertEquals(100, result.getBalance());
         Assertions.assertEquals("閒置", result.getStatus());
+    }
+
+    @Test 
+    public void testGetMemberDetailsService() {
+        Member memberDetails = new Member();
+        try (MockedStatic<MemberIdUtil> memberIdUtil = Mockito.mockStatic(MemberIdUtil.class)) {
+            memberIdUtil.when(() -> MemberIdUtil.getMemberIdUtil()).thenReturn(1);
+            when(memberDao.getMemberDetailsByMemberIdDao(1)).thenReturn(memberDetails);
+
+            Member result = memberService.getMemberDetailsService();
+            Assertions.assertNotNull(result);
+            Assertions.assertEquals(memberDetails, result);
+        }
     }
 }
 
